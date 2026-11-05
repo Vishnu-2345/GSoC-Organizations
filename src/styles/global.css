@@ -256,8 +256,9 @@ img {
 
 .filter-panel-title {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+  gap: 12px;
   padding: 18px 18px 14px;
   border-bottom: 1px solid var(--border);
 }
@@ -269,6 +270,20 @@ img {
   margin: 0;
   font-size: 18px;
   letter-spacing: -0.015em;
+}
+
+.filter-panel-title p {
+  margin: 3px 0 0;
+  color: var(--text-secondary);
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.filter-panel-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
 }
 
 .filter-group {
@@ -289,9 +304,72 @@ img {
 }
 
 .filter-heading h3 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   margin: 0;
   font-size: 13px;
   font-weight: 750;
+}
+
+.filter-selected-count {
+  display: inline-grid;
+  min-width: 19px;
+  min-height: 19px;
+  place-items: center;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: var(--blue-pale);
+  color: var(--blue-dark);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.filter-group-help {
+  margin: -3px 0 7px;
+  color: var(--text-secondary);
+  font-size: 10px;
+}
+
+.filter-option-search {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  min-height: 34px;
+  margin-bottom: 7px;
+  padding: 0 9px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: #fff;
+}
+
+.filter-option-search:focus-within {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 2px rgba(227, 116, 0, 0.14);
+}
+
+.filter-option-search svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: var(--text-secondary);
+  stroke-linecap: round;
+  stroke-width: 1.8;
+}
+
+.filter-option-search input {
+  width: 100%;
+  min-width: 0;
+  padding: 6px 0 6px 7px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 11px;
+}
+
+.filter-option-search input::placeholder {
+  color: #8a8d91;
 }
 
 .filter-options {
@@ -317,6 +395,12 @@ img {
   color: var(--text);
   cursor: pointer;
   font-size: 13px;
+  border-radius: 6px;
+}
+
+.check-row:hover,
+.check-row:has(input:checked) {
+  background: var(--blue-pale);
 }
 
 .check-row input {
@@ -333,6 +417,12 @@ img {
 
 .check-row small {
   color: var(--text-secondary);
+}
+
+.filter-no-results {
+  margin: 6px 0 2px;
+  color: var(--text-secondary);
+  font-size: 11px;
 }
 
 .text-button {
@@ -365,6 +455,43 @@ img {
 .show-options-button:hover {
   border-color: var(--blue);
   background: var(--blue-pale);
+}
+
+.advanced-filters {
+  border-bottom: 1px solid var(--border);
+}
+
+.advanced-filters summary {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 16px 18px;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 750;
+  list-style: none;
+}
+
+.advanced-filters summary::-webkit-details-marker {
+  display: none;
+}
+
+.advanced-filters summary::after {
+  margin-left: auto;
+  color: var(--text-secondary);
+  content: '+';
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.advanced-filters[open] summary::after {
+  content: '−';
+}
+
+.advanced-filters[open] > .filter-group {
+  border-top: 1px solid var(--border);
+  border-bottom: 0;
 }
 
 .results-column {

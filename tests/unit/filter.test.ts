@@ -1,6 +1,10 @@
 import { describe, expect, it } from 'vitest';
-import { filterOrganizations, sortOrganizations } from '../../src/lib/filter';
-import type { OrganizationSummary } from '../../src/types';
+import {
+  defaultFilters,
+  filterOrganizations,
+  sortOrganizations,
+} from '../../src/lib/filter';
+import type { FilterState, OrganizationSummary } from '../../src/types';
 
 const baseRepository = {
   repositories: [],
@@ -44,46 +48,71 @@ const organizations: OrganizationSummary[] = [
   },
 ];
 
+const filters = (overrides: Partial<FilterState> = {}): FilterState => ({
+  ...defaultFilters,
+  ...overrides,
+});
+
 describe('organization filtering', () => {
   it('searches across tags and descriptions', () => {
     expect(
-      filterOrganizations(organizations, {
-        query: 'mapping',
-        years: [],
-        categories: [],
-        technologies: [],
-        topics: [],
-        excludeTechnologies: [],
-        excludeTopics: [],
-        sort: 'recent',
-      }).map((org) => org.slug),
+      filterOrganizations(organizations, filters({ query: 'mapping' })).map(
+        (org) => org.slug,
+      ),
     ).toEqual(['alpha']);
     expect(
-      filterOrganizations(organizations, {
-        query: 'python',
-        years: [],
-        categories: [],
-        technologies: [],
-        topics: [],
-        excludeTechnologies: [],
-        excludeTopics: [],
-        sort: 'recent',
-      }).map((org) => org.slug),
+      filterOrganizations(organizations, filters({ query: 'python' })).map(
+        (org) => org.slug,
+      ),
+    ).toEqual(['beta']);
+    expect(
+      filterOrganizations(
+        organizations,
+        filters({ query: 'machine python' }),
+      ).map((org) => org.slug),
     ).toEqual(['beta']);
   });
 
   it('applies inclusion and exclusion filters together', () => {
-    const result = filterOrganizations(organizations, {
-      query: '',
-      years: [],
-      categories: [],
-      technologies: [],
-      topics: [],
-      excludeTechnologies: ['Python'],
-      excludeTopics: [],
-      sort: 'recent',
-    });
+    const result = filterOrganizations(
+      organizations,
+      filters({ excludeTechnologies: ['Python'] }),
+    );
     expect(result.map((org) => org.slug)).toEqual(['alpha']);
+  });
+
+  it('matches every selected year and any selected tag', () => {
+    expect(
+      filterOrganizations(organizations, filters({ years: [2026, 2025] })).map(
+        (org) => org.slug,
+      ),
+    ).toEqual(['alpha']);
+    expect(
+      filterOrganizations(organizations, filters({ years: [2026, 2024] })),
+    ).toEqual([]);
+    expect(
+      filterOrganizations(
+        organizations,
+        filters({ technologies: ['React', 'Python'] }),
+      ).map((org) => org.slug),
+    ).toEqual(['alpha', 'beta']);
+  });
+
+  it('identifies organizations appearing for the first time this year', () => {
+    const newcomer: OrganizationSummary = {
+      ...organizations[0],
+      slug: 'newcomer',
+      name: 'Newcomer',
+      years: [2026],
+      latestYear: 2026,
+      participationCount: 1,
+    };
+    expect(
+      filterOrganizations(
+        [...organizations, newcomer],
+        filters({ firstTime: true }),
+      ).map((org) => org.slug),
+    ).toEqual(['newcomer']);
   });
 });
 

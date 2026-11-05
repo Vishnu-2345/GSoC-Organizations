@@ -36,7 +36,9 @@ export default function Explorer({
   const [visibleLimit, setVisibleLimit] = useState(ORGANIZATIONS_PER_BATCH);
 
   useEffect(() => {
-    setState(parseFilterState(window.location.search));
+    const syncStateFromUrl = () =>
+      setState(parseFilterState(window.location.search));
+    syncStateFromUrl();
     try {
       const stored = JSON.parse(localStorage.getItem(BOOKMARKS_KEY) || '[]');
       if (Array.isArray(stored))
@@ -46,7 +48,9 @@ export default function Explorer({
     } catch {
       localStorage.removeItem(BOOKMARKS_KEY);
     }
+    window.addEventListener('popstate', syncStateFromUrl);
     setReady(true);
+    return () => window.removeEventListener('popstate', syncStateFromUrl);
   }, []);
 
   useEffect(() => {
@@ -65,7 +69,14 @@ export default function Explorer({
       for (const year of organization.years)
         yearCounts.set(year, (yearCounts.get(year) || 0) + 1);
     }
+    const latestYear = Math.max(...yearCounts.keys());
     return {
+      latestYear,
+      firstTimeCount: organizations.filter(
+        (organization) =>
+          organization.participationCount === 1 &&
+          organization.latestYear === latestYear,
+      ).length,
       years: [...yearCounts.entries()]
         .map(([value, count]) => ({ value, count }))
         .sort((a, b) => b.value - a.value),
@@ -80,12 +91,11 @@ export default function Explorer({
   }, [organizations]);
 
   const results = useMemo(() => {
+    const filtered = filterOrganizations(organizations, state);
     const available = shortlistOnly
-      ? organizations.filter((organization) =>
-          bookmarks.includes(organization.slug),
-        )
-      : organizations;
-    return sortOrganizations(filterOrganizations(available, state), state.sort);
+      ? filtered.filter((organization) => bookmarks.includes(organization.slug))
+      : filtered;
+    return sortOrganizations(available, state.sort);
   }, [organizations, bookmarks, shortlistOnly, state]);
 
   function toggleBookmark(slug: string) {

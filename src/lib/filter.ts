@@ -2,6 +2,7 @@ import type { FilterState, OrganizationSummary } from '../types';
 
 export const defaultFilters: FilterState = {
   query: '',
+  firstTime: false,
   years: [],
   categories: [],
   technologies: [],
@@ -18,6 +19,11 @@ export function filterOrganizations(
   state: FilterState,
 ): OrganizationSummary[] {
   const query = normalized(state.query);
+  const queryTerms = query.split(/\s+/).filter(Boolean);
+  const latestProgramYear = Math.max(
+    0,
+    ...organizations.map((organization) => organization.latestYear),
+  );
   return organizations.filter((organization) => {
     const searchable = [
       organization.name,
@@ -34,10 +40,18 @@ export function filterOrganizations(
       .join(' ')
       .toLocaleLowerCase();
 
-    if (query && !searchable.includes(query)) return false;
+    if (queryTerms.some((term) => !searchable.includes(term))) return false;
+    if (
+      state.firstTime &&
+      !(
+        organization.participationCount === 1 &&
+        organization.latestYear === latestProgramYear
+      )
+    )
+      return false;
     if (
       state.years.length &&
-      !state.years.some((year) => organization.years.includes(year))
+      !state.years.every((year) => organization.years.includes(year))
     )
       return false;
     if (
@@ -91,6 +105,7 @@ export function sortOrganizations(
 export function activeFilterCount(state: FilterState): number {
   return (
     (state.query ? 1 : 0) +
+    (state.firstTime ? 1 : 0) +
     state.years.length +
     state.categories.length +
     state.technologies.length +

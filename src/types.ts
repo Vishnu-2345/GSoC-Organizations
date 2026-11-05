@@ -57,6 +57,7 @@ export type SortKey = 'recent' | 'projects' | 'years' | 'name';
 
 export type FilterState = {
   query: string;
+  firstTime: boolean;
   years: number[];
   categories: string[];
   technologies: string[];

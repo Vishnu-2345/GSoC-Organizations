@@ -89,6 +89,36 @@ test('directory reveals organizations in batches of 25', async ({ page }) => {
   await expect(page.getByText('Showing 50 of 519')).toBeVisible();
 });
 
+test('filters offer option search and a first-time shortcut', async ({
+  page,
+}, testInfo) => {
+  test.skip(
+    testInfo.project.name.includes('mobile'),
+    'Desktop sidebar behavior is covered here; the drawer is covered separately.',
+  );
+  await page.goto('/');
+  await expect(page.getByTestId('explorer')).toHaveAttribute(
+    'data-ready',
+    'true',
+  );
+
+  const filters = page.getByRole('complementary', {
+    name: 'Organization filters',
+  });
+  await filters
+    .getByRole('searchbox', { name: 'Search technologies' })
+    .fill('python');
+  await filters.getByRole('checkbox', { name: 'python', exact: true }).check();
+  await expect(page).toHaveURL(/technology=python/i);
+  await expect(page.getByText('1 active')).toBeVisible();
+
+  await filters.getByRole('button', { name: 'Clear all' }).click();
+  await filters
+    .getByRole('checkbox', { name: /First-time organizations in 2026/ })
+    .check();
+  await expect(page).toHaveURL(/firstTime=1/);
+});
+
 test('footer provides project, privacy, and creator links', async ({
   page,
 }) => {
@@ -145,7 +175,7 @@ test('filters and clear-all are usable on mobile', async ({
   );
   await page.getByRole('button', { name: /^Filters/ }).click();
   await expect(page.getByRole('heading', { name: 'Filters' })).toBeVisible();
-  await page.getByRole('checkbox', { name: /2026/ }).check();
+  await page.getByRole('checkbox', { name: 'Participation year 2026' }).check();
   await page.getByRole('button', { name: 'Close filters' }).click();
   await expect(page.getByText('1 active')).toBeVisible();
   await page.getByRole('button', { name: 'Clear all filters' }).click();

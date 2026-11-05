@@ -42,6 +42,9 @@ export function parseFilterState(search: string): FilterState {
     query:
       params.get('q')?.slice(0, 200) ||
       (typeof legacy.query === 'string' ? legacy.query.slice(0, 200) : ''),
+    firstTime:
+      params.get('firstTime') === '1' ||
+      legacyList('shortcuts').includes('First-time organizations'),
     years: [...new Set(years)],
     categories: [
       ...new Set([...list(params, 'category'), ...legacyList('categories')]),
@@ -75,6 +78,7 @@ export function parseFilterState(search: string): FilterState {
 export function serializeFilterState(state: FilterState): string {
   const params = new URLSearchParams();
   if (state.query) params.set('q', state.query);
+  if (state.firstTime) params.set('firstTime', '1');
   for (const year of state.years) params.append('year', String(year));
   for (const category of state.categories) params.append('category', category);
   for (const technology of state.technologies)
