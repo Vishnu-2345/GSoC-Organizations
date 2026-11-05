@@ -36,6 +36,59 @@ const canonicalTags = new Map([
   ['css', 'CSS'],
 ]);
 
+// The reference project keeps a small, reviewable alias table instead of
+// guessing organization identity from fuzzy text similarity. These aliases
+// cover known public-archive renames; the website URL check below handles the
+// remaining unchanged organizations across years.
+const organizationNameAliases = new Map([
+  ['The Apertium Project', 'Apertium'],
+  [
+    'AOSSIE - Australian Open Source Software Innovation and Education',
+    'AOSSIE',
+  ],
+  [
+    'Berkman Center for Internet and Society',
+    'Berkman Klein Center for Internet and Society',
+  ],
+  [
+    'Berkman Klein Center for Internet & Society at Harvard University',
+    'Berkman Klein Center for Internet and Society',
+  ],
+  [
+    'Berkman Klein Center for Internet and Society at Harvard University',
+    'Berkman Klein Center for Internet and Society',
+  ],
+  ['CiviCRM LLC', 'CiviCRM'],
+  ['Ceph', 'Ceph Foundation'],
+  ['Debian Project', 'Debian'],
+  [
+    'Digital Impact Alliance',
+    'Digital Impact Alliance (DIAL) at UN Foundation',
+  ],
+  ['FOSSology Project', 'FOSSology'],
+  ['GENIVI Development Platform', 'GENIVI Alliance'],
+  ['KDE', 'KDE Community'],
+  ['Liquid Galaxy Project', 'Liquid Galaxy project'],
+  ['OSGeo - The Open Source Geospatial Foundation', 'OSGeo'],
+  ['GFOSS - Open Technologies Alliance', 'Open Technologies Alliance - GFOSS'],
+  ['Open Technologies Aliance - GFOSS', 'Open Technologies Alliance - GFOSS'],
+  ['Open Roberta Lab', 'Open Roberta'],
+  ['Zulip Open Source Project', 'Zulip'],
+  ['Xi Editor Project', 'Xi Editor'],
+  ['VideoLAN / VLMC Project', 'VideoLAN'],
+  ['The syslog-ng project.', 'syslog-ng'],
+  ['The syslog-ng project', 'syslog-ng'],
+  ['The Eclipse Foundation', 'Eclipse Foundation'],
+  ['shogun.ml', 'Shogun'],
+  ['Shogun Machine Learning Toolbox', 'Shogun'],
+  ['Robocomp', 'RoboComp'],
+  ['Apache Software Foundation', 'The Apache Software Foundation'],
+  ['Cloud Native Computing Foundation (CNCF)', 'CNCF'],
+  ['GNOME', 'GNOME Foundation'],
+  ['GNU Mailman', 'GNU Mailman Project'],
+  ['Kodi Foundation', 'Kodi'],
+]);
+
 function clean(value = '') {
   return String(value).replace(/\s+/g, ' ').trim();
 }
@@ -76,6 +129,28 @@ function slugify(value) {
     .replace(/&/g, ' and ')
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/(^-|-$)/g, '');
+}
+
+function canonicalOrganizationName(value) {
+  let name = clean(value);
+  const visited = new Set();
+  while (organizationNameAliases.has(name) && !visited.has(name)) {
+    visited.add(name);
+    name = organizationNameAliases.get(name);
+  }
+  return name;
+}
+
+function organizationUrlIdentity(value) {
+  try {
+    const url = new URL(value);
+    if (!['http:', 'https:'].includes(url.protocol)) return '';
+    const host = url.hostname.replace(/^www\./, '').toLocaleLowerCase();
+    const pathname = url.pathname.replace(/\/+$/, '') || '/';
+    return `${host}${pathname}`;
+  } catch {
+    return '';
+  }
 }
 
 function safeUrl(value = '') {
@@ -261,7 +336,26 @@ const manualRepositories = {
   },
 };
 
-const organizationsByName = new Map();
+class UnionFind {
+  constructor(size) {
+    this.parents = Array.from({ length: size }, (_, index) => index);
+  }
+
+  find(index) {
+    if (this.parents[index] !== index) {
+      this.parents[index] = this.find(this.parents[index]);
+    }
+    return this.parents[index];
+  }
+
+  union(first, second) {
+    const firstRoot = this.find(first);
+    const secondRoot = this.find(second);
+    if (firstRoot !== secondRoot) this.parents[firstRoot] = secondRoot;
+  }
+}
+
+const records = [];
 
 for (const file of files) {
   const document = JSON.parse(
@@ -269,29 +363,61 @@ for (const file of files) {
   );
   const year = Number(document.year || path.basename(file, '.json'));
   for (const raw of document.organizations || []) {
-    const name = clean(raw.name);
-    if (!name) continue;
-    // The archive contains punctuation-only name variants across years (for
-    // example, a trailing period or trademark symbol). A stable slug is a
-    // safer historical identity key than raw display-name casing.
-    const key = slugify(name);
-    const existing = organizationsByName.get(key) || {
-      slug: slugify(name),
-      name,
-      logo: '',
-      description: '',
-      website: '',
-      category: 'Other',
-      ideasUrl: '',
-      contributionGuide: '',
-      communityLinks: [],
-      technologies: [],
-      topics: [],
-      participations: [],
-      repositoryCandidates: [],
-    };
+    const name = canonicalOrganizationName(raw.name);
+    if (name) records.push({ raw, year, name });
+  }
+}
 
+const identities = new UnionFind(records.length);
+const firstByName = new Map();
+const firstByWebsite = new Map();
+
+records.forEach((record, index) => {
+  const nameKey = record.name.toLocaleLowerCase();
+  const websiteKey = organizationUrlIdentity(record.raw.url);
+  if (firstByName.has(nameKey))
+    identities.union(index, firstByName.get(nameKey));
+  else firstByName.set(nameKey, index);
+  if (websiteKey) {
+    if (firstByWebsite.has(websiteKey)) {
+      identities.union(index, firstByWebsite.get(websiteKey));
+    } else {
+      firstByWebsite.set(websiteKey, index);
+    }
+  }
+});
+
+const groupedRecords = new Map();
+records.forEach((record, index) => {
+  const root = identities.find(index);
+  const group = groupedRecords.get(root) || [];
+  group.push(record);
+  groupedRecords.set(root, group);
+});
+
+function combineOrganizationRecords(group) {
+  group.sort((a, b) => a.year - b.year);
+  const mostRecent = group.at(-1);
+  const existing = {
+    slug: slugify(mostRecent.name),
+    name: mostRecent.name,
+    logo: '',
+    description: '',
+    website: '',
+    category: 'Other',
+    ideasUrl: '',
+    contributionGuide: '',
+    communityLinks: [],
+    technologies: [],
+    topics: [],
+    participations: [],
+    repositoryCandidates: [],
+  };
+  const recentTagStart = Math.max(0, group.length - 3);
+
+  group.forEach(({ raw, year, name }, groupIndex) => {
     existing.name = name;
+    existing.slug = slugify(name);
     existing.logo = safeUrl(raw.image_url) || existing.logo;
     existing.description = plainText(raw.description) || existing.description;
     existing.website = safeUrl(raw.url) || existing.website;
@@ -299,12 +425,18 @@ for (const file of files) {
     existing.ideasUrl = safeUrl(raw.ideas_url) || existing.ideasUrl;
     existing.contributionGuide =
       safeUrl(raw.guide_url) || existing.contributionGuide;
-    existing.technologies = uniqueTags([
-      ...existing.technologies,
-      ...(raw.technologies || []),
-    ]);
-    existing.topics = uniqueTags([...existing.topics, ...(raw.topics || [])]);
-    existing.repositoryCandidates.push(raw.ideas_url, raw.guide_url, raw.url);
+    if (groupIndex >= recentTagStart) {
+      existing.technologies = uniqueTags([
+        ...existing.technologies,
+        ...(raw.technologies || []),
+      ]);
+      existing.topics = uniqueTags([...existing.topics, ...(raw.topics || [])]);
+    }
+    existing.repositoryCandidates.unshift(
+      raw.ideas_url,
+      raw.guide_url,
+      raw.url,
+    );
 
     const communityLinks = [
       ['Chat / community', raw.irc_channel],
@@ -320,12 +452,6 @@ for (const file of files) {
     }
 
     const projects = (raw.projects || []).map((project) => {
-      const searchable =
-        `${project.title || ''} ${project.short_description || ''} ${project.description || ''}`.toLocaleLowerCase();
-      const inferredTechnologies = existing.technologies.filter((tag) => {
-        const normalized = tag.toLocaleLowerCase();
-        return normalized.length > 1 && searchable.includes(normalized);
-      });
       return {
         title: clean(project.title) || 'Untitled project',
         shortDescription: plainText(project.short_description),
@@ -333,7 +459,7 @@ for (const file of files) {
         contributor: clean(project.student_name),
         codeUrl: safeUrl(project.code_url) || undefined,
         projectUrl: safeUrl(project.project_url) || undefined,
-        inferredTechnologies,
+        inferredTechnologies: [],
       };
     });
 
@@ -347,12 +473,26 @@ for (const file of files) {
     };
     if (priorIndex >= 0) existing.participations[priorIndex] = participation;
     else existing.participations.push(participation);
-    organizationsByName.set(key, existing);
+  });
+
+  for (const participation of existing.participations) {
+    for (const project of participation.projects) {
+      const searchable =
+        `${project.title} ${project.shortDescription} ${project.description}`.toLocaleLowerCase();
+      project.inferredTechnologies = existing.technologies
+        .filter((tag) => {
+          const normalized = tag.toLocaleLowerCase();
+          return normalized.length > 1 && searchable.includes(normalized);
+        })
+        .slice(0, 6);
+    }
   }
+  return existing;
 }
 
 const repositoryLinks = {};
-const organizations = [...organizationsByName.values()]
+const organizations = [...groupedRecords.values()]
+  .map(combineOrganizationRecords)
   .map((org) => {
     org.participations.sort((a, b) => b.year - a.year);
     const manual = manualRepositories[org.name];

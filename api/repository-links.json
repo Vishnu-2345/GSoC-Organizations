@@ -1,7 +1,7 @@
 {
-  "52°North Initiative for Geospatial Open Source Software GmbH": {
+  "52°North Spatial Information Research GmbH": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=52%C2%B0North%20Initiative%20for%20Geospatial%20Open%20Source%20Software%20GmbH%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=52%C2%B0North%20Spatial%20Information%20Research%20GmbH%20source%20code%20repository",
     "source": "search"
   },
   "aimacode": {
@@ -21,9 +21,9 @@
     "organizationProfile": "https://www.google.com/search?q=AOSSIE%20-%20The%20Australian%20National%20University's%20Open-Source%20Software%20Innovation%20and%20Education%20source%20code%20repository",
     "source": "search"
   },
-  "Apache Software Foundation": {
+  "The Apache Software Foundation": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Apache%20Software%20Foundation%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=The%20Apache%20Software%20Foundation%20source%20code%20repository",
     "source": "search"
   },
   "ArchC": {
@@ -46,9 +46,9 @@
     "organizationProfile": "https://www.google.com/search?q=Beam%20Community%20source%20code%20repository",
     "source": "search"
   },
-  "Berkman Center for Internet and Society": {
+  "Berkman Klein Center for Internet and Society": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Berkman%20Center%20for%20Internet%20and%20Society%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=Berkman%20Klein%20Center%20for%20Internet%20and%20Society%20source%20code%20repository",
     "source": "search"
   },
   "BioJS": {
@@ -107,21 +107,21 @@
     "organizationProfile": "https://www.google.com/search?q=BuildmLearn%20source%20code%20repository",
     "source": "search"
   },
-  "Canadian Centre for Computational Genomics (C3G) - Montreal node": {
+  "Canadian Centre for Computational Genomics": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Canadian%20Centre%20for%20Computational%20Genomics%20(C3G)%20-%20Montreal%20node%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=Canadian%20Centre%20for%20Computational%20Genomics%20source%20code%20repository",
     "source": "search"
   },
-  "Catrobat": {
+  "International Catrobat Association": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Catrobat%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=International%20Catrobat%20Association%20source%20code%20repository",
     "source": "search"
   },
   "cBioPortal for Cancer Genomics": {
     "repositories": [
       {
         "label": "Source repository",
-        "url": "https://github.com/cBioPortal/gsoc",
+        "url": "https://github.com/cBioPortal/GSoC",
         "host": "GitHub",
         "verified": false
       }
@@ -138,9 +138,9 @@
     "organizationProfile": "https://www.google.com/search?q=Celluloid%20source%20code%20repository",
     "source": "search"
   },
-  "Ceph": {
+  "Ceph Foundation": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Ceph%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=Ceph%20Foundation%20source%20code%20repository",
     "source": "search"
   },
   "CERN SFT": {
@@ -199,19 +199,25 @@
     "organizationProfile": "https://www.google.com/search?q=CVXPY%20source%20code%20repository",
     "source": "search"
   },
-  "D Foundation": {
+  "D Language Foundation": {
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://dlang.github.io/GSoC/gsoc-2026",
+        "host": "Self-hosted Git",
+        "verified": false
+      }
+    ],
+    "source": "derived"
+  },
+  "DBpedia": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=D%20Foundation%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=DBpedia%20source%20code%20repository",
     "source": "search"
   },
-  "dbpediaspotlight": {
+  "Debian": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=dbpediaspotlight%20source%20code%20repository",
-    "source": "search"
-  },
-  "Debian Project": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Debian%20Project%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=Debian%20source%20code%20repository",
     "source": "search"
   },
   "Discourse": {
@@ -228,16 +234,16 @@
     "repositories": [
       {
         "label": "Source repository",
-        "url": "https://code.djangoproject.com/wiki/SummerOfCode2025",
+        "url": "https://code.djangoproject.com/wiki/SummerOfCode2026",
         "host": "Self-hosted Git",
         "verified": false
       }
     ],
     "source": "derived"
   },
-  "Drupal": {
+  "Drupal Association": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Drupal%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=Drupal%20Association%20source%20code%20repository",
     "source": "search"
   },
   "Eclipse Foundation": {
@@ -261,9 +267,9 @@
     "organizationProfile": "https://www.google.com/search?q=FFmpeg%20source%20code%20repository",
     "source": "search"
   },
-  "FOSDEM VZW": {
+  "FOSDEM": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=FOSDEM%20VZW%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=FOSDEM%20source%20code%20repository",
     "source": "search"
   },
   "FOSSASIA": {
@@ -276,9 +282,9 @@
     "organizationProfile": "https://www.google.com/search?q=Free%20and%20Open%20Source%20Silicon%20Foundation%20source%20code%20repository",
     "source": "search"
   },
-  "FreeBSD": {
+  "The FreeBSD Project": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=FreeBSD%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=The%20FreeBSD%20Project%20source%20code%20repository",
     "source": "search"
   },
   "freifunk": {
@@ -286,9 +292,9 @@
     "organizationProfile": "https://www.google.com/search?q=freifunk%20source%20code%20repository",
     "source": "search"
   },
-  "Gambit - Software Tools for Game Theory": {
+  "Gambit: The package for computation in game theory": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Gambit%20-%20Software%20Tools%20for%20Game%20Theory%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=Gambit%3A%20The%20package%20for%20computation%20in%20game%20theory%20source%20code%20repository",
     "source": "search"
   },
   "Ganeti": {
@@ -336,9 +342,9 @@
     "organizationProfile": "https://www.google.com/search?q=Global%20Alliance%20for%20Genomics%20and%20Health%20source%20code%20repository",
     "source": "search"
   },
-  "GNOME": {
+  "GNOME Foundation": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=GNOME%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=GNOME%20Foundation%20source%20code%20repository",
     "source": "search"
   },
   "GNSS-SDR": {
@@ -346,9 +352,9 @@
     "organizationProfile": "https://www.google.com/search?q=GNSS-SDR%20source%20code%20repository",
     "source": "search"
   },
-  "GNU Mailman": {
+  "GNU Mailman Project": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=GNU%20Mailman%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=GNU%20Mailman%20Project%20source%20code%20repository",
     "source": "search"
   },
   "GNU Octave": {
@@ -412,25 +418,39 @@
     ],
     "source": "derived"
   },
-  "International Neuroinformatics Coordinating Facility": {
+  "INCF": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=International%20Neuroinformatics%20Coordinating%20Facility%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=INCF%20source%20code%20repository",
     "source": "search"
   },
-  "Java Pathfinder Team": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Java%20Pathfinder%20Team%20source%20code%20repository",
-    "source": "search"
+  "The JPF team": {
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/javapathfinder/jpf-core",
+        "host": "GitHub",
+        "verified": false
+      }
+    ],
+    "source": "derived"
   },
   "JBoss Community": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=JBoss%20Community%20source%20code%20repository",
     "source": "search"
   },
-  "Jenkins project": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Jenkins%20project%20source%20code%20repository",
-    "source": "search"
+  "Jenkins": {
+    "repositories": [
+      {
+        "label": "Jenkins core",
+        "url": "https://github.com/jenkinsci/jenkins",
+        "host": "GitHub",
+        "verified": true,
+        "lastChecked": "2026-11-05"
+      }
+    ],
+    "organizationProfile": "https://github.com/jenkinsci",
+    "source": "manual"
   },
   "Joomla!": {
     "repositories": [],
@@ -442,19 +462,27 @@
     "organizationProfile": "https://www.google.com/search?q=jQuery%20Foundation%20source%20code%20repository",
     "source": "search"
   },
-  "JSK Robotics Laboratory": {
+  "JSK Robotics Laboratory / The University of Tokyo": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=JSK%20Robotics%20Laboratory%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=JSK%20Robotics%20Laboratory%20%2F%20The%20University%20of%20Tokyo%20source%20code%20repository",
     "source": "search"
   },
-  "KDE": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=KDE%20source%20code%20repository",
-    "source": "search"
+  "KDE Community": {
+    "repositories": [
+      {
+        "label": "KDE Invent repositories",
+        "url": "https://invent.kde.org/",
+        "host": "Self-hosted Git",
+        "verified": true,
+        "lastChecked": "2026-11-05"
+      }
+    ],
+    "organizationProfile": "https://invent.kde.org/",
+    "source": "manual"
   },
-  "KolibriOS": {
+  "KolibriOS Project Team": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=KolibriOS%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=KolibriOS%20Project%20Team%20source%20code%20repository",
     "source": "search"
   },
   "LabLua": {
@@ -504,39 +532,63 @@
     "organizationProfile": "https://www.google.com/search?q=Matrix.org%20source%20code%20repository",
     "source": "search"
   },
-  "MBDyn, Department of Aerospace Science and Technology at Politecnico di Milano": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=MBDyn%2C%20Department%20of%20Aerospace%20Science%20and%20Technology%20at%20Politecnico%20di%20Milano%20source%20code%20repository",
-    "source": "search"
+  "MBDyn": {
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://public.gitlab.polimi.it/DAER/mbdyn",
+        "host": "Self-hosted Git",
+        "verified": false
+      }
+    ],
+    "source": "derived"
   },
   "McGill Space Institute": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=McGill%20Space%20Institute%20source%20code%20repository",
     "source": "search"
   },
-  "MetaBrainz Foundation": {
+  "MetaBrainz Foundation Inc": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=MetaBrainz%20Foundation%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=MetaBrainz%20Foundation%20Inc%20source%20code%20repository",
     "source": "search"
   },
-  "Mifos Initiative": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Mifos%20Initiative%20source%20code%20repository",
-    "source": "search"
+  "The Mifos Initiative": {
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://mifosforge.jira.com/wiki/spaces",
+        "host": "Self-hosted Git",
+        "verified": false
+      }
+    ],
+    "source": "derived"
   },
-  "MIT Media Lab": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=MIT%20Media%20Lab%20source%20code%20repository",
-    "source": "search"
+  "MIT App Inventor": {
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/mit-cml/appinventor-sources",
+        "host": "GitHub",
+        "verified": false
+      }
+    ],
+    "source": "derived"
   },
-  "Mixxx DJ Software": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Mixxx%20DJ%20Software%20source%20code%20repository",
-    "source": "search"
+  "Mixxx": {
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/mixxxdj/mixxx",
+        "host": "GitHub",
+        "verified": false
+      }
+    ],
+    "source": "derived"
   },
-  "mlpack: a scalable C++ machine learning library": {
+  "mlpack": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=mlpack%3A%20a%20scalable%20C%2B%2B%20machine%20learning%20library%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=mlpack%20source%20code%20repository",
     "source": "search"
   },
   "Mobile Robot Programming Toolkit (MRPT)": {
@@ -554,9 +606,9 @@
     "organizationProfile": "https://www.google.com/search?q=Moodle%20source%20code%20repository",
     "source": "search"
   },
-  "MovingBlocks": {
+  "The Terasology Foundation": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=MovingBlocks%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=The%20Terasology%20Foundation%20source%20code%20repository",
     "source": "search"
   },
   "Mozilla": {
@@ -601,9 +653,9 @@
     ],
     "source": "derived"
   },
-  "Open Bioinformatics Foundation": {
+  "Open Bioinformatics Foundation (OBF)": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Open%20Bioinformatics%20Foundation%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=Open%20Bioinformatics%20Foundation%20(OBF)%20source%20code%20repository",
     "source": "search"
   },
   "Open Chemistry": {
@@ -626,10 +678,16 @@
     "organizationProfile": "https://www.google.com/search?q=Open%20Genome%20Informatics%20source%20code%20repository",
     "source": "search"
   },
-  "Open Source Robotics Foundation": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Open%20Source%20Robotics%20Foundation%20source%20code%20repository",
-    "source": "search"
+  "Open Robotics": {
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/osrf/osrf_wiki",
+        "host": "GitHub",
+        "verified": false
+      }
+    ],
+    "source": "derived"
   },
   "OpenAstronomy": {
     "repositories": [],
@@ -640,7 +698,7 @@
     "repositories": [
       {
         "label": "Source repository",
-        "url": "https://github.com/itseez/opencv",
+        "url": "https://github.com/opencv/opencv",
         "host": "GitHub",
         "verified": false
       }
@@ -670,10 +728,16 @@
     "organizationProfile": "https://github.com/openstreetmap",
     "source": "manual"
   },
-  "openSUSE": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=openSUSE%20source%20code%20repository",
-    "source": "search"
+  "openSUSE Project": {
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/openSUSE/mentoring",
+        "host": "GitHub",
+        "verified": false
+      }
+    ],
+    "source": "derived"
   },
   "Oppia Foundation": {
     "repositories": [
@@ -691,9 +755,9 @@
     "organizationProfile": "https://www.google.com/search?q=Orange%20%E2%80%93%20Data%20Mining%20Fruitful%20%26%20Fun%20source%20code%20repository",
     "source": "search"
   },
-  "OSGeo - The Open Source Geospatial Foundation": {
+  "OSGeo (Open Source Geospatial Foundation)": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=OSGeo%20-%20The%20Open%20Source%20Geospatial%20Foundation%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=OSGeo%20(Open%20Source%20Geospatial%20Foundation)%20source%20code%20repository",
     "source": "search"
   },
   "OSU Open Source Lab": {
@@ -790,9 +854,9 @@
     "organizationProfile": "https://www.google.com/search?q=Radare%20source%20code%20repository",
     "source": "search"
   },
-  "ReactOS": {
+  "ReactOS Foundation": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=ReactOS%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=ReactOS%20Foundation%20source%20code%20repository",
     "source": "search"
   },
   "Red Hen Lab": {
@@ -804,12 +868,12 @@
     "repositories": [
       {
         "label": "Organization profile",
-        "url": "https://robocomp.github.io/website",
+        "url": "https://robocomp.github.io/web",
         "host": "Self-hosted Git",
         "verified": false
       }
     ],
-    "organizationProfile": "https://robocomp.github.io/website",
+    "organizationProfile": "https://robocomp.github.io/web",
     "source": "derived"
   },
   "RTEMS Project": {
@@ -840,19 +904,25 @@
     "organizationProfile": "https://www.google.com/search?q=Ruby%20Science%20Foundation%20source%20code%20repository",
     "source": "search"
   },
-  "Sage Mathematical Software System": {
+  "SageMath": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Sage%20Mathematical%20Software%20System%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=SageMath%20source%20code%20repository",
     "source": "search"
   },
-  "Scala": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Scala%20source%20code%20repository",
-    "source": "search"
+  "Scala Center": {
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/scalacenter/GoogleSummerOfCode",
+        "host": "GitHub",
+        "verified": false
+      }
+    ],
+    "source": "derived"
   },
-  "Scilab Enterprises": {
+  "Scilab": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Scilab%20Enterprises%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=Scilab%20source%20code%20repository",
     "source": "search"
   },
   "ScummVM": {
@@ -860,9 +930,9 @@
     "organizationProfile": "https://www.google.com/search?q=ScummVM%20source%20code%20repository",
     "source": "search"
   },
-  "Shogun Machine Learning Toolbox": {
+  "Shogun": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Shogun%20Machine%20Learning%20Toolbox%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=Shogun%20source%20code%20repository",
     "source": "search"
   },
   "Sigmah": {
@@ -902,9 +972,9 @@
     ],
     "source": "derived"
   },
-  "Sustainable Computing Research Group (SCoRe)": {
+  "SCoRe Lab": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Sustainable%20Computing%20Research%20Group%20(SCoRe)%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=SCoRe%20Lab%20source%20code%20repository",
     "source": "search"
   },
   "SymPy": {
@@ -946,9 +1016,9 @@
     ],
     "source": "derived"
   },
-  "The Apertium Project": {
+  "Apertium": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=The%20Apertium%20Project%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=Apertium%20source%20code%20repository",
     "source": "search"
   },
   "The Center for Connected Learning and Computer-Based Modeling": {
@@ -977,9 +1047,9 @@
     ],
     "source": "derived"
   },
-  "The LLVM Compiler Infrastructure": {
+  "LLVM Compiler Infrastructure": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=The%20LLVM%20Compiler%20Infrastructure%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=LLVM%20Compiler%20Infrastructure%20source%20code%20repository",
     "source": "search"
   },
   "The Monarch Initiative": {
@@ -992,14 +1062,20 @@
     "organizationProfile": "https://www.google.com/search?q=The%20NetBSD%20Foundation%20source%20code%20repository",
     "source": "search"
   },
-  "The STE||AR Group": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=The%20STE%7C%7CAR%20Group%20source%20code%20repository",
-    "source": "search"
+  "Ste||ar group": {
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/STEllAR-GROUP/hpx",
+        "host": "GitHub",
+        "verified": false
+      }
+    ],
+    "source": "derived"
   },
-  "The syslog-ng project.": {
+  "syslog-ng": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=The%20syslog-ng%20project.%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=syslog-ng%20source%20code%20repository",
     "source": "search"
   },
   "The Tor Project": {
@@ -1038,15 +1114,23 @@
     "organizationProfile": "https://www.google.com/search?q=Urban%20Energy%20Systems%20Laboratory%2C%20Empa%20source%20code%20repository",
     "source": "search"
   },
-  "Vert.x": {
+  "Eclipse Vert.x": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Vert.x%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=Eclipse%20Vert.x%20source%20code%20repository",
     "source": "search"
   },
-  "VideoLAN / VLMC Project": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=VideoLAN%20%2F%20VLMC%20Project%20source%20code%20repository",
-    "source": "search"
+  "VideoLAN": {
+    "repositories": [
+      {
+        "label": "VLC media player",
+        "url": "https://code.videolan.org/videolan/vlc",
+        "host": "Self-hosted Git",
+        "verified": true,
+        "lastChecked": "2026-11-05"
+      }
+    ],
+    "organizationProfile": "https://code.videolan.org/videolan",
+    "source": "manual"
   },
   "vitrivr": {
     "repositories": [],
@@ -1083,9 +1167,9 @@
     "organizationProfile": "https://www.google.com/search?q=XWiki%20source%20code%20repository",
     "source": "search"
   },
-  "Zulip Open Source Project": {
+  "Zulip": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Zulip%20Open%20Source%20Project%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=Zulip%20source%20code%20repository",
     "source": "search"
   },
   "AboutCode": {
@@ -1109,24 +1193,25 @@
     "organizationProfile": "https://www.google.com/search?q=Amahi%20source%20code%20repository",
     "source": "search"
   },
-  "AOSSIE - Australian Open Source Software Innovation and Education": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=AOSSIE%20-%20Australian%20Open%20Source%20Software%20Innovation%20and%20Education%20source%20code%20repository",
-    "source": "search"
-  },
-  "Apertium": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Apertium%20source%20code%20repository",
-    "source": "search"
+  "AOSSIE": {
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/AOSSIE-Org/Info",
+        "host": "GitHub",
+        "verified": false
+      }
+    ],
+    "source": "derived"
   },
   "Apertus Association": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Apertus%20Association%20source%20code%20repository",
     "source": "search"
   },
-  "appleseedhq": {
+  "appleseed": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=appleseedhq%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=appleseed%20source%20code%20repository",
     "source": "search"
   },
   "ArduPilot": {
@@ -1144,19 +1229,9 @@
     "organizationProfile": "https://www.google.com/search?q=Bazel%20source%20code%20repository",
     "source": "search"
   },
-  "BeagleBoard.org Foundation": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=BeagleBoard.org%20Foundation%20source%20code%20repository",
-    "source": "search"
-  },
   "BeeWare Project": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=BeeWare%20Project%20source%20code%20repository",
-    "source": "search"
-  },
-  "Berkman Klein Center for Internet & Society at Harvard University": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Berkman%20Klein%20Center%20for%20Internet%20%26%20Society%20at%20Harvard%20University%20source%20code%20repository",
     "source": "search"
   },
   "Boost C++ Libraries": {
@@ -1214,10 +1289,16 @@
     "organizationProfile": "https://www.google.com/search?q=Clojure%20source%20code%20repository",
     "source": "search"
   },
-  "Cloud Native Computing Foundation (CNCF)": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Cloud%20Native%20Computing%20Foundation%20(CNCF)%20source%20code%20repository",
-    "source": "search"
+  "CNCF": {
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/cncf/mentoring",
+        "host": "GitHub",
+        "verified": false
+      }
+    ],
+    "source": "derived"
   },
   "CMU Sphinx": {
     "repositories": [],
@@ -1234,16 +1315,6 @@
     "organizationProfile": "https://www.google.com/search?q=Conversations.im%20source%20code%20repository",
     "source": "search"
   },
-  "DBpedia": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=DBpedia%20source%20code%20repository",
-    "source": "search"
-  },
-  "Eclipse Vert.x": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Eclipse%20Vert.x%20source%20code%20repository",
-    "source": "search"
-  },
   "Elm Software Foundation": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Elm%20Software%20Foundation%20source%20code%20repository",
@@ -1254,17 +1325,12 @@
     "organizationProfile": "https://www.google.com/search?q=Environmental%20Data%20And%20Governance%20Initiative%20source%20code%20repository",
     "source": "search"
   },
-  "FOSDEM": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=FOSDEM%20source%20code%20repository",
-    "source": "search"
-  },
   "Frescobaldi": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Frescobaldi%20source%20code%20repository",
     "source": "search"
   },
-  "GENIVI Development Platform": {
+  "GENIVI Alliance": {
     "repositories": [
       {
         "label": "Source repository",
@@ -1285,19 +1351,14 @@
     "organizationProfile": "https://www.google.com/search?q=illumos.org%20source%20code%20repository",
     "source": "search"
   },
-  "INCF": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=INCF%20source%20code%20repository",
-    "source": "search"
-  },
   "Institute for Artificial Intelligence": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Institute%20for%20Artificial%20Intelligence%20source%20code%20repository",
     "source": "search"
   },
-  "Intel Media And Audio For Linux": {
+  "Intel Video and Audio for Linux": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Intel%20Media%20And%20Audio%20For%20Linux%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=Intel%20Video%20and%20Audio%20for%20Linux%20source%20code%20repository",
     "source": "search"
   },
   "Internet Archive": {
@@ -1305,10 +1366,16 @@
     "organizationProfile": "https://www.google.com/search?q=Internet%20Archive%20source%20code%20repository",
     "source": "search"
   },
-  "JdeRobot - Universidad Rey Juan Carlos": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=JdeRobot%20-%20Universidad%20Rey%20Juan%20Carlos%20source%20code%20repository",
-    "source": "search"
+  "JdeRobot": {
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://jderobot.github.io/activities/gsoc",
+        "host": "Self-hosted Git",
+        "verified": false
+      }
+    ],
+    "source": "derived"
   },
   "Jitsi": {
     "repositories": [
@@ -1337,30 +1404,9 @@
     "organizationProfile": "https://www.google.com/search?q=LibreHealth%20source%20code%20repository",
     "source": "search"
   },
-  "LLVM Compiler Infrastructure": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=LLVM%20Compiler%20Infrastructure%20source%20code%20repository",
-    "source": "search"
-  },
   "LuaRocks": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=LuaRocks%20source%20code%20repository",
-    "source": "search"
-  },
-  "MBDyn": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://public.gitlab.polimi.it/DAER/mbdyn",
-        "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "source": "derived"
-  },
-  "MetaBrainz Foundation Inc": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=MetaBrainz%20Foundation%20Inc%20source%20code%20repository",
     "source": "search"
   },
   "Metasploit": {
@@ -1379,22 +1425,6 @@
   "Microkernel devroom": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Microkernel%20devroom%20source%20code%20repository",
-    "source": "search"
-  },
-  "MIT App Inventor": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://github.com/mit-cml/appinventor-sources",
-        "host": "GitHub",
-        "verified": false
-      }
-    ],
-    "source": "derived"
-  },
-  "mlpack": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=mlpack%20source%20code%20repository",
     "source": "search"
   },
   "Mono Project": {
@@ -1420,11 +1450,6 @@
   "OpenWISP": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=OpenWISP%20source%20code%20repository",
-    "source": "search"
-  },
-  "OSGeo": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=OSGeo%20source%20code%20repository",
     "source": "search"
   },
   "oVirt": {
@@ -1479,16 +1504,11 @@
     "organizationProfile": "https://www.google.com/search?q=Qubes%20OS%20source%20code%20repository",
     "source": "search"
   },
-  "radare2": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=radare2%20source%20code%20repository",
-    "source": "search"
-  },
   "rocket.chat": {
     "repositories": [
       {
         "label": "Source repository",
-        "url": "https://github.com/RocketChat/Rocket.Chat",
+        "url": "https://github.com/RocketChat/google-summer-of-code",
         "host": "GitHub",
         "verified": false
       }
@@ -1516,57 +1536,26 @@
     "organizationProfile": "https://www.google.com/search?q=Samba%20source%20code%20repository",
     "source": "search"
   },
-  "Scilab": {
+  "SPDX": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Scilab%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=SPDX%20source%20code%20repository",
     "source": "search"
   },
-  "Software Product Data Exchange (SPDX)": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Software%20Product%20Data%20Exchange%20(SPDX)%20source%20code%20repository",
-    "source": "search"
-  },
-  "Ste||ar group": {
+  "CGAL Project": {
     "repositories": [
       {
         "label": "Source repository",
-        "url": "https://github.com/STEllAR-GROUP/hpx",
+        "url": "https://github.com/CGAL/cgal",
         "host": "GitHub",
         "verified": false
       }
     ],
     "source": "derived"
   },
-  "The CGAL Project": {
+  "FreeType": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=The%20CGAL%20Project%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=FreeType%20source%20code%20repository",
     "source": "search"
-  },
-  "The Eclipse Foundation": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=The%20Eclipse%20Foundation%20source%20code%20repository",
-    "source": "search"
-  },
-  "The FreeType Project": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=The%20FreeType%20Project%20source%20code%20repository",
-    "source": "search"
-  },
-  "The GNU Project": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=The%20GNU%20Project%20source%20code%20repository",
-    "source": "search"
-  },
-  "The Java Pathfinder Team": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://github.com/javapathfinder/jpf-core",
-        "host": "GitHub",
-        "verified": false
-      }
-    ],
-    "source": "derived"
   },
   "The Libreswan Project": {
     "repositories": [
@@ -1579,9 +1568,9 @@
     ],
     "source": "derived"
   },
-  "The MacPorts Project": {
+  "MacPorts": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=The%20MacPorts%20Project%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=MacPorts%20source%20code%20repository",
     "source": "search"
   },
   "The ns-3 Network Simulator Project": {
@@ -1589,10 +1578,16 @@
     "organizationProfile": "https://www.google.com/search?q=The%20ns-3%20Network%20Simulator%20Project%20source%20code%20repository",
     "source": "search"
   },
-  "The Processing Foundation": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=The%20Processing%20Foundation%20source%20code%20repository",
-    "source": "search"
+  "Processing Foundation": {
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/processing/Processing-Foundation-GSoC",
+        "host": "GitHub",
+        "verified": false
+      }
+    ],
+    "source": "derived"
   },
   "Tiled": {
     "repositories": [
@@ -1605,42 +1600,19 @@
     ],
     "source": "derived"
   },
-  "TimVideos": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=TimVideos%20source%20code%20repository",
-    "source": "search"
-  },
-  "Tor": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Tor%20source%20code%20repository",
-    "source": "search"
-  },
   "UCSC Xena": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=UCSC%20Xena%20source%20code%20repository",
     "source": "search"
-  },
-  "VideoLAN": {
-    "repositories": [
-      {
-        "label": "VLC media player",
-        "url": "https://code.videolan.org/videolan/vlc",
-        "host": "Self-hosted Git",
-        "verified": true,
-        "lastChecked": "2026-11-05"
-      }
-    ],
-    "organizationProfile": "https://code.videolan.org/videolan",
-    "source": "manual"
   },
   "ViSP": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=ViSP%20source%20code%20repository",
     "source": "search"
   },
-  "WorldBrain - Verifying the Internet with Science": {
+  "WorldBrain.io - Verifying the Internet": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=WorldBrain%20-%20Verifying%20the%20Internet%20with%20Science%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=WorldBrain.io%20-%20Verifying%20the%20Internet%20source%20code%20repository",
     "source": "search"
   },
   "wxWidgets": {
@@ -1648,9 +1620,9 @@
     "organizationProfile": "https://www.google.com/search?q=wxWidgets%20source%20code%20repository",
     "source": "search"
   },
-  "XBMC Foundation": {
+  "Kodi": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=XBMC%20Foundation%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=Kodi%20source%20code%20repository",
     "source": "search"
   },
   "Xen Project": {
@@ -1668,65 +1640,51 @@
     "organizationProfile": "https://www.google.com/search?q=Zenodo%20source%20code%20repository",
     "source": "search"
   },
-  "Zulip": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Zulip%20source%20code%20repository",
-    "source": "search"
-  },
   "3DTK": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=3DTK%20source%20code%20repository",
     "source": "search"
   },
-  "Canadian Centre for Computational Genomics": {
+  "Center for Research in Open Source Software (CROSS)": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Canadian%20Centre%20for%20Computational%20Genomics%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=Center%20for%20Research%20in%20Open%20Source%20Software%20(CROSS)%20source%20code%20repository",
     "source": "search"
   },
-  "Center for Research In Open Source Software (CROSS) at UC Santa Cruz": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Center%20for%20Research%20In%20Open%20Source%20Software%20(CROSS)%20at%20UC%20Santa%20Cruz%20source%20code%20repository",
-    "source": "search"
-  },
-  "CGAL Project": {
+  "CHAOSS": {
     "repositories": [
       {
         "label": "Source repository",
-        "url": "https://github.com/CGAL/cgal",
+        "url": "https://github.com/chaoss/augur",
         "host": "GitHub",
         "verified": false
       }
     ],
     "source": "derived"
   },
-  "CHAOSS: Community Health Analytics Open Source Software": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=CHAOSS%3A%20Community%20Health%20Analytics%20Open%20Source%20Software%20source%20code%20repository",
-    "source": "search"
-  },
-  "CiviCRM LLC": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=CiviCRM%20LLC%20source%20code%20repository",
-    "source": "search"
-  },
-  "Cuneiform Digital Library Initiative": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Cuneiform%20Digital%20Library%20Initiative%20source%20code%20repository",
-    "source": "search"
+  "Cuneiform Digital Library Initiative (CDLI)": {
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://gitlab.com/cdli/framework",
+        "host": "GitLab",
+        "verified": false
+      }
+    ],
+    "source": "derived"
   },
   "Developers Italia": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Developers%20Italia%20source%20code%20repository",
     "source": "search"
   },
-  "Digital Impact Alliance": {
+  "Digital Impact Alliance (DIAL) at UN Foundation": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Digital%20Impact%20Alliance%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=Digital%20Impact%20Alliance%20(DIAL)%20at%20UN%20Foundation%20source%20code%20repository",
     "source": "search"
   },
-  "Earth Science Information Partners (ESIP)": {
+  "Earth Science Information Partners": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Earth%20Science%20Information%20Partners%20(ESIP)%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=Earth%20Science%20Information%20Partners%20source%20code%20repository",
     "source": "search"
   },
   "Elastic": {
@@ -1753,21 +1711,6 @@
   "Free UK Genealogy": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Free%20UK%20Genealogy%20source%20code%20repository",
-    "source": "search"
-  },
-  "FreeType": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=FreeType%20source%20code%20repository",
-    "source": "search"
-  },
-  "GENIVI Alliance": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=GENIVI%20Alliance%20source%20code%20repository",
-    "source": "search"
-  },
-  "GFOSS - Open Technologies Alliance": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=GFOSS%20-%20Open%20Technologies%20Alliance%20source%20code%20repository",
     "source": "search"
   },
   "GNU Compiler Collection (GCC)": {
@@ -1813,24 +1756,6 @@
     "organizationProfile": "https://www.google.com/search?q=JGraphT%20source%20code%20repository",
     "source": "search"
   },
-  "JSK Robotics Laboratory / The University of Tokyo": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=JSK%20Robotics%20Laboratory%20%2F%20The%20University%20of%20Tokyo%20source%20code%20repository",
-    "source": "search"
-  },
-  "KDE Community": {
-    "repositories": [
-      {
-        "label": "KDE Invent repositories",
-        "url": "https://invent.kde.org/",
-        "host": "Self-hosted Git",
-        "verified": true,
-        "lastChecked": "2026-11-05"
-      }
-    ],
-    "organizationProfile": "https://invent.kde.org/",
-    "source": "manual"
-  },
   "Kiwix": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Kiwix%20source%20code%20repository",
@@ -1846,11 +1771,6 @@
     "organizationProfile": "https://www.google.com/search?q=LEAP%20Encryption%20Access%20Project%20source%20code%20repository",
     "source": "search"
   },
-  "MariaDB Foundation": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=MariaDB%20Foundation%20source%20code%20repository",
-    "source": "search"
-  },
   "Neovim": {
     "repositories": [
       {
@@ -1862,19 +1782,25 @@
     ],
     "source": "derived"
   },
-  "omegaUp.com": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=omegaUp.com%20source%20code%20repository",
-    "source": "search"
+  "omegaUp": {
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/omegaup/omegaup",
+        "host": "GitHub",
+        "verified": false
+      }
+    ],
+    "source": "derived"
   },
   "Open Food Facts": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Open%20Food%20Facts%20source%20code%20repository",
     "source": "search"
   },
-  "Open Roberta Lab": {
+  "Open Roberta": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Open%20Roberta%20Lab%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=Open%20Roberta%20source%20code%20repository",
     "source": "search"
   },
   "OpenCensus": {
@@ -1897,11 +1823,6 @@
     "organizationProfile": "https://www.google.com/search?q=OW2%20source%20code%20repository",
     "source": "search"
   },
-  "Plone": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Plone%20source%20code%20repository",
-    "source": "search"
-  },
   "Pocket Science Lab": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Pocket%20Science%20Lab%20source%20code%20repository",
@@ -1917,9 +1838,9 @@
     "organizationProfile": "https://www.google.com/search?q=Purr%20Data%20source%20code%20repository",
     "source": "search"
   },
-  "Python HYDRA": {
+  "Hydra Ecosystem": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Python%20HYDRA%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=Hydra%20Ecosystem%20source%20code%20repository",
     "source": "search"
   },
   "Quill.org": {
@@ -1947,11 +1868,6 @@
     "organizationProfile": "https://www.google.com/search?q=Space%20%40%20Virginia%20Tech%20source%20code%20repository",
     "source": "search"
   },
-  "SPDX": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=SPDX%20source%20code%20repository",
-    "source": "search"
-  },
   "Stemformatics": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Stemformatics%20source%20code%20repository",
@@ -1977,25 +1893,14 @@
     "organizationProfile": "https://www.google.com/search?q=Systers%20Community%20source%20code%20repository",
     "source": "search"
   },
-  "The Mifos Initiative": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://mifosforge.jira.com/wiki/spaces",
-        "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "source": "derived"
-  },
   "The Qt Project": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=The%20Qt%20Project%20source%20code%20repository",
     "source": "search"
   },
-  "The Vega Visualization Tools by the UW Interactive Data Lab": {
+  "The Vega Project at the University of Washington": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=The%20Vega%20Visualization%20Tools%20by%20the%20UW%20Interactive%20Data%20Lab%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=The%20Vega%20Project%20at%20the%20University%20of%20Washington%20source%20code%20repository",
     "source": "search"
   },
   "TLA+": {
@@ -2008,12 +1913,7 @@
     "organizationProfile": "https://www.google.com/search?q=webpack%20source%20code%20repository",
     "source": "search"
   },
-  "WorldBrain.io - Verifying the Internet": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=WorldBrain.io%20-%20Verifying%20the%20Internet%20source%20code%20repository",
-    "source": "search"
-  },
-  "Xi Editor Project": {
+  "Xi Editor": {
     "repositories": [
       {
         "label": "Source repository",
@@ -2024,14 +1924,9 @@
     ],
     "source": "derived"
   },
-  "xpra.org": {
+  "xpra": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=xpra.org%20source%20code%20repository",
-    "source": "search"
-  },
-  "AboutCode.org": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=AboutCode.org%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=xpra%20source%20code%20repository",
     "source": "search"
   },
   "Android Graphics Tools Team": {
@@ -2050,51 +1945,15 @@
     "organizationProfile": "https://www.google.com/search?q=API%20Client%20Tools%20at%20Google%20source%20code%20repository",
     "source": "search"
   },
-  "Ardupilot.org": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Ardupilot.org%20source%20code%20repository",
-    "source": "search"
-  },
-  "Berkman Klein Center for Internet and Society": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Berkman%20Klein%20Center%20for%20Internet%20and%20Society%20source%20code%20repository",
-    "source": "search"
-  },
-  "Boost C++": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Boost%20C%2B%2B%20source%20code%20repository",
-    "source": "search"
-  },
   "Buildroot": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Buildroot%20source%20code%20repository",
-    "source": "search"
-  },
-  "Canadian Center for Computational Genomics": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Canadian%20Center%20for%20Computational%20Genomics%20source%20code%20repository",
     "source": "search"
   },
   "CBMI@UTHSC": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=CBMI%40UTHSC%20source%20code%20repository",
     "source": "search"
-  },
-  "Center for Research in Open Source Software at UC Santa Cruz": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Center%20for%20Research%20in%20Open%20Source%20Software%20at%20UC%20Santa%20Cruz%20source%20code%20repository",
-    "source": "search"
-  },
-  "CHAOSS": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://github.com/chaoss/augur",
-        "host": "GitHub",
-        "verified": false
-      }
-    ],
-    "source": "derived"
   },
   "CircuitVerse.org": {
     "repositories": [
@@ -2112,50 +1971,20 @@
     "organizationProfile": "https://www.google.com/search?q=Creative%20Commons%20source%20code%20repository",
     "source": "search"
   },
-  "CRIU (Checkpoint/Restore in User-space)": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=CRIU%20(Checkpoint%2FRestore%20in%20User-space)%20source%20code%20repository",
-    "source": "search"
-  },
-  "Cuneiform Digital Library Initiative (CDLI)": {
+  "CRIU": {
     "repositories": [
       {
         "label": "Source repository",
-        "url": "https://gitlab.com/cdli/framework",
-        "host": "GitLab",
+        "url": "https://github.com/checkpoint-restore/criu",
+        "host": "GitHub",
         "verified": false
       }
     ],
     "source": "derived"
   },
-  "D Programming Language": {
+  "FrameNet Brasil (UFJF)": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=D%20Programming%20Language%20source%20code%20repository",
-    "source": "search"
-  },
-  "Debian": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Debian%20source%20code%20repository",
-    "source": "search"
-  },
-  "Earth Science Information Partners": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Earth%20Science%20Information%20Partners%20source%20code%20repository",
-    "source": "search"
-  },
-  "FOSSology Project": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=FOSSology%20Project%20source%20code%20repository",
-    "source": "search"
-  },
-  "FrameNet Brasil at the Federal University of Juiz de Fora": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=FrameNet%20Brasil%20at%20the%20Federal%20University%20of%20Juiz%20de%20Fora%20source%20code%20repository",
-    "source": "search"
-  },
-  "GNU Compiler Collection": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=GNU%20Compiler%20Collection%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=FrameNet%20Brasil%20(UFJF)%20source%20code%20repository",
     "source": "search"
   },
   "gprMax": {
@@ -2169,20 +1998,21 @@
     ],
     "source": "derived"
   },
-  "Hydra Ecosystem": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Hydra%20Ecosystem%20source%20code%20repository",
-    "source": "search"
-  },
   "Institut für Angewandte Informatik (InfAI) e.V.": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Institut%20f%C3%BCr%20Angewandte%20Informatik%20(InfAI)%20e.V.%20source%20code%20repository",
     "source": "search"
   },
-  "JabRef": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=JabRef%20source%20code%20repository",
-    "source": "search"
+  "JabRef e.V.": {
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://jabref.github.io/GSoC/projects",
+        "host": "Self-hosted Git",
+        "verified": false
+      }
+    ],
+    "source": "derived"
   },
   "Kapitan": {
     "repositories": [
@@ -2200,11 +2030,6 @@
     "organizationProfile": "https://www.google.com/search?q=KNIME%20source%20code%20repository",
     "source": "search"
   },
-  "Kodi Foundation": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Kodi%20Foundation%20source%20code%20repository",
-    "source": "search"
-  },
   "Libre Space Foundation": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Libre%20Space%20Foundation%20source%20code%20repository",
@@ -2213,16 +2038,6 @@
   "Linkerd": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Linkerd%20source%20code%20repository",
-    "source": "search"
-  },
-  "MacPorts": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=MacPorts%20source%20code%20repository",
-    "source": "search"
-  },
-  "MBDyn - Multibody Dynamics": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=MBDyn%20-%20Multibody%20Dynamics%20source%20code%20repository",
     "source": "search"
   },
   "Moira": {
@@ -2240,21 +2055,6 @@
     "organizationProfile": "https://www.google.com/search?q=NV%20Access%20source%20code%20repository",
     "source": "search"
   },
-  "Open Astronomy": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Open%20Astronomy%20source%20code%20repository",
-    "source": "search"
-  },
-  "Open Roberta": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Open%20Roberta%20source%20code%20repository",
-    "source": "search"
-  },
-  "Open Technologies Aliance - GFOSS": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Open%20Technologies%20Aliance%20-%20GFOSS%20source%20code%20repository",
-    "source": "search"
-  },
   "Percona": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Percona%20source%20code%20repository",
@@ -2270,34 +2070,14 @@
     "organizationProfile": "https://www.google.com/search?q=Project%20PANOPTES%20source%20code%20repository",
     "source": "search"
   },
-  "SageMath": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=SageMath%20source%20code%20repository",
-    "source": "search"
-  },
   "Salesforce": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Salesforce%20source%20code%20repository",
     "source": "search"
   },
-  "SCoRe Lab (Sustainable Computing Research Lab)": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=SCoRe%20Lab%20(Sustainable%20Computing%20Research%20Lab)%20source%20code%20repository",
-    "source": "search"
-  },
-  "shogun.ml": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=shogun.ml%20source%20code%20repository",
-    "source": "search"
-  },
   "Software Heritage": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Software%20Heritage%20source%20code%20repository",
-    "source": "search"
-  },
-  "SPDX (Software Product Data Exchange)": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=SPDX%20(Software%20Product%20Data%20Exchange)%20source%20code%20repository",
     "source": "search"
   },
   "SymbiFlow": {
@@ -2316,19 +2096,9 @@
     ],
     "source": "derived"
   },
-  "syslog-ng": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=syslog-ng%20source%20code%20repository",
-    "source": "search"
-  },
   "TensorFlow": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=TensorFlow%20source%20code%20repository",
-    "source": "search"
-  },
-  "The Apache Software Foundation": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=The%20Apache%20Software%20Foundation%20source%20code%20repository",
     "source": "search"
   },
   "The Perl Foundation": {
@@ -2347,16 +2117,6 @@
     ],
     "source": "derived"
   },
-  "The Terasology Foundation": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=The%20Terasology%20Foundation%20source%20code%20repository",
-    "source": "search"
-  },
-  "The Vega Project at the University of Washington": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=The%20Vega%20Project%20at%20the%20University%20of%20Washington%20source%20code%20repository",
-    "source": "search"
-  },
   "Tokio": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Tokio%20source%20code%20repository",
@@ -2367,34 +2127,14 @@
     "organizationProfile": "https://www.google.com/search?q=Tungsten%20Fabric%20source%20code%20repository",
     "source": "search"
   },
-  "Xi Editor": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Xi%20Editor%20source%20code%20repository",
-    "source": "search"
-  },
-  "XMPP Standards Foundation (XSF)": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=XMPP%20Standards%20Foundation%20(XSF)%20source%20code%20repository",
-    "source": "search"
-  },
-  "xpra": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=xpra%20source%20code%20repository",
-    "source": "search"
-  },
   "ZynAddSubFX": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=ZynAddSubFX%20source%20code%20repository",
     "source": "search"
   },
-  "52°North GmbH": {
+  "Academy Software Foundation": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=52%C2%B0North%20GmbH%20source%20code%20repository",
-    "source": "search"
-  },
-  "Academy Software Foundation (ASWF)": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Academy%20Software%20Foundation%20(ASWF)%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=Academy%20Software%20Foundation%20source%20code%20repository",
     "source": "search"
   },
   "Accord Project": {
@@ -2408,30 +2148,20 @@
     ],
     "source": "derived"
   },
-  "afl++": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=afl%2B%2B%20source%20code%20repository",
-    "source": "search"
-  },
-  "AnitaB.org Open Source": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=AnitaB.org%20Open%20Source%20source%20code%20repository",
-    "source": "search"
-  },
-  "AOSSIE": {
+  "AFLplusplus": {
     "repositories": [
       {
         "label": "Source repository",
-        "url": "https://github.com/AOSSIE-Org/Info",
+        "url": "https://github.com/AFLplusplus/LibAFL",
         "host": "GitHub",
         "verified": false
       }
     ],
     "source": "derived"
   },
-  "appleseed": {
+  "AnitaB.org Open Source": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=appleseed%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=AnitaB.org%20Open%20Source%20source%20code%20repository",
     "source": "search"
   },
   "Arduino": {
@@ -2454,26 +2184,10 @@
     "organizationProfile": "https://www.google.com/search?q=Casbin%20source%20code%20repository",
     "source": "search"
   },
-  "Ceph Foundation": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Ceph%20Foundation%20source%20code%20repository",
-    "source": "search"
-  },
   "Continuous Delivery Foundation": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Continuous%20Delivery%20Foundation%20source%20code%20repository",
     "source": "search"
-  },
-  "CRIU": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://github.com/checkpoint-restore/criu",
-        "host": "GitHub",
-        "verified": false
-      }
-    ],
-    "source": "derived"
   },
   "Dart": {
     "repositories": [
@@ -2486,11 +2200,6 @@
     ],
     "source": "derived"
   },
-  "Digital Impact Alliance (DIAL) at UN Foundation": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Digital%20Impact%20Alliance%20(DIAL)%20at%20UN%20Foundation%20source%20code%20repository",
-    "source": "search"
-  },
   "Embox": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Embox%20source%20code%20repository",
@@ -2499,16 +2208,6 @@
   "Erlang Ecosystem Foundation": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Erlang%20Ecosystem%20Foundation%20source%20code%20repository",
-    "source": "search"
-  },
-  "FrameNet Brasil (UFJF)": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=FrameNet%20Brasil%20(UFJF)%20source%20code%20repository",
-    "source": "search"
-  },
-  "FreeBSD Project": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=FreeBSD%20Project%20source%20code%20repository",
     "source": "search"
   },
   "FRRouting": {
@@ -2525,7 +2224,7 @@
     "repositories": [
       {
         "label": "Source repository",
-        "url": "https://github.com/GeomScale/gsoc25",
+        "url": "https://github.com/GeomScale/gsoc26",
         "host": "GitHub",
         "verified": false
       }
@@ -2546,7 +2245,7 @@
     "repositories": [
       {
         "label": "Source repository",
-        "url": "https://github.com/laurent22/joplin",
+        "url": "https://github.com/joplin/gsoc",
         "host": "GitHub",
         "verified": false
       }
@@ -2556,11 +2255,6 @@
   "Kubeflow": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Kubeflow%20source%20code%20repository",
-    "source": "search"
-  },
-  "Matrix": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Matrix%20source%20code%20repository",
     "source": "search"
   },
   "MDAnalysis": {
@@ -2578,17 +2272,6 @@
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=MGGG%20Redistricting%20Lab%20source%20code%20repository",
     "source": "search"
-  },
-  "Mixxx": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://github.com/mixxxdj/mixxx",
-        "host": "GitHub",
-        "verified": false
-      }
-    ],
-    "source": "derived"
   },
   "MoveIt": {
     "repositories": [],
@@ -2608,11 +2291,6 @@
   "Netty": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Netty%20source%20code%20repository",
-    "source": "search"
-  },
-  "Open Bioinformatics Foundation (OBF)": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Open%20Bioinformatics%20Foundation%20(OBF)%20source%20code%20repository",
     "source": "search"
   },
   "OpenEMR": {
@@ -2635,17 +2313,6 @@
     "organizationProfile": "https://www.google.com/search?q=OpenRefine%20source%20code%20repository",
     "source": "search"
   },
-  "openSUSE Project": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://github.com/openSUSE/mentoring",
-        "host": "GitHub",
-        "verified": false
-      }
-    ],
-    "source": "derived"
-  },
   "Orcasound": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Orcasound%20source%20code%20repository",
@@ -2661,42 +2328,10 @@
     "organizationProfile": "https://www.google.com/search?q=Postman%20source%20code%20repository",
     "source": "search"
   },
-  "Processing Foundation": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://github.com/processing/Processing-Foundation-GSoC",
-        "host": "GitHub",
-        "verified": false
-      }
-    ],
-    "source": "derived"
-  },
-  "SCoRe Lab": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=SCoRe%20Lab%20source%20code%20repository",
-    "source": "search"
-  },
-  "Shogun": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Shogun%20source%20code%20repository",
-    "source": "search"
-  },
   "Wireshark": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Wireshark%20source%20code%20repository",
     "source": "search"
-  },
-  "AFLplusplus": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://github.com/AFLplusplus/LibAFL",
-        "host": "GitHub",
-        "verified": false
-      }
-    ],
-    "source": "derived"
   },
   "AnkiDroid": {
     "repositories": [
@@ -2724,16 +2359,6 @@
     "organizationProfile": "https://www.google.com/search?q=CASTOR%20source%20code%20repository",
     "source": "search"
   },
-  "Center for Research in Open Source Software, UC Santa Cruz": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Center%20for%20Research%20in%20Open%20Source%20Software%2C%20UC%20Santa%20Cruz%20source%20code%20repository",
-    "source": "search"
-  },
-  "CHAOSS Project": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=CHAOSS%20Project%20source%20code%20repository",
-    "source": "search"
-  },
   "Chromium": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Chromium%20source%20code%20repository",
@@ -2744,26 +2369,21 @@
     "organizationProfile": "https://www.google.com/search?q=Cilium%20source%20code%20repository",
     "source": "search"
   },
-  "CNCF": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://github.com/cncf/mentoring",
-        "host": "GitHub",
-        "verified": false
-      }
-    ],
-    "source": "derived"
-  },
   "DeepPavlov": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=DeepPavlov%20source%20code%20repository",
     "source": "search"
   },
-  "Department of Biomedical Informatics (BMI), Emory University School of Medicine": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Department%20of%20Biomedical%20Informatics%20(BMI)%2C%20Emory%20University%20School%20of%20Medicine%20source%20code%20repository",
-    "source": "search"
+  "Department of Biomedical Informatics, Emory University": {
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/NISYSLAB/Emory-BMI-GSoC",
+        "host": "GitHub",
+        "verified": false
+      }
+    ],
+    "source": "derived"
   },
   "Elm Tooling": {
     "repositories": [
@@ -2793,11 +2413,6 @@
     "organizationProfile": "https://www.google.com/search?q=Genome%20Assembly%20and%20Annotation%20source%20code%20repository",
     "source": "search"
   },
-  "GFOSS - Open Technology Alliance": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=GFOSS%20-%20Open%20Technology%20Alliance%20source%20code%20repository",
-    "source": "search"
-  },
   "GitLab": {
     "repositories": [
       {
@@ -2809,16 +2424,6 @@
     ],
     "organizationProfile": "https://contributors.gitlab.com/issues",
     "source": "derived"
-  },
-  "GNOME Foundation": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=GNOME%20Foundation%20source%20code%20repository",
-    "source": "search"
-  },
-  "GNU Mailman Project": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=GNU%20Mailman%20Project%20source%20code%20repository",
-    "source": "search"
   },
   "Google FHIR SDK": {
     "repositories": [
@@ -2852,47 +2457,16 @@
     "organizationProfile": "https://www.google.com/search?q=Halide%20source%20code%20repository",
     "source": "search"
   },
-  "Integrated Ocean Observing System (IOOS)": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Integrated%20Ocean%20Observing%20System%20(IOOS)%20source%20code%20repository",
-    "source": "search"
-  },
-  "Intel Video and Audio for Linux": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Intel%20Video%20and%20Audio%20for%20Linux%20source%20code%20repository",
-    "source": "search"
-  },
-  "International Catrobat Association": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=International%20Catrobat%20Association%20source%20code%20repository",
-    "source": "search"
-  },
-  "JabRef e.V.": {
+  "IOOS": {
     "repositories": [
       {
         "label": "Source repository",
-        "url": "https://jabref.github.io/GSoC/projects",
-        "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "source": "derived"
-  },
-  "Java PathFinder": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://github.com/javapathfinder/jpf-core",
+        "url": "https://github.com/ioos/gsoc",
         "host": "GitHub",
         "verified": false
       }
     ],
     "source": "derived"
-  },
-  "Kodi": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Kodi%20source%20code%20repository",
-    "source": "search"
   },
   "Learning Equality": {
     "repositories": [],
@@ -2909,9 +2483,9 @@
     "organizationProfile": "https://www.google.com/search?q=LibreCube%20Initiative%20source%20code%20repository",
     "source": "search"
   },
-  "Machine Learning for Science (ML4SCI) Umbrella Organization": {
+  "Machine Learning for Science (ML4SCI)": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Machine%20Learning%20for%20Science%20(ML4SCI)%20Umbrella%20Organization%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=Machine%20Learning%20for%20Science%20(ML4SCI)%20source%20code%20repository",
     "source": "search"
   },
   "MapAction": {
@@ -2919,9 +2493,9 @@
     "organizationProfile": "https://www.google.com/search?q=MapAction%20source%20code%20repository",
     "source": "search"
   },
-  "Mayor's Office of New Urban Mechanics (City of Boston)": {
+  "Mayor's Office of New Urban Mechanics": {
     "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Mayor's%20Office%20of%20New%20Urban%20Mechanics%20(City%20of%20Boston)%20source%20code%20repository",
+    "organizationProfile": "https://www.google.com/search?q=Mayor's%20Office%20of%20New%20Urban%20Mechanics%20source%20code%20repository",
     "source": "search"
   },
   "Media Cloud": {
@@ -2937,34 +2511,17 @@
   "MetaCall": {
     "repositories": [
       {
-        "label": "Organization profile",
-        "url": "https://github.com/metacall",
+        "label": "Source repository",
+        "url": "https://github.com/metacall/gsoc-2026",
         "host": "GitHub",
         "verified": false
       }
     ],
-    "organizationProfile": "https://github.com/metacall",
     "source": "derived"
   },
   "Navidrome": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Navidrome%20source%20code%20repository",
-    "source": "search"
-  },
-  "Open Robotics": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://github.com/osrf/osrf_wiki",
-        "host": "GitHub",
-        "verified": false
-      }
-    ],
-    "source": "derived"
-  },
-  "OSGeo (Open Source Geospatial Foundation)": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=OSGeo%20(Open%20Source%20Geospatial%20Foundation)%20source%20code%20repository",
     "source": "search"
   },
   "Pidgin Instant Messenger": {
@@ -2997,17 +2554,6 @@
     "organizationProfile": "https://www.google.com/search?q=Rizin%20source%20code%20repository",
     "source": "search"
   },
-  "Scala Center": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://github.com/scalacenter/GoogleSummerOfCode",
-        "host": "GitHub",
-        "verified": false
-      }
-    ],
-    "source": "derived"
-  },
   "Shaka Player": {
     "repositories": [
       {
@@ -3032,11 +2578,6 @@
   "The Palisadoes Foundation": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=The%20Palisadoes%20Foundation%20source%20code%20repository",
-    "source": "search"
-  },
-  "The R Project for Statistical Computing": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=The%20R%20Project%20for%20Statistical%20Computing%20source%20code%20repository",
     "source": "search"
   },
   "TianoCore": {
@@ -3065,21 +2606,6 @@
     ],
     "source": "derived"
   },
-  "52°North Spatial Information Research GmbH": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=52%C2%B0North%20Spatial%20Information%20Research%20GmbH%20source%20code%20repository",
-    "source": "search"
-  },
-  "Academy Software Foundation": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Academy%20Software%20Foundation%20source%20code%20repository",
-    "source": "search"
-  },
-  "Center for Research in Open Source Software (CROSS)": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Center%20for%20Research%20in%20Open%20Source%20Software%20(CROSS)%20source%20code%20repository",
-    "source": "search"
-  },
   "Center for Translational Data Science": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Center%20for%20Translational%20Data%20Science%20source%20code%20repository",
@@ -3088,22 +2614,6 @@
   "CHIPS Alliance": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=CHIPS%20Alliance%20source%20code%20repository",
-    "source": "search"
-  },
-  "Department of Biomedical Informatics, Emory University": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://github.com/NISYSLAB/Emory-BMI-GSoC",
-        "host": "GitHub",
-        "verified": false
-      }
-    ],
-    "source": "derived"
-  },
-  "Drupal Association": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Drupal%20Association%20source%20code%20repository",
     "source": "search"
   },
   "Electron": {
@@ -3148,41 +2658,6 @@
     ],
     "source": "derived"
   },
-  "IOOS": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://github.com/ioos/gsoc",
-        "host": "GitHub",
-        "verified": false
-      }
-    ],
-    "source": "derived"
-  },
-  "JdeRobot": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://jderobot.github.io/activities/gsoc",
-        "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "source": "derived"
-  },
-  "Jenkins": {
-    "repositories": [
-      {
-        "label": "Jenkins core",
-        "url": "https://github.com/jenkinsci/jenkins",
-        "host": "GitHub",
-        "verified": true,
-        "lastChecked": "2026-11-05"
-      }
-    ],
-    "organizationProfile": "https://github.com/jenkinsci",
-    "source": "manual"
-  },
   "Jenkins X": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Jenkins%20X%20source%20code%20repository",
@@ -3203,19 +2678,9 @@
     "organizationProfile": "https://www.google.com/search?q=libssh%20source%20code%20repository",
     "source": "search"
   },
-  "Machine Learning for Science (ML4SCI)": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Machine%20Learning%20for%20Science%20(ML4SCI)%20source%20code%20repository",
-    "source": "search"
-  },
   "Mathesar": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Mathesar%20source%20code%20repository",
-    "source": "search"
-  },
-  "Mayor's Office of New Urban Mechanics": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Mayor's%20Office%20of%20New%20Urban%20Mechanics%20source%20code%20repository",
     "source": "search"
   },
   "Micro Electronics Research Lab - UITU": {
@@ -3244,17 +2709,6 @@
       {
         "label": "Source repository",
         "url": "https://github.com/neutralinojs/gsoc2026",
-        "host": "GitHub",
-        "verified": false
-      }
-    ],
-    "source": "derived"
-  },
-  "omegaUp": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://github.com/omegaup/omegaup",
         "host": "GitHub",
         "verified": false
       }
@@ -3308,11 +2762,6 @@
     "organizationProfile": "https://www.google.com/search?q=RADAR-base%20source%20code%20repository",
     "source": "search"
   },
-  "ReactOS Foundation": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=ReactOS%20Foundation%20source%20code%20repository",
-    "source": "search"
-  },
   "Responsible AI and Human Centred Technology": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=Responsible%20AI%20and%20Human%20Centred%20Technology%20source%20code%20repository",
@@ -3355,22 +2804,6 @@
         "label": "Source repository",
         "url": "https://tardis-sn.github.io/summer_of_code/ideas",
         "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "source": "derived"
-  },
-  "The FreeBSD Project": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=The%20FreeBSD%20Project%20source%20code%20repository",
-    "source": "search"
-  },
-  "The JPF team": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://github.com/javapathfinder/jpf-core",
-        "host": "GitHub",
         "verified": false
       }
     ],
@@ -3466,12 +2899,12 @@
     "repositories": [
       {
         "label": "Organization profile",
-        "url": "https://ucsc-ospo.github.io/osre25",
+        "url": "https://ucsc-ospo.github.io/osre26",
         "host": "Self-hosted Git",
         "verified": false
       }
     ],
-    "organizationProfile": "https://ucsc-ospo.github.io/osre25",
+    "organizationProfile": "https://ucsc-ospo.github.io/osre26",
     "source": "derived"
   },
   "Invesalius": {
@@ -3661,11 +3094,6 @@
     ],
     "source": "derived"
   },
-  "KolibriOS Project Team": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=KolibriOS%20Project%20Team%20source%20code%20repository",
-    "source": "search"
-  },
   "LAPPIS": {
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=LAPPIS%20source%20code%20repository",
@@ -3732,7 +3160,7 @@
     "repositories": [
       {
         "label": "Source repository",
-        "url": "https://github.com/projectmesa/mesa",
+        "url": "https://github.com/mesa/mesa",
         "host": "GitHub",
         "verified": false
       }
@@ -3808,12 +3236,12 @@
     "repositories": [
       {
         "label": "Organization profile",
-        "url": "https://github.com/ruxailab",
-        "host": "GitHub",
+        "url": "https://ruxailab.github.io/gsoc",
+        "host": "Self-hosted Git",
         "verified": false
       }
     ],
-    "organizationProfile": "https://github.com/ruxailab",
+    "organizationProfile": "https://ruxailab.github.io/gsoc",
     "source": "derived"
   },
   "Waycrate": {
@@ -3889,18 +3317,6 @@
     "repositories": [],
     "organizationProfile": "https://www.google.com/search?q=SW360%20source%20code%20repository",
     "source": "search"
-  },
-  "D Language Foundation": {
-    "repositories": [
-      {
-        "label": "Organization profile",
-        "url": "https://dlang.github.io/GSoC",
-        "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "organizationProfile": "https://dlang.github.io/GSoC",
-    "source": "derived"
   },
   "St. Jude Children's Research Hospital": {
     "repositories": [
@@ -4067,10 +3483,5 @@
       }
     ],
     "source": "derived"
-  },
-  "Gambit: The package for computation in game theory": {
-    "repositories": [],
-    "organizationProfile": "https://www.google.com/search?q=Gambit%3A%20The%20package%20for%20computation%20in%20game%20theory%20source%20code%20repository",
-    "source": "search"
   }
 }

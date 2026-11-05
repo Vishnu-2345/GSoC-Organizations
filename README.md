@@ -60,7 +60,18 @@ Annual source snapshots live in `data/raw/YYYY.json`. They are factual exports o
 4. Run `npm run validate`, `npm test`, and `npm run build`.
 5. Manually review new or changed repository links using [`docs/repository-curation.md`](docs/repository-curation.md).
 
-The preparation script normalizes only clear equivalents such as capitalization, surrounding whitespace, `nodejs`/`Node.js`, and `golang`/`Go`. It intentionally keeps meaningful distinctions such as C and C++.
+This follows the same data lifecycle as `gsocorganizations.dev`: annual JSON snapshots are committed to the repository and compiled during the static build. The reference site does not query GSoC or GitHub at page-request time and does not contain an automatic annual scraper.
+
+During compilation, `scripts/prepare-data.mjs`:
+
+1. Applies a reviewable organization-name alias table.
+2. Merges annual records when their canonical names or normalized official website URLs match.
+3. Uses only the three most recent participation records for current technology/topic tags while retaining every historical project year.
+4. Normalizes clear tag equivalents such as capitalization, surrounding whitespace, `nodejs`/`Node.js`, and `golang`/`Go` without collapsing meaningful distinctions such as C and C++.
+5. Derives participation totals and repository candidates.
+6. Emits the normalized static dataset consumed by Astro.
+
+This produces 519 historical organization identities from the 2016–2026 snapshots, including all 183 organizations in the 2026 snapshot.
 
 ## Repository curation
 
@@ -79,7 +90,7 @@ For umbrella organizations, add multiple repository records rather than choosing
 - `src/pages/org/[slug].astro`: statically generated organization pages.
 - `src/data/organizations.json`: normalized, version-controlled browsing data.
 - `api/repository-links.json`: repository link records and provenance.
-- `scripts/prepare-data.mjs`: repeatable data compiler.
+- `scripts/prepare-data.mjs`: repeatable build-time compiler using canonical-name and official-website identity matching.
 - `scripts/validate-data.mjs`: schema, duplicate, tag, and URL checks.
 - `scripts/validate-repository-links.mjs`: repository format, provenance, duplicate, redirect, and reachability checks.
 
@@ -87,7 +98,7 @@ Bookmarks and notes use versioned local-storage keys. Malformed local data or UR
 
 ## Known data limitations
 
-- Organization name changes across years can appear as separate historical records until manually reconciled.
+- Organization name changes without a known alias and simultaneous official-website changes can appear as separate historical records until manually reconciled.
 - Most repository links are inferred and require the manual review workflow before they can be marked verified.
 - Project-level technology tags are text matches against organization-declared technologies. They are displayed as inferred, not authoritative.
 - Public archive records occasionally contain stale external links. Validation identifies malformed URLs; network validation and manual review are still needed for freshness.

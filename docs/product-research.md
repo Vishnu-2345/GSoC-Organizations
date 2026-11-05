@@ -62,6 +62,7 @@ These are intentionally not implemented as scores or claims because the current 
 ## Product decisions from the research
 
 - Keep the recognizable sidebar, search, grid, detail, chart, and year-section structure.
+- Retain the reference site's static data lifecycle: version annual archive snapshots, compile them at build time, and merge identities only through explicit name aliases or matching official website URLs.
 - Treat all URL and browser-local state as untrusted and recoverable.
 - Make repository provenance visible at the moment of use.
 - Prefer deterministic filters and transparent historical facts over opaque rankings.

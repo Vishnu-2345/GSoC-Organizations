@@ -6,6 +6,20 @@ const organizations = JSON.parse(
 const errors = [];
 const names = new Set();
 const slugs = new Set();
+const websites = new Map();
+
+function websiteIdentity(value) {
+  if (!value) return '';
+  try {
+    const url = new URL(value);
+    if (!['http:', 'https:'].includes(url.protocol)) return '';
+    const host = url.hostname.replace(/^www\./, '').toLocaleLowerCase();
+    const pathname = url.pathname.replace(/\/+$/, '') || '/';
+    return `${host}${pathname}`;
+  } catch {
+    return '';
+  }
+}
 
 function validUrl(value) {
   if (!value) return true;
@@ -27,6 +41,14 @@ for (const org of organizations) {
     errors.push(`${org.name}: duplicate slug ${org.slug}`);
   names.add(nameKey);
   slugs.add(org.slug);
+  const websiteKey = websiteIdentity(org.website);
+  if (websiteKey && websites.has(websiteKey)) {
+    errors.push(
+      `${org.name}: duplicate official website identity shared with ${websites.get(websiteKey)}`,
+    );
+  } else if (websiteKey) {
+    websites.set(websiteKey, org.name);
+  }
 
   const years = new Set();
   for (const participation of org.participations) {
