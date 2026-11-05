@@ -1,6 +1,6 @@
-# Gsock organizations
+# GSoC Organizations
 
-Gsock organizations is a static-first explorer for researching Google Summer of Code organizations. It provides local full-text search, inclusion and exclusion filters, sorting, browser-local shortlists and notes, participation history, historical projects, and transparent repository-link states.
+GSoC Organizations is a static-first explorer for researching Google Summer of Code organizations. It provides local full-text search, inclusion and exclusion filters, sorting, browser-local shortlists and notes, participation history, historical projects, and transparent repository-link states.
 
 This is an independent community project. It is not affiliated with or endorsed by Google. Google Summer of Code is a Google program.
 

@@ -4,7 +4,7 @@ test('uses the official brand across the page and browser tab', async ({
   page,
 }) => {
   await page.goto('/shortlist/');
-  await expect(page).toHaveTitle('Gsock organizations');
+  await expect(page).toHaveTitle('GSoC Organizations');
 
   const favicon = page.locator('link[rel="icon"]');
   await expect(favicon).toHaveAttribute(
@@ -13,7 +13,7 @@ test('uses the official brand across the page and browser tab', async ({
   );
 
   const homeLink = page.getByRole('link', {
-    name: 'Gsock organizations home',
+    name: 'GSoC Organizations home',
   });
   await expect(homeLink.locator('img')).toHaveAttribute(
     'src',
@@ -21,7 +21,7 @@ test('uses the official brand across the page and browser tab', async ({
   );
   await homeLink.click();
   await expect(page).toHaveURL('/');
-  await expect(page).toHaveTitle('Gsock organizations');
+  await expect(page).toHaveTitle('GSoC Organizations');
 });
 
 test('search, malformed URL recovery, and organization navigation', async ({

@@ -135,7 +135,7 @@ export default function Explorer({
               <a
                 className="brand-home-link"
                 href="/"
-                aria-label="Gsock organizations home"
+                aria-label="GSoC Organizations home"
               >
                 <img
                   className="gsoc-mark"
