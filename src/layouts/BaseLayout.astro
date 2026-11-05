@@ -1,0 +1,68 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'GSoC Atlas — Explore open-source organizations',
+  description = 'Search, compare, and shortlist Google Summer of Code organizations using public archive data and transparent source links.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0A66C2" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <script is:inline>
+      document.documentElement.classList.add('js');
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/" aria-label="GSoC Atlas home">
+          <span class="brand-mark" aria-hidden="true">G</span>
+          <span>GSoC Atlas</span>
+        </a>
+        <nav aria-label="Primary navigation">
+          <a href="/">Directory</a>
+          <a href="/shortlist/">Shortlist</a>
+          <a href="/about/">About the data</a>
+        </nav>
+        <a
+          class="header-source"
+          href="https://summerofcode.withgoogle.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Official GSoC ↗
+        </a>
+      </div>
+    </header>
+    <div id="main-content">
+      <slot />
+    </div>
+    <footer class="site-footer">
+      <div>
+        <strong>GSoC Atlas</strong>
+        <p>
+          An independent, privacy-friendly explorer built from public GSoC
+          archive data.
+        </p>
+      </div>
+      <div>
+        <span>No analytics. No advertising. Browser-local notes.</span>
+        <a href="/about/">Data notes & methodology</a>
+      </div>
+    </footer>
+  </body>
+</html>

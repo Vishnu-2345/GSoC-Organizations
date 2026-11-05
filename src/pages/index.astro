@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Explorer from '../components/Explorer';
+import organizationsData from '../data/organizations.json';
+import type { Organization, OrganizationSummary } from '../types';
+
+const organizations = organizationsData as Organization[];
+const summaries: OrganizationSummary[] = organizations.map(
+  ({ participations, communityLinks, ...organization }) => organization,
+);
+---
+
+<BaseLayout>
+  <Explorer organizations={summaries} client:load />
+</BaseLayout>

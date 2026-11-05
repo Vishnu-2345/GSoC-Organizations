@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import organizationsData from '../data/organizations.json';
+
+const latestYear = Math.max(
+  ...organizationsData.flatMap((organization) => organization.years),
+);
+---
+
+<BaseLayout
+  title="About the data — GSoC Atlas"
+  description="How GSoC Atlas sources, normalizes, and verifies organization data and repository links."
+>
+  <main class="prose-page">
+    <div class="page-intro">
+      <span class="eyebrow">Transparent by design</span>
+      <h1>About the data</h1>
+      <p>
+        GSoC Atlas reorganizes public Google Summer of Code archive data for
+        research. It does not rank organizations or predict acceptance.
+      </p>
+    </div>
+    <div class="prose-grid">
+      <article class="detail-card prose-card">
+        <h2>What is included</h2>
+        <p>
+          The local dataset covers annual archive records through {latestYear},
+          with organization metadata, participation years, and historical
+          projects. Tags are normalized only for obvious spelling,
+          capitalization, and whitespace equivalents.
+        </p>
+        <p>
+          Project-level technology tags are inferred by matching an
+          organization’s declared technologies against project text. They are
+          labeled as inferred and should be used as discovery hints, not
+          authoritative classifications.
+        </p>
+      </article>
+      <article class="detail-card prose-card">
+        <h2>Repository link states</h2>
+        <ul>
+          <li>
+            <strong>Verified</strong> links were manually checked against an official
+            organization-controlled source.
+          </li>
+          <li>
+            <strong>Inferred</strong> links are derived from official ideas, contribution,
+            or organization URLs.
+          </li>
+          <li>
+            <strong>Find repositories</strong> is a clearly labeled search fallback
+            when no direct source can be established.
+          </li>
+        </ul>
+      </article>
+      <article class="detail-card prose-card">
+        <h2>Privacy and independence</h2>
+        <p>
+          Bookmarks and notes stay in browser storage. The site has no account
+          system, advertising, analytics, or runtime GitHub API calls.
+        </p>
+        <p>
+          This independent community project is not affiliated with or endorsed
+          by Google. Google Summer of Code is a Google program.
+        </p>
+      </article>
+      <article class="detail-card prose-card">
+        <h2>Methodology</h2>
+        <p>
+          See the repository documentation for the complete <a
+            href="https://github.com/"
+            rel="noreferrer">research record</a
+          >, data-refresh steps, validation checks, and repository-review
+          workflow.
+        </p>
+      </article>
+    </div>
+  </main>
+</BaseLayout>

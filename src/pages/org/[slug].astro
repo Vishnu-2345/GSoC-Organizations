@@ -1,0 +1,316 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ParticipationChart from '../../components/ParticipationChart.astro';
+import LocalResearch from '../../components/LocalResearch';
+import organizationsData from '../../data/organizations.json';
+import type { Organization } from '../../types';
+
+export function getStaticPaths() {
+  return (organizationsData as Organization[]).map((organization) => ({
+    params: { slug: organization.slug },
+    props: { organization },
+  }));
+}
+
+interface Props {
+  organization: Organization;
+}
+
+const { organization } = Astro.props;
+const primaryRepository = organization.repository.repositories[0];
+const repositoryFallback = organization.repository.organizationProfile;
+const initials = organization.name
+  .split(/\s+/)
+  .slice(0, 2)
+  .map((word) => word[0])
+  .join('');
+---
+
+<BaseLayout
+  title={`${organization.name} — GSoC Atlas`}
+  description={organization.description}
+>
+  <main class="detail-page">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Organizations</a><span>/</span><span aria-current="page"
+        >{organization.name}</span
+      >
+    </nav>
+    <section class="organization-hero">
+      <div class="detail-logo" aria-hidden="true">
+        <span>{initials}</span>
+        {
+          organization.logo && (
+            <img
+              src={organization.logo}
+              alt=""
+              width="88"
+              height="88"
+              decoding="async"
+            />
+          )
+        }
+      </div>
+      <div class="organization-heading">
+        <span class="category-label">{organization.category}</span>
+        <h1>{organization.name}</h1>
+        <p>{organization.description}</p>
+        <div class="hero-actions">
+          {
+            organization.website && (
+              <a
+                class="button secondary-button"
+                href={organization.website}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Official website ↗
+              </a>
+            )
+          }
+          {
+            primaryRepository ? (
+              <a
+                class="button primary-button"
+                href={primaryRepository.url}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {primaryRepository.host} source
+                <span
+                  class={
+                    primaryRepository.verified
+                      ? 'verification-pill verified'
+                      : 'verification-pill inferred'
+                  }
+                >
+                  {primaryRepository.verified ? 'Verified' : 'Inferred'}
+                </span>
+              </a>
+            ) : repositoryFallback ? (
+              <a
+                class="button primary-button"
+                href={repositoryFallback}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Find repositories ↗
+              </a>
+            ) : null
+          }
+        </div>
+      </div>
+      <dl class="hero-metrics">
+        <div><dt>Total projects</dt><dd>{organization.totalProjects}</dd></div>
+        <div>
+          <dt>Years participating</dt><dd>{organization.participationCount}</dd>
+        </div>
+        <div><dt>Most recent</dt><dd>{organization.latestYear}</dd></div>
+      </dl>
+    </section>
+
+    <div class="detail-layout">
+      <div class="detail-main">
+        <section class="detail-card" aria-labelledby="participation-heading">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">Public archive</span><h2
+                id="participation-heading"
+              >
+                Participation history
+              </h2>
+            </div>
+            <span>{organization.participationCount} program years</span>
+          </div>
+          <ParticipationChart participations={organization.participations} />
+        </section>
+
+        <section class="detail-card" aria-labelledby="history-heading">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">Year by year</span><h2 id="history-heading">
+                Historical projects
+              </h2>
+            </div>
+          </div>
+          <div class="history-list">
+            {
+              organization.participations.map(
+                (participation, participationIndex) => (
+                  <details open={participationIndex === 0}>
+                    <summary>
+                      <>
+                        <span>{participation.year}</span>
+                        <small>
+                          {participation.projectCount}{' '}
+                          {participation.projectCount === 1
+                            ? 'project'
+                            : 'projects'}
+                        </small>
+                      </>
+                    </summary>
+                    {participation.projects.length ? (
+                      <div class="project-list">
+                        {participation.projects.map((project) => (
+                          <article class="project-item">
+                            <h3>{project.title}</h3>
+                            <p>
+                              {project.shortDescription ||
+                                project.description ||
+                                'No project summary is available in the archive.'}
+                            </p>
+                            {project.inferredTechnologies.length > 0 && (
+                              <div
+                                class="tag-row"
+                                aria-label="Inferred project technologies"
+                              >
+                                <span class="inferred-label">Inferred:</span>
+                                {project.inferredTechnologies.map(
+                                  (technology) => (
+                                    <span
+                                      class="tag"
+                                      title="Inferred from project text"
+                                    >
+                                      {technology}
+                                    </span>
+                                  ),
+                                )}
+                              </div>
+                            )}
+                            <div class="project-links">
+                              {project.projectUrl && (
+                                <a
+                                  href={project.projectUrl}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                >
+                                  Project record ↗
+                                </a>
+                              )}
+                              {project.codeUrl && (
+                                <a
+                                  href={project.codeUrl}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                >
+                                  Submitted code ↗
+                                </a>
+                              )}
+                            </div>
+                          </article>
+                        ))}
+                      </div>
+                    ) : (
+                      <p class="empty-inline">
+                        No project records were included for this year.
+                      </p>
+                    )}
+                  </details>
+                ),
+              )
+            }
+          </div>
+        </section>
+
+        <LocalResearch
+          slug={organization.slug}
+          name={organization.name}
+          client:load
+        />
+      </div>
+
+      <aside class="detail-sidebar" aria-label="Organization resources">
+        <section class="detail-card resource-card">
+          <h2>Start contributing</h2>
+          <div class="resource-links">
+            {
+              organization.ideasUrl && (
+                <a
+                  href={organization.ideasUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <>
+                    <span>Project ideas</span>
+                    <small>Official organization link ↗</small>
+                  </>
+                </a>
+              )
+            }
+            {
+              organization.contributionGuide && (
+                <a
+                  href={organization.contributionGuide}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <>
+                    <span>Contribution guide</span>
+                    <small>How to get started ↗</small>
+                  </>
+                </a>
+              )
+            }
+            {
+              organization.communityLinks.map((link) => (
+                <a href={link.url} target="_blank" rel="noreferrer">
+                  <>
+                    <span>{link.label}</span>
+                    <small>Community resource ↗</small>
+                  </>
+                </a>
+              ))
+            }
+          </div>
+        </section>
+        <section class="detail-card resource-card">
+          <h2>Source repositories</h2>
+          {
+            organization.repository.repositories.length ? (
+              <div class="repository-list">
+                {organization.repository.repositories.map((repository) => (
+                  <a href={repository.url} target="_blank" rel="noreferrer">
+                    <span>{repository.label}</span>
+                    <small>
+                      {repository.host} ·{' '}
+                      {repository.verified
+                        ? `Verified ${repository.lastChecked || ''}`
+                        : 'Inferred, review before use'}
+                    </small>
+                  </a>
+                ))}
+              </div>
+            ) : (
+              <div class="repository-fallback">
+                <p>No direct repository has been established.</p>
+                {repositoryFallback && (
+                  <a href={repositoryFallback} target="_blank" rel="noreferrer">
+                    Find repositories ↗
+                  </a>
+                )}
+              </div>
+            )
+          }
+        </section>
+        <section class="detail-card resource-card">
+          <h2>Technologies</h2>
+          <div class="tag-row">
+            {
+              organization.technologies.map((technology) => (
+                <span class="tag">{technology}</span>
+              ))
+            }
+          </div>
+          <h2 class="resource-subheading">Topics</h2>
+          <div class="tag-row">
+            {
+              organization.topics.map((topic) => (
+                <span class="tag muted">{topic}</span>
+              ))
+            }
+          </div>
+        </section>
+      </aside>
+    </div>
+  </main>
+</BaseLayout>

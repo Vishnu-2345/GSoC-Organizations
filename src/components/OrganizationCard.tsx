@@ -1,0 +1,123 @@
+import type { OrganizationSummary } from '../types';
+
+type Props = {
+  organization: OrganizationSummary;
+  bookmarked: boolean;
+  onBookmark: (slug: string) => void;
+};
+
+export default function OrganizationCard({
+  organization,
+  bookmarked,
+  onBookmark,
+}: Props) {
+  const repository = organization.repository.repositories[0];
+  const repositoryUrl =
+    repository?.url || organization.repository.organizationProfile;
+  const initials = organization.name
+    .split(/\s+/)
+    .slice(0, 2)
+    .map((word) => word[0])
+    .join('');
+
+  return (
+    <article className="org-card">
+      <div className="org-card-topline">
+        <div className="org-logo" aria-hidden="true">
+          <span>{initials}</span>
+          {organization.logo && (
+            <img
+              src={organization.logo}
+              alt=""
+              width="56"
+              height="56"
+              loading="lazy"
+              decoding="async"
+              onError={(event) => {
+                event.currentTarget.hidden = true;
+              }}
+            />
+          )}
+        </div>
+        <button
+          className={`bookmark-button ${bookmarked ? 'is-bookmarked' : ''}`}
+          type="button"
+          aria-label={`${bookmarked ? 'Remove' : 'Add'} ${organization.name} ${bookmarked ? 'from' : 'to'} shortlist`}
+          aria-pressed={bookmarked}
+          onClick={() => onBookmark(organization.slug)}
+        >
+          {bookmarked ? '★' : '☆'}
+        </button>
+      </div>
+      <div className="org-card-body">
+        <span className="category-label">{organization.category}</span>
+        <h2>
+          <a href={`/org/${organization.slug}/`}>{organization.name}</a>
+        </h2>
+        <p>
+          {organization.description ||
+            'No description is available in the source archive.'}
+        </p>
+        <div className="year-row" aria-label="Recent participation years">
+          {organization.years.slice(0, 4).map((year) => (
+            <span key={year}>{year}</span>
+          ))}
+          {organization.years.length > 4 && (
+            <small>+{organization.years.length - 4}</small>
+          )}
+        </div>
+        <div className="tag-row" aria-label="Technologies">
+          {organization.technologies.slice(0, 4).map((technology) => (
+            <span className="tag" key={technology}>
+              {technology}
+            </span>
+          ))}
+          {organization.technologies.length > 4 && (
+            <span className="tag muted">
+              +{organization.technologies.length - 4}
+            </span>
+          )}
+        </div>
+      </div>
+      <dl className="card-metrics">
+        <div>
+          <dt>Projects</dt>
+          <dd>{organization.totalProjects}</dd>
+        </div>
+        <div>
+          <dt>Participations</dt>
+          <dd>{organization.participationCount}</dd>
+        </div>
+      </dl>
+      <div className="org-card-actions">
+        <a
+          className="button secondary-button"
+          href={`/org/${organization.slug}/`}
+        >
+          View profile
+        </a>
+        {repositoryUrl && (
+          <a
+            className="button repository-button"
+            href={repositoryUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {repository?.host || 'Web'}
+            <span
+              className={repository?.verified ? 'verified-dot' : 'inferred-dot'}
+              aria-hidden="true"
+            />
+            <span className="sr-only">
+              {repository?.verified
+                ? 'verified'
+                : organization.repository.source === 'search'
+                  ? 'search fallback'
+                  : 'inferred'}
+            </span>
+          </a>
+        )}
+      </div>
+    </article>
+  );
+}

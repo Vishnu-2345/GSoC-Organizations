@@ -1,0 +1,78 @@
+---
+import type { Participation } from '../types';
+
+interface Props {
+  participations: Participation[];
+}
+
+const { participations } = Astro.props;
+const values = [...participations].sort((a, b) => a.year - b.year);
+const max = Math.max(1, ...values.map((item) => item.projectCount));
+const width = 720;
+const height = 230;
+const left = 42;
+const bottom = 34;
+const chartHeight = 170;
+const step = values.length > 1 ? (width - left - 22) / (values.length - 1) : 0;
+const points = values.map((item, index) => ({
+  ...item,
+  x: left + (values.length === 1 ? (width - left) / 2 : index * step),
+  y: 14 + chartHeight - (item.projectCount / max) * chartHeight,
+}));
+const line = points.map((point) => `${point.x},${point.y}`).join(' ');
+---
+
+<div class="chart-wrap">
+  <svg
+    class="participation-chart"
+    viewBox={`0 0 ${width} ${height}`}
+    role="img"
+    aria-labelledby="chart-title chart-description"
+  >
+    <title id="chart-title">Projects by participation year</title>
+    <desc id="chart-description"
+      >{
+        values
+          .map((item) => `${item.year}: ${item.projectCount} projects`)
+          .join(', ')
+      }</desc
+    >
+    <line
+      x1={left}
+      y1={14 + chartHeight}
+      x2={width - 12}
+      y2={14 + chartHeight}
+      class="chart-axis"></line>
+    {points.length > 1 && <polyline points={line} class="chart-line" />}
+    {
+      points.map((point) => (
+        <g>
+          <line
+            x1={point.x}
+            y1={14 + chartHeight}
+            x2={point.x}
+            y2={point.y}
+            class="chart-stem"
+          />
+          <circle cx={point.x} cy={point.y} r="5" class="chart-point" />
+          <text
+            x={point.x}
+            y={point.y - 12}
+            text-anchor="middle"
+            class="chart-value"
+          >
+            {point.projectCount}
+          </text>
+          <text
+            x={point.x}
+            y={height - 12}
+            text-anchor="middle"
+            class="chart-year"
+          >
+            {point.year}
+          </text>
+        </g>
+      ))
+    }
+  </svg>
+</div>

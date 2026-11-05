@@ -1,0 +1,5 @@
+node_modules
+dist
+data/raw
+src/data/organizations.json
+api/repository-links.json
