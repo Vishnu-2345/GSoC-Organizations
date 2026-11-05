@@ -90,7 +90,11 @@ test('footer provides project, privacy, and creator links', async ({
   );
   await expect(
     footer.getByRole('link', { name: 'LinkedIn ↗' }),
-  ).toHaveAttribute('href', 'https://www.linkedin.com/in/rohanmalhotracodes');
+  ).toHaveAttribute('href', 'https://www.linkedin.com/in/rohanmalhotracodes/');
+  await expect(footer.getByRole('link', { name: 'X ↗' })).toHaveAttribute(
+    'href',
+    'https://x.com/rohangotnochill',
+  );
   await footer.getByRole('link', { name: 'Privacy policy' }).click();
   await expect(
     page.getByRole('heading', { level: 1, name: 'Privacy policy' }),
