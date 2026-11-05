@@ -26,10 +26,7 @@ const initials = organization.name
   .join('');
 ---
 
-<BaseLayout
-  title={`${organization.name} — GSoC Atlas`}
-  description={organization.description}
->
+<BaseLayout description={organization.description}>
   <main class="detail-page">
     <nav class="breadcrumbs" aria-label="Breadcrumb">
       <a href="/">Organizations</a><span>/</span><span aria-current="page"

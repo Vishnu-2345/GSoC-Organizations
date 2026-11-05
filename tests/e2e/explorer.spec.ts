@@ -1,5 +1,29 @@
 import { expect, test } from '@playwright/test';
 
+test('uses the official brand across the page and browser tab', async ({
+  page,
+}) => {
+  await page.goto('/shortlist/');
+  await expect(page).toHaveTitle('Gsock organizations');
+
+  const favicon = page.locator('link[rel="icon"]');
+  await expect(favicon).toHaveAttribute(
+    'href',
+    '/brand/gsoc-organizations-favicon.png',
+  );
+
+  const homeLink = page.getByRole('link', {
+    name: 'Gsock organizations home',
+  });
+  await expect(homeLink.locator('img')).toHaveAttribute(
+    'src',
+    '/brand/gsoc-organizations-logo.png',
+  );
+  await homeLink.click();
+  await expect(page).toHaveURL('/');
+  await expect(page).toHaveTitle('Gsock organizations');
+});
+
 test('search, malformed URL recovery, and organization navigation', async ({
   page,
 }) => {

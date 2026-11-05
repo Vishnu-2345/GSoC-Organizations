@@ -2,12 +2,10 @@
 import '../styles/global.css';
 
 interface Props {
-  title?: string;
   description?: string;
 }
 
 const {
-  title = 'GSoC Atlas — Explore open-source organizations',
   description = 'Search, compare, and shortlist Google Summer of Code organizations using public archive data and transparent source links.',
 } = Astro.props;
 ---
@@ -20,7 +18,14 @@ const {
     <meta name="description" content={description} />
     <meta name="theme-color" content="#F9AB00" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="64x64"
+      href="/brand/gsoc-organizations-favicon.png"
+    />
+    <link rel="apple-touch-icon" href="/brand/gsoc-organizations-logo.png" />
+    <title>Gsock organizations</title>
     <script is:inline>
       document.documentElement.classList.add('js');
     </script>
@@ -32,7 +37,7 @@ const {
     </div>
     <footer class="site-footer">
       <div>
-        <strong>GSoC Atlas</strong>
+        <strong>Gsock organizations</strong>
         <p>
           An independent, privacy-friendly explorer built from public GSoC
           archive data.
