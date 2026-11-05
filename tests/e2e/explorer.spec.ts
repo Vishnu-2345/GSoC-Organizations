@@ -86,7 +86,7 @@ test('footer provides project, privacy, and creator links', async ({
     footer.getByRole('link', { name: 'GitHub repository ↗' }),
   ).toHaveAttribute(
     'href',
-    'https://github.com/rohanmalhotracodes/gsoc-org-explorer',
+    'https://github.com/rohanmalhotracodes/GSoC-Organizations',
   );
   await expect(
     footer.getByRole('link', { name: 'LinkedIn ↗' }),
