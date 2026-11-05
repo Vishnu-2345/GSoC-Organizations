@@ -35,7 +35,6 @@ const initials = organization.name
     </nav>
     <section class="organization-hero">
       <div class="detail-logo" aria-hidden="true">
-        <span>{initials}</span>
         {
           organization.logo && (
             <img
@@ -44,9 +43,11 @@ const initials = organization.name
               width="124"
               height="124"
               decoding="async"
+              onerror="this.hidden=true"
             />
           )
         }
+        <span>{initials}</span>
       </div>
       <div class="organization-heading">
         <span class="category-label">{organization.category}</span>

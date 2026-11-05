@@ -31,7 +31,6 @@ export default function OrganizationCard({
     >
       <div className="org-card-topline">
         <div className="org-logo" aria-hidden="true">
-          <span>{initials}</span>
           {organization.logo && (
             <img
               src={organization.logo}
@@ -45,6 +44,7 @@ export default function OrganizationCard({
               }}
             />
           )}
+          <span>{initials}</span>
         </div>
         <button
           className={`bookmark-button ${bookmarked ? 'is-bookmarked' : ''}`}

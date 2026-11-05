@@ -209,6 +209,11 @@ img {
   color: #65676b;
 }
 
+.global-search input::-webkit-search-cancel-button {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
 .global-search button {
   width: 34px;
   height: 34px;
@@ -546,6 +551,11 @@ img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.org-logo img:not([hidden]) + span,
+.detail-logo img:not([hidden]) + span {
+  visibility: hidden;
 }
 
 .bookmark-button {

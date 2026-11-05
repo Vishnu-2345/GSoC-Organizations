@@ -38,6 +38,9 @@ test('search, malformed URL recovery, and organization navigation', async ({
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
   const search = page.getByRole('searchbox', { name: 'Search organizations' });
   await search.fill('Metasploit');
+  await expect(page.getByRole('button', { name: 'Clear search' })).toHaveCount(
+    1,
+  );
   const metasploitCard = page.getByRole('article').filter({
     has: page.getByRole('heading', { name: 'Metasploit', exact: true }),
   });
