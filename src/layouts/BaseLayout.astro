@@ -48,25 +48,69 @@ const {
       <slot />
     </div>
     <footer class="site-footer">
-      <div>
-        <strong>GSoC Organizations</strong>
-        <p>
-          An independent, privacy-friendly explorer built from public GSoC
-          archive data.
-        </p>
-      </div>
-      <div>
-        <span>No analytics. No advertising. Browser-local notes.</span>
-        <nav aria-label="Footer navigation">
-          <a href="/">Directory</a>
-          <a href="/shortlist/">Shortlist</a>
-          <a href="/about/">About the data</a>
+      <div class="footer-inner">
+        <div class="footer-brand">
           <a
-            href="https://summerofcode.withgoogle.com/"
-            target="_blank"
-            rel="noreferrer">Official GSoC ↗</a
+            class="footer-brand-link"
+            href="/"
+            aria-label="GSoC Organizations footer home"
           >
-        </nav>
+            <img
+              src="/brand/gsoc-organizations-logo.svg"
+              alt=""
+              width="54"
+              height="54"
+            />
+            <span>GSoC Organizations</span>
+          </a>
+          <p>
+            A focused way to discover, compare, and research open-source
+            communities from the public Google Summer of Code archive.
+          </p>
+        </div>
+        <div class="footer-link-grid">
+          <nav class="footer-column" aria-labelledby="footer-explore-heading">
+            <h2 id="footer-explore-heading">Explore</h2>
+            <a href="/">Directory</a>
+            <a href="/shortlist/">Shortlist</a>
+            <a href="/about/">About the data</a>
+          </nav>
+          <nav class="footer-column" aria-labelledby="footer-project-heading">
+            <h2 id="footer-project-heading">Project</h2>
+            <a href="/privacy/">Privacy policy</a>
+            <a
+              href="https://github.com/rohanmalhotracodes/gsoc-org-explorer"
+              target="_blank"
+              rel="noreferrer">GitHub repository ↗</a
+            >
+            <a
+              href="https://summerofcode.withgoogle.com/"
+              target="_blank"
+              rel="noreferrer">Official GSoC ↗</a
+            >
+          </nav>
+          <nav class="footer-column" aria-labelledby="footer-creator-heading">
+            <h2 id="footer-creator-heading">Created by</h2>
+            <p>Made by <strong>Rohan Malhotra</strong>.</p>
+            <a
+              href="https://www.linkedin.com/in/rohanmalhotracodes"
+              target="_blank"
+              rel="noreferrer">LinkedIn ↗</a
+            >
+            <a
+              href="https://github.com/rohanmalhotracodes"
+              target="_blank"
+              rel="noreferrer">GitHub profile ↗</a
+            >
+          </nav>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Rohan Malhotra</span>
+        <p>
+          Independent community project. Not affiliated with or endorsed by
+          Google.
+        </p>
       </div>
     </footer>
   </body>

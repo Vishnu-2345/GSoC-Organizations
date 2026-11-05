@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  description="Privacy policy for GSoC Organizations, including browser-local data and external links."
+>
+  <main class="prose-page">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Organizations</a><span>/</span><span aria-current="page"
+        >Privacy policy</span
+      >
+    </nav>
+    <div class="page-intro">
+      <span class="eyebrow">Privacy by default</span>
+      <h1>Privacy policy</h1>
+      <p>
+        GSoC Organizations is designed to work without accounts, advertising, or
+        behavioral tracking. Last updated 6 November 2026.
+      </p>
+    </div>
+    <div class="prose-grid">
+      <article class="detail-card prose-card">
+        <h2>Information we collect</h2>
+        <p>
+          The site does not collect personal information, create user profiles,
+          run analytics, or serve advertising. There are no account, payment, or
+          newsletter forms.
+        </p>
+      </article>
+      <article class="detail-card prose-card">
+        <h2>Browser-local data</h2>
+        <p>
+          Saved organizations and research notes are stored only in your
+          browser’s local storage. They are not transmitted to this project or
+          synchronized between devices. Clearing site data removes them.
+        </p>
+      </article>
+      <article class="detail-card prose-card">
+        <h2>External websites</h2>
+        <p>
+          Organization websites, source repositories, LinkedIn, GitHub, and the
+          official GSoC website are third-party services with their own privacy
+          practices. Following an external link leaves this site.
+        </p>
+      </article>
+      <article class="detail-card prose-card">
+        <h2>Source and contact</h2>
+        <p>
+          The project’s source code and data methodology are available in the
+          <a
+            href="https://github.com/rohanmalhotracodes/gsoc-org-explorer"
+            target="_blank"
+            rel="noreferrer">GitHub repository ↗</a
+          >. Privacy questions can be raised through the repository or sent to
+          <a
+            href="https://www.linkedin.com/in/rohanmalhotracodes"
+            target="_blank"
+            rel="noreferrer">Rohan Malhotra on LinkedIn ↗</a
+          >.
+        </p>
+      </article>
+    </div>
+  </main>
+</BaseLayout>

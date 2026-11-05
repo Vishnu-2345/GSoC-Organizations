@@ -76,6 +76,27 @@ test('bookmark persists into shortlist', async ({ page }) => {
   ).toBeVisible();
 });
 
+test('footer provides project, privacy, and creator links', async ({
+  page,
+}) => {
+  await page.goto('/');
+  const footer = page.getByRole('contentinfo');
+  await expect(footer.getByText('Made by Rohan Malhotra.')).toBeVisible();
+  await expect(
+    footer.getByRole('link', { name: 'GitHub repository ↗' }),
+  ).toHaveAttribute(
+    'href',
+    'https://github.com/rohanmalhotracodes/gsoc-org-explorer',
+  );
+  await expect(
+    footer.getByRole('link', { name: 'LinkedIn ↗' }),
+  ).toHaveAttribute('href', 'https://www.linkedin.com/in/rohanmalhotracodes');
+  await footer.getByRole('link', { name: 'Privacy policy' }).click();
+  await expect(
+    page.getByRole('heading', { level: 1, name: 'Privacy policy' }),
+  ).toBeVisible();
+});
+
 test('filters and clear-all are usable on mobile', async ({
   page,
 }, testInfo) => {
