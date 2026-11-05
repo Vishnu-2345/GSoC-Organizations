@@ -140,6 +140,10 @@ export default function Explorer({
               </h1>
               <p>
                 {organizations.length.toLocaleString()} historical organizations
+                {' · '}
+                <a href={shortlistOnly ? '/' : '/shortlist/'}>
+                  {shortlistOnly ? 'Back to directory' : 'View shortlist'}
+                </a>
               </p>
             </div>
             <label className="global-search">

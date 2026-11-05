@@ -98,69 +98,6 @@ img {
   transform: translateY(0);
 }
 
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  border-bottom: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.97);
-}
-
-.header-inner {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 34px;
-  max-width: var(--content);
-  min-height: 64px;
-  margin: 0 auto;
-  padding: 0 28px;
-}
-
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--text);
-  font-weight: 750;
-  letter-spacing: -0.02em;
-  text-decoration: none;
-}
-
-.brand:hover {
-  color: var(--text);
-}
-
-.brand-mark {
-  display: grid;
-  width: 34px;
-  height: 34px;
-  place-items: center;
-  border-radius: 8px;
-  background: var(--blue);
-  color: #fff;
-  font-size: 18px;
-}
-
-.site-header nav {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-
-.site-header nav a,
-.header-source {
-  color: var(--text-secondary);
-  font-size: 14px;
-  font-weight: 650;
-  text-decoration: none;
-}
-
-.site-header nav a:hover,
-.header-source:hover {
-  color: var(--blue);
-}
-
 .directory-header {
   display: grid;
   grid-template-columns: minmax(220px, 0.6fr) minmax(320px, 1.4fr);
@@ -271,8 +208,8 @@ img {
 
 .filters-panel {
   position: sticky;
-  top: 92px;
-  max-height: calc(100vh - 118px);
+  top: 28px;
+  max-height: calc(100vh - 56px);
   overflow: auto;
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -923,7 +860,7 @@ img {
 
 .detail-sidebar {
   position: sticky;
-  top: 86px;
+  top: 28px;
 }
 
 .detail-card {
@@ -1194,6 +1131,19 @@ img {
   align-items: flex-end;
 }
 
+.site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px 14px;
+  margin-top: 5px;
+}
+
+.site-footer nav a {
+  font-weight: 650;
+  text-decoration: none;
+}
+
 @media (max-width: 1260px) {
   .organization-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1247,28 +1197,6 @@ img {
 }
 
 @media (max-width: 760px) {
-  .header-inner {
-    grid-template-columns: 1fr auto;
-    padding: 0 16px;
-  }
-
-  .site-header nav {
-    grid-column: 1 / -1;
-    order: 3;
-    justify-content: space-between;
-    margin: 0 -16px;
-    padding: 9px 16px;
-    border-top: 1px solid var(--border);
-  }
-
-  .header-source {
-    font-size: 12px;
-  }
-
-  .site-header nav a {
-    font-size: 12px;
-  }
-
   .global-search {
     min-height: 46px;
   }
@@ -1356,6 +1284,10 @@ img {
 
   .site-footer > div:last-child {
     align-items: flex-start;
+  }
+
+  .site-footer nav {
+    justify-content: flex-start;
   }
 }
 

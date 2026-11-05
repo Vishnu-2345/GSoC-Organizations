@@ -27,27 +27,6 @@ const {
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
-    <header class="site-header">
-      <div class="header-inner">
-        <a class="brand" href="/" aria-label="GSoC Atlas home">
-          <span class="brand-mark" aria-hidden="true">G</span>
-          <span>GSoC Atlas</span>
-        </a>
-        <nav aria-label="Primary navigation">
-          <a href="/">Directory</a>
-          <a href="/shortlist/">Shortlist</a>
-          <a href="/about/">About the data</a>
-        </nav>
-        <a
-          class="header-source"
-          href="https://summerofcode.withgoogle.com/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Official GSoC ↗
-        </a>
-      </div>
-    </header>
     <div id="main-content">
       <slot />
     </div>
@@ -61,7 +40,16 @@ const {
       </div>
       <div>
         <span>No analytics. No advertising. Browser-local notes.</span>
-        <a href="/about/">Data notes & methodology</a>
+        <nav aria-label="Footer navigation">
+          <a href="/">Directory</a>
+          <a href="/shortlist/">Shortlist</a>
+          <a href="/about/">About the data</a>
+          <a
+            href="https://summerofcode.withgoogle.com/"
+            target="_blank"
+            rel="noreferrer">Official GSoC ↗</a
+          >
+        </nav>
       </div>
     </footer>
   </body>
