@@ -138,13 +138,6 @@ export default function Explorer({
               <h1>
                 {shortlistOnly ? 'Your shortlist' : 'Organization directory'}
               </h1>
-              <p>
-                {organizations.length.toLocaleString()} historical organizations
-                {' · '}
-                <a href={shortlistOnly ? '/' : '/shortlist/'}>
-                  {shortlistOnly ? 'Back to directory' : 'View shortlist'}
-                </a>
-              </p>
             </div>
             <label className="global-search">
               <span className="sr-only">Search organizations</span>
@@ -256,7 +249,7 @@ export default function Explorer({
               </h2>
               <p>
                 {shortlistOnly && !bookmarks.length
-                  ? 'Bookmark organizations from the directory to compare them here.'
+                  ? 'Save organizations from the directory to compare them here.'
                   : 'Try removing an exclusion or clearing the current filters.'}
               </p>
               {shortlistOnly && !bookmarks.length ? (

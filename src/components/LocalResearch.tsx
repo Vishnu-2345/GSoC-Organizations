@@ -71,7 +71,10 @@ export default function LocalResearch({
           onClick={toggleBookmark}
           aria-pressed={bookmarked}
         >
-          {bookmarked ? '★ Shortlisted' : '☆ Add to shortlist'}
+          <svg className="save-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7.25 3.5h9.5c.97 0 1.75.78 1.75 1.75v15.1L12 16.4l-6.5 3.95V5.25c0-.97.78-1.75 1.75-1.75Z" />
+          </svg>
+          {bookmarked ? 'Saved' : 'Save organization'}
         </button>
       </div>
       <label>

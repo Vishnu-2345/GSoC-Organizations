@@ -459,6 +459,7 @@ img {
 }
 
 .org-card {
+  position: relative;
   display: flex;
   min-width: 0;
   flex-direction: column;
@@ -467,11 +468,22 @@ img {
   border-radius: var(--radius);
   background: var(--card);
   box-shadow: var(--shadow);
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
 }
 
 .org-card:hover {
   border-color: var(--blue);
-  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.16);
+  transform: translateY(-6px);
+}
+
+.org-card:active {
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
 }
 
 .org-card-topline {
@@ -519,7 +531,17 @@ img {
   background: #fff;
   color: var(--blue-dark);
   cursor: pointer;
-  font-size: 22px;
+}
+
+.bookmark-button svg,
+.save-icon {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
 }
 
 .bookmark-button:hover,
@@ -527,6 +549,11 @@ img {
   border-color: var(--blue);
   background: var(--blue-pale);
   color: var(--blue);
+}
+
+.bookmark-button.is-bookmarked svg,
+.primary-button .save-icon {
+  fill: currentColor;
 }
 
 .org-card-body {

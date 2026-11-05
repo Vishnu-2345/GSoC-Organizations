@@ -11,6 +11,7 @@ export default function OrganizationCard({
   bookmarked,
   onBookmark,
 }: Props) {
+  const profileUrl = `/org/${organization.slug}/`;
   const repository = organization.repository.repositories[0];
   const repositoryUrl =
     repository?.url || organization.repository.organizationProfile;
@@ -21,7 +22,13 @@ export default function OrganizationCard({
     .join('');
 
   return (
-    <article className="org-card">
+    <article
+      className="org-card"
+      onClick={(event) => {
+        if ((event.target as HTMLElement).closest('a, button')) return;
+        window.location.assign(profileUrl);
+      }}
+    >
       <div className="org-card-topline">
         <div className="org-logo" aria-hidden="true">
           <span>{initials}</span>
@@ -42,17 +49,24 @@ export default function OrganizationCard({
         <button
           className={`bookmark-button ${bookmarked ? 'is-bookmarked' : ''}`}
           type="button"
-          aria-label={`${bookmarked ? 'Remove' : 'Add'} ${organization.name} ${bookmarked ? 'from' : 'to'} shortlist`}
+          aria-label={
+            bookmarked
+              ? `Remove ${organization.name} from saved organizations`
+              : `Save ${organization.name}`
+          }
+          title={bookmarked ? 'Remove saved organization' : 'Save organization'}
           aria-pressed={bookmarked}
           onClick={() => onBookmark(organization.slug)}
         >
-          {bookmarked ? '★' : '☆'}
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7.25 3.5h9.5c.97 0 1.75.78 1.75 1.75v15.1L12 16.4l-6.5 3.95V5.25c0-.97.78-1.75 1.75-1.75Z" />
+          </svg>
         </button>
       </div>
       <div className="org-card-body">
         <span className="category-label">{organization.category}</span>
         <h2>
-          <a href={`/org/${organization.slug}/`}>{organization.name}</a>
+          <a href={profileUrl}>{organization.name}</a>
         </h2>
         <p>
           {organization.description ||
@@ -90,10 +104,7 @@ export default function OrganizationCard({
         </div>
       </dl>
       <div className="org-card-actions">
-        <a
-          className="button secondary-button"
-          href={`/org/${organization.slug}/`}
-        >
+        <a className="button secondary-button" href={profileUrl}>
           View profile
         </a>
         {repositoryUrl && (

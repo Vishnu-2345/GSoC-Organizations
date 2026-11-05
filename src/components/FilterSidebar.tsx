@@ -97,7 +97,6 @@ export default function FilterSidebar({
     <div className="filters-panel">
       <div className="filter-panel-title">
         <div>
-          <span className="eyebrow">Refine results</span>
           <h2>Filters</h2>
         </div>
         {onClose && (

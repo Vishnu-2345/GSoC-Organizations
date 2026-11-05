@@ -15,7 +15,12 @@ test('search, malformed URL recovery, and organization navigation', async ({
     has: page.getByRole('heading', { name: 'Metasploit', exact: true }),
   });
   await expect(metasploitCard).toBeVisible();
-  await metasploitCard.getByRole('link', { name: 'View profile' }).click();
+  await metasploitCard.hover();
+  await expect(metasploitCard).toHaveCSS('cursor', 'pointer');
+  expect(
+    await metasploitCard.evaluate((card) => getComputedStyle(card).transform),
+  ).not.toBe('none');
+  await metasploitCard.getByText('Projects', { exact: true }).click();
   await expect(
     page.getByRole('heading', { level: 1, name: 'Metasploit' }),
   ).toBeVisible();
@@ -27,9 +32,10 @@ test('bookmark persists into shortlist', async ({ page }) => {
     'data-ready',
     'true',
   );
-  await page
-    .getByRole('button', { name: /Add Metasploit to shortlist/ })
-    .click();
+  const saveButton = page.getByRole('button', { name: 'Save Metasploit' });
+  await expect(saveButton.locator('svg')).toBeVisible();
+  await saveButton.click();
+  await expect(page).toHaveURL(/\?q=Metasploit/);
   await page.goto('/shortlist/');
   await expect(page.getByTestId('explorer')).toHaveAttribute(
     'data-ready',
