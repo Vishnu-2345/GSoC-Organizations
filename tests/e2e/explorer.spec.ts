@@ -76,6 +76,19 @@ test('bookmark persists into shortlist', async ({ page }) => {
   ).toBeVisible();
 });
 
+test('directory reveals organizations in batches of 25', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.getByTestId('explorer')).toHaveAttribute(
+    'data-ready',
+    'true',
+  );
+  await expect(page.getByRole('article')).toHaveCount(25);
+  await expect(page.getByText('Showing 25 of 519')).toBeVisible();
+  await page.getByRole('button', { name: 'Load more organizations' }).click();
+  await expect(page.getByRole('article')).toHaveCount(50);
+  await expect(page.getByText('Showing 50 of 519')).toBeVisible();
+});
+
 test('footer provides project, privacy, and creator links', async ({
   page,
 }) => {

@@ -11,6 +11,7 @@ import FilterSidebar from './FilterSidebar';
 import OrganizationCard from './OrganizationCard';
 
 const BOOKMARKS_KEY = 'gsoc-explorer-bookmarks-v1';
+const ORGANIZATIONS_PER_BATCH = 25;
 
 function counts(values: string[][]) {
   const result = new Map<string, number>();
@@ -32,7 +33,7 @@ export default function Explorer({
   const [bookmarks, setBookmarks] = useState<string[]>([]);
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [ready, setReady] = useState(false);
-  const [visibleLimit, setVisibleLimit] = useState(48);
+  const [visibleLimit, setVisibleLimit] = useState(ORGANIZATIONS_PER_BATCH);
 
   useEffect(() => {
     setState(parseFilterState(window.location.search));
@@ -55,7 +56,7 @@ export default function Explorer({
   }, [state, ready]);
 
   useEffect(() => {
-    setVisibleLimit(48);
+    setVisibleLimit(ORGANIZATIONS_PER_BATCH);
   }, [state, shortlistOnly]);
 
   const options = useMemo(() => {
@@ -243,7 +244,11 @@ export default function Explorer({
                   <button
                     className="button secondary-button"
                     type="button"
-                    onClick={() => setVisibleLimit((limit) => limit + 48)}
+                    onClick={() =>
+                      setVisibleLimit(
+                        (limit) => limit + ORGANIZATIONS_PER_BATCH,
+                      )
+                    }
                   >
                     Load more organizations
                   </button>
