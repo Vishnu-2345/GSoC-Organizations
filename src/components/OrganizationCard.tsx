@@ -72,13 +72,10 @@ export default function OrganizationCard({
           {organization.description ||
             'No description is available in the source archive.'}
         </p>
-        <div className="year-row" aria-label="Recent participation years">
-          {organization.years.slice(0, 4).map((year) => (
+        <div className="year-row" aria-label="Participation years">
+          {organization.years.map((year) => (
             <span key={year}>{year}</span>
           ))}
-          {organization.years.length > 4 && (
-            <small>+{organization.years.length - 4}</small>
-          )}
         </div>
         <div className="tag-row" aria-label="Technologies">
           {organization.technologies.slice(0, 4).map((technology) => (

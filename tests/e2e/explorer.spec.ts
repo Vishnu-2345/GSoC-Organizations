@@ -89,6 +89,25 @@ test('directory reveals organizations in batches of 25', async ({ page }) => {
   await expect(page.getByText('Showing 50 of 519')).toBeVisible();
 });
 
+test('cards show the complete participation history', async ({ page }) => {
+  await page.goto('/?q=NumFOCUS');
+  await expect(page.getByTestId('explorer')).toHaveAttribute(
+    'data-ready',
+    'true',
+  );
+
+  const card = page.getByRole('article').filter({
+    has: page.getByRole('heading', { name: 'NumFOCUS', exact: true }),
+  });
+  const participationYears = card.locator('.year-row');
+
+  await expect(participationYears.locator('span')).toHaveCount(11);
+  await expect(
+    participationYears.getByText('2016', { exact: true }),
+  ).toBeVisible();
+  await expect(participationYears.locator('small')).toHaveCount(0);
+});
+
 test('filters offer option search and a first-time shortcut', async ({
   page,
 }, testInfo) => {
