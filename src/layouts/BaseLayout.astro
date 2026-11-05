@@ -71,43 +71,60 @@ const {
           </p>
         </div>
         <div class="footer-link-grid">
-          <nav class="footer-column" aria-labelledby="footer-explore-heading">
-            <h2 id="footer-explore-heading">Explore</h2>
-            <a href="/">Directory</a>
-            <a href="/shortlist/">Shortlist</a>
-            <a href="/about/">About the data</a>
-          </nav>
           <nav class="footer-column" aria-labelledby="footer-project-heading">
             <h2 id="footer-project-heading">Project</h2>
+            <a href="/about/">About the data</a>
             <a href="/privacy/">Privacy policy</a>
             <a
               href="https://github.com/rohanmalhotracodes/GSoC-Organizations"
               target="_blank"
-              rel="noreferrer">GitHub repository ↗</a
+              rel="noreferrer">GitHub repository</a
             >
             <a
               href="https://summerofcode.withgoogle.com/"
               target="_blank"
-              rel="noreferrer">Official GSoC ↗</a
+              rel="noreferrer">Official GSoC</a
+            >
+            <a
+              class="github-star-link"
+              href="https://github.com/rohanmalhotracodes/GSoC-Organizations"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Star GSoC Organizations on GitHub"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="m12 2.7 2.7 5.48 6.05.88-4.38 4.27 1.03 6.03L12 16.52l-5.4 2.84 1.03-6.03-4.38-4.27 6.05-.88L12 2.7Z"
+                ></path>
+              </svg>
+              <span>Star on GitHub</span>
+              <span
+                class="github-star-count"
+                data-github-star-count
+                data-testid="github-star-count">—</span
+              >
+            </a>
+            <span class="sr-only" data-github-star-status aria-live="polite"
+              >Live repository stars</span
             >
           </nav>
           <nav class="footer-column" aria-labelledby="footer-creator-heading">
             <h2 id="footer-creator-heading">Created by</h2>
-            <p>Made by <strong>Rohan Malhotra</strong>.</p>
+            <p><strong>Rohan Malhotra</strong></p>
             <a
               href="https://www.linkedin.com/in/rohanmalhotracodes/"
               target="_blank"
-              rel="noreferrer">LinkedIn ↗</a
+              rel="noreferrer">LinkedIn</a
             >
             <a
               href="https://x.com/rohangotnochill"
               target="_blank"
-              rel="noreferrer">X ↗</a
+              rel="noreferrer">X</a
             >
             <a
               href="https://github.com/rohanmalhotracodes"
               target="_blank"
-              rel="noreferrer">GitHub profile ↗</a
+              rel="noreferrer">GitHub</a
             >
           </nav>
         </div>
@@ -120,5 +137,68 @@ const {
         </p>
       </div>
     </footer>
+    <script is:inline>
+      (() => {
+        const countElements = document.querySelectorAll(
+          '[data-github-star-count]',
+        );
+        const statusElements = document.querySelectorAll(
+          '[data-github-star-status]',
+        );
+        if (!countElements.length) return;
+
+        const cacheKey = 'gsoc-organizations-github-stars';
+        const cacheDuration = 15 * 60 * 1000;
+
+        const showCount = (count) => {
+          const formattedCount = new Intl.NumberFormat().format(count);
+          countElements.forEach((element) => {
+            element.textContent = formattedCount;
+          });
+          statusElements.forEach((element) => {
+            element.textContent = `${formattedCount} GitHub ${count === 1 ? 'star' : 'stars'}`;
+          });
+        };
+
+        try {
+          const cached = JSON.parse(sessionStorage.getItem(cacheKey) || 'null');
+          if (
+            cached &&
+            Number.isInteger(cached.count) &&
+            Date.now() - cached.updatedAt < cacheDuration
+          ) {
+            showCount(cached.count);
+            return;
+          }
+        } catch {}
+
+        fetch(
+          'https://api.github.com/repos/rohanmalhotracodes/GSoC-Organizations',
+          { headers: { Accept: 'application/vnd.github+json' } },
+        )
+          .then((response) => {
+            if (!response.ok) throw new Error('Unable to load GitHub stars');
+            return response.json();
+          })
+          .then((repository) => {
+            if (!Number.isInteger(repository.stargazers_count)) return;
+            showCount(repository.stargazers_count);
+            try {
+              sessionStorage.setItem(
+                cacheKey,
+                JSON.stringify({
+                  count: repository.stargazers_count,
+                  updatedAt: Date.now(),
+                }),
+              );
+            } catch {}
+          })
+          .catch(() => {
+            statusElements.forEach((element) => {
+              element.textContent = 'View repository stars on GitHub';
+            });
+          });
+      })();
+    </script>
   </body>
 </html>

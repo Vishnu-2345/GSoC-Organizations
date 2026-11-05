@@ -79,22 +79,39 @@ test('bookmark persists into shortlist', async ({ page }) => {
 test('footer provides project, privacy, and creator links', async ({
   page,
 }) => {
+  await page.route(
+    'https://api.github.com/repos/rohanmalhotracodes/GSoC-Organizations',
+    (route) => route.fulfill({ json: { stargazers_count: 1234 } }),
+  );
   await page.goto('/');
   const footer = page.getByRole('contentinfo');
-  await expect(footer.getByText('Made by Rohan Malhotra.')).toBeVisible();
   await expect(
-    footer.getByRole('link', { name: 'GitHub repository ↗' }),
+    footer.getByText('Rohan Malhotra', { exact: true }),
+  ).toBeVisible();
+  await expect(footer.getByRole('link', { name: 'Directory' })).toHaveCount(0);
+  await expect(footer.getByRole('link', { name: 'Shortlist' })).toHaveCount(0);
+  await expect(footer).not.toContainText('↗');
+  await expect(
+    footer.getByRole('link', { name: 'GitHub repository' }),
   ).toHaveAttribute(
     'href',
     'https://github.com/rohanmalhotracodes/GSoC-Organizations',
   );
-  await expect(
-    footer.getByRole('link', { name: 'LinkedIn ↗' }),
-  ).toHaveAttribute('href', 'https://www.linkedin.com/in/rohanmalhotracodes/');
-  await expect(footer.getByRole('link', { name: 'X ↗' })).toHaveAttribute(
+  await expect(footer.getByRole('link', { name: 'LinkedIn' })).toHaveAttribute(
+    'href',
+    'https://www.linkedin.com/in/rohanmalhotracodes/',
+  );
+  await expect(footer.getByRole('link', { name: 'X' })).toHaveAttribute(
     'href',
     'https://x.com/rohangotnochill',
   );
+  await expect(
+    footer.getByRole('link', { name: 'Star GSoC Organizations on GitHub' }),
+  ).toHaveAttribute(
+    'href',
+    'https://github.com/rohanmalhotracodes/GSoC-Organizations',
+  );
+  await expect(footer.getByTestId('github-star-count')).toHaveText('1,234');
   await footer.getByRole('link', { name: 'Privacy policy' }).click();
   await expect(
     page.getByRole('heading', { level: 1, name: 'Privacy policy' }),

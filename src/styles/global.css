@@ -1184,7 +1184,7 @@ img {
 
 .footer-inner {
   display: grid;
-  grid-template-columns: minmax(280px, 1.05fr) minmax(540px, 1.5fr);
+  grid-template-columns: minmax(320px, 1.2fr) minmax(420px, 1fr);
   gap: clamp(48px, 7vw, 104px);
   max-width: var(--content);
   margin: 0 auto;
@@ -1216,8 +1216,8 @@ img {
 
 .footer-link-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 36px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px;
 }
 
 .footer-column {
@@ -1252,6 +1252,42 @@ img {
 .footer-column a:hover,
 .footer-brand-link:hover {
   color: var(--blue-dark);
+}
+
+.footer-column .github-star-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 5px;
+  padding: 8px 10px;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--text);
+  font-size: 12px;
+  box-shadow: 0 1px 2px rgb(24 29 35 / 6%);
+}
+
+.footer-column .github-star-link:hover {
+  border-color: var(--blue-dark);
+  background: var(--surface-soft);
+  color: var(--blue-dark);
+}
+
+.github-star-link svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--yellow);
+  stroke: #9b5a00;
+  stroke-width: 1;
+}
+
+.github-star-count {
+  min-width: 20px;
+  padding-left: 7px;
+  border-left: 1px solid var(--border);
+  font-variant-numeric: tabular-nums;
+  text-align: center;
 }
 
 .footer-bottom {
