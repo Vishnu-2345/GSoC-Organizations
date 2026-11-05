@@ -618,12 +618,12 @@ img {
 .org-card h2 a {
   color: var(--text);
   text-decoration: none;
+  transition: color 140ms ease;
 }
 
 .org-card h2 a:hover {
   color: var(--blue);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  text-decoration: none;
 }
 
 .org-card-body > p {
