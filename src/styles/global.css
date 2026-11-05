@@ -519,10 +519,11 @@ img {
 }
 
 .org-card-topline {
+  position: relative;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 18px 18px 0;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 18px 4px;
 }
 
 .org-logo,
@@ -538,9 +539,10 @@ img {
 }
 
 .org-logo {
-  width: 58px;
-  height: 58px;
-  border-radius: 9px;
+  width: 104px;
+  height: 104px;
+  border-radius: 14px;
+  font-size: 27px;
 }
 
 .org-logo img,
@@ -554,6 +556,9 @@ img {
 }
 
 .bookmark-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
   display: grid;
   width: 38px;
   height: 38px;
