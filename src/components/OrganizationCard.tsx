@@ -103,24 +103,22 @@ export default function OrganizationCard({
           <dd>{organization.participationCount}</dd>
         </div>
       </dl>
-      {repositoryUrl && (
-        <div className="org-card-actions">
+      <div className="org-card-actions">
+        <a className="button secondary-button" href={profileUrl}>
+          View profile
+        </a>
+        {repositoryUrl && (
           <a
-            className="repository-link"
+            className="button repository-button"
             href={repositoryUrl}
             target="_blank"
             rel="noreferrer"
           >
-            <span>{repository?.host || 'Web'} source</span>
-            <span className="source-status">
-              <span
-                className={
-                  repository?.verified ? 'verified-dot' : 'inferred-dot'
-                }
-                aria-hidden="true"
-              />
-              {repository?.verified ? 'Verified' : 'Open link'}
-            </span>
+            {repository?.host || 'Web'}
+            <span
+              className={repository?.verified ? 'verified-dot' : 'inferred-dot'}
+              aria-hidden="true"
+            />
             <span className="sr-only">
               {repository?.verified
                 ? 'verified'
@@ -129,8 +127,8 @@ export default function OrganizationCard({
                   : 'inferred'}
             </span>
           </a>
-        </div>
-      )}
+        )}
+      </div>
     </article>
   );
 }
