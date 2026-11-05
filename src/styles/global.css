@@ -1,15 +1,18 @@
 :root {
-  --blue: #0866ff;
-  --blue-dark: #075ce0;
-  --blue-pale: #eef5ff;
-  --page: #ffffff;
+  --sun: #f9ab00;
+  --orange: #e37400;
+  --orange-deep: #a84600;
+  --blue: var(--orange);
+  --blue-dark: var(--orange-deep);
+  --blue-pale: #fff4d6;
+  --page: #fffaf2;
   --card: #ffffff;
-  --text: #080809;
-  --text-secondary: #65676b;
-  --border: #e4e6eb;
+  --text: #202124;
+  --text-secondary: #5f6368;
+  --border: #dadce0;
   --success: #057642;
   --danger: #b24020;
-  --shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  --shadow: 0 2px 12px rgba(96, 62, 0, 0.08);
   --radius: 10px;
   --content: 1440px;
   font-family:
@@ -100,10 +103,39 @@ img {
 
 .directory-header {
   display: grid;
-  grid-template-columns: minmax(220px, 0.6fr) minmax(320px, 1.4fr);
+  grid-template-columns: minmax(330px, 0.75fr) minmax(360px, 1.25fr);
   align-items: center;
   gap: 24px;
   margin-bottom: 20px;
+}
+
+.directory-brand {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 12px;
+}
+
+.gsoc-mark {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 auto;
+}
+
+.gsoc-mark > path:first-child {
+  fill: var(--sun);
+}
+
+.gsoc-mark circle {
+  fill: var(--orange);
+}
+
+.gsoc-mark > path:last-child {
+  fill: none;
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3.2;
 }
 
 .eyebrow {
@@ -153,7 +185,7 @@ img {
 
 .global-search:focus-within {
   border-color: var(--blue);
-  box-shadow: 0 0 0 3px rgba(8, 102, 255, 0.18);
+  box-shadow: 0 0 0 3px rgba(227, 116, 0, 0.18);
 }
 
 .global-search svg {
@@ -394,14 +426,14 @@ img {
 }
 
 .primary-button {
-  border-color: var(--blue);
-  background: var(--blue);
+  border-color: var(--orange-deep);
+  background: var(--orange-deep);
   color: #fff;
 }
 
 .primary-button:hover {
-  border-color: var(--blue-dark);
-  background: var(--blue-dark);
+  border-color: #873700;
+  background: #873700;
   color: #fff;
 }
 
@@ -476,8 +508,8 @@ img {
 }
 
 .org-card:hover {
-  border-color: var(--blue);
-  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.16);
+  border-color: var(--sun);
+  box-shadow: 0 16px 34px rgba(96, 62, 0, 0.16);
   transform: translateY(-6px);
 }
 
@@ -932,7 +964,7 @@ img {
 }
 
 .chart-stem {
-  stroke: #e7f0ff;
+  stroke: #ffe7b3;
   stroke-width: 12;
 }
 
@@ -1095,7 +1127,7 @@ img {
 
 .local-research textarea:focus {
   border-color: var(--blue);
-  box-shadow: 0 0 0 3px rgba(8, 102, 255, 0.16);
+  box-shadow: 0 0 0 3px rgba(227, 116, 0, 0.16);
 }
 
 .note-actions {

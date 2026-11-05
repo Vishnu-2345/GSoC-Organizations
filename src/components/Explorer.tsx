@@ -131,13 +131,20 @@ export default function Explorer({
 
         <main className="results-column" id="results">
           <div className="directory-header">
-            <div className="directory-title">
-              <span className="eyebrow">
-                {shortlistOnly ? 'Saved in this browser' : 'GSoC archive'}
-              </span>
-              <h1>
-                {shortlistOnly ? 'Your shortlist' : 'Organization directory'}
-              </h1>
+            <div className="directory-brand">
+              <svg className="gsoc-mark" viewBox="0 0 64 64" aria-hidden="true">
+                <path d="M32 3 40 12 52 11 53 23 62 31 53 39 52 51 40 50 32 59 24 50 12 51 11 39 2 31 11 23 12 11 24 12Z" />
+                <circle cx="32" cy="31" r="17" />
+                <path d="m26 24-7 7 7 7m12-14 7 7-7 7m-3-17-6 20" />
+              </svg>
+              <div className="directory-title">
+                <span className="eyebrow">
+                  {shortlistOnly ? 'Saved in this browser' : 'GSoC archive'}
+                </span>
+                <h1>
+                  {shortlistOnly ? 'Your shortlist' : 'Organization directory'}
+                </h1>
+              </div>
             </div>
             <label className="global-search">
               <span className="sr-only">Search organizations</span>
