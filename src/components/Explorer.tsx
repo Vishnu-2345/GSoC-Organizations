@@ -139,7 +139,7 @@ export default function Explorer({
               >
                 <img
                   className="gsoc-mark"
-                  src="/brand/gsoc-organizations-logo.png"
+                  src="/brand/gsoc-organizations-logo.svg"
                   alt=""
                   width="512"
                   height="512"

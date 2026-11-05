@@ -36,8 +36,8 @@ export default function OrganizationCard({
             <img
               src={organization.logo}
               alt=""
-              width="56"
-              height="56"
+              width="132"
+              height="132"
               loading="lazy"
               decoding="async"
               onError={(event) => {

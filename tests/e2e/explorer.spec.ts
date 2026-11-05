@@ -6,10 +6,10 @@ test('uses the official brand across the page and browser tab', async ({
   await page.goto('/shortlist/');
   await expect(page).toHaveTitle('GSoC Organizations');
 
-  const favicon = page.locator('link[rel="icon"]');
+  const favicon = page.locator('link[rel="icon"]').first();
   await expect(favicon).toHaveAttribute(
     'href',
-    '/brand/gsoc-organizations-favicon.png',
+    '/brand/gsoc-organizations-favicon.ico',
   );
 
   const homeLink = page.getByRole('link', {
@@ -17,7 +17,7 @@ test('uses the official brand across the page and browser tab', async ({
   });
   await expect(homeLink.locator('img')).toHaveAttribute(
     'src',
-    '/brand/gsoc-organizations-logo.png',
+    '/brand/gsoc-organizations-logo.svg',
   );
   await homeLink.click();
   await expect(page).toHaveURL('/');
@@ -32,6 +32,9 @@ test('search, malformed URL recovery, and organization navigation', async ({
     'data-ready',
     'true',
   );
+  const firstOrganizationLogo = page.locator('.org-logo').first();
+  await expect(firstOrganizationLogo).toHaveCSS('border-top-width', '0px');
+  await expect(firstOrganizationLogo).toHaveCSS('width', '132px');
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
   const search = page.getByRole('searchbox', { name: 'Search organizations' });
   await search.fill('Metasploit');
