@@ -1,6 +1,6 @@
 # GSoC Atlas
 
-GSoC Atlas is a static-first explorer for researching Google Summer of Code organizations. It provides local full-text search, inclusion and exclusion filters, sorting, browser-local shortlists and notes, CSV export, participation history, historical projects, and transparent repository-link states.
+GSoC Atlas is a static-first explorer for researching Google Summer of Code organizations. It provides local full-text search, inclusion and exclusion filters, sorting, browser-local shortlists and notes, participation history, historical projects, and transparent repository-link states.
 
 This is an independent community project. It is not affiliated with or endorsed by Google. Google Summer of Code is a Google program.
 
@@ -86,7 +86,7 @@ For umbrella organizations, add multiple repository records rather than choosing
 ## Architecture
 
 - `src/pages/index.astro`: static directory shell.
-- `src/components/Explorer.tsx`: local search, filters, sorting, URL state, shortlist, and CSV export.
+- `src/components/Explorer.tsx`: local search, filters, sorting, URL state, and shortlist.
 - `src/pages/org/[slug].astro`: statically generated organization pages.
 - `src/data/organizations.json`: normalized, version-controlled browsing data.
 - `api/repository-links.json`: repository link records and provenance.

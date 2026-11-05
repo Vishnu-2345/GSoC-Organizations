@@ -5,7 +5,6 @@ import {
   filterOrganizations,
   sortOrganizations,
 } from '../lib/filter';
-import { downloadCsv } from '../lib/csv';
 import { parseFilterState, serializeFilterState } from '../lib/url-state';
 import type { FilterState, OrganizationSummary } from '../types';
 import FilterSidebar from './FilterSidebar';
@@ -104,45 +103,6 @@ export default function Explorer({
       data-testid="explorer"
       data-ready={ready ? 'true' : 'false'}
     >
-      <div className="search-band">
-        <div className="search-copy">
-          <span className="eyebrow">Independent community explorer</span>
-          <h1>
-            {shortlistOnly
-              ? 'Your organization shortlist'
-              : 'Find an open-source community worth joining'}
-          </h1>
-          <p>
-            Search verified source links, technologies, topics, and{' '}
-            {organizations.length.toLocaleString()} organizations from the
-            public GSoC archive.
-          </p>
-        </div>
-        <label className="global-search">
-          <span className="sr-only">Search organizations</span>
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="m21 21-4.35-4.35m2.35-5.15a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z" />
-          </svg>
-          <input
-            type="search"
-            placeholder="Search orgs, technologies, topics, repositories…"
-            value={state.query}
-            onChange={(event) =>
-              setState({ ...state, query: event.target.value })
-            }
-          />
-          {state.query && (
-            <button
-              type="button"
-              aria-label="Clear search"
-              onClick={() => setState({ ...state, query: '' })}
-            >
-              ×
-            </button>
-          )}
-        </label>
-      </div>
-
       <div className="explorer-layout">
         <aside className="desktop-filters" aria-label="Organization filters">
           <FilterSidebar state={state} options={options} onChange={setState} />
@@ -170,6 +130,43 @@ export default function Explorer({
         )}
 
         <main className="results-column" id="results">
+          <div className="directory-header">
+            <div className="directory-title">
+              <span className="eyebrow">
+                {shortlistOnly ? 'Saved in this browser' : 'GSoC archive'}
+              </span>
+              <h1>
+                {shortlistOnly ? 'Your shortlist' : 'Organization directory'}
+              </h1>
+              <p>
+                {organizations.length.toLocaleString()} historical organizations
+              </p>
+            </div>
+            <label className="global-search">
+              <span className="sr-only">Search organizations</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m21 21-4.35-4.35m2.35-5.15a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z" />
+              </svg>
+              <input
+                type="search"
+                placeholder="Search organizations, technologies, topics…"
+                value={state.query}
+                onChange={(event) =>
+                  setState({ ...state, query: event.target.value })
+                }
+              />
+              {state.query && (
+                <button
+                  type="button"
+                  aria-label="Clear search"
+                  onClick={() => setState({ ...state, query: '' })}
+                >
+                  ×
+                </button>
+              )}
+            </label>
+          </div>
+
           <div className="results-toolbar">
             <div>
               <strong>{results.length.toLocaleString()}</strong>{' '}
@@ -197,14 +194,6 @@ export default function Explorer({
                   Clear all filters
                 </button>
               )}
-              <button
-                className="button secondary-button"
-                type="button"
-                onClick={() => downloadCsv(results)}
-                disabled={!results.length}
-              >
-                Export CSV
-              </button>
               <label className="sort-control">
                 <span>Sort</span>
                 <select
