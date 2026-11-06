@@ -22,6 +22,10 @@ test('uses the official brand across the page and browser tab', async ({
   await homeLink.click();
   await expect(page).toHaveURL('/');
   await expect(page).toHaveTitle('GSoC Organizations');
+  await expect(
+    page.getByRole('heading', { level: 1, name: 'GSoC Organizations' }),
+  ).toBeVisible();
+  await expect(page.getByText('GSoC archive', { exact: true })).toHaveCount(0);
 });
 
 test('search, malformed URL recovery, and organization navigation', async ({

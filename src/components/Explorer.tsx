@@ -157,12 +157,14 @@ export default function Explorer({
                 />
               </a>
               <div className="directory-title">
-                <span className="eyebrow">
-                  {shortlistOnly ? 'Saved in this browser' : 'GSoC archive'}
-                </span>
-                <h1>
-                  {shortlistOnly ? 'Your shortlist' : 'Organization directory'}
-                </h1>
+                {shortlistOnly ? (
+                  <>
+                    <span className="eyebrow">Saved in this browser</span>
+                    <h1>Your shortlist</h1>
+                  </>
+                ) : (
+                  <h1>GSoC Organizations</h1>
+                )}
               </div>
             </div>
             <label className="global-search">
