@@ -55,6 +55,7 @@ test('search, malformed URL recovery, and organization navigation', async ({
     await metasploitCard.evaluate((card) => getComputedStyle(card).transform),
   ).not.toBe('none');
   await metasploitCard.getByText('Projects', { exact: true }).click();
+  await expect(page).toHaveTitle('Metasploit');
   await expect(
     page.getByRole('heading', { level: 1, name: 'Metasploit' }),
   ).toBeVisible();

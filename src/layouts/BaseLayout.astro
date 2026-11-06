@@ -2,10 +2,12 @@
 import '../styles/global.css';
 
 interface Props {
+  title?: string;
   description?: string;
 }
 
 const {
+  title = 'GSoC Organizations',
   description = 'Search, compare, and shortlist Google Summer of Code organizations using public archive data and transparent source links.',
 } = Astro.props;
 ---
@@ -37,7 +39,7 @@ const {
       href="/brand/gsoc-organizations-apple-touch-icon.png"
     />
     <link rel="manifest" href="/site.webmanifest" />
-    <title>GSoC Organizations</title>
+    <title>{title}</title>
     <script is:inline>
       document.documentElement.classList.add('js');
     </script>
