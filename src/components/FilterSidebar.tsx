@@ -206,11 +206,11 @@ export default function FilterSidebar({
         <label className="check-row">
           <input
             type="checkbox"
-            aria-label={`First-time organizations in ${options.latestYear}`}
+            aria-label={`New to GSoC in ${options.latestYear}`}
             checked={state.firstTime}
             onChange={() => onChange({ ...state, firstTime: !state.firstTime })}
           />
-          <span>First-time organizations in {options.latestYear}</span>
+          <span>New to GSoC in {options.latestYear}</span>
           <small>{options.firstTimeCount.toLocaleString()}</small>
         </label>
       </section>

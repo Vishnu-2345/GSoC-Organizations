@@ -139,9 +139,7 @@ test('filters offer option search and a first-time shortcut', async ({
   ).toBeVisible();
 
   await filters.getByRole('button', { name: 'Clear all' }).click();
-  await filters
-    .getByRole('checkbox', { name: /First-time organizations in 2026/ })
-    .check();
+  await filters.getByRole('checkbox', { name: /New to GSoC in 2026/ }).check();
   await expect(page).toHaveURL(/firstTime=1/);
 });
 
