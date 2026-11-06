@@ -3,12 +3,14 @@ import type { OrganizationSummary } from '../types';
 type Props = {
   organization: OrganizationSummary;
   bookmarked: boolean;
+  priority?: boolean;
   onBookmark: (slug: string) => void;
 };
 
 export default function OrganizationCard({
   organization,
   bookmarked,
+  priority = false,
   onBookmark,
 }: Props) {
   const profileUrl = `/org/${organization.slug}/`;
@@ -41,7 +43,8 @@ export default function OrganizationCard({
               alt=""
               width="132"
               height="132"
-              loading="lazy"
+              loading={priority ? 'eager' : 'lazy'}
+              fetchPriority={priority ? 'high' : 'auto'}
               decoding="async"
               onError={(event) => {
                 event.currentTarget.hidden = true;

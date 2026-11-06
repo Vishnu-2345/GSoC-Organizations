@@ -50,6 +50,12 @@ for (const org of organizations) {
     websites.set(websiteKey, org.name);
   }
 
+  if (!org.logo.startsWith('/organization-logos/')) {
+    errors.push(`${org.name}: logo is not served from the local asset cache`);
+  } else if (!fs.existsSync(`public${org.logo}`)) {
+    errors.push(`${org.name}: missing cached logo ${org.logo}`);
+  }
+
   const years = new Set();
   for (const participation of org.participations) {
     if (years.has(participation.year))

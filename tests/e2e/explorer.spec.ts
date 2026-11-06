@@ -42,6 +42,17 @@ test('search, malformed URL recovery, and organization navigation', async ({
   const firstOrganizationLogo = page.locator('.org-logo').first();
   await expect(firstOrganizationLogo).toHaveCSS('border-top-width', '0px');
   await expect(firstOrganizationLogo).toHaveCSS('width', '104px');
+  const firstOrganizationImage = firstOrganizationLogo.locator('img');
+  await expect(firstOrganizationImage).toHaveAttribute(
+    'src',
+    /^\/organization-logos\//,
+  );
+  await expect(firstOrganizationImage).toHaveAttribute('loading', 'eager');
+  await expect(firstOrganizationImage).toHaveAttribute('fetchpriority', 'high');
+  await expect(page.locator('.org-logo img').nth(8)).toHaveAttribute(
+    'loading',
+    'lazy',
+  );
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
   const search = page.getByRole('searchbox', { name: 'Search organizations' });
   await search.fill('Metasplot');

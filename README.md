@@ -20,7 +20,7 @@ Requires Node.js 20.11 or newer.
 
 ```sh
 npm install
-npm run prepare:data
+npm run cache:logos
 npm run dev
 ```
 
@@ -65,8 +65,8 @@ node scripts/validate-repository-links.mjs --network
 Annual source snapshots live in `data/raw/YYYY.json`. They are factual exports of the public Google Summer of Code archive data model. To refresh:
 
 1. Replace or add the relevant annual snapshot.
-2. Run `npm run prepare:data`.
-3. Review changes to `src/data/organizations.json` and `api/repository-links.json`.
+2. Run `npm run cache:logos` to rebuild the normalized data and download any new organization logos into the local static asset cache.
+3. Review changes to `src/data/organizations.json`, `data/logo-assets.json`, `public/organization-logos/`, and `api/repository-links.json`.
 4. Run `npm run validate`, `npm test`, and `npm run build`.
 5. Manually review new or changed repository links using [`docs/repository-curation.md`](docs/repository-curation.md).
 
@@ -80,6 +80,8 @@ During compilation, `scripts/prepare-data.mjs`:
 4. Normalizes clear tag equivalents such as capitalization, surrounding whitespace, `nodejs`/`Node.js`, and `golang`/`Go` without collapsing meaningful distinctions such as C and C++.
 5. Derives participation totals and repository candidates.
 6. Emits the normalized static dataset consumed by Astro.
+
+The version-controlled logo cache keeps organization artwork on the same Cloudflare CDN as the website, so rendering does not depend on third-party image hosts. The first visible row is requested eagerly; remaining logos retain native lazy loading.
 
 This produces 519 historical organization identities from the 2016–2026 snapshots, including all 183 organizations in the 2026 snapshot.
 

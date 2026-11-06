@@ -9,6 +9,10 @@ const root = process.cwd();
 const rawDirectory = path.join(root, 'data', 'raw');
 const outputFile = path.join(root, 'src', 'data', 'organizations.json');
 const repositoryFile = path.join(root, 'api', 'repository-links.json');
+const logoAssetsFile = path.join(root, 'data', 'logo-assets.json');
+const logoAssets = fs.existsSync(logoAssetsFile)
+  ? JSON.parse(fs.readFileSync(logoAssetsFile, 'utf8'))
+  : {};
 
 const files = fs
   .readdirSync(rawDirectory)
@@ -485,10 +489,14 @@ const organizations = [...groupedRecords.values()]
           });
     repositoryLinks[org.name] = repository;
     const years = org.participations.map((item) => item.year);
+    const localLogo = logoAssets[org.slug];
     const result = {
       slug: org.slug,
       name: org.name,
-      logo: org.logo,
+      logo:
+        localLogo?.source === org.logo && localLogo?.path
+          ? localLogo.path
+          : org.logo,
       description: org.description,
       website: org.website,
       category: org.category,

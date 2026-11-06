@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
     "prepare:data": "node scripts/prepare-data.mjs",
+    "cache:logos": "npm run prepare:data && node scripts/cache-logo-assets.mjs && npm run prepare:data",
     "build": "npm run prepare:data && ASTRO_TELEMETRY_DISABLED=1 astro build",
     "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
     "format": "prettier --write .",

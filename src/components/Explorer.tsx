@@ -275,11 +275,12 @@ export default function Explorer({
           {results.length ? (
             <>
               <div className="organization-grid">
-                {results.slice(0, visibleLimit).map((organization) => (
+                {results.slice(0, visibleLimit).map((organization, index) => (
                   <OrganizationCard
                     key={organization.slug}
                     organization={organization}
                     bookmarked={bookmarks.includes(organization.slug)}
+                    priority={index < 8}
                     onBookmark={toggleBookmark}
                   />
                 ))}
