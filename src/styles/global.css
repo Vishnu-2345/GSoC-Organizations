@@ -256,7 +256,7 @@ img {
 
 .filter-panel-title {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 12px;
   padding: 18px 18px 14px;
@@ -270,13 +270,6 @@ img {
   margin: 0;
   font-size: 18px;
   letter-spacing: -0.015em;
-}
-
-.filter-panel-title p {
-  margin: 3px 0 0;
-  color: var(--text-secondary);
-  font-size: 10px;
-  line-height: 1.4;
 }
 
 .filter-panel-actions {

@@ -166,10 +166,7 @@ export default function FilterSidebar({
   return (
     <div className="filters-panel">
       <div className="filter-panel-title">
-        <div>
-          <h2>Filters</h2>
-          <p>Years match all. Other groups match any.</p>
-        </div>
+        <h2>Filters</h2>
         <div className="filter-panel-actions">
           {selectedFilterCount > 0 && (
             <button
