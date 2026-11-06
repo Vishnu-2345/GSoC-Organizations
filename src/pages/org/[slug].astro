@@ -28,6 +28,43 @@ const initials = organization.name
 
 <BaseLayout title={organization.name} description={organization.description}>
   <main class="detail-page">
+    <header class="directory-header profile-directory-header">
+      <div class="directory-brand">
+        <a
+          class="brand-home-link"
+          href="/"
+          aria-label="GSoC Organizations home"
+        >
+          <img
+            class="gsoc-mark"
+            src="/brand/gsoc-organizations-logo.svg"
+            alt=""
+            width="512"
+            height="512"
+          />
+        </a>
+        <div class="directory-title">
+          <span class="directory-site-title">GSoC Organizations</span>
+        </div>
+      </div>
+      <form class="global-search" role="search" action="/" method="get">
+        <label class="sr-only" for="profile-organization-search"
+          >Search organizations</label
+        >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="m21 21-4.35-4.35m2.35-5.15a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"
+          ></path>
+        </svg>
+        <input
+          id="profile-organization-search"
+          name="q"
+          type="search"
+          placeholder="Search organizations, technologies, topics…"
+          autocomplete="off"
+        />
+      </form>
+    </header>
     <nav class="breadcrumbs" aria-label="Breadcrumb">
       <a href="/">Organizations</a><span>/</span><span aria-current="page"
         >{organization.name}</span

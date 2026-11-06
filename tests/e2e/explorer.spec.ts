@@ -121,6 +121,14 @@ test('organization profiles preserve contributor and archive details', async ({
 }) => {
   await page.goto('/org/3dtk/');
 
+  await expect(
+    page.getByRole('link', { name: 'GSoC Organizations home' }),
+  ).toBeVisible();
+  const profileSearch = page.getByRole('searchbox', {
+    name: 'Search organizations',
+  });
+  await expect(profileSearch).toBeVisible();
+
   const hero = page.locator('.organization-hero');
   await expect(hero.getByText('Technologies', { exact: true })).toBeVisible();
   await expect(hero.getByText('Topics', { exact: true })).toBeVisible();
@@ -156,6 +164,17 @@ test('organization profiles preserve contributor and archive details', async ({
     'href',
     'https://summerofcode.withgoogle.com/archive/2018/organizations/5685665089978368/',
   );
+
+  await profileSearch.fill('NumFOCUS');
+  await profileSearch.press('Enter');
+  await expect(page).toHaveURL('/?q=NumFOCUS');
+  await expect(page.getByTestId('explorer')).toHaveAttribute(
+    'data-ready',
+    'true',
+  );
+  await expect(
+    page.getByRole('heading', { name: 'NumFOCUS', exact: true }),
+  ).toBeVisible();
 });
 
 test('project years switch a grid of project cards', async ({ page }) => {

@@ -161,6 +161,19 @@ img {
   font-size: clamp(24px, 2vw, 32px);
 }
 
+.directory-site-title {
+  display: block;
+  color: var(--text);
+  font-size: clamp(24px, 2vw, 32px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+.profile-directory-header {
+  margin-bottom: 22px;
+}
+
 .directory-title p,
 .page-intro p {
   max-width: 700px;
