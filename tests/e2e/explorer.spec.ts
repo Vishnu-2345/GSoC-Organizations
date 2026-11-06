@@ -72,6 +72,35 @@ test('search, malformed URL recovery, and organization navigation', async ({
   await profilePage.close();
 });
 
+test('short search terms rank organization names and keep clear aligned', async ({
+  page,
+}) => {
+  await page.goto('/');
+  await expect(page.getByTestId('explorer')).toHaveAttribute(
+    'data-ready',
+    'true',
+  );
+
+  const searchField = page.locator('.global-search');
+  const search = page.getByRole('searchbox', { name: 'Search organizations' });
+  await search.fill('br');
+  await expect(
+    page.getByRole('article').first().getByRole('heading'),
+  ).toHaveText('BRL-CAD');
+
+  const fieldBox = await searchField.boundingBox();
+  const clearBox = await page
+    .getByRole('button', { name: 'Clear search' })
+    .boundingBox();
+  expect(fieldBox).not.toBeNull();
+  expect(clearBox).not.toBeNull();
+  expect(
+    Math.abs(
+      clearBox!.y + clearBox!.height / 2 - (fieldBox!.y + fieldBox!.height / 2),
+    ),
+  ).toBeLessThan(1);
+});
+
 test('directory and profile mastheads keep the same position', async ({
   page,
 }) => {

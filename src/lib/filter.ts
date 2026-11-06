@@ -13,6 +13,29 @@ export const defaultFilters: FilterState = {
 };
 
 const normalized = (value: string) => value.trim().toLocaleLowerCase();
+const words = (value: string) =>
+  normalized(value)
+    .split(/[^\p{L}\p{N}+#.]+/u)
+    .filter(Boolean);
+
+function fieldScore(
+  value: string,
+  term: string,
+  baseScore: number,
+  allowContains = true,
+): number {
+  const field = normalized(value);
+  if (!field) return Number.POSITIVE_INFINITY;
+  if (field === term) return baseScore;
+  if (field.startsWith(term)) return baseScore + 1;
+
+  const fieldWords = words(field);
+  if (fieldWords.some((word) => word === term)) return baseScore + 1;
+  if (fieldWords.some((word) => word.startsWith(term))) return baseScore + 2;
+  if (allowContains && term.length >= 3 && field.includes(term))
+    return baseScore + 3;
+  return Number.POSITIVE_INFINITY;
+}
 
 function editDistance(source: string, target: string): number {
   const rows = Array.from({ length: source.length + 1 }, (_, index) => [index]);
@@ -60,39 +83,72 @@ function approximatelyMatchesName(name: string, term: string): boolean {
   );
 }
 
+function termSearchScore(
+  organization: OrganizationSummary,
+  term: string,
+): number {
+  const nameScore = fieldScore(organization.name, term, 0);
+  const fuzzyNameScore = approximatelyMatchesName(organization.name, term)
+    ? 4
+    : Number.POSITIVE_INFINITY;
+  const taxonomyScore = Math.min(
+    fieldScore(organization.category, term, 10),
+    ...organization.technologies.map((value) => fieldScore(value, term, 10)),
+    ...organization.topics.map((value) => fieldScore(value, term, 10)),
+  );
+
+  // Two-letter fragments are useful for names and tags (for example, "br"
+  // for BRL-CAD), but are far too broad for prose and URLs.
+  const descriptionScore =
+    term.length >= 3
+      ? fieldScore(organization.description, term, 20, term.length >= 4)
+      : Number.POSITIVE_INFINITY;
+  const repositoryScore =
+    term.length >= 3
+      ? Math.min(
+          ...organization.repository.repositories.flatMap((repository) => [
+            fieldScore(repository.label, term, 30),
+            fieldScore(repository.host, term, 30),
+          ]),
+        )
+      : Number.POSITIVE_INFINITY;
+
+  return Math.min(
+    nameScore,
+    fuzzyNameScore,
+    taxonomyScore,
+    descriptionScore,
+    repositoryScore,
+  );
+}
+
+export function organizationSearchScore(
+  organization: OrganizationSummary,
+  query: string,
+): number {
+  const queryTerms = words(query);
+  if (!queryTerms.length) return 0;
+
+  let total = 0;
+  for (const term of queryTerms) {
+    const score = termSearchScore(organization, term);
+    if (!Number.isFinite(score)) return Number.POSITIVE_INFINITY;
+    total += score;
+  }
+  return total;
+}
+
 export function filterOrganizations(
   organizations: OrganizationSummary[],
   state: FilterState,
 ): OrganizationSummary[] {
   const query = normalized(state.query);
-  const queryTerms = query.split(/\s+/).filter(Boolean);
   const latestProgramYear = Math.max(
     0,
     ...organizations.map((organization) => organization.latestYear),
   );
   return organizations.filter((organization) => {
-    const searchable = [
-      organization.name,
-      organization.description,
-      organization.category,
-      ...organization.technologies,
-      ...organization.topics,
-      ...organization.repository.repositories.flatMap((repository) => [
-        repository.label,
-        repository.host,
-        repository.url,
-      ]),
-    ]
-      .join(' ')
-      .toLocaleLowerCase();
-
-    if (
-      queryTerms.some(
-        (term) =>
-          !searchable.includes(term) &&
-          !approximatelyMatchesName(organization.name, term),
-      )
-    )
+    if (query && !Number.isFinite(organizationSearchScore(organization, query)))
       return false;
     if (
       state.firstTime &&
@@ -137,8 +193,20 @@ export function filterOrganizations(
 export function sortOrganizations(
   organizations: OrganizationSummary[],
   sort: FilterState['sort'],
+  query = '',
 ): OrganizationSummary[] {
+  const scores = new Map(
+    organizations.map((organization) => [
+      organization,
+      organizationSearchScore(organization, query),
+    ]),
+  );
+
   return [...organizations].sort((a, b) => {
+    if (normalized(query)) {
+      const relevanceDifference = scores.get(a)! - scores.get(b)!;
+      if (relevanceDifference) return relevanceDifference;
+    }
     if (sort === 'projects')
       return b.totalProjects - a.totalProjects || a.name.localeCompare(b.name);
     if (sort === 'years')

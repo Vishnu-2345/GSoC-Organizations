@@ -245,14 +245,27 @@ img {
 }
 
 .global-search button {
+  display: grid;
   width: 34px;
   height: 34px;
+  place-items: center;
+  padding: 0;
   border: 0;
   border-radius: 50%;
   background: transparent;
   color: var(--text-secondary);
   cursor: pointer;
-  font-size: 24px;
+  line-height: 1;
+}
+
+.global-search button svg {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-width: 2.25;
 }
 
 .global-search button:hover {

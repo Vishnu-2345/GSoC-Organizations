@@ -81,6 +81,40 @@ describe('organization filtering', () => {
     ).toEqual(['alpha']);
   });
 
+  it('ranks name prefixes and avoids broad prose matches for short terms', () => {
+    const shortQueryOrganizations: OrganizationSummary[] = [
+      {
+        ...organizations[0],
+        slug: 'unrelated',
+        name: 'Unrelated Foundation',
+        description: 'A broad open-source platform',
+      },
+      {
+        ...organizations[0],
+        slug: 'brl-cad',
+        name: 'BRL-CAD',
+        description: 'Solid modeling tools',
+      },
+      {
+        ...organizations[0],
+        slug: 'browser-tools',
+        name: 'Developer Toolbox',
+        description: 'Utilities for developers',
+        technologies: ['Browser tooling'],
+      },
+    ];
+    const matches = filterOrganizations(
+      shortQueryOrganizations,
+      filters({ query: 'br' }),
+    );
+
+    expect(matches.map((org) => org.slug)).toEqual([
+      'brl-cad',
+      'browser-tools',
+    ]);
+    expect(sortOrganizations(matches, 'recent', 'br')[0].slug).toBe('brl-cad');
+  });
+
   it('applies inclusion and exclusion filters together', () => {
     const result = filterOrganizations(
       organizations,
