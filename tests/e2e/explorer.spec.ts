@@ -120,6 +120,19 @@ test('organization profiles preserve contributor and archive details', async ({
   await expect(
     page.getByRole('heading', { name: 'Start contributing' }),
   ).toHaveCount(0);
+  await expect(page.getByText('Public archive', { exact: true })).toHaveCount(
+    0,
+  );
+  const chartLabelsFit = await page
+    .locator('.participation-chart')
+    .evaluate((chart) => {
+      const height = chart.viewBox.baseVal.height;
+      return [...chart.querySelectorAll('.chart-value')].every((label) => {
+        const bounds = (label as SVGGraphicsElement).getBBox();
+        return bounds.y >= 0 && bounds.y + bounds.height <= height;
+      });
+    });
+  expect(chartLabelsFit).toBe(true);
   await expect(page.getByText('Contributor: Xia Sun')).toBeVisible();
   await expect(
     page.getByRole('link', { name: 'View 2018 organization archive' }),

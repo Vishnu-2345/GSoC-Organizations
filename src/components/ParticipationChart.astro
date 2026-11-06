@@ -11,13 +11,14 @@ const max = Math.max(1, ...values.map((item) => item.projectCount));
 const width = 720;
 const height = 230;
 const left = 42;
-const bottom = 34;
-const chartHeight = 170;
+const top = 36;
+const chartHeight = 144;
+const axisY = top + chartHeight;
 const step = values.length > 1 ? (width - left - 22) / (values.length - 1) : 0;
 const points = values.map((item, index) => ({
   ...item,
   x: left + (values.length === 1 ? (width - left) / 2 : index * step),
-  y: 14 + chartHeight - (item.projectCount / max) * chartHeight,
+  y: axisY - (item.projectCount / max) * chartHeight,
 }));
 const line = points.map((point) => `${point.x},${point.y}`).join(' ');
 ---
@@ -37,19 +38,15 @@ const line = points.map((point) => `${point.x},${point.y}`).join(' ');
           .join(', ')
       }</desc
     >
-    <line
-      x1={left}
-      y1={14 + chartHeight}
-      x2={width - 12}
-      y2={14 + chartHeight}
-      class="chart-axis"></line>
+    <line x1={left} y1={axisY} x2={width - 12} y2={axisY} class="chart-axis"
+    ></line>
     {points.length > 1 && <polyline points={line} class="chart-line" />}
     {
       points.map((point) => (
         <g>
           <line
             x1={point.x}
-            y1={14 + chartHeight}
+            y1={axisY}
             x2={point.x}
             y2={point.y}
             class="chart-stem"
