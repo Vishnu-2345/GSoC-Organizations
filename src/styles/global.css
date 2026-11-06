@@ -733,6 +733,12 @@ img {
   gap: 18px;
 }
 
+@media (min-width: 1261px) {
+  .organization-grid {
+    grid-auto-rows: minmax(440px, auto);
+  }
+}
+
 .load-more-row {
   display: flex;
   align-items: center;

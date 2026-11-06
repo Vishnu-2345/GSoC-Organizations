@@ -423,6 +423,46 @@ test('selecting a filter does not move the option list', async ({
   expect(Math.abs(scrollTopAfter - scrollTopBefore)).toBeLessThan(4);
 });
 
+test('filtering a full desktop grid keeps the page height stable', async ({
+  page,
+}, testInfo) => {
+  test.skip(
+    testInfo.project.name.includes('mobile'),
+    'The four-column desktop grid is covered here.',
+  );
+  await page.setViewportSize({ width: 2048, height: 1140 });
+  await page.goto('/');
+  await expect(page.getByTestId('explorer')).toHaveAttribute(
+    'data-ready',
+    'true',
+  );
+
+  const filters = page.getByRole('complementary', {
+    name: 'Organization filters',
+  });
+  const webTopic = filters.getByRole('checkbox', {
+    name: 'web',
+    exact: true,
+  });
+  await webTopic.scrollIntoViewIfNeeded();
+  await page.evaluate(() =>
+    window.scrollTo(0, document.documentElement.scrollHeight),
+  );
+  const heightBefore = await page.evaluate(
+    () => document.documentElement.scrollHeight,
+  );
+  const scrollBefore = await page.evaluate(() => window.scrollY);
+
+  await webTopic.check();
+
+  const heightAfter = await page.evaluate(
+    () => document.documentElement.scrollHeight,
+  );
+  const scrollAfter = await page.evaluate(() => window.scrollY);
+  expect(Math.abs(heightAfter - heightBefore)).toBeLessThan(4);
+  expect(Math.abs(scrollAfter - scrollBefore)).toBeLessThan(4);
+});
+
 test('footer provides project, privacy, and creator links', async ({
   page,
 }, testInfo) => {
