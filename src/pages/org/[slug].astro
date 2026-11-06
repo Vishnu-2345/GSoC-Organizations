@@ -274,17 +274,11 @@ const initials = organization.name
                             {project.inferredTechnologies.length > 0 && (
                               <div
                                 class="tag-row"
-                                aria-label="Inferred project technologies"
+                                aria-label="Project technologies"
                               >
-                                <span class="inferred-label">Inferred:</span>
                                 {project.inferredTechnologies.map(
                                   (technology) => (
-                                    <span
-                                      class="tag"
-                                      title="Inferred from project text"
-                                    >
-                                      {technology}
-                                    </span>
+                                    <span class="tag">{technology}</span>
                                   ),
                                 )}
                               </div>

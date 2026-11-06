@@ -323,6 +323,9 @@ test('project years switch a grid of project cards', async ({ page }) => {
   const projects2025 = page.locator('[data-project-year-panel="2025"]');
   await expect(projects2025).toBeVisible();
   await expect(projects2025.locator('.project-card').first()).toBeVisible();
+  await expect(
+    projects2025.getByText('Inferred:', { exact: true }),
+  ).toHaveCount(0);
 });
 
 test('filters offer option search and a first-time shortcut', async ({
