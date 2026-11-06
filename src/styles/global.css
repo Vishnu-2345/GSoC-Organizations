@@ -1583,36 +1583,43 @@ img {
 
 .footer-column .github-star-link {
   display: inline-flex;
+  min-height: 38px;
   align-items: center;
-  gap: 7px;
-  margin-top: 5px;
-  padding: 8px 10px;
-  border: 1px solid var(--border-strong);
-  border-radius: 8px;
-  background: #fff;
-  color: var(--text);
+  gap: 8px;
+  margin-top: 8px;
+  padding: 7px 8px 7px 12px;
+  border: 1px solid var(--orange);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--orange-deep);
   font-size: 12px;
-  box-shadow: 0 1px 2px rgb(24 29 35 / 6%);
+  box-shadow: none;
 }
 
 .footer-column .github-star-link:hover {
-  border-color: var(--blue-dark);
-  background: var(--surface-soft);
-  color: var(--blue-dark);
+  border-color: var(--orange-deep);
+  background: var(--blue-pale);
+  color: var(--orange-deep);
 }
 
 .github-star-link svg {
   width: 16px;
   height: 16px;
-  fill: var(--yellow);
-  stroke: #9b5a00;
-  stroke-width: 1;
+  fill: var(--sun);
+  stroke: var(--orange-deep);
+  stroke-width: 1.2;
 }
 
 .github-star-count {
-  min-width: 20px;
-  padding-left: 7px;
-  border-left: 1px solid var(--border);
+  display: inline-grid;
+  min-width: 24px;
+  min-height: 22px;
+  place-items: center;
+  padding: 0 7px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--orange-deep);
+  font-size: 11px;
   font-variant-numeric: tabular-nums;
   text-align: center;
 }

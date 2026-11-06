@@ -471,12 +471,18 @@ test('footer provides project, privacy, and creator links', async ({
     'https://x.com/rohangotnochill',
   );
   await expect(
-    footer.getByRole('link', { name: 'Star GSoC Organizations on GitHub' }),
+    footer.getByRole('link', { name: 'Star us on GitHub' }),
   ).toHaveAttribute(
     'href',
     'https://github.com/rohanmalhotracodes/GSoC-Organizations',
   );
-  await expect(footer.getByTestId('github-star-count')).toHaveText('1,234');
+  const starLink = footer.getByRole('link', { name: 'Star us on GitHub' });
+  await expect(starLink).toHaveCSS('border-radius', '999px');
+  await expect(starLink).toHaveCSS('border-top-color', 'rgb(227, 116, 0)');
+  await expect(starLink).toHaveCSS('box-shadow', 'none');
+  const starCount = footer.getByTestId('github-star-count');
+  await expect(starCount).toHaveText('1,234');
+  await expect(starCount).toHaveCSS('border-left-width', '0px');
   await footer.getByRole('link', { name: 'Privacy policy' }).click();
   await expect(
     page.getByRole('heading', { level: 1, name: 'Privacy policy' }),
