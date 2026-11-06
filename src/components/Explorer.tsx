@@ -194,11 +194,6 @@ export default function Explorer({
             <div>
               <strong>{results.length.toLocaleString()}</strong>{' '}
               {results.length === 1 ? 'organization' : 'organizations'}
-              {filterCount > 0 && (
-                <span className="active-filter-count">
-                  {filterCount} active
-                </span>
-              )}
             </div>
             <div className="toolbar-actions">
               <button
@@ -208,15 +203,6 @@ export default function Explorer({
               >
                 Filters {filterCount > 0 && `(${filterCount})`}
               </button>
-              {filterCount > 0 && (
-                <button
-                  className="text-button clear-all"
-                  type="button"
-                  onClick={() => setState(defaultFilters)}
-                >
-                  Clear all filters
-                </button>
-              )}
               <label className="sort-control">
                 <span>Sort</span>
                 <select

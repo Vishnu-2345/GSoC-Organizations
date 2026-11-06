@@ -129,7 +129,10 @@ test('filters offer option search and a first-time shortcut', async ({
     .fill('python');
   await filters.getByRole('checkbox', { name: 'python', exact: true }).check();
   await expect(page).toHaveURL(/technology=python/i);
-  await expect(page.getByText('1 active')).toBeVisible();
+  await expect(page.getByText('1 active')).toHaveCount(0);
+  await expect(
+    filters.getByRole('button', { name: 'Clear all' }),
+  ).toBeVisible();
 
   await filters.getByRole('button', { name: 'Clear all' }).click();
   await filters
@@ -180,7 +183,7 @@ test('footer provides project, privacy, and creator links', async ({
   ).toBeVisible();
 });
 
-test('filters and clear-all are usable on mobile', async ({
+test('filters and drawer clear-all are usable on mobile', async ({
   page,
 }, testInfo) => {
   test.skip(
@@ -196,7 +199,10 @@ test('filters and clear-all are usable on mobile', async ({
   await expect(page.getByRole('heading', { name: 'Filters' })).toBeVisible();
   await page.getByRole('checkbox', { name: 'Participation year 2026' }).check();
   await page.getByRole('button', { name: 'Close filters' }).click();
-  await expect(page.getByText('1 active')).toBeVisible();
-  await page.getByRole('button', { name: 'Clear all filters' }).click();
+  await expect(page.getByRole('button', { name: 'Filters (1)' })).toBeVisible();
   await expect(page.getByText('1 active')).toHaveCount(0);
+  await page.getByRole('button', { name: 'Filters (1)' }).click();
+  await page.getByRole('button', { name: 'Clear all' }).click();
+  await page.getByRole('button', { name: 'Close filters' }).click();
+  await expect(page.getByRole('button', { name: 'Filters' })).toBeVisible();
 });
