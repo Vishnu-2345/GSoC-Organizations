@@ -268,17 +268,6 @@ img {
   padding: 22px 28px 28px;
 }
 
-.shortlist-heading {
-  margin-bottom: 16px;
-}
-
-.shortlist-heading h2 {
-  margin: 0;
-  font-size: 28px;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
-}
-
 .desktop-filters {
   min-width: 0;
 }

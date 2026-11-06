@@ -121,6 +121,10 @@ test('bookmark persists into shortlist', async ({ page }) => {
     'data-ready',
     'true',
   );
+  await expect(page.getByText('Saved in this browser')).toHaveCount(0);
+  await expect(
+    page.getByRole('heading', { name: 'Your shortlist' }),
+  ).toHaveCount(0);
   await expect(
     page.getByRole('heading', { name: 'Metasploit', exact: true }),
   ).toBeVisible();

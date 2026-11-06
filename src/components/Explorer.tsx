@@ -187,13 +187,6 @@ export default function Explorer({
         )}
 
         <main className="results-column" id="results">
-          {shortlistOnly && (
-            <div className="shortlist-heading">
-              <span className="eyebrow">Saved in this browser</span>
-              <h2>Your shortlist</h2>
-            </div>
-          )}
-
           <div className="results-toolbar">
             <div>
               <strong>{results.length.toLocaleString()}</strong>{' '}
