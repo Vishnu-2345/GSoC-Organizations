@@ -151,11 +151,33 @@ test('organization profiles preserve contributor and archive details', async ({
   expect(chartLabelsFit).toBe(true);
   await expect(page.getByText('Contributor: Xia Sun')).toBeVisible();
   await expect(
-    page.getByRole('link', { name: 'View 2018 organization archive' }),
+    page.getByRole('link', { name: 'Official GSoC page' }),
   ).toHaveAttribute(
     'href',
     'https://summerofcode.withgoogle.com/archive/2018/organizations/5685665089978368/',
   );
+});
+
+test('project years switch a grid of project cards', async ({ page }) => {
+  await page.goto('/org/python-software-foundation/');
+
+  const yearTabs = page.getByRole('tablist', { name: 'Participation years' });
+  await expect(yearTabs.getByRole('tab')).toHaveCount(11);
+  await expect(yearTabs.getByRole('tab', { name: '2026' })).toHaveAttribute(
+    'aria-selected',
+    'true',
+  );
+  await expect(page.locator('[data-project-year-panel="2026"]')).toBeVisible();
+
+  await yearTabs.getByRole('tab', { name: '2025' }).click();
+  await expect(yearTabs.getByRole('tab', { name: '2025' })).toHaveAttribute(
+    'aria-selected',
+    'true',
+  );
+  await expect(page.locator('[data-project-year-panel="2026"]')).toBeHidden();
+  const projects2025 = page.locator('[data-project-year-panel="2025"]');
+  await expect(projects2025).toBeVisible();
+  await expect(projects2025.locator('.project-card').first()).toBeVisible();
 });
 
 test('filters offer option search and a first-time shortcut', async ({

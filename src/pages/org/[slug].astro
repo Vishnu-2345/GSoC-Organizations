@@ -155,36 +155,71 @@ const initials = organization.name
               </h2>
             </div>
           </div>
-          <div class="history-list">
+          <div class="project-history" data-project-history>
+            <div class="year-tabs-shell">
+              <div
+                class="year-tabs"
+                role="tablist"
+                aria-label="Participation years"
+              >
+                {
+                  organization.participations.map(
+                    (participation, participationIndex) => (
+                      <button
+                        class="year-tab"
+                        type="button"
+                        role="tab"
+                        id={`year-tab-${organization.slug}-${participation.year}`}
+                        aria-controls={`year-panel-${organization.slug}-${participation.year}`}
+                        aria-selected={
+                          participationIndex === 0 ? 'true' : 'false'
+                        }
+                        tabindex={participationIndex === 0 ? 0 : -1}
+                        data-project-year-tab={participation.year}
+                      >
+                        {participation.year}
+                      </button>
+                    ),
+                  )
+                }
+              </div>
+            </div>
             {
               organization.participations.map(
                 (participation, participationIndex) => (
-                  <details open={participationIndex === 0}>
-                    <summary>
-                      <>
-                        <span>{participation.year}</span>
-                        <small>
+                  <section
+                    class="project-year-panel"
+                    role="tabpanel"
+                    id={`year-panel-${organization.slug}-${participation.year}`}
+                    aria-labelledby={`year-tab-${organization.slug}-${participation.year}`}
+                    data-project-year-panel={participation.year}
+                    hidden={participationIndex !== 0}
+                  >
+                    <div class="project-year-toolbar">
+                      <p>
+                        <strong>{participation.year}</strong>
+                        <span>
                           {participation.projectCount}{' '}
                           {participation.projectCount === 1
                             ? 'project'
                             : 'projects'}
-                        </small>
-                      </>
-                    </summary>
-                    {participation.archiveUrl && (
-                      <a
-                        class="participation-archive-link"
-                        href={participation.archiveUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        View {participation.year} organization archive ↗
-                      </a>
-                    )}
+                        </span>
+                      </p>
+                      {participation.archiveUrl && (
+                        <a
+                          class="participation-archive-link"
+                          href={participation.archiveUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          Official GSoC page ↗
+                        </a>
+                      )}
+                    </div>
                     {participation.projects.length ? (
-                      <div class="project-list">
+                      <div class="project-card-grid">
                         {participation.projects.map((project) => (
-                          <article class="project-item">
+                          <article class="project-card">
                             <h3>{project.title}</h3>
                             {project.contributor && (
                               <p class="project-contributor">
@@ -242,7 +277,7 @@ const initials = organization.name
                         No project records were included for this year.
                       </p>
                     )}
-                  </details>
+                  </section>
                 ),
               )
             }
@@ -258,3 +293,50 @@ const initials = organization.name
     </div>
   </main>
 </BaseLayout>
+
+<script>
+  document
+    .querySelectorAll<HTMLElement>('[data-project-history]')
+    .forEach((history) => {
+      const tabs = [
+        ...history.querySelectorAll<HTMLButtonElement>(
+          '[data-project-year-tab]',
+        ),
+      ];
+      const panels = [
+        ...history.querySelectorAll<HTMLElement>('[data-project-year-panel]'),
+      ];
+
+      const activateTab = (tab: HTMLButtonElement, moveFocus = false) => {
+        const selectedYear = tab.dataset.projectYearTab;
+
+        tabs.forEach((candidate) => {
+          const isSelected = candidate === tab;
+          candidate.setAttribute('aria-selected', String(isSelected));
+          candidate.tabIndex = isSelected ? 0 : -1;
+        });
+        panels.forEach((panel) => {
+          panel.hidden = panel.dataset.projectYearPanel !== selectedYear;
+        });
+
+        if (moveFocus) tab.focus();
+      };
+
+      tabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => activateTab(tab));
+        tab.addEventListener('keydown', (event) => {
+          let nextIndex: number | undefined;
+
+          if (event.key === 'ArrowRight') nextIndex = (index + 1) % tabs.length;
+          if (event.key === 'ArrowLeft')
+            nextIndex = (index - 1 + tabs.length) % tabs.length;
+          if (event.key === 'Home') nextIndex = 0;
+          if (event.key === 'End') nextIndex = tabs.length - 1;
+          if (nextIndex === undefined) return;
+
+          event.preventDefault();
+          activateTab(tabs[nextIndex], true);
+        });
+      });
+    });
+</script>
