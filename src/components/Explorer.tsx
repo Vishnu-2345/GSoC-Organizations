@@ -198,6 +198,22 @@ export default function Explorer({
               {results.length === 1 ? 'organization' : 'organizations'}
             </div>
             <div className="toolbar-actions">
+              <a
+                className="button secondary-button saved-organizations-link"
+                href={shortlistOnly ? '/' : '/shortlist/'}
+              >
+                <svg
+                  className="save-icon"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path d="M7.25 3.5h9.5c.97 0 1.75.78 1.75 1.75v15.1L12 16.4l-6.5 3.95V5.25c0-.97.78-1.75 1.75-1.75Z" />
+                </svg>
+                {shortlistOnly ? 'All organizations' : 'Saved organizations'}
+                {!shortlistOnly && bookmarks.length > 0 && (
+                  <span className="saved-count">{bookmarks.length}</span>
+                )}
+              </a>
               <button
                 className="button secondary-button filter-trigger"
                 type="button"

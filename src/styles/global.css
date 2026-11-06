@@ -526,6 +526,24 @@ img {
   gap: 10px;
 }
 
+.saved-organizations-link .save-icon {
+  width: 17px;
+  height: 17px;
+}
+
+.saved-count {
+  display: inline-grid;
+  min-width: 21px;
+  min-height: 21px;
+  place-items: center;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--blue-pale);
+  color: var(--blue-dark);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
 .button {
   display: inline-flex;
   min-height: 38px;
@@ -606,7 +624,7 @@ img {
 
 .organization-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 18px;
 }
 
@@ -1485,7 +1503,7 @@ img {
 
 @media (max-width: 1260px) {
   .organization-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .organization-hero {
@@ -1514,6 +1532,10 @@ img {
 
   .explorer-layout {
     grid-template-columns: 1fr;
+  }
+
+  .organization-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .desktop-filters {

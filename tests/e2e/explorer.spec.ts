@@ -97,6 +97,44 @@ test('directory reveals organizations in batches of 25', async ({ page }) => {
   await expect(page.getByText('Showing 50 of 519')).toBeVisible();
 });
 
+test('wide directory uses four columns and exposes saved organizations', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1700, height: 900 });
+  await page.goto('/');
+  await expect(page.getByTestId('explorer')).toHaveAttribute(
+    'data-ready',
+    'true',
+  );
+
+  const grid = page.locator('.organization-grid');
+  const columnCount = await grid.evaluate(
+    (element) =>
+      getComputedStyle(element).gridTemplateColumns.split(' ').filter(Boolean)
+        .length,
+  );
+  expect(columnCount).toBe(4);
+  await expect(
+    page.getByRole('link', { name: 'Saved organizations' }),
+  ).toHaveAttribute('href', '/shortlist/');
+});
+
+test('organization cards display every technology label', async ({ page }) => {
+  await page.goto('/?q=Fedora%20Project');
+  await expect(page.getByTestId('explorer')).toHaveAttribute(
+    'data-ready',
+    'true',
+  );
+
+  const card = page.getByRole('article').filter({
+    has: page.getByRole('heading', { name: 'Fedora Project', exact: true }),
+  });
+  const technologies = card.locator('[aria-label="Technologies"] .tag');
+  await expect(technologies).toHaveCount(13);
+  await expect(technologies.getByText('web development')).toBeVisible();
+  await expect(technologies.filter({ hasText: /^\+\d+$/ })).toHaveCount(0);
+});
+
 test('cards show the complete participation history', async ({ page }) => {
   await page.goto('/?q=NumFOCUS');
   await expect(page.getByTestId('explorer')).toHaveAttribute(

@@ -78,16 +78,11 @@ export default function OrganizationCard({
           ))}
         </div>
         <div className="tag-row" aria-label="Technologies">
-          {organization.technologies.slice(0, 4).map((technology) => (
+          {organization.technologies.map((technology) => (
             <span className="tag" key={technology}>
               {technology}
             </span>
           ))}
-          {organization.technologies.length > 4 && (
-            <span className="tag muted">
-              +{organization.technologies.length - 4}
-            </span>
-          )}
         </div>
       </div>
       <dl className="card-metrics">
