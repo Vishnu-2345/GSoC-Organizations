@@ -107,7 +107,7 @@ function plainText(value = '') {
 }
 
 function normalizeTag(value) {
-  const cleaned = clean(value).replace(/\s*\.\s*$/, '');
+  const cleaned = clean(value).replace(/\s*[,;.]\s*$/, '');
   const key = cleaned.toLocaleLowerCase();
   return canonicalTags.get(key) || cleaned;
 }

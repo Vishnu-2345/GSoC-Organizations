@@ -70,6 +70,10 @@ for (const org of organizations) {
         errors.push(
           `${org.name}: untrimmed ${label} tag ${JSON.stringify(tag)}`,
         );
+      if (/[,;.]$/.test(tag))
+        errors.push(
+          `${org.name}: trailing punctuation in ${label} tag ${JSON.stringify(tag)}`,
+        );
       seen.add(key);
     }
   }
