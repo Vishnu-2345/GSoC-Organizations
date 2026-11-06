@@ -65,6 +65,12 @@ test('search, malformed URL recovery, and organization navigation', async ({
   await expect(metasploitCard).toBeVisible();
   await metasploitCard.hover();
   await expect(
+    page.locator('link[data-organization-profile-prefetch="metasploit"]'),
+  ).toHaveAttribute('href', '/org/metasploit/');
+  await expect(
+    page.locator('link[data-organization-profile-prefetch="metasploit"]'),
+  ).toHaveAttribute('rel', 'prefetch');
+  await expect(
     metasploitCard.getByRole('link', { name: 'Metasploit' }),
   ).toHaveCSS('color', 'rgb(249, 171, 0)');
   await expect(metasploitCard).toHaveCSS('cursor', 'pointer');

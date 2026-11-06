@@ -1,5 +1,7 @@
 import type { OrganizationSummary } from '../types';
 
+const prefetchedProfiles = new Set<string>();
+
 type Props = {
   organization: OrganizationSummary;
   bookmarked: boolean;
@@ -27,9 +29,24 @@ export default function OrganizationCard({
     window.open(profileUrl, '_blank', 'noopener,noreferrer');
   }
 
+  function prefetchProfile() {
+    if (prefetchedProfiles.has(profileUrl)) return;
+
+    const link = document.createElement('link');
+    link.rel = 'prefetch';
+    link.as = 'document';
+    link.href = profileUrl;
+    link.dataset.organizationProfilePrefetch = organization.slug;
+    document.head.append(link);
+    prefetchedProfiles.add(profileUrl);
+  }
+
   return (
     <article
       className="org-card"
+      onPointerEnter={prefetchProfile}
+      onPointerDown={prefetchProfile}
+      onFocusCapture={prefetchProfile}
       onClick={(event) => {
         if ((event.target as HTMLElement).closest('a, button')) return;
         openProfile();
