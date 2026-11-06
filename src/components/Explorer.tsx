@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import {
   activeFilterCount,
   defaultFilters,
@@ -35,6 +35,8 @@ export default function Explorer({
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [ready, setReady] = useState(false);
   const [visibleLimit, setVisibleLimit] = useState(ORGANIZATIONS_PER_BATCH);
+  const resultsColumnRef = useRef<HTMLElement>(null);
+  const sidebarFilterChangeRef = useRef(false);
 
   useEffect(() => {
     const syncStateFromUrl = () =>
@@ -98,6 +100,27 @@ export default function Explorer({
       : filtered;
     return sortOrganizations(available, state.sort, state.query);
   }, [organizations, bookmarks, shortlistOnly, state]);
+
+  useLayoutEffect(() => {
+    if (!sidebarFilterChangeRef.current) return;
+    sidebarFilterChangeRef.current = false;
+    if (results.length >= ORGANIZATIONS_PER_BATCH) return;
+
+    const resultsColumn = resultsColumnRef.current;
+    if (!resultsColumn) return;
+    const resultsTop =
+      resultsColumn.getBoundingClientRect().top + window.scrollY - 16;
+    const previousScrollBehavior =
+      document.documentElement.style.scrollBehavior;
+    document.documentElement.style.scrollBehavior = 'auto';
+    window.scrollTo({ top: Math.max(0, resultsTop), behavior: 'auto' });
+    document.documentElement.style.scrollBehavior = previousScrollBehavior;
+  }, [results]);
+
+  function updateSidebarFilters(next: FilterState) {
+    sidebarFilterChangeRef.current = true;
+    setState(next);
+  }
 
   function toggleBookmark(slug: string) {
     const next = bookmarks.includes(slug)
@@ -164,7 +187,11 @@ export default function Explorer({
       </div>
       <div className="explorer-layout">
         <aside className="desktop-filters" aria-label="Organization filters">
-          <FilterSidebar state={state} options={options} onChange={setState} />
+          <FilterSidebar
+            state={state}
+            options={options}
+            onChange={updateSidebarFilters}
+          />
         </aside>
 
         {filtersOpen && (
@@ -181,14 +208,14 @@ export default function Explorer({
               <FilterSidebar
                 state={state}
                 options={options}
-                onChange={setState}
+                onChange={updateSidebarFilters}
                 onClose={() => setFiltersOpen(false)}
               />
             </aside>
           </div>
         )}
 
-        <main className="results-column" id="results">
+        <main ref={resultsColumnRef} className="results-column" id="results">
           <div className="results-toolbar">
             <div>
               <strong>{results.length.toLocaleString()}</strong>{' '}

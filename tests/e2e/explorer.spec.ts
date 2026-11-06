@@ -463,6 +463,43 @@ test('filtering a full desktop grid keeps the page height stable', async ({
   expect(Math.abs(scrollAfter - scrollBefore)).toBeLessThan(4);
 });
 
+test('a small filtered result set opens at the results instead of the footer', async ({
+  page,
+}, testInfo) => {
+  test.skip(
+    testInfo.project.name.includes('mobile'),
+    'The desktop sidebar interaction is covered here.',
+  );
+  await page.setViewportSize({ width: 2048, height: 1140 });
+  await page.goto('/');
+  await expect(page.getByTestId('explorer')).toHaveAttribute(
+    'data-ready',
+    'true',
+  );
+  await page.evaluate(() =>
+    window.scrollTo(0, document.documentElement.scrollHeight),
+  );
+
+  const filters = page.getByRole('complementary', {
+    name: 'Organization filters',
+  });
+  const developmentTools = filters.getByRole('checkbox', {
+    name: 'Development tools',
+    exact: true,
+  });
+  await developmentTools.scrollIntoViewIfNeeded();
+  await developmentTools.check();
+
+  await expect(
+    page.getByText('6 organizations', { exact: true }),
+  ).toBeVisible();
+  const resultsBox = await page.locator('.results-column').boundingBox();
+  expect(resultsBox).not.toBeNull();
+  expect(resultsBox!.y).toBeGreaterThanOrEqual(0);
+  expect(resultsBox!.y).toBeLessThan(40);
+  await expect(page.getByRole('contentinfo')).not.toBeInViewport();
+});
+
 test('footer provides project, privacy, and creator links', async ({
   page,
 }, testInfo) => {
