@@ -108,6 +108,13 @@ test('wide directory uses four columns and exposes saved organizations', async (
   );
 
   const grid = page.locator('.organization-grid');
+  const masthead = page.locator('.directory-masthead .directory-header');
+  const filters = page.locator('.desktop-filters');
+  const mastheadBox = await masthead.boundingBox();
+  const filtersBox = await filters.boundingBox();
+  expect(mastheadBox).not.toBeNull();
+  expect(filtersBox).not.toBeNull();
+  expect(Math.abs(mastheadBox!.x - filtersBox!.x)).toBeLessThan(2);
   const columnCount = await grid.evaluate(
     (element) =>
       getComputedStyle(element).gridTemplateColumns.split(' ').filter(Boolean)

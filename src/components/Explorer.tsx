@@ -114,6 +114,51 @@ export default function Explorer({
       data-testid="explorer"
       data-ready={ready ? 'true' : 'false'}
     >
+      <div className="directory-masthead">
+        <header className="directory-header">
+          <div className="directory-brand">
+            <a
+              className="brand-home-link"
+              href="/"
+              aria-label="GSoC Organizations home"
+            >
+              <img
+                className="gsoc-mark"
+                src="/brand/gsoc-organizations-logo.svg"
+                alt=""
+                width="512"
+                height="512"
+              />
+            </a>
+            <div className="directory-title">
+              <h1>GSoC Organizations</h1>
+            </div>
+          </div>
+          <label className="global-search">
+            <span className="sr-only">Search organizations</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m21 21-4.35-4.35m2.35-5.15a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z" />
+            </svg>
+            <input
+              type="search"
+              placeholder="Search organizations, technologies, topics…"
+              value={state.query}
+              onChange={(event) =>
+                setState({ ...state, query: event.target.value })
+              }
+            />
+            {state.query && (
+              <button
+                type="button"
+                aria-label="Clear search"
+                onClick={() => setState({ ...state, query: '' })}
+              >
+                ×
+              </button>
+            )}
+          </label>
+        </header>
+      </div>
       <div className="explorer-layout">
         <aside className="desktop-filters" aria-label="Organization filters">
           <FilterSidebar state={state} options={options} onChange={setState} />
@@ -141,56 +186,12 @@ export default function Explorer({
         )}
 
         <main className="results-column" id="results">
-          <div className="directory-header">
-            <div className="directory-brand">
-              <a
-                className="brand-home-link"
-                href="/"
-                aria-label="GSoC Organizations home"
-              >
-                <img
-                  className="gsoc-mark"
-                  src="/brand/gsoc-organizations-logo.svg"
-                  alt=""
-                  width="512"
-                  height="512"
-                />
-              </a>
-              <div className="directory-title">
-                {shortlistOnly ? (
-                  <>
-                    <span className="eyebrow">Saved in this browser</span>
-                    <h1>Your shortlist</h1>
-                  </>
-                ) : (
-                  <h1>GSoC Organizations</h1>
-                )}
-              </div>
+          {shortlistOnly && (
+            <div className="shortlist-heading">
+              <span className="eyebrow">Saved in this browser</span>
+              <h2>Your shortlist</h2>
             </div>
-            <label className="global-search">
-              <span className="sr-only">Search organizations</span>
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="m21 21-4.35-4.35m2.35-5.15a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z" />
-              </svg>
-              <input
-                type="search"
-                placeholder="Search organizations, technologies, topics…"
-                value={state.query}
-                onChange={(event) =>
-                  setState({ ...state, query: event.target.value })
-                }
-              />
-              {state.query && (
-                <button
-                  type="button"
-                  aria-label="Clear search"
-                  onClick={() => setState({ ...state, query: '' })}
-                >
-                  ×
-                </button>
-              )}
-            </label>
-          </div>
+          )}
 
           <div className="results-toolbar">
             <div>

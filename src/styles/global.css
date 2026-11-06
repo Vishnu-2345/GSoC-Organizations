@@ -109,6 +109,16 @@ img {
   margin-bottom: 20px;
 }
 
+.directory-masthead {
+  max-width: var(--content);
+  margin: 0 auto;
+  padding: 28px 28px 0;
+}
+
+.directory-masthead .directory-header {
+  margin-bottom: 0;
+}
+
 .directory-brand {
   display: flex;
   min-width: 0;
@@ -248,7 +258,18 @@ img {
   gap: 26px;
   max-width: var(--content);
   margin: 0 auto;
-  padding: 28px;
+  padding: 22px 28px 28px;
+}
+
+.shortlist-heading {
+  margin-bottom: 16px;
+}
+
+.shortlist-heading h2 {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
 }
 
 .desktop-filters {
@@ -1554,9 +1575,14 @@ img {
   }
 
   .explorer-layout,
+  .directory-masthead,
   .detail-page,
   .prose-page {
     padding: 18px 14px 40px;
+  }
+
+  .directory-masthead {
+    padding-bottom: 0;
   }
 
   .results-toolbar {
