@@ -37,6 +37,7 @@ export default function Explorer({
   const [visibleLimit, setVisibleLimit] = useState(ORGANIZATIONS_PER_BATCH);
   const resultsColumnRef = useRef<HTMLElement>(null);
   const sidebarFilterChangeRef = useRef(false);
+  const sidebarTopBeforeChangeRef = useRef<number | null>(null);
 
   useEffect(() => {
     const syncStateFromUrl = () =>
@@ -104,21 +105,39 @@ export default function Explorer({
   useLayoutEffect(() => {
     if (!sidebarFilterChangeRef.current) return;
     sidebarFilterChangeRef.current = false;
-    if (results.length >= ORGANIZATIONS_PER_BATCH) return;
-
-    const resultsColumn = resultsColumnRef.current;
-    if (!resultsColumn) return;
-    const resultsTop =
-      resultsColumn.getBoundingClientRect().top + window.scrollY - 16;
     const previousScrollBehavior =
       document.documentElement.style.scrollBehavior;
     document.documentElement.style.scrollBehavior = 'auto';
-    window.scrollTo({ top: Math.max(0, resultsTop), behavior: 'auto' });
+
+    if (results.length < ORGANIZATIONS_PER_BATCH) {
+      const resultsColumn = resultsColumnRef.current;
+      if (resultsColumn) {
+        const resultsTop =
+          resultsColumn.getBoundingClientRect().top + window.scrollY - 16;
+        window.scrollTo({ top: Math.max(0, resultsTop), behavior: 'auto' });
+      }
+    }
+
+    const sidebar = document.querySelector<HTMLElement>(
+      '.desktop-filters .filters-panel',
+    );
+    const topBeforeChange = sidebarTopBeforeChangeRef.current;
+    if (sidebar && topBeforeChange !== null) {
+      const topDifference =
+        sidebar.getBoundingClientRect().top - topBeforeChange;
+      if (Math.abs(topDifference) > 0.5) window.scrollBy(0, topDifference);
+    }
+
+    sidebarTopBeforeChangeRef.current = null;
     document.documentElement.style.scrollBehavior = previousScrollBehavior;
   }, [results]);
 
   function updateSidebarFilters(next: FilterState) {
     sidebarFilterChangeRef.current = true;
+    sidebarTopBeforeChangeRef.current =
+      document
+        .querySelector<HTMLElement>('.desktop-filters .filters-panel')
+        ?.getBoundingClientRect().top ?? null;
     setState(next);
   }
 

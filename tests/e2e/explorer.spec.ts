@@ -463,7 +463,7 @@ test('filtering a full desktop grid keeps the page height stable', async ({
   expect(Math.abs(scrollAfter - scrollBefore)).toBeLessThan(4);
 });
 
-test('a small filtered result set opens at the results instead of the footer', async ({
+test('a small filtered result set keeps the filter panel anchored', async ({
   page,
 }, testInfo) => {
   test.skip(
@@ -476,9 +476,7 @@ test('a small filtered result set opens at the results instead of the footer', a
     'data-ready',
     'true',
   );
-  await page.evaluate(() =>
-    window.scrollTo(0, document.documentElement.scrollHeight),
-  );
+  await page.evaluate(() => window.scrollTo(0, 500));
 
   const filters = page.getByRole('complementary', {
     name: 'Organization filters',
@@ -488,6 +486,9 @@ test('a small filtered result set opens at the results instead of the footer', a
     exact: true,
   });
   await developmentTools.scrollIntoViewIfNeeded();
+  const sidebarTopBefore = await page
+    .locator('.desktop-filters .filters-panel')
+    .evaluate((element) => element.getBoundingClientRect().top);
   await developmentTools.check();
 
   await expect(
@@ -497,7 +498,10 @@ test('a small filtered result set opens at the results instead of the footer', a
   expect(resultsBox).not.toBeNull();
   expect(resultsBox!.y).toBeGreaterThanOrEqual(0);
   expect(resultsBox!.y).toBeLessThan(40);
-  await expect(page.getByRole('contentinfo')).not.toBeInViewport();
+  const sidebarTopAfter = await page
+    .locator('.desktop-filters .filters-panel')
+    .evaluate((element) => element.getBoundingClientRect().top);
+  expect(Math.abs(sidebarTopAfter - sidebarTopBefore)).toBeLessThan(1);
 });
 
 test('footer provides project, privacy, and creator links', async ({
