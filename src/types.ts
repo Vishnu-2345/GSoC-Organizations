@@ -12,6 +12,7 @@ export type Participation = {
   year: number;
   projectCount: number;
   projects: Project[];
+  archiveUrl?: string;
 };
 
 export type Repository = {

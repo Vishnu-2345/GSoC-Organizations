@@ -41,7 +41,7 @@ test('search, malformed URL recovery, and organization navigation', async ({
   await expect(firstOrganizationLogo).toHaveCSS('width', '132px');
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
   const search = page.getByRole('searchbox', { name: 'Search organizations' });
-  await search.fill('Metasploit');
+  await search.fill('Metasplot');
   await expect(page.getByRole('button', { name: 'Clear search' })).toHaveCount(
     1,
   );
@@ -110,6 +110,20 @@ test('cards show the complete participation history', async ({ page }) => {
     participationYears.getByText('2016', { exact: true }),
   ).toBeVisible();
   await expect(participationYears.locator('small')).toHaveCount(0);
+});
+
+test('organization profiles preserve contributor and archive details', async ({
+  page,
+}) => {
+  await page.goto('/org/3dtk/');
+
+  await expect(page.getByText('Contributor: Xia Sun')).toBeVisible();
+  await expect(
+    page.getByRole('link', { name: 'View 2018 organization archive' }),
+  ).toHaveAttribute(
+    'href',
+    'https://summerofcode.withgoogle.com/archive/2018/organizations/5685665089978368/',
+  );
 });
 
 test('filters offer option search and a first-time shortcut', async ({

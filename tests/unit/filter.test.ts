@@ -73,6 +73,14 @@ describe('organization filtering', () => {
     ).toEqual(['beta']);
   });
 
+  it('tolerates small spelling mistakes in organization names', () => {
+    expect(
+      filterOrganizations(organizations, filters({ query: 'Alhpa' })).map(
+        (org) => org.slug,
+      ),
+    ).toEqual(['alpha']);
+  });
+
   it('applies inclusion and exclusion filters together', () => {
     const result = filterOrganizations(
       organizations,

@@ -14,6 +14,52 @@ export const defaultFilters: FilterState = {
 
 const normalized = (value: string) => value.trim().toLocaleLowerCase();
 
+function editDistance(source: string, target: string): number {
+  const rows = Array.from({ length: source.length + 1 }, (_, index) => [index]);
+
+  for (let column = 1; column <= target.length; column += 1) {
+    rows[0][column] = column;
+  }
+
+  for (let row = 1; row <= source.length; row += 1) {
+    for (let column = 1; column <= target.length; column += 1) {
+      const substitutionCost = source[row - 1] === target[column - 1] ? 0 : 1;
+      rows[row][column] = Math.min(
+        rows[row - 1][column] + 1,
+        rows[row][column - 1] + 1,
+        rows[row - 1][column - 1] + substitutionCost,
+      );
+
+      if (
+        row > 1 &&
+        column > 1 &&
+        source[row - 1] === target[column - 2] &&
+        source[row - 2] === target[column - 1]
+      ) {
+        rows[row][column] = Math.min(
+          rows[row][column],
+          rows[row - 2][column - 2] + 1,
+        );
+      }
+    }
+  }
+
+  return rows[source.length][target.length];
+}
+
+function approximatelyMatchesName(name: string, term: string): boolean {
+  if (term.length < 4) return false;
+
+  const maximumDistance = term.length >= 8 ? 2 : 1;
+  const nameWords = normalized(name).split(/[^\p{L}\p{N}+#.]+/u);
+
+  return nameWords.some(
+    (word) =>
+      Math.abs(word.length - term.length) <= maximumDistance &&
+      editDistance(word, term) <= maximumDistance,
+  );
+}
+
 export function filterOrganizations(
   organizations: OrganizationSummary[],
   state: FilterState,
@@ -40,7 +86,14 @@ export function filterOrganizations(
       .join(' ')
       .toLocaleLowerCase();
 
-    if (queryTerms.some((term) => !searchable.includes(term))) return false;
+    if (
+      queryTerms.some(
+        (term) =>
+          !searchable.includes(term) &&
+          !approximatelyMatchesName(organization.name, term),
+      )
+    )
+      return false;
     if (
       state.firstTime &&
       !(

@@ -470,6 +470,7 @@ function combineOrganizationRecords(group) {
       year,
       projectCount: Number(raw.num_projects) || projects.length,
       projects,
+      archiveUrl: safeUrl(raw.projects_url) || undefined,
     };
     if (priorIndex >= 0) existing.participations[priorIndex] = participation;
     else existing.participations.push(participation);

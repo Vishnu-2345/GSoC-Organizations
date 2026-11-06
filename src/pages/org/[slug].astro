@@ -147,11 +147,26 @@ const initials = organization.name
                         </small>
                       </>
                     </summary>
+                    {participation.archiveUrl && (
+                      <a
+                        class="participation-archive-link"
+                        href={participation.archiveUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        View {participation.year} organization archive ↗
+                      </a>
+                    )}
                     {participation.projects.length ? (
                       <div class="project-list">
                         {participation.projects.map((project) => (
                           <article class="project-item">
                             <h3>{project.title}</h3>
+                            {project.contributor && (
+                              <p class="project-contributor">
+                                Contributor: {project.contributor}
+                              </p>
+                            )}
                             <p>
                               {project.shortDescription ||
                                 project.description ||
