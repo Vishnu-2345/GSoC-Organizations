@@ -126,23 +126,29 @@ img {
   gap: 12px;
 }
 
-.brand-home-link {
-  display: block;
-  width: 46px;
-  height: 46px;
-  flex: 0 0 auto;
+.directory-brand-link {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 12px;
   border-radius: 10px;
+  color: var(--text);
   text-decoration: none;
 }
 
-.brand-home-link:focus-visible {
+.directory-brand-link:hover {
+  color: var(--text);
+}
+
+.directory-brand-link:focus-visible {
   outline: 3px solid rgba(227, 116, 0, 0.28);
 }
 
 .gsoc-mark {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 46px;
+  height: 46px;
+  flex: 0 0 auto;
   object-fit: contain;
 }
 

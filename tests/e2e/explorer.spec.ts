@@ -19,7 +19,10 @@ test('uses the official brand across the page and browser tab', async ({
     'src',
     '/brand/gsoc-organizations-logo.svg',
   );
-  await homeLink.click();
+  await expect(
+    homeLink.getByText('GSoC Organizations', { exact: true }),
+  ).toBeVisible();
+  await homeLink.getByText('GSoC Organizations', { exact: true }).click();
   await expect(page).toHaveURL('/');
   await expect(page).toHaveTitle('GSoC Organizations');
   await expect(

@@ -118,7 +118,7 @@ export default function Explorer({
         <header className="directory-header">
           <div className="directory-brand">
             <a
-              className="brand-home-link"
+              className="directory-brand-link"
               href="/"
               aria-label="GSoC Organizations home"
             >
@@ -129,10 +129,10 @@ export default function Explorer({
                 width="512"
                 height="512"
               />
+              <div className="directory-title">
+                <h1>GSoC Organizations</h1>
+              </div>
             </a>
-            <div className="directory-title">
-              <h1>GSoC Organizations</h1>
-            </div>
           </div>
           <label className="global-search">
             <span className="sr-only">Search organizations</span>

@@ -30,7 +30,7 @@ const initials = organization.name
     <header class="directory-header profile-directory-header">
       <div class="directory-brand">
         <a
-          class="brand-home-link"
+          class="directory-brand-link"
           href="/"
           aria-label="GSoC Organizations home"
         >
@@ -41,10 +41,10 @@ const initials = organization.name
             width="512"
             height="512"
           />
+          <div class="directory-title">
+            <span class="directory-site-title">GSoC Organizations</span>
+          </div>
         </a>
-        <div class="directory-title">
-          <span class="directory-site-title">GSoC Organizations</span>
-        </div>
       </div>
       <form class="global-search" role="search" action="/" method="get">
         <label class="sr-only" for="profile-organization-search"
