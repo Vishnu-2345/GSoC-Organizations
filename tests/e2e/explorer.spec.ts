@@ -561,14 +561,21 @@ test('footer provides project, privacy, and creator links', async ({
     'href',
     'https://github.com/rohanmalhotracodes/GSoC-Organizations',
   );
-  await expect(footer.getByRole('link', { name: 'LinkedIn' })).toHaveAttribute(
-    'href',
-    'https://www.linkedin.com/in/rohanmalhotracodes/',
-  );
-  await expect(footer.getByRole('link', { name: 'X' })).toHaveAttribute(
+  await expect(
+    footer.getByRole('link', { name: 'LinkedIn profile' }),
+  ).toHaveAttribute('href', 'https://www.linkedin.com/in/rohanmalhotracodes/');
+  await expect(footer.getByRole('link', { name: 'X profile' })).toHaveAttribute(
     'href',
     'https://x.com/rohangotnochill',
   );
+  await expect(
+    footer.getByRole('link', { name: 'GitHub profile' }),
+  ).toHaveAttribute('href', 'https://github.com/rohanmalhotracodes');
+  await expect(footer.locator('.footer-social-links')).toHaveCSS(
+    'flex-direction',
+    'row',
+  );
+  await expect(footer.locator('.social-icon-link')).toHaveCount(3);
   await expect(
     footer.getByRole('link', { name: 'Star us on GitHub' }),
   ).toHaveAttribute(

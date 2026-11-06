@@ -1567,6 +1567,43 @@ img {
   color: var(--blue-dark);
 }
 
+.footer-social-links {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 4px;
+}
+
+.footer-column .social-icon-link {
+  display: inline-grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: #fff;
+  color: var(--text);
+  transition:
+    transform 140ms ease,
+    border-color 140ms ease,
+    background 140ms ease,
+    color 140ms ease;
+}
+
+.footer-column .social-icon-link:hover,
+.footer-column .social-icon-link:focus-visible {
+  border-color: var(--orange);
+  background: var(--blue-pale);
+  color: var(--orange-deep);
+  transform: translateY(-2px);
+}
+
+.social-icon-link svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
 .footer-column .github-star-link {
   display: inline-flex;
   min-height: 38px;
