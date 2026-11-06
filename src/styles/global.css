@@ -1499,14 +1499,21 @@ img {
   padding: 52px 28px 44px;
 }
 
-.footer-brand-link {
+.footer-brand-link,
+.footer-brand-link:visited,
+.footer-brand-link:hover,
+.footer-brand-link:focus,
+.footer-brand-link:active {
   display: flex;
   align-items: center;
   gap: 13px;
+  background: transparent;
   color: var(--text);
+  filter: none;
   font-size: 22px;
   font-weight: 800;
   letter-spacing: -0.025em;
+  text-shadow: none;
   text-decoration: none;
 }
 
@@ -1559,10 +1566,6 @@ img {
 
 .footer-column a:hover {
   color: var(--blue-dark);
-}
-
-.footer-brand-link:hover {
-  color: var(--text);
 }
 
 .footer-column .github-star-link {

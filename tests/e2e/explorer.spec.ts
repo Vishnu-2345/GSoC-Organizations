@@ -412,6 +412,9 @@ test('footer provides project, privacy, and creator links', async ({
     );
     await footerBrand.hover();
     await expect(footerBrand).toHaveCSS('color', brandColor);
+    await expect(footerBrand).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
+    await expect(footerBrand).toHaveCSS('filter', 'none');
+    await expect(footerBrand).toHaveCSS('text-shadow', 'none');
   }
   await expect(
     footer.getByText('Rohan Malhotra', { exact: true }),
