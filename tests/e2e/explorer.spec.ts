@@ -41,7 +41,7 @@ test('search, malformed URL recovery, and organization navigation', async ({
   );
   const firstOrganizationLogo = page.locator('.org-logo').first();
   await expect(firstOrganizationLogo).toHaveCSS('border-top-width', '0px');
-  await expect(firstOrganizationLogo).toHaveCSS('width', '132px');
+  await expect(firstOrganizationLogo).toHaveCSS('width', '104px');
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
   const search = page.getByRole('searchbox', { name: 'Search organizations' });
   await search.fill('Metasplot');
@@ -124,6 +124,9 @@ test('wide directory uses four columns and exposes saved organizations', async (
         .length,
   );
   expect(columnCount).toBe(4);
+  const firstCardBox = await grid.locator('.org-card').first().boundingBox();
+  expect(firstCardBox).not.toBeNull();
+  expect(firstCardBox!.height).toBeLessThan(500);
   await expect(
     page.getByRole('link', { name: 'Saved organizations' }),
   ).toHaveAttribute('href', '/shortlist/');
