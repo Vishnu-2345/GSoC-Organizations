@@ -265,7 +265,6 @@ img {
 
 .filter-panel-title h2,
 .section-heading h2,
-.resource-card h2,
 .prose-card h2 {
   margin: 0;
   font-size: 18px;
@@ -960,10 +959,10 @@ img {
 
 .organization-hero {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-columns: auto minmax(0, 1fr) minmax(320px, 0.65fr);
   align-items: center;
-  gap: 22px;
-  padding: 28px;
+  gap: 20px;
+  padding: 20px 22px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: #fff;
@@ -971,26 +970,70 @@ img {
 }
 
 .detail-logo {
-  width: 124px;
-  height: 124px;
-  font-size: 28px;
+  width: 104px;
+  height: 104px;
+  font-size: 24px;
 }
 
 .organization-heading h1 {
   margin-top: 4px;
-  font-size: clamp(28px, 3vw, 40px);
+  font-size: clamp(26px, 2.5vw, 34px);
 }
 
 .organization-heading > p {
   max-width: 780px;
-  margin: 8px 0 16px;
+  margin: 5px 0 11px;
   color: var(--text-secondary);
 }
 
-.hero-actions {
+.hero-taxonomy {
+  display: grid;
+  gap: 6px;
+}
+
+.taxonomy-group {
   display: flex;
-  flex-wrap: wrap;
+  align-items: flex-start;
   gap: 9px;
+}
+
+.taxonomy-label {
+  min-width: 72px;
+  padding-top: 3px;
+  color: var(--text-secondary);
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.hero-taxonomy .tag-row {
+  gap: 4px;
+}
+
+.hero-taxonomy .tag {
+  padding: 3px 8px;
+  font-size: 10px;
+}
+
+.hero-summary {
+  display: grid;
+  align-self: stretch;
+  align-content: space-between;
+  gap: 16px;
+  padding-left: 20px;
+  border-left: 1px solid var(--border);
+}
+
+.hero-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.hero-actions .button {
+  min-width: 0;
+  padding-inline: 10px;
 }
 
 .verification-pill {
@@ -1008,12 +1051,16 @@ img {
 
 .hero-metrics {
   display: grid;
-  grid-template-columns: repeat(3, minmax(86px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   margin: 0;
 }
 
 .hero-metrics div {
-  padding: 8px 18px;
+  min-width: 0;
+  padding: 4px 10px;
+}
+
+.hero-metrics div + div {
   border-left: 1px solid var(--border);
 }
 
@@ -1026,27 +1073,17 @@ img {
 
 .hero-metrics dd {
   margin: 4px 0 0;
-  font-size: 23px;
+  font-size: 21px;
   font-weight: 780;
 }
 
 .detail-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 330px;
-  align-items: start;
-  gap: 22px;
   margin-top: 22px;
 }
 
-.detail-main,
-.detail-sidebar {
+.detail-main {
   display: grid;
   gap: 22px;
-}
-
-.detail-sidebar {
-  position: sticky;
-  top: 28px;
 }
 
 .detail-card {
@@ -1183,7 +1220,6 @@ img {
 }
 
 .project-item p,
-.repository-fallback p,
 .empty-inline {
   margin: 0 0 10px;
   color: var(--text-secondary);
@@ -1214,42 +1250,6 @@ img {
 .empty-inline {
   padding: 16px;
   border-top: 1px solid var(--border);
-}
-
-.repository-list {
-  display: grid;
-  gap: 8px;
-  margin-top: 14px;
-}
-
-.repository-list a {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  padding: 10px 12px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  color: var(--text);
-  text-decoration: none;
-}
-
-.repository-list a:hover {
-  border-color: var(--blue);
-  background: var(--blue-pale);
-}
-
-.repository-list span {
-  font-size: 13px;
-  font-weight: 750;
-}
-
-.repository-list small {
-  color: var(--text-secondary);
-  font-size: 11px;
-}
-
-.resource-subheading {
-  margin-top: 22px !important;
 }
 
 .local-research textarea {
@@ -1447,12 +1447,11 @@ img {
     grid-template-columns: auto minmax(0, 1fr);
   }
 
-  .hero-metrics {
+  .hero-summary {
     grid-column: 1 / -1;
+    padding-top: 16px;
+    padding-left: 0;
     border-top: 1px solid var(--border);
-  }
-
-  .hero-metrics div:first-child {
     border-left: 0;
   }
 }
@@ -1479,19 +1478,6 @@ img {
   .filter-trigger,
   .mobile-only {
     display: inline-flex;
-  }
-
-  .detail-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .detail-sidebar {
-    position: static;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .detail-sidebar .detail-card:last-child {
-    grid-column: 1 / -1;
   }
 }
 
@@ -1544,6 +1530,10 @@ img {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .hero-summary {
+    grid-column: auto;
+  }
+
   .hero-metrics div {
     padding: 12px 8px;
   }
@@ -1556,13 +1546,17 @@ img {
     padding: 17px;
   }
 
-  .detail-sidebar,
   .prose-grid {
     grid-template-columns: 1fr;
   }
 
-  .detail-sidebar .detail-card:last-child {
-    grid-column: auto;
+  .taxonomy-group {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .taxonomy-label {
+    min-width: 0;
   }
 
   .section-heading {

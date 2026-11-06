@@ -53,6 +53,41 @@ const initials = organization.name
         <span class="category-label">{organization.category}</span>
         <h1>{organization.name}</h1>
         <p>{organization.description}</p>
+        <div class="hero-taxonomy">
+          <div class="taxonomy-group">
+            <span class="taxonomy-label">Technologies</span>
+            <div class="tag-row">
+              {
+                organization.technologies.map((technology) => (
+                  <span class="tag">{technology}</span>
+                ))
+              }
+            </div>
+          </div>
+          <div class="taxonomy-group">
+            <span class="taxonomy-label">Topics</span>
+            <div class="tag-row">
+              {
+                organization.topics.map((topic) => (
+                  <span class="tag muted">{topic}</span>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-summary">
+        <dl class="hero-metrics">
+          <div>
+            <dt>Total projects</dt><dd>{organization.totalProjects}</dd>
+          </div>
+          <div>
+            <dt>Years participating</dt><dd>
+              {organization.participationCount}
+            </dd>
+          </div>
+          <div><dt>Most recent</dt><dd>{organization.latestYear}</dd></div>
+        </dl>
         <div class="hero-actions">
           {
             organization.website && (
@@ -62,7 +97,7 @@ const initials = organization.name
                 target="_blank"
                 rel="noreferrer"
               >
-                Official website ↗
+                Official website
               </a>
             )
           }
@@ -74,7 +109,7 @@ const initials = organization.name
                 target="_blank"
                 rel="noreferrer"
               >
-                {primaryRepository.host} source
+                Repository
                 <span
                   class={
                     primaryRepository.verified
@@ -92,19 +127,12 @@ const initials = organization.name
                 target="_blank"
                 rel="noreferrer"
               >
-                Find repositories ↗
+                Find repository
               </a>
             ) : null
           }
         </div>
       </div>
-      <dl class="hero-metrics">
-        <div><dt>Total projects</dt><dd>{organization.totalProjects}</dd></div>
-        <div>
-          <dt>Years participating</dt><dd>{organization.participationCount}</dd>
-        </div>
-        <div><dt>Most recent</dt><dd>{organization.latestYear}</dd></div>
-      </dl>
     </section>
 
     <div class="detail-layout">
@@ -227,56 +255,6 @@ const initials = organization.name
           client:load
         />
       </div>
-
-      <aside class="detail-sidebar" aria-label="Organization resources">
-        <section class="detail-card resource-card">
-          <h2>Source repositories</h2>
-          {
-            organization.repository.repositories.length ? (
-              <div class="repository-list">
-                {organization.repository.repositories.map((repository) => (
-                  <a href={repository.url} target="_blank" rel="noreferrer">
-                    <span>{repository.label}</span>
-                    <small>
-                      {repository.host} ·{' '}
-                      {repository.verified
-                        ? `Verified ${repository.lastChecked || ''}`
-                        : 'Inferred, review before use'}
-                    </small>
-                  </a>
-                ))}
-              </div>
-            ) : (
-              <div class="repository-fallback">
-                <p>No direct repository has been established.</p>
-                {repositoryFallback && (
-                  <a href={repositoryFallback} target="_blank" rel="noreferrer">
-                    Find repositories ↗
-                  </a>
-                )}
-              </div>
-            )
-          }
-        </section>
-        <section class="detail-card resource-card">
-          <h2>Technologies</h2>
-          <div class="tag-row">
-            {
-              organization.technologies.map((technology) => (
-                <span class="tag">{technology}</span>
-              ))
-            }
-          </div>
-          <h2 class="resource-subheading">Topics</h2>
-          <div class="tag-row">
-            {
-              organization.topics.map((topic) => (
-                <span class="tag muted">{topic}</span>
-              ))
-            }
-          </div>
-        </section>
-      </aside>
     </div>
   </main>
 </BaseLayout>

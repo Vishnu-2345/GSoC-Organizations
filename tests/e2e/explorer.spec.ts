@@ -121,6 +121,18 @@ test('organization profiles preserve contributor and archive details', async ({
 }) => {
   await page.goto('/org/3dtk/');
 
+  const hero = page.locator('.organization-hero');
+  await expect(hero.getByText('Technologies', { exact: true })).toBeVisible();
+  await expect(hero.getByText('Topics', { exact: true })).toBeVisible();
+  await expect(
+    hero.getByRole('link', { name: 'Official website' }),
+  ).toBeVisible();
+  await expect(
+    hero.getByRole('link', { name: 'Find repository' }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole('heading', { name: 'Source repositories' }),
+  ).toHaveCount(0);
   await expect(
     page.getByRole('heading', { name: 'Start contributing' }),
   ).toHaveCount(0);
