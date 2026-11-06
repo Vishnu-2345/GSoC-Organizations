@@ -180,7 +180,8 @@ export default function Explorer({
           <label className="global-search">
             <span className="sr-only">Search organizations</span>
             <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="m21 21-4.35-4.35m2.35-5.15a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z" />
+              <circle cx="10.75" cy="10.75" r="6.75" />
+              <path d="m15.75 15.75 4.25 4.25" />
             </svg>
             <input
               type="search"

@@ -204,8 +204,8 @@ img {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  min-height: 48px;
-  padding: 0 16px;
+  min-height: 42px;
+  padding: 0 13px;
   border: 1px solid #d0d3d8;
   border-radius: var(--radius);
   background: #fff;
@@ -218,13 +218,13 @@ img {
 }
 
 .global-search svg {
-  width: 22px;
-  height: 22px;
-  margin-right: 12px;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
   fill: none;
   stroke: var(--text-secondary);
   stroke-linecap: round;
-  stroke-width: 2;
+  stroke-width: 1.8;
 }
 
 .global-search input {
@@ -233,7 +233,7 @@ img {
   background: transparent;
   outline: 0;
   color: var(--text);
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .global-search input::placeholder {
@@ -247,8 +247,8 @@ img {
 
 .global-search button {
   display: grid;
-  width: 34px;
-  height: 34px;
+  width: 30px;
+  height: 30px;
   place-items: center;
   padding: 0;
   border: 0;
@@ -831,8 +831,24 @@ img {
   text-transform: uppercase;
 }
 
+.org-card .category-label {
+  align-self: flex-start;
+  max-width: 100%;
+  padding: 2px 7px;
+  overflow: hidden;
+  border-radius: 6px;
+  background: var(--orange);
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+  text-overflow: ellipsis;
+  text-transform: none;
+  white-space: nowrap;
+}
+
 .org-card h2 {
-  margin: 3px 0 5px;
+  margin: 2px 0 5px;
   font-size: 17px;
   line-height: 1.25;
   letter-spacing: -0.02em;
@@ -1661,7 +1677,7 @@ img {
 
 @media (max-width: 760px) {
   .global-search {
-    min-height: 46px;
+    min-height: 42px;
   }
 
   .explorer-layout,
