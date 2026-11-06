@@ -11,7 +11,7 @@ import FilterSidebar from './FilterSidebar';
 import OrganizationCard from './OrganizationCard';
 
 const BOOKMARKS_KEY = 'gsoc-explorer-bookmarks-v1';
-const ORGANIZATIONS_PER_BATCH = 25;
+const ORGANIZATIONS_PER_BATCH = 24;
 
 function counts(values: string[][]) {
   const result = new Map<string, number>();

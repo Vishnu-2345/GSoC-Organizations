@@ -87,17 +87,19 @@ test('bookmark persists into shortlist', async ({ page }) => {
   ).toBeVisible();
 });
 
-test('directory reveals organizations in batches of 25', async ({ page }) => {
+test('directory reveals organizations in complete four-card rows', async ({
+  page,
+}) => {
   await page.goto('/');
   await expect(page.getByTestId('explorer')).toHaveAttribute(
     'data-ready',
     'true',
   );
-  await expect(page.getByRole('article')).toHaveCount(25);
-  await expect(page.getByText('Showing 25 of 519')).toBeVisible();
+  await expect(page.getByRole('article')).toHaveCount(24);
+  await expect(page.getByText('Showing 24 of 519')).toBeVisible();
   await page.getByRole('button', { name: 'Load more organizations' }).click();
-  await expect(page.getByRole('article')).toHaveCount(50);
-  await expect(page.getByText('Showing 50 of 519')).toBeVisible();
+  await expect(page.getByRole('article')).toHaveCount(48);
+  await expect(page.getByText('Showing 48 of 519')).toBeVisible();
 });
 
 test('wide directory uses four columns and exposes saved organizations', async ({
