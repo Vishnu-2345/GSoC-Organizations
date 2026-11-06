@@ -1,5 +1,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import {
+  normalizeTechnologies,
+  normalizeTopics,
+} from './tag-normalization.mjs';
 
 const root = process.cwd();
 const rawDirectory = path.join(root, 'data', 'raw');
@@ -10,31 +14,6 @@ const files = fs
   .readdirSync(rawDirectory)
   .filter((file) => /^\d{4}\.json$/.test(file))
   .sort();
-
-const canonicalTags = new Map([
-  ['js', 'JavaScript'],
-  ['javascript', 'JavaScript'],
-  ['typescript', 'TypeScript'],
-  ['ts', 'TypeScript'],
-  ['nodejs', 'Node.js'],
-  ['node.js', 'Node.js'],
-  ['reactjs', 'React'],
-  ['react.js', 'React'],
-  ['react', 'React'],
-  ['postgres', 'PostgreSQL'],
-  ['postgresql', 'PostgreSQL'],
-  ['golang', 'Go'],
-  ['go', 'Go'],
-  ['c++', 'C++'],
-  ['cpp', 'C++'],
-  ['c', 'C'],
-  ['c#', 'C#'],
-  ['c sharp', 'C#'],
-  ['html5', 'HTML'],
-  ['html', 'HTML'],
-  ['css3', 'CSS'],
-  ['css', 'CSS'],
-]);
 
 // The reference project keeps a small, reviewable alias table instead of
 // guessing organization identity from fuzzy text similarity. These aliases
@@ -104,21 +83,6 @@ function plainText(value = '') {
     .replace(/&#39;/gi, "'")
     .replace(/\s+/g, ' ')
     .trim();
-}
-
-function normalizeTag(value) {
-  const cleaned = clean(value).replace(/\s*[,;.]\s*$/, '');
-  const key = cleaned.toLocaleLowerCase();
-  return canonicalTags.get(key) || cleaned;
-}
-
-function uniqueTags(values = []) {
-  const byKey = new Map();
-  for (const value of values) {
-    const normalized = normalizeTag(value);
-    if (normalized) byKey.set(normalized.toLocaleLowerCase(), normalized);
-  }
-  return [...byKey.values()].sort((a, b) => a.localeCompare(b));
 }
 
 function slugify(value) {
@@ -426,11 +390,14 @@ function combineOrganizationRecords(group) {
     existing.contributionGuide =
       safeUrl(raw.guide_url) || existing.contributionGuide;
     if (groupIndex >= recentTagStart) {
-      existing.technologies = uniqueTags([
+      existing.technologies = normalizeTechnologies([
         ...existing.technologies,
         ...(raw.technologies || []),
       ]);
-      existing.topics = uniqueTags([...existing.topics, ...(raw.topics || [])]);
+      existing.topics = normalizeTopics([
+        ...existing.topics,
+        ...(raw.topics || []),
+      ]);
     }
     existing.repositoryCandidates.unshift(
       raw.ideas_url,

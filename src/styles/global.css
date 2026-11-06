@@ -1557,9 +1557,12 @@ img {
   text-decoration: none;
 }
 
-.footer-column a:hover,
-.footer-brand-link:hover {
+.footer-column a:hover {
   color: var(--blue-dark);
+}
+
+.footer-brand-link:hover {
+  color: var(--text);
 }
 
 .footer-column .github-star-link {

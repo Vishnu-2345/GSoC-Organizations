@@ -12,7 +12,7 @@ import OrganizationCard from './OrganizationCard';
 import SortControl from './SortControl';
 
 const BOOKMARKS_KEY = 'gsoc-explorer-bookmarks-v1';
-const ORGANIZATIONS_PER_BATCH = 24;
+const ORGANIZATIONS_PER_BATCH = 48;
 
 function counts(values: string[][]) {
   const result = new Map<string, number>();

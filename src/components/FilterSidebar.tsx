@@ -1,8 +1,10 @@
 import { useMemo, useState } from 'react';
+import {
+  filterAndSortOptions,
+  type FilterOption as Option,
+  type FilterOptionSort as OptionSort,
+} from '../lib/filter-options';
 import type { FilterState } from '../types';
-
-type Option = { value: string; count: number };
-type OptionSort = 'frequency' | 'name';
 
 type Props = {
   state: FilterState;
@@ -45,29 +47,22 @@ function FilterGroup({
   const [query, setQuery] = useState('');
   const headingId = `filter-${title.replaceAll(' ', '-').toLowerCase()}`;
 
-  const orderedOptions = useMemo(
-    () =>
-      [...options].sort((a, b) => {
-        const aSelected = values.includes(a.value);
-        const bSelected = values.includes(b.value);
-        if (aSelected !== bSelected) return aSelected ? -1 : 1;
-        if (sortBy === 'name') return a.value.localeCompare(b.value);
-        return b.count - a.count || a.value.localeCompare(b.value);
-      }),
-    [options, sortBy, values],
-  );
-
   const normalizedQuery = query.trim().toLocaleLowerCase();
-  const matchingOptions = normalizedQuery
-    ? orderedOptions.filter((option) =>
-        option.value.toLocaleLowerCase().includes(normalizedQuery),
-      )
-    : orderedOptions;
+  const matchingOptions = useMemo(
+    () => filterAndSortOptions(options, query, sortBy),
+    [options, query, sortBy],
+  );
   const collapsedLimit = Math.max(DEFAULT_OPTIONS_DISPLAYED, values.length);
+  const collapsedOptions = matchingOptions.slice(0, collapsedLimit);
+  const selectedCollapsedOptions = matchingOptions.filter(
+    (option) =>
+      values.includes(option.value) &&
+      !collapsedOptions.some((visible) => visible.value === option.value),
+  );
   const shownOptions =
     expanded || normalizedQuery
       ? matchingOptions
-      : matchingOptions.slice(0, collapsedLimit);
+      : [...collapsedOptions, ...selectedCollapsedOptions];
   const canExpand = !normalizedQuery && matchingOptions.length > collapsedLimit;
 
   return (

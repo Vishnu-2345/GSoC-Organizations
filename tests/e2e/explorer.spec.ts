@@ -138,11 +138,11 @@ test('directory reveals organizations in complete four-card rows', async ({
     'data-ready',
     'true',
   );
-  await expect(page.getByRole('article')).toHaveCount(24);
-  await expect(page.getByText('Showing 24 of 519')).toBeVisible();
-  await page.getByRole('button', { name: 'Load more organizations' }).click();
   await expect(page.getByRole('article')).toHaveCount(48);
   await expect(page.getByText('Showing 48 of 519')).toBeVisible();
+  await page.getByRole('button', { name: 'Load more organizations' }).click();
+  await expect(page.getByRole('article')).toHaveCount(96);
+  await expect(page.getByText('Showing 96 of 519')).toBeVisible();
 });
 
 test('wide directory uses four columns and exposes saved organizations', async ({
@@ -188,8 +188,8 @@ test('organization cards display every technology label', async ({ page }) => {
     has: page.getByRole('heading', { name: 'Fedora Project', exact: true }),
   });
   const technologies = card.locator('[aria-label="Technologies"] .tag');
-  await expect(technologies).toHaveCount(13);
-  await expect(technologies.getByText('web development')).toBeVisible();
+  await expect(technologies).toHaveCount(14);
+  await expect(technologies.getByText('Web', { exact: true })).toBeVisible();
   await expect(technologies.filter({ hasText: /^\+\d+$/ })).toHaveCount(0);
 });
 
@@ -347,7 +347,7 @@ test('filters offer option search and a first-time shortcut', async ({
   await filters
     .getByRole('searchbox', { name: 'Search technologies' })
     .fill('python');
-  await filters.getByRole('checkbox', { name: 'python', exact: true }).check();
+  await filters.getByRole('checkbox', { name: 'Python', exact: true }).check();
   await expect(page).toHaveURL(/technology=python/i);
   await expect(page.getByText('1 active')).toHaveCount(0);
   await expect(
@@ -359,15 +359,60 @@ test('filters offer option search and a first-time shortcut', async ({
   await expect(page).toHaveURL(/firstTime=1/);
 });
 
+test('selecting a filter does not move the option list', async ({
+  page,
+}, testInfo) => {
+  test.skip(
+    testInfo.project.name.includes('mobile'),
+    'Desktop sidebar behavior is covered here.',
+  );
+  await page.goto('/');
+  await expect(page.getByTestId('explorer')).toHaveAttribute(
+    'data-ready',
+    'true',
+  );
+
+  const topics = page
+    .locator('.filter-group')
+    .filter({ has: page.getByRole('heading', { name: /^Topics/ }) });
+  await topics.getByRole('button', { name: /^View all/ }).click();
+  const optionList = topics.locator('.filter-options');
+  const wayland = topics.getByRole('checkbox', {
+    name: 'Wayland',
+    exact: true,
+  });
+  await wayland.scrollIntoViewIfNeeded();
+  const scrollTopBefore = await optionList.evaluate(
+    (element) => element.scrollTop,
+  );
+
+  await wayland.check();
+
+  const scrollTopAfter = await optionList.evaluate(
+    (element) => element.scrollTop,
+  );
+  expect(Math.abs(scrollTopAfter - scrollTopBefore)).toBeLessThan(4);
+});
+
 test('footer provides project, privacy, and creator links', async ({
   page,
-}) => {
+}, testInfo) => {
   await page.route(
     'https://api.github.com/repos/rohanmalhotracodes/GSoC-Organizations',
     (route) => route.fulfill({ json: { stargazers_count: 1234 } }),
   );
   await page.goto('/');
   const footer = page.getByRole('contentinfo');
+  const footerBrand = footer.getByRole('link', {
+    name: 'GSoC Organizations footer home',
+  });
+  if (!testInfo.project.name.includes('mobile')) {
+    const brandColor = await footerBrand.evaluate(
+      (element) => getComputedStyle(element).color,
+    );
+    await footerBrand.hover();
+    await expect(footerBrand).toHaveCSS('color', brandColor);
+  }
   await expect(
     footer.getByText('Rohan Malhotra', { exact: true }),
   ).toBeVisible();
