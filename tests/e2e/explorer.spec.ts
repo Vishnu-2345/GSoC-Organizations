@@ -448,6 +448,11 @@ test('footer provides project, privacy, and creator links', async ({
   await expect(
     footer.getByText('Rohan Malhotra', { exact: true }),
   ).toBeVisible();
+  await expect(footer).toContainText(
+    'A comprehensive directory of Google Summer of Code organizations across every archived program year',
+  );
+  await expect(footer).not.toContainText('past and present');
+  await expect(footer).not.toContainText('Built for the open-source community');
   await expect(footer.getByRole('link', { name: 'Directory' })).toHaveCount(0);
   await expect(footer.getByRole('link', { name: 'Shortlist' })).toHaveCount(0);
   await expect(footer).not.toContainText('↗');
