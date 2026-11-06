@@ -56,18 +56,6 @@ export function parseFilterState(search: string): FilterState {
       ]),
     ],
     topics: [...new Set([...list(params, 'topic'), ...legacyList('topics')])],
-    excludeTechnologies: [
-      ...new Set([
-        ...list(params, 'excludeTechnology'),
-        ...legacyList('excludeTechnologies'),
-      ]),
-    ],
-    excludeTopics: [
-      ...new Set([
-        ...list(params, 'excludeTopic'),
-        ...legacyList('excludeTopics'),
-      ]),
-    ],
     sort:
       sortValue && validSorts.has(sortValue as SortKey)
         ? (sortValue as SortKey)
@@ -84,9 +72,6 @@ export function serializeFilterState(state: FilterState): string {
   for (const technology of state.technologies)
     params.append('technology', technology);
   for (const topic of state.topics) params.append('topic', topic);
-  for (const technology of state.excludeTechnologies)
-    params.append('excludeTechnology', technology);
-  for (const topic of state.excludeTopics) params.append('excludeTopic', topic);
   if (state.sort !== defaultFilters.sort) params.set('sort', state.sort);
   const value = params.toString();
   return value ? `?${value}` : '';

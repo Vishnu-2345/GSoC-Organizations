@@ -7,12 +7,11 @@ import {
 describe('URL state', () => {
   it('round-trips shareable filters', () => {
     const state = parseFilterState(
-      '?q=rust&firstTime=1&year=2026&technology=Rust&excludeTopic=AI&sort=projects',
+      '?q=rust&firstTime=1&year=2026&technology=Rust&sort=projects',
     );
     expect(state.query).toBe('rust');
     expect(state.firstTime).toBe(true);
     expect(state.years).toEqual([2026]);
-    expect(state.excludeTopics).toEqual(['AI']);
     expect(parseFilterState(serializeFilterState(state))).toEqual(state);
   });
 

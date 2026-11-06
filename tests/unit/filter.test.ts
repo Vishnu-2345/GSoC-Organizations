@@ -115,14 +115,6 @@ describe('organization filtering', () => {
     expect(sortOrganizations(matches, 'recent', 'br')[0].slug).toBe('brl-cad');
   });
 
-  it('applies inclusion and exclusion filters together', () => {
-    const result = filterOrganizations(
-      organizations,
-      filters({ excludeTechnologies: ['Python'] }),
-    );
-    expect(result.map((org) => org.slug)).toEqual(['alpha']);
-  });
-
   it('matches every selected year and any selected tag', () => {
     expect(
       filterOrganizations(organizations, filters({ years: [2026, 2025] })).map(

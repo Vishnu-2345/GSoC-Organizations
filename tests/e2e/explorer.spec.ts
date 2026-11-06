@@ -373,6 +373,7 @@ test('filters offer option search and a first-time shortcut', async ({
   const filters = page.getByRole('complementary', {
     name: 'Organization filters',
   });
+  await expect(filters.getByText('Advanced exclusions')).toHaveCount(0);
   await filters
     .getByRole('searchbox', { name: 'Search technologies' })
     .fill('python');

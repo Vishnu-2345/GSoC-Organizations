@@ -63,7 +63,5 @@ export type FilterState = {
   categories: string[];
   technologies: string[];
   topics: string[];
-  excludeTechnologies: string[];
-  excludeTopics: string[];
   sort: SortKey;
 };

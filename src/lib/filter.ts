@@ -7,8 +7,6 @@ export const defaultFilters: FilterState = {
   categories: [],
   technologies: [],
   topics: [],
-  excludeTechnologies: [],
-  excludeTopics: [],
   sort: 'recent',
 };
 
@@ -178,14 +176,6 @@ export function filterOrganizations(
       !state.topics.some((tag) => organization.topics.includes(tag))
     )
       return false;
-    if (
-      state.excludeTechnologies.some((tag) =>
-        organization.technologies.includes(tag),
-      )
-    )
-      return false;
-    if (state.excludeTopics.some((tag) => organization.topics.includes(tag)))
-      return false;
     return true;
   });
 }
@@ -230,8 +220,6 @@ export function activeFilterCount(state: FilterState): number {
     state.years.length +
     state.categories.length +
     state.technologies.length +
-    state.topics.length +
-    state.excludeTechnologies.length +
-    state.excludeTopics.length
+    state.topics.length
   );
 }

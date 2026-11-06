@@ -140,11 +140,7 @@ export default function FilterSidebar({
     state.years.length +
     state.categories.length +
     state.technologies.length +
-    state.topics.length +
-    state.excludeTechnologies.length +
-    state.excludeTopics.length;
-  const exclusionCount =
-    state.excludeTechnologies.length + state.excludeTopics.length;
+    state.topics.length;
 
   const clearFilters = () =>
     onChange({
@@ -154,8 +150,6 @@ export default function FilterSidebar({
       categories: [],
       technologies: [],
       topics: [],
-      excludeTechnologies: [],
-      excludeTopics: [],
     });
 
   return (
@@ -283,42 +277,6 @@ export default function FilterSidebar({
         }
         onReset={() => onChange({ ...state, topics: [] })}
       />
-
-      <details
-        className="advanced-filters"
-        open={exclusionCount > 0 || undefined}
-      >
-        <summary>
-          Advanced exclusions
-          {exclusionCount > 0 && (
-            <span className="filter-selected-count">{exclusionCount}</span>
-          )}
-        </summary>
-        <FilterGroup
-          title="Exclude technologies"
-          values={state.excludeTechnologies}
-          options={options.technologies}
-          onToggle={(value) =>
-            onChange({
-              ...state,
-              excludeTechnologies: toggle(state.excludeTechnologies, value),
-            })
-          }
-          onReset={() => onChange({ ...state, excludeTechnologies: [] })}
-        />
-        <FilterGroup
-          title="Exclude topics"
-          values={state.excludeTopics}
-          options={options.topics}
-          onToggle={(value) =>
-            onChange({
-              ...state,
-              excludeTopics: toggle(state.excludeTopics, value),
-            })
-          }
-          onReset={() => onChange({ ...state, excludeTopics: [] })}
-        />
-      </details>
     </div>
   );
 }
