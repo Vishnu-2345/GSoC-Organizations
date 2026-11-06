@@ -150,6 +150,33 @@ test('organization cards display every technology label', async ({ page }) => {
   await expect(technologies.filter({ hasText: /^\+\d+$/ })).toHaveCount(0);
 });
 
+test('sort menu stays anchored below its trigger', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.getByTestId('explorer')).toHaveAttribute(
+    'data-ready',
+    'true',
+  );
+
+  const trigger = page.getByRole('button', {
+    name: /Sort organizations: Most recently participating/,
+  });
+  await trigger.click();
+  const menu = page.getByRole('menu', { name: 'Sort organizations' });
+  await expect(menu).toBeVisible();
+
+  const triggerBox = await trigger.boundingBox();
+  const menuBox = await menu.boundingBox();
+  expect(triggerBox).not.toBeNull();
+  expect(menuBox).not.toBeNull();
+  expect(menuBox!.y).toBeGreaterThanOrEqual(triggerBox!.y + triggerBox!.height);
+
+  await menu
+    .getByRole('menuitemradio', { name: 'Most completed projects' })
+    .click();
+  await expect(page).toHaveURL(/sort=projects/);
+  await expect(menu).toBeHidden();
+});
+
 test('cards show the complete participation history', async ({ page }) => {
   await page.goto('/?q=NumFOCUS');
   await expect(page.getByTestId('explorer')).toHaveAttribute(

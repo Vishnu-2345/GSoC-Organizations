@@ -9,6 +9,7 @@ import { parseFilterState, serializeFilterState } from '../lib/url-state';
 import type { FilterState, OrganizationSummary } from '../types';
 import FilterSidebar from './FilterSidebar';
 import OrganizationCard from './OrganizationCard';
+import SortControl from './SortControl';
 
 const BOOKMARKS_KEY = 'gsoc-explorer-bookmarks-v1';
 const ORGANIZATIONS_PER_BATCH = 24;
@@ -222,23 +223,10 @@ export default function Explorer({
               >
                 Filters {filterCount > 0 && `(${filterCount})`}
               </button>
-              <label className="sort-control">
-                <span>Sort</span>
-                <select
-                  value={state.sort}
-                  onChange={(event) =>
-                    setState({
-                      ...state,
-                      sort: event.target.value as FilterState['sort'],
-                    })
-                  }
-                >
-                  <option value="recent">Most recently participating</option>
-                  <option value="projects">Most completed projects</option>
-                  <option value="years">Most years participating</option>
-                  <option value="name">Name A–Z</option>
-                </select>
-              </label>
+              <SortControl
+                value={state.sort}
+                onChange={(sort) => setState({ ...state, sort })}
+              />
             </div>
           </div>
 

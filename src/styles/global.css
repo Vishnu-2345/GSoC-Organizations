@@ -628,21 +628,96 @@ img {
   font-weight: 700;
 }
 
-.sort-control select {
+.sort-dropdown {
+  position: relative;
   width: 250px;
+}
+
+.sort-trigger {
+  display: flex;
+  width: 100%;
   min-height: 38px;
-  appearance: none;
-  padding: 0 44px 0 10px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 12px;
   border: 1px solid #d0d3d8;
   border-radius: 8px;
-  background-color: #fff;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='m1 1 6 6 6-6' fill='none' stroke='%2324262b' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'/%3E%3C/svg%3E");
-  background-position: right 16px center;
-  background-repeat: no-repeat;
-  background-size: 14px 9px;
+  background: #fff;
   color: var(--text);
   cursor: pointer;
   font-size: 13px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.sort-trigger:hover,
+.sort-trigger[aria-expanded='true'] {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(227, 116, 0, 0.14);
+}
+
+.sort-trigger svg {
+  width: 14px;
+  height: 9px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+  transition: transform 140ms ease;
+}
+
+.sort-trigger[aria-expanded='true'] svg {
+  transform: rotate(180deg);
+}
+
+.sort-menu {
+  position: absolute;
+  z-index: 40;
+  top: calc(100% + 7px);
+  right: 0;
+  width: 100%;
+  padding: 6px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 14px 32px rgba(32, 33, 36, 0.18);
+}
+
+.sort-option {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 18px minmax(0, 1fr);
+  align-items: center;
+  gap: 7px;
+  padding: 9px 8px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 650;
+  text-align: left;
+}
+
+.sort-option:hover,
+.sort-option:focus-visible,
+.sort-option[aria-checked='true'] {
+  background: var(--blue-pale);
+  color: var(--blue-dark);
+}
+
+.sort-option-check {
+  visibility: hidden;
+  font-size: 15px;
+  line-height: 1;
+}
+
+.sort-option[aria-checked='true'] .sort-option-check {
+  visibility: visible;
 }
 
 .filter-trigger {
@@ -1621,9 +1696,9 @@ img {
     width: 100%;
   }
 
-  .sort-control select {
-    max-width: none;
+  .sort-dropdown {
     flex: 1;
+    width: auto;
   }
 
   .organization-grid {
