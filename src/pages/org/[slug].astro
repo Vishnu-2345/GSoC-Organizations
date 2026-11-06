@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ParticipationChart from '../../components/ParticipationChart.astro';
-import LocalResearch from '../../components/LocalResearch';
 import organizationsData from '../../data/organizations.json';
 import type { Organization } from '../../types';
 
@@ -174,7 +173,10 @@ const initials = organization.name
 
     <div class="detail-layout">
       <div class="detail-main">
-        <section class="detail-card" aria-labelledby="participation-heading">
+        <section
+          class="detail-card participation-card"
+          aria-labelledby="participation-heading"
+        >
           <div class="section-heading">
             <div>
               <h2 id="participation-heading">Participation history</h2>
@@ -320,12 +322,6 @@ const initials = organization.name
             }
           </div>
         </section>
-
-        <LocalResearch
-          slug={organization.slug}
-          name={organization.name}
-          client:load
-        />
       </div>
     </div>
   </main>

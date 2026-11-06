@@ -1108,6 +1108,14 @@ img {
   box-shadow: var(--shadow);
 }
 
+.participation-card {
+  padding: 18px 22px 14px;
+}
+
+.participation-card .section-heading {
+  margin-bottom: 4px;
+}
+
 .section-heading {
   display: flex;
   align-items: center;
@@ -1129,7 +1137,7 @@ img {
 .participation-chart {
   display: block;
   width: 100%;
-  min-width: 540px;
+  min-width: 675px;
   height: auto;
   overflow: visible;
 }
@@ -1314,33 +1322,6 @@ img {
   border: 1px dashed var(--border);
   border-radius: 9px;
   background: var(--page);
-}
-
-.local-research textarea {
-  width: 100%;
-  resize: vertical;
-  padding: 13px;
-  border: 1px solid #d0d3d8;
-  border-radius: 8px;
-  color: var(--text);
-  line-height: 1.55;
-}
-
-.local-research textarea:focus {
-  border-color: var(--blue);
-  box-shadow: 0 0 0 3px rgba(227, 116, 0, 0.16);
-}
-
-.note-actions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 10px;
-}
-
-.note-actions span {
-  color: var(--text-secondary);
-  font-size: 12px;
 }
 
 .page-intro {
@@ -1626,10 +1607,6 @@ img {
   .section-heading {
     align-items: flex-start;
     flex-direction: column;
-  }
-
-  .local-research .section-heading {
-    align-items: stretch;
   }
 
   .footer-inner {

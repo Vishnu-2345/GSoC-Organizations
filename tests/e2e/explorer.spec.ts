@@ -144,6 +144,9 @@ test('organization profiles preserve contributor and archive details', async ({
   await expect(
     page.getByRole('heading', { name: 'Start contributing' }),
   ).toHaveCount(0);
+  await expect(
+    page.getByRole('heading', { name: 'Private research notes' }),
+  ).toHaveCount(0);
   await expect(page.getByText('Public archive', { exact: true })).toHaveCount(
     0,
   );
