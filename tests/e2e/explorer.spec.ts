@@ -117,6 +117,9 @@ test('organization profiles preserve contributor and archive details', async ({
 }) => {
   await page.goto('/org/3dtk/');
 
+  await expect(
+    page.getByRole('heading', { name: 'Start contributing' }),
+  ).toHaveCount(0);
   await expect(page.getByText('Contributor: Xia Sun')).toBeVisible();
   await expect(
     page.getByRole('link', { name: 'View 2018 organization archive' }),

@@ -1212,14 +1212,12 @@ img {
   border-top: 1px solid var(--border);
 }
 
-.resource-links,
 .repository-list {
   display: grid;
   gap: 8px;
   margin-top: 14px;
 }
 
-.resource-links a,
 .repository-list a {
   display: flex;
   flex-direction: column;
@@ -1231,19 +1229,16 @@ img {
   text-decoration: none;
 }
 
-.resource-links a:hover,
 .repository-list a:hover {
   border-color: var(--blue);
   background: var(--blue-pale);
 }
 
-.resource-links span,
 .repository-list span {
   font-size: 13px;
   font-weight: 750;
 }
 
-.resource-links small,
 .repository-list small {
   color: var(--text-secondary);
   font-size: 11px;

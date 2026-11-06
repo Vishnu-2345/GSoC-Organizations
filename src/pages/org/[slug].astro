@@ -234,49 +234,6 @@ const initials = organization.name
 
       <aside class="detail-sidebar" aria-label="Organization resources">
         <section class="detail-card resource-card">
-          <h2>Start contributing</h2>
-          <div class="resource-links">
-            {
-              organization.ideasUrl && (
-                <a
-                  href={organization.ideasUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <>
-                    <span>Project ideas</span>
-                    <small>Official organization link ↗</small>
-                  </>
-                </a>
-              )
-            }
-            {
-              organization.contributionGuide && (
-                <a
-                  href={organization.contributionGuide}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <>
-                    <span>Contribution guide</span>
-                    <small>How to get started ↗</small>
-                  </>
-                </a>
-              )
-            }
-            {
-              organization.communityLinks.map((link) => (
-                <a href={link.url} target="_blank" rel="noreferrer">
-                  <>
-                    <span>{link.label}</span>
-                    <small>Community resource ↗</small>
-                  </>
-                </a>
-              ))
-            }
-          </div>
-        </section>
-        <section class="detail-card resource-card">
           <h2>Source repositories</h2>
           {
             organization.repository.repositories.length ? (
