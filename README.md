@@ -1,6 +1,6 @@
 # GSoC Organizations
 
-GSoC Organizations is a static-first explorer for researching Google Summer of Code organizations. It provides local full-text search, inclusion and exclusion filters, sorting, browser-local shortlists and notes, participation history, historical projects, and transparent repository-link states.
+GSoC Organizations is a static-first explorer for researching Google Summer of Code organizations. It provides local full-text search, filters, sorting, browser-local shortlists, participation history, historical projects, and transparent repository-link states.
 
 This is an independent community project. It is not affiliated with or endorsed by Google. Google Summer of Code is a Google program.
 
@@ -34,6 +34,16 @@ npm run preview
 ```
 
 The production output is written to `dist/`. Astro emits one static page for every organization.
+
+## Cloudflare Pages
+
+The production site is deployed at [gsoc-organizations-ael.pages.dev](https://gsoc-organizations-ael.pages.dev).
+
+The tracked `wrangler.toml` configures the Pages project and its `dist/` output directory. After authenticating Wrangler, build and publish the production branch with:
+
+```sh
+npm run deploy:pages
+```
 
 ## Validation and tests
 

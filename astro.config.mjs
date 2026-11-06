@@ -5,5 +5,5 @@ export default defineConfig({
   integrations: [react()],
   output: 'static',
   build: { format: 'directory' },
-  site: 'https://example.invalid',
+  site: 'https://gsoc-organizations-ael.pages.dev',
 });
