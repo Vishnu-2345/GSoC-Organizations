@@ -21,12 +21,16 @@ export default function OrganizationCard({
     .map((word) => word[0])
     .join('');
 
+  function openProfile() {
+    window.open(profileUrl, '_blank', 'noopener,noreferrer');
+  }
+
   return (
     <article
       className="org-card"
       onClick={(event) => {
         if ((event.target as HTMLElement).closest('a, button')) return;
-        window.location.assign(profileUrl);
+        openProfile();
       }}
     >
       <div className="org-card-topline">
@@ -66,7 +70,9 @@ export default function OrganizationCard({
       <div className="org-card-body">
         <span className="category-label">{organization.category}</span>
         <h2>
-          <a href={profileUrl}>{organization.name}</a>
+          <a href={profileUrl} target="_blank" rel="noreferrer">
+            {organization.name}
+          </a>
         </h2>
         <p>
           {organization.description ||
@@ -96,7 +102,12 @@ export default function OrganizationCard({
         </div>
       </dl>
       <div className="org-card-actions">
-        <a className="button secondary-button" href={profileUrl}>
+        <a
+          className="button secondary-button"
+          href={profileUrl}
+          target="_blank"
+          rel="noreferrer"
+        >
           View profile
         </a>
         {repositoryUrl && (

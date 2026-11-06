@@ -175,6 +175,7 @@ img {
 
 .directory-title h1 {
   font-size: clamp(24px, 2vw, 32px);
+  font-weight: 800;
 }
 
 .directory-site-title {
@@ -1090,6 +1091,10 @@ img {
   max-width: var(--content);
   margin: 0 auto;
   padding: 26px 28px 56px;
+}
+
+.detail-page {
+  padding-top: 28px;
 }
 
 .breadcrumbs {

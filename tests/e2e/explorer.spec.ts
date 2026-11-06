@@ -60,11 +60,50 @@ test('search, malformed URL recovery, and organization navigation', async ({
   expect(
     await metasploitCard.evaluate((card) => getComputedStyle(card).transform),
   ).not.toBe('none');
+  const popupPromise = page.waitForEvent('popup');
   await metasploitCard.getByText('Projects', { exact: true }).click();
-  await expect(page).toHaveTitle('Metasploit');
+  const profilePage = await popupPromise;
+  await profilePage.waitForLoadState();
+  await expect(page).toHaveURL(/\?q=Metasplot/);
+  await expect(profilePage).toHaveTitle('Metasploit');
   await expect(
-    page.getByRole('heading', { level: 1, name: 'Metasploit' }),
+    profilePage.getByRole('heading', { level: 1, name: 'Metasploit' }),
   ).toBeVisible();
+  await profilePage.close();
+});
+
+test('directory and profile mastheads keep the same position', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1700, height: 900 });
+  await page.goto('/?q=Metasploit');
+  await expect(page.getByTestId('explorer')).toHaveAttribute(
+    'data-ready',
+    'true',
+  );
+
+  const directoryHeader = page.locator('.directory-header');
+  const directoryBox = await directoryHeader.boundingBox();
+  expect(directoryBox).not.toBeNull();
+
+  const popupPromise = page.waitForEvent('popup');
+  await page
+    .getByRole('article')
+    .filter({
+      has: page.getByRole('heading', { name: 'Metasploit', exact: true }),
+    })
+    .click();
+  const profilePage = await popupPromise;
+  await profilePage.waitForLoadState();
+  await profilePage.setViewportSize({ width: 1700, height: 900 });
+  const profileBox = await profilePage
+    .locator('.profile-directory-header')
+    .boundingBox();
+  expect(profileBox).not.toBeNull();
+  expect(Math.abs(profileBox!.x - directoryBox!.x)).toBeLessThan(1);
+  expect(Math.abs(profileBox!.y - directoryBox!.y)).toBeLessThan(1);
+  expect(Math.abs(profileBox!.width - directoryBox!.width)).toBeLessThan(1);
+  await profilePage.close();
 });
 
 test('bookmark persists into shortlist', async ({ page }) => {
