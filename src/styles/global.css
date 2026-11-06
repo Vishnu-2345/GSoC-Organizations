@@ -736,12 +736,16 @@ img {
 .org-card h2 a {
   color: var(--text);
   text-decoration: none;
-  transition: color 140ms ease;
+  transition:
+    color 160ms ease,
+    text-shadow 160ms ease;
 }
 
-.org-card h2 a:hover {
-  color: var(--blue);
+.org-card:hover h2 a,
+.org-card:focus-within h2 a {
+  color: var(--sun);
   text-decoration: none;
+  text-shadow: 0 0 18px rgba(249, 171, 0, 0.24);
 }
 
 .org-card-body > p {

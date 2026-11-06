@@ -50,6 +50,9 @@ test('search, malformed URL recovery, and organization navigation', async ({
   });
   await expect(metasploitCard).toBeVisible();
   await metasploitCard.hover();
+  await expect(
+    metasploitCard.getByRole('link', { name: 'Metasploit' }),
+  ).toHaveCSS('color', 'rgb(249, 171, 0)');
   await expect(metasploitCard).toHaveCSS('cursor', 'pointer');
   expect(
     await metasploitCard.evaluate((card) => getComputedStyle(card).transform),
