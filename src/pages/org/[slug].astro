@@ -187,16 +187,9 @@ const organizationStructuredData = [
                 target="_blank"
                 rel="noreferrer"
               >
-                Repository
-                <span
-                  class={
-                    primaryRepository.verified
-                      ? 'verification-pill verified'
-                      : 'verification-pill inferred'
-                  }
-                >
-                  {primaryRepository.verified ? 'Verified' : 'Inferred'}
-                </span>
+                {primaryRepository.label === 'Organization profile'
+                  ? 'Source repositories'
+                  : 'Repository'}
               </a>
             ) : repositoryProfile ? (
               <a
@@ -205,8 +198,7 @@ const organizationStructuredData = [
                 target="_blank"
                 rel="noreferrer"
               >
-                Repositories
-                <span class="verification-pill inferred">Inferred</span>
+                Source repositories
               </a>
             ) : null
           }

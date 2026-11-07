@@ -5,7 +5,6 @@ export type Project = {
   contributor?: string;
   codeUrl?: string;
   projectUrl?: string;
-  inferredTechnologies: string[];
 };
 
 export type Participation = {

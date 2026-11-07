@@ -90,10 +90,10 @@ This produces 519 historical organization identities from the 2016–2026 snapsh
 `api/repository-links.json` is generated for full coverage and then reviewed through the workflow in [`docs/repository-curation.md`](docs/repository-curation.md). Link states are explicit:
 
 - `manual`: verified against an organization-controlled source.
-- `derived`: inferred from the ideas page, contribution guide, or organization site and never shown as verified.
+- `derived`: extracted from an official record only when it points directly to a recognized source-code host.
 - `unresolved`: no direct source destination has been established, so no repository button is shown.
 
-The build never creates web-search links. Manual records in `api/repository-links.json` are preserved across data rebuilds, while `api/unresolved-repositories.json` provides the review queue for missing links.
+The build never creates web-search links. Manual records in `api/repository-links.json` are preserved across data rebuilds. `api/unresolved-repositories.json` lists missing links, while `api/derived-repositories-to-review.json` lists direct code-host links that still need manual confirmation.
 
 For umbrella organizations, add multiple repository records rather than choosing one representative project.
 
@@ -105,6 +105,7 @@ For umbrella organizations, add multiple repository records rather than choosing
 - `src/data/organizations.json`: normalized, version-controlled browsing data.
 - `api/repository-links.json`: repository link records and provenance.
 - `api/unresolved-repositories.json`: organizations still awaiting a direct repository or source-host profile.
+- `api/derived-repositories-to-review.json`: direct code-host links awaiting manual confirmation.
 - `scripts/prepare-data.mjs`: repeatable build-time compiler using canonical-name and official-website identity matching.
 - `scripts/validate-data.mjs`: schema, duplicate, tag, and URL checks.
 - `scripts/validate-repository-links.mjs`: repository format, provenance, duplicate, redirect, and reachability checks.
@@ -114,8 +115,7 @@ Bookmarks and notes use versioned local-storage keys. Malformed local data or UR
 ## Known data limitations
 
 - Organization name changes without a known alias and simultaneous official-website changes can appear as separate historical records until manually reconciled.
-- Most repository links are inferred and require the manual review workflow before they can be marked verified.
-- Project-level technology tags are text matches against organization-declared technologies. They are displayed as inferred, not authoritative.
+- Derived repository links require the manual review workflow before they can be marked verified.
 - Public archive records occasionally contain stale external links. Validation identifies malformed URLs; network validation and manual review are still needed for freshness.
 
 The product deliberately does not invent competition, acceptance, difficulty, mentor-response, activity, or beginner-friendliness scores.

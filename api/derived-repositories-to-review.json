@@ -1,0 +1,1500 @@
+[
+  {
+    "name": "AboutCode",
+    "slug": "aboutcode",
+    "website": "https://aboutcode.org",
+    "ideasUrl": "https://github.com/aboutcode-org/aboutcode/wiki/GSOC-2026-project-ideas",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/aboutcode-org/aboutcode",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Accord Project",
+    "slug": "accord-project",
+    "website": "https://accordproject.org",
+    "ideasUrl": "https://github.com/accordproject/techdocs/wiki/Google-Summer-of-Code-2026-Ideas-List",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/accordproject/techdocs",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "AFLplusplus",
+    "slug": "aflplusplus",
+    "website": "https://aflplus.plus",
+    "ideasUrl": "https://github.com/AFLplusplus/LibAFL/issues/2992",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/AFLplusplus/LibAFL",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "aimacode",
+    "slug": "aimacode",
+    "website": "https://github.com/aimacode",
+    "ideasUrl": "",
+    "repositories": [
+      {
+        "label": "Organization profile",
+        "url": "https://github.com/aimacode",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Alaska",
+    "slug": "alaska",
+    "website": "https://www.uaa.alaska.edu/research",
+    "ideasUrl": "https://github.com/uaanchorage/GSoC",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/uaanchorage/GSoC",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Android Graphics Tools Team",
+    "slug": "android-graphics-tools-team",
+    "website": "https://github.com/google/graphicsfuzz/blob/master/docs/summer-of-code-ideas/2021.md",
+    "ideasUrl": "",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/google/graphicsfuzz",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "AnkiDroid",
+    "slug": "ankidroid",
+    "website": "https://github.com/ankidroid/Anki-Android",
+    "ideasUrl": "https://docs.google.com/document/d/1ygIJl-Tp5_wJDKkSXrCC8h5K3WUG8D4BcJa_j70F0Zo",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/ankidroid/Anki-Android",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "AOSSIE",
+    "slug": "aossie",
+    "website": "https://www.aossie.org",
+    "ideasUrl": "https://github.com/AOSSIE-Org/Info/blob/main/GSoC-Ideas/2026/index.md",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/AOSSIE-Org/Info",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "API Dash",
+    "slug": "api-dash",
+    "website": "https://apidash.dev",
+    "ideasUrl": "https://github.com/foss42/apidash/discussions/1054",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/foss42/apidash",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "AsyncAPI",
+    "slug": "asyncapi",
+    "website": "https://www.asyncapi.com/",
+    "ideasUrl": "https://www.asyncapi.com/docs/community/050-mentorship-program/summerofcode-2025-asyncapi-gsoc-ideas-page",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/asyncapi/community",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Biomedical Informatics, Emory University",
+    "slug": "biomedical-informatics-emory-university",
+    "website": "https://github.com/sharmalab/Emory-BMI-GSoC-2019",
+    "ideasUrl": "",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/sharmalab/Emory-BMI-GSoC-2019",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Boston University / XIA",
+    "slug": "boston-university-xia",
+    "website": "https://github.com/AltraMayor/XIA-for-Linux/wiki",
+    "ideasUrl": "",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/AltraMayor/XIA-for-Linux",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "BRL-CAD",
+    "slug": "brl-cad",
+    "website": "https://opencax.github.io/",
+    "ideasUrl": "https://github.com/opencax/GSoC/issues?q=is%3Aissue+is%3Aopen+label%3A%22GSoC+2026%22",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/opencax/GSoC",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Carbon Language",
+    "slug": "carbon-language",
+    "website": "https://github.com/carbon-language/carbon-lang",
+    "ideasUrl": "",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/carbon-language/carbon-lang",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "cBioPortal for Cancer Genomics",
+    "slug": "cbioportal-for-cancer-genomics",
+    "website": "https://www.cbioportal.org/",
+    "ideasUrl": "https://github.com/cBioPortal/GSoC/issues?q=is%3Aissue%20state%3Aopen%20label%3AGSoC-2026",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/cBioPortal/GSoC",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "CGAL Project",
+    "slug": "cgal-project",
+    "website": "https://www.cgal.org",
+    "ideasUrl": "https://github.com/CGAL/cgal/wiki/Project-Ideas",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/CGAL/cgal",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "CHAOSS",
+    "slug": "chaoss",
+    "website": "https://chaoss.community",
+    "ideasUrl": "https://github.com/chaoss/augur/blob/main/gsoc-interest.md",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/chaoss/augur",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "checkstyle",
+    "slug": "checkstyle",
+    "website": "https://checkstyle.org",
+    "ideasUrl": "https://github.com/checkstyle/checkstyle/wiki/Checkstyle-GSoC-2026-Project-Ideas",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/checkstyle/checkstyle",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "CircuitVerse.org",
+    "slug": "circuitverse-org",
+    "website": "http://circuitverse.org/",
+    "ideasUrl": "https://github.com/CircuitVerse/CircuitVerse/wiki/GSoC'26-Project-List",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/CircuitVerse/CircuitVerse",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "CloudCV",
+    "slug": "cloudcv",
+    "website": "https://eval.ai/",
+    "ideasUrl": "https://gsoc.cloudcv.org/",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/Cloud-CV/GSoC-Ideas",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "CNCF",
+    "slug": "cncf",
+    "website": "https://cncf.io",
+    "ideasUrl": "https://github.com/cncf/mentoring/blob/main/programs/summerofcode/2026.md",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/cncf/mentoring",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "CRIU",
+    "slug": "criu",
+    "website": "https://criu.org",
+    "ideasUrl": "https://criu.org/Google_Summer_of_Code_Ideas",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/checkpoint-restore/criu",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Cuneiform Digital Library Initiative (CDLI)",
+    "slug": "cuneiform-digital-library-initiative-cdli",
+    "website": "https://cdli.earth",
+    "ideasUrl": "https://gitlab.com/cdli/framework/-/wikis/Google-Summer-of-Code-GSoC-2026-Cuneiform-Digital-Library-Initiative-(CDLI)-ideas-list",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://gitlab.com/cdli/framework",
+        "host": "GitLab",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Dart",
+    "slug": "dart",
+    "website": "https://dart.dev",
+    "ideasUrl": "https://github.com/dart-lang/sdk/blob/main/docs/gsoc/Dart-GSoC-2026-Project-Ideas.md",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/dart-lang/sdk",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "DeepChem",
+    "slug": "deepchem",
+    "website": "https://www.deepchem.io",
+    "ideasUrl": "https://github.com/deepchem/deepchem/discussions/4703",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/deepchem/deepchem",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Department of Biomedical Informatics, Emory University",
+    "slug": "department-of-biomedical-informatics-emory-university",
+    "website": "https://med.emory.edu/departments/biomedical-informatics/",
+    "ideasUrl": "https://github.com/NISYSLAB/Emory-BMI-GSoC/?tab=readme-ov-file#list-of-ideas",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/NISYSLAB/Emory-BMI-GSoC",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "dora-rs",
+    "slug": "dora-rs",
+    "website": "https://dora-rs.ai",
+    "ideasUrl": "https://github.com/dora-rs/dora/wiki/GSoC_2026",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/dora-rs/dora",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Elm Tooling",
+    "slug": "elm-tooling",
+    "website": "https://github.com/elm-tooling?type=source",
+    "ideasUrl": "",
+    "repositories": [
+      {
+        "label": "Organization profile",
+        "url": "https://github.com/elm-tooling",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "FLARE",
+    "slug": "flare",
+    "website": "https://cloud.google.com/security/flare",
+    "ideasUrl": "https://github.com/mandiant/flare-gsoc/blob/2026/doc/project-ideas.md",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/mandiant/flare-gsoc",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Fortran-lang",
+    "slug": "fortran-lang",
+    "website": "https://fortran-lang.org",
+    "ideasUrl": "https://github.com/fortran-lang/webpage/wiki/GSoC-2026-Project-ideas",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/fortran-lang/webpage",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "FOSSology",
+    "slug": "fossology",
+    "website": "https://fossology.org",
+    "ideasUrl": "https://github.com/fossology/fossology/discussions/3267",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/fossology/fossology",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "GCP Scanner",
+    "slug": "gcp-scanner",
+    "website": "https://github.com/google/gcp_scanner/wiki/Google-Summer-of-Code-2023",
+    "ideasUrl": "",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/google/gcp_scanner",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Gemini CLI",
+    "slug": "gemini-cli",
+    "website": "https://geminicli.com",
+    "ideasUrl": "https://docs.google.com/document/d/1iaMZliqwUn-ACyZAbgzdXmDiQZ7l5gp8UQIIY2BnPO8/edit?usp=sharing",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/google-gemini/gemini-cli",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "GeomScale",
+    "slug": "geomscale",
+    "website": "https://geomscale.github.io",
+    "ideasUrl": "https://github.com/GeomScale/gsoc26/wiki/table-of-proposed-coding-projects",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/GeomScale/gsoc26",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "German Center for Open Source AI",
+    "slug": "german-center-for-open-source-ai",
+    "website": "https://gcos.ai/",
+    "ideasUrl": "https://github.com/gc-os-ai/mentoring-projects/blob/main/2026/ideas_list.md",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/gc-os-ai/mentoring-projects",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "GitHub",
+    "slug": "github",
+    "website": "https://github.com/github",
+    "ideasUrl": "",
+    "repositories": [
+      {
+        "label": "Organization profile",
+        "url": "https://github.com/github",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "GnuTLS",
+    "slug": "gnutls",
+    "website": "https://gitlab.com/gnutls/gnutls",
+    "ideasUrl": "",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://gitlab.com/gnutls/gnutls",
+        "host": "GitLab",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Google DeepMind",
+    "slug": "google-deepmind",
+    "website": "https://github.com/google-deepmind",
+    "ideasUrl": "https://goo.gle/deepmind-gsoc-projects-2025",
+    "repositories": [
+      {
+        "label": "Organization profile",
+        "url": "https://github.com/google-deepmind",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Google FHIR SDK",
+    "slug": "google-fhir-sdk",
+    "website": "https://github.com/google/android-fhir",
+    "ideasUrl": "",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/google/android-fhir",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "gprMax",
+    "slug": "gprmax",
+    "website": "https://www.gprmax.com",
+    "ideasUrl": "https://github.com/gprMax/GSoC/blob/main/project-ideas-2026.md",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/gprMax/GSoC",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "GRAME",
+    "slug": "grame",
+    "website": "https://faust.grame.fr",
+    "ideasUrl": "https://github.com/grame-cncm/faustideas/blob/master/GSOC.md",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/grame-cncm/faustideas",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "GRR Rapid Response",
+    "slug": "grr-rapid-response",
+    "website": "https://github.com/google/grr",
+    "ideasUrl": "",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/google/grr",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Inkscape",
+    "slug": "inkscape",
+    "website": "https://inkscape.org",
+    "ideasUrl": "https://gitlab.com/inkscape/inkscape/-/blob/master/doc/gsoc/summerofcode.md",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://gitlab.com/inkscape/inkscape",
+        "host": "GitLab",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Internet Health Report",
+    "slug": "internet-health-report",
+    "website": "https://ihr.iijlab.net",
+    "ideasUrl": "https://github.com/InternetHealthReport/gsoc/blob/main/ideas.md",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/InternetHealthReport/gsoc",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Invesalius",
+    "slug": "invesalius",
+    "website": "https://invesalius.github.io/",
+    "ideasUrl": "https://github.com/invesalius/gsoc/blob/main/gsoc_2026_ideas.md",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/invesalius/gsoc",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "IOOS",
+    "slug": "ioos",
+    "website": "https://ioos.noaa.gov/",
+    "ideasUrl": "https://github.com/ioos/gsoc/blob/main/2026/ideas-list.md",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/ioos/gsoc",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "JabRef e.V.",
+    "slug": "jabref-e-v",
+    "website": "https://www.jabref.org/",
+    "ideasUrl": "https://jabref.github.io/GSoC/projects/",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/JabRef/jabref",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Jitsi",
+    "slug": "jitsi",
+    "website": "https://jitsi.org",
+    "ideasUrl": "https://github.com/jitsi/gsoc-ideas/blob/master/2026/README.md",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/jitsi/gsoc-ideas",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Joplin",
+    "slug": "joplin",
+    "website": "https://github.com/laurent22/joplin",
+    "ideasUrl": "https://github.com/joplin/gsoc/blob/master/ideas.md",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/joplin/gsoc",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "JSON Schema",
+    "slug": "json-schema",
+    "website": "https://json-schema.org/",
+    "ideasUrl": "https://github.com/json-schema-org/community/blob/main/programs/mentoring/gsoc/gsoc-2026.md",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/json-schema-org/community",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "K-9 Mail",
+    "slug": "k-9-mail",
+    "website": "https://github.com/k9mail/k-9",
+    "ideasUrl": "",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/k9mail/k-9",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Kapitan",
+    "slug": "kapitan",
+    "website": "https://kapitan.dev/",
+    "ideasUrl": "",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/deepmind/kapitan",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Keploy",
+    "slug": "keploy",
+    "website": "https://keploy.io",
+    "ideasUrl": "https://github.com/keploy/gsoc/tree/main/2025",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/keploy/gsoc",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Konflux",
+    "slug": "konflux",
+    "website": "https://konflux-ci.dev/",
+    "ideasUrl": "https://github.com/konflux-ci/community/wiki/Google-Summer-of-Code-&-Outreachy-Project-Ideas-%E2%80%90-2026",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/konflux-ci/community",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Kornia",
+    "slug": "kornia",
+    "website": "https://docs.rs/kornia",
+    "ideasUrl": "https://github.com/kornia/kornia-rs/wiki/%5B2026%5D-Google-Sumer-of-Code-Application",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/kornia/kornia-rs",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "kro | Kube Resource Orchestrator",
+    "slug": "kro-kube-resource-orchestrator",
+    "website": "https://kro.run/",
+    "ideasUrl": "https://github.com/kro-run/kro/issues/288",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/kro-run/kro",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "KubeVirt",
+    "slug": "kubevirt",
+    "website": "https://kubevirt.io",
+    "ideasUrl": "https://github.com/kubevirt/community/wiki/Google-Summer-of-Code-2026",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/kubevirt/community",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "LabLua",
+    "slug": "lablua",
+    "website": "http://www.lua.inf.puc-rio.br",
+    "ideasUrl": "https://github.com/labluapucrio/gsoc",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/labluapucrio/gsoc",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Liquid Galaxy project",
+    "slug": "liquid-galaxy-project",
+    "website": "https://www.liquidgalaxy.eu",
+    "ideasUrl": "https://www.liquidgalaxy.eu/2026/01/gsoc-2026-project-ideas.html",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/LiquidGalaxy/liquid-galaxy",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "MDAnalysis",
+    "slug": "mdanalysis",
+    "website": "https://www.mdanalysis.org",
+    "ideasUrl": "https://github.com/MDAnalysis/mdanalysis/wiki/GSoC-2026-Project-Ideas",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/MDAnalysis/mdanalysis",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "MetaCall",
+    "slug": "metacall",
+    "website": "https://metacall.io",
+    "ideasUrl": "https://github.com/metacall/gsoc-2026",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/metacall/gsoc-2026",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Metaflow",
+    "slug": "metaflow",
+    "website": "https://metaflow.org/",
+    "ideasUrl": "https://github.com/Netflix/metaflow/blob/master/GSOC_2026_PROPOSALS.md",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/Netflix/metaflow",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Micro Electronics Research Lab - UITU",
+    "slug": "micro-electronics-research-lab-uitu",
+    "website": "https://www.merledupk.org",
+    "ideasUrl": "https://github.com/merledu/Google-Summer-of-Code/wiki/GSoC'25-Project-Ideas-List",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/merledu/Google-Summer-of-Code",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "MIT App Inventor",
+    "slug": "mit-app-inventor",
+    "website": "http://appinventor.mit.edu",
+    "ideasUrl": "https://github.com/mit-cml/appinventor-sources/wiki/Google-Summer-of-Code-2026",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/mit-cml/appinventor-sources",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Mixxx",
+    "slug": "mixxx",
+    "website": "https://mixxx.org",
+    "ideasUrl": "https://github.com/mixxxdj/mixxx/wiki/GSOC-2026-Ideas",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/mixxxdj/mixxx",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "MLLAM",
+    "slug": "mllam",
+    "website": "https://github.com/mllam",
+    "ideasUrl": "https://github.com/mllam/neural-lam/wiki/GSoC-ideas",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/mllam/neural-lam",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "MoFA Org",
+    "slug": "mofa-org",
+    "website": "https://mofa.ai",
+    "ideasUrl": "https://github.com/mofa-org/GSoC/blob/main/ideas-list.md",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/mofa-org/GSoC",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "MoganLab",
+    "slug": "moganlab",
+    "website": "https://mogan.app/en/",
+    "ideasUrl": "https://github.com/MoganLab/GSoC-2026-MoganLab/blob/main/ideas/main.md",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/MoganLab/GSoC-2026-MoganLab",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "National Resource for Network Biology (NRNB)",
+    "slug": "national-resource-for-network-biology-nrnb",
+    "website": "https://nrnb.org",
+    "ideasUrl": "https://github.com/nrnb/GoogleSummerOfCode/issues",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/nrnb/GoogleSummerOfCode",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Neovim",
+    "slug": "neovim",
+    "website": "https://neovim.io/",
+    "ideasUrl": "https://github.com/neovim/neovim/wiki/Google-Summer-of-Code",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/neovim/neovim",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Neutralinojs",
+    "slug": "neutralinojs",
+    "website": "https://neutralino.js.org",
+    "ideasUrl": "https://github.com/neutralinojs/gsoc2026/blob/main/project-ideas.md",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/neutralinojs/gsoc2026",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "NixOS Foundation",
+    "slug": "nixos-foundation",
+    "website": "https://nixos.org/",
+    "ideasUrl": "https://github.com/NixOS/GSoC/blob/main/ideas/2026.md",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/NixOS/GSoC",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "NumFOCUS",
+    "slug": "numfocus",
+    "website": "https://numfocus.org",
+    "ideasUrl": "https://github.com/numfocus/gsoc/blob/master/2026/ideas-list.md",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/numfocus/gsoc",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "omegaUp",
+    "slug": "omegaup",
+    "website": "https://omegaup.org",
+    "ideasUrl": "https://github.com/omegaup/omegaup/blob/main/frontend/www/docs/Google-Summer-of-Code-2026.md",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/omegaup/omegaup",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Open HealthCare Network",
+    "slug": "open-healthcare-network",
+    "website": "https://ohc.network/",
+    "ideasUrl": "https://github.com/ohcnetwork/care_fe/issues?q=is%3Aissue%20state%3Aopen%20label%3AGSoC",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/ohcnetwork/care_fe",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Open Robotics",
+    "slug": "open-robotics",
+    "website": "https://www.openrobotics.org/",
+    "ideasUrl": "https://github.com/osrf/osrf_wiki/wiki/GSoC-2026",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/osrf/osrf_wiki",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "OpenCV",
+    "slug": "opencv",
+    "website": "https://opencv.org/",
+    "ideasUrl": "https://github.com/opencv/opencv/wiki/GSoC_2025",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/opencv/opencv",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "openSUSE Project",
+    "slug": "opensuse-project",
+    "website": "https://get.opensuse.org/",
+    "ideasUrl": "https://github.com/openSUSE/mentoring/issues",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/openSUSE/mentoring",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "OpenVINO Toolkit",
+    "slug": "openvino-toolkit",
+    "website": "https://docs.openvino.ai/",
+    "ideasUrl": "https://github.com/openvinotoolkit/openvino/wiki/Google-Summer-Of-Code#project-ideas-for-2026",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/openvinotoolkit/openvino",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Oppia Foundation",
+    "slug": "oppia-foundation",
+    "website": "https://www.oppia.org",
+    "ideasUrl": "https://github.com/oppia/oppia/wiki/Google-Summer-of-Code-2026",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/oppia/oppia",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Organic Maps",
+    "slug": "organic-maps",
+    "website": "https://organicmaps.app",
+    "ideasUrl": "https://github.com/organicmaps/organicmaps/wiki/GSoC-2025-ideas",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/organicmaps/organicmaps",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Processing Foundation",
+    "slug": "processing-foundation",
+    "website": "http://processingfoundation.org",
+    "ideasUrl": "https://github.com/processing/Processing-Foundation-GSoC/wiki/Project-Ideas-List-(GSoC-2026)#project-ideas-list",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/processing/Processing-Foundation-GSoC",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Project Mesa",
+    "slug": "project-mesa",
+    "website": "https://mesa.readthedocs.io/latest/",
+    "ideasUrl": "https://github.com/mesa/mesa/wiki/GSoC-2026-Project-Ideas",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/mesa/mesa",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Prometheus-Operator",
+    "slug": "prometheus-operator",
+    "website": "https://prometheus-operator.dev/",
+    "ideasUrl": "https://github.com/prometheus-operator/community/blob/main/mentoring/gsoc/2025/project_ideas.md",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/prometheus-operator/community",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "R project for statistical computing",
+    "slug": "r-project-for-statistical-computing",
+    "website": "https://www.r-project.org/",
+    "ideasUrl": "https://github.com/rstats-gsoc/gsoc2026/wiki/table-of-proposed-coding-projects",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/rstats-gsoc/gsoc2026",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "rocket.chat",
+    "slug": "rocket-chat",
+    "website": "https://github.com/RocketChat",
+    "ideasUrl": "https://github.com/RocketChat/google-summer-of-code/blob/main/google-summer-of-code-2026.md#-project-ideas",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/RocketChat/google-summer-of-code",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Rspamd",
+    "slug": "rspamd",
+    "website": "https://www.rspamd.com",
+    "ideasUrl": "https://rspamd.com/gsoc2025_ideas.html",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/rspamd/rspamd",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Ruby",
+    "slug": "ruby",
+    "website": "https://www.ruby-lang.org/",
+    "ideasUrl": "https://github.com/rubygsoc/rubygsoc/wiki/Ideas-List-(2026)",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/rubygsoc/rubygsoc",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Scala Center",
+    "slug": "scala-center",
+    "website": "https://scala-lang.org/",
+    "ideasUrl": "https://github.com/scalacenter/GoogleSummerOfCode",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/scalacenter/GoogleSummerOfCode",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "SQLancer",
+    "slug": "sqlancer",
+    "website": "https://www.sqlancer.com",
+    "ideasUrl": "https://github.com/sqlancer/sqlancer/wiki/GSoC-2025-Ideas",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/sqlancer/sqlancer",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "stdlib",
+    "slug": "stdlib",
+    "website": "https://stdlib.io",
+    "ideasUrl": "https://github.com/stdlib-js/google-summer-of-code/blob/main/ideas.md",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/stdlib-js/google-summer-of-code",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Ste||ar group",
+    "slug": "ste-ar-group",
+    "website": "http://stellar-group.org/",
+    "ideasUrl": "https://github.com/STEllAR-GROUP/hpx/wiki/Google-Summer-of-Code-(GSoC)-2026#2026-hpx-project-ideas",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/STEllAR-GROUP/hpx",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Sugar Labs",
+    "slug": "sugar-labs",
+    "website": "https://sugarlabs.org",
+    "ideasUrl": "https://github.com/sugarlabs/GSoC/blob/master/Ideas-2026.md",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/sugarlabs/GSoC",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "SymPy",
+    "slug": "sympy",
+    "website": "https://www.sympy.org/",
+    "ideasUrl": "https://github.com/sympy/sympy/wiki/GSoC-Ideas",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/sympy/sympy",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Synfig",
+    "slug": "synfig",
+    "website": "https://synfig.org",
+    "ideasUrl": "https://github.com/synfig/synfig-docs-dev/blob/master/docs/gsoc/2026/ideas.rst",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/synfig/synfig-docs-dev",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "TEAMMATES @ National University of Singapore",
+    "slug": "teammates-national-university-of-singapore",
+    "website": "https://github.com/teammates/teammates",
+    "ideasUrl": "",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/teammates/teammates",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "The JPF team",
+    "slug": "the-jpf-team",
+    "website": "https://github.com/javapathfinder/jpf-core/wiki",
+    "ideasUrl": "https://github.com/javapathfinder/jpf-core/wiki/GSoC-2026-Project-Ideas",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/javapathfinder/jpf-core",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "The Libreswan Project",
+    "slug": "the-libreswan-project",
+    "website": "https://libreswan.org",
+    "ideasUrl": "https://github.com/libreswan/libreswan/wiki/GSoC-2026-Code-Project-Ideas",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/libreswan/libreswan",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "The Linux Foundation",
+    "slug": "the-linux-foundation",
+    "website": "http://www.linuxfoundation.org/",
+    "ideasUrl": "https://github.com/LinuxFoundationGSoC/ProjectIdeas/wiki/Google-Summer-of-Code-2026",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/LinuxFoundationGSoC/ProjectIdeas",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "The P4 Language Consortium",
+    "slug": "the-p4-language-consortium",
+    "website": "https://p4.org/",
+    "ideasUrl": "https://github.com/p4lang/gsoc/blob/main/2026/ideas_list.md",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/p4lang/gsoc",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "The Postgres Operator",
+    "slug": "the-postgres-operator",
+    "website": "https://github.com/zalando-incubator/postgres-operator",
+    "ideasUrl": "",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/zalando-incubator/postgres-operator",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "The Rust Foundation",
+    "slug": "the-rust-foundation",
+    "website": "https://www.rust-lang.org",
+    "ideasUrl": "https://github.com/rust-lang/google-summer-of-code",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/rust-lang/google-summer-of-code",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Tiled",
+    "slug": "tiled",
+    "website": "https://www.mapeditor.org",
+    "ideasUrl": "https://github.com/mapeditor/tiled/wiki/GSoC-2026#project-ideas",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/mapeditor/tiled",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Unikraft",
+    "slug": "unikraft",
+    "website": "https://unikraft.org/",
+    "ideasUrl": "https://github.com/unikraft/gsoc/blob/staging/gsoc-2026/ideas.md",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/unikraft/gsoc",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Uramaki LAB",
+    "slug": "uramaki-lab",
+    "website": "https://github.com/ruxailab",
+    "ideasUrl": "https://ruxailab.github.io/gsoc/",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/ruxailab/gsoc",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Wagtail",
+    "slug": "wagtail",
+    "website": "https://wagtail.org/",
+    "ideasUrl": "https://github.com/wagtail/gsoc/blob/main/project-ideas.md",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/wagtail/gsoc",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "name": "Xi Editor",
+    "slug": "xi-editor",
+    "website": "https://xi-editor.io/",
+    "ideasUrl": "",
+    "repositories": [
+      {
+        "label": "Source repository",
+        "url": "https://github.com/google/xi-editor",
+        "host": "GitHub",
+        "verified": false
+      }
+    ]
+  }
+]

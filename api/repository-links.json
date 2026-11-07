@@ -176,15 +176,8 @@
     "source": "unresolved"
   },
   "D Language Foundation": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://dlang.github.io/GSoC/gsoc-2026",
-        "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "source": "derived"
+    "repositories": [],
+    "source": "unresolved"
   },
   "DBpedia": {
     "repositories": [],
@@ -203,30 +196,16 @@
     "source": "unresolved"
   },
   "Django Software Foundation": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://code.djangoproject.com/wiki/SummerOfCode2026",
-        "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "source": "derived"
+    "repositories": [],
+    "source": "unresolved"
   },
   "Drupal Association": {
     "repositories": [],
     "source": "unresolved"
   },
   "Eclipse Foundation": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://gitlab.eclipse.org/eclipsefdn/emo-team",
-        "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "source": "derived"
+    "repositories": [],
+    "source": "unresolved"
   },
   "Fedora Project": {
     "repositories": [],
@@ -468,15 +447,8 @@
     "source": "unresolved"
   },
   "MBDyn": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://public.gitlab.polimi.it/DAER/mbdyn",
-        "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "source": "derived"
+    "repositories": [],
+    "source": "unresolved"
   },
   "McGill Space Institute": {
     "repositories": [],
@@ -487,15 +459,8 @@
     "source": "unresolved"
   },
   "The Mifos Initiative": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://mifosforge.jira.com/wiki/spaces",
-        "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "source": "derived"
+    "repositories": [],
+    "source": "unresolved"
   },
   "MIT App Inventor": {
     "repositories": [
@@ -763,28 +728,12 @@
     "source": "unresolved"
   },
   "RoboComp": {
-    "repositories": [
-      {
-        "label": "Organization profile",
-        "url": "https://robocomp.github.io/web",
-        "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "organizationProfile": "https://robocomp.github.io/web",
-    "source": "derived"
+    "repositories": [],
+    "source": "unresolved"
   },
   "RTEMS Project": {
-    "repositories": [
-      {
-        "label": "Organization profile",
-        "url": "https://projects.rtems.org/gsoc",
-        "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "organizationProfile": "https://projects.rtems.org/gsoc",
-    "source": "derived"
+    "repositories": [],
+    "source": "unresolved"
   },
   "Ruby": {
     "repositories": [
@@ -841,15 +790,8 @@
     "source": "unresolved"
   },
   "strace": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://sourceforge.net/projects/strace",
-        "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "source": "derived"
+    "repositories": [],
+    "source": "unresolved"
   },
   "Sugar Labs": {
     "repositories": [
@@ -882,16 +824,8 @@
     "source": "unresolved"
   },
   "TARDIS SN": {
-    "repositories": [
-      {
-        "label": "Organization profile",
-        "url": "https://tardis-sn.github.io/tardis",
-        "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "organizationProfile": "https://tardis-sn.github.io/tardis",
-    "source": "derived"
+    "repositories": [],
+    "source": "unresolved"
   },
   "TEAMMATES @ National University of Singapore": {
     "repositories": [
@@ -959,15 +893,8 @@
     "source": "unresolved"
   },
   "The Tor Project": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://gitlab.torproject.org/tpo/team",
-        "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "source": "derived"
+    "repositories": [],
+    "source": "unresolved"
   },
   "The Wine Project": {
     "repositories": [],
@@ -1114,15 +1041,8 @@
     "source": "manual"
   },
   "Checker Framework": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://rawgit.com/typetools/checker-framework",
-        "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "source": "derived"
+    "repositories": [],
+    "source": "unresolved"
   },
   "checkstyle": {
     "repositories": [
@@ -1179,15 +1099,8 @@
     "source": "unresolved"
   },
   "GENIVI Alliance": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://at.projects.genivi.org/wiki/pages",
-        "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "source": "derived"
+    "repositories": [],
+    "source": "unresolved"
   },
   "Haiku": {
     "repositories": [],
@@ -1210,15 +1123,8 @@
     "source": "unresolved"
   },
   "JdeRobot": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://jderobot.github.io/activities/gsoc",
-        "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "source": "derived"
+    "repositories": [],
+    "source": "unresolved"
   },
   "Jitsi": {
     "repositories": [
@@ -1292,16 +1198,8 @@
     "source": "unresolved"
   },
   "PEcAn Project": {
-    "repositories": [
-      {
-        "label": "Organization profile",
-        "url": "https://pecanproject.github.io/gsoc_ideas",
-        "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "organizationProfile": "https://pecanproject.github.io/gsoc_ideas",
-    "source": "derived"
+    "repositories": [],
+    "source": "unresolved"
   },
   "Pharo Consortium": {
     "repositories": [],
@@ -1772,8 +1670,8 @@
     "repositories": [
       {
         "label": "Source repository",
-        "url": "https://jabref.github.io/GSoC/projects",
-        "host": "Self-hosted Git",
+        "url": "https://github.com/JabRef/jabref",
+        "host": "GitHub",
         "verified": false
       }
     ],
@@ -2128,16 +2026,8 @@
     "source": "unresolved"
   },
   "GitLab": {
-    "repositories": [
-      {
-        "label": "Organization profile",
-        "url": "https://contributors.gitlab.com/issues",
-        "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "organizationProfile": "https://contributors.gitlab.com/issues",
-    "source": "derived"
+    "repositories": [],
+    "source": "unresolved"
   },
   "Google FHIR SDK": {
     "repositories": [
@@ -2252,15 +2142,8 @@
     "source": "unresolved"
   },
   "Shaka Player": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://opensource.google/projects/shaka-player",
-        "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "source": "derived"
+    "repositories": [],
+    "source": "unresolved"
   },
   "Tarantool": {
     "repositories": [],
@@ -2287,15 +2170,8 @@
     "source": "unresolved"
   },
   "xrdesktop": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://gitlab.freedesktop.org/xrdesktop/xrdesktop",
-        "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "source": "derived"
+    "repositories": [],
+    "source": "unresolved"
   },
   "Center for Translational Data Science": {
     "repositories": [],
@@ -2456,26 +2332,12 @@
     "source": "unresolved"
   },
   "Society for Arts and Technology (SAT)": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://sat-mtl.gitlab.io/collaborations/google-summer-of-code",
-        "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "source": "derived"
+    "repositories": [],
+    "source": "unresolved"
   },
   "TARDIS RT Collaboration": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://tardis-sn.github.io/summer_of_code/ideas",
-        "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "source": "derived"
+    "repositories": [],
+    "source": "unresolved"
   },
   "Unikraft": {
     "repositories": [
@@ -2508,16 +2370,8 @@
     "source": "unresolved"
   },
   "Mantis": {
-    "repositories": [
-      {
-        "label": "Organization profile",
-        "url": "https://netflix.github.io/mantis",
-        "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "organizationProfile": "https://netflix.github.io/mantis",
-    "source": "derived"
+    "repositories": [],
+    "source": "unresolved"
   },
   "Cockpit Project": {
     "repositories": [],
@@ -2558,16 +2412,8 @@
     "source": "unresolved"
   },
   "UC OSPO": {
-    "repositories": [
-      {
-        "label": "Organization profile",
-        "url": "https://ucsc-ospo.github.io/osre26",
-        "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "organizationProfile": "https://ucsc-ospo.github.io/osre26",
-    "source": "derived"
+    "repositories": [],
+    "source": "unresolved"
   },
   "Invesalius": {
     "repositories": [
@@ -2697,15 +2543,8 @@
     "source": "unresolved"
   },
   "Data for the Common Good": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://chicagopcdc.github.io/GSoC/ideas",
-        "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "source": "derived"
+    "repositories": [],
+    "source": "unresolved"
   },
   "DatenLord": {
     "repositories": [],
@@ -2837,15 +2676,8 @@
     "source": "derived"
   },
   "Stichting SU2": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://su2code.github.io/gsoc/Introduction",
-        "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "source": "derived"
+    "repositories": [],
+    "source": "unresolved"
   },
   "The P4 Language Consortium": {
     "repositories": [
@@ -2876,25 +2708,17 @@
   "Uramaki LAB": {
     "repositories": [
       {
-        "label": "Organization profile",
-        "url": "https://ruxailab.github.io/gsoc",
-        "host": "Self-hosted Git",
+        "label": "Source repository",
+        "url": "https://github.com/ruxailab/gsoc",
+        "host": "GitHub",
         "verified": false
       }
     ],
-    "organizationProfile": "https://ruxailab.github.io/gsoc",
     "source": "derived"
   },
   "Waycrate": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://waycrate.github.io/outreach/gsoc",
-        "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "source": "derived"
+    "repositories": [],
+    "source": "unresolved"
   },
   "Zendalona": {
     "repositories": [],
@@ -2952,15 +2776,8 @@
     "source": "unresolved"
   },
   "St. Jude Children's Research Hospital": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://gist.github.com/claymcleod/ee8e62831a4975cba2032d888bb52080",
-        "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "source": "derived"
+    "repositories": [],
+    "source": "unresolved"
   },
   "dora-rs": {
     "repositories": [
@@ -3053,15 +2870,8 @@
     "source": "unresolved"
   },
   "United Nations Office of Information Communication Technology": {
-    "repositories": [
-      {
-        "label": "Source repository",
-        "url": "https://opensource.unicc.org/un/unoict",
-        "host": "Self-hosted Git",
-        "verified": false
-      }
-    ],
-    "source": "derived"
+    "repositories": [],
+    "source": "unresolved"
   },
   "preCICE": {
     "repositories": [],

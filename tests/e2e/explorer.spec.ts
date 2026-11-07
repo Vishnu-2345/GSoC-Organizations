@@ -488,6 +488,9 @@ test('repository actions use direct source destinations only', async ({
     'href',
     'https://github.com/python/cpython',
   );
+  await expect(
+    page.locator('.organization-hero').getByText('Inferred', { exact: true }),
+  ).toHaveCount(0);
 
   await page.goto('/org/3dtk/');
   const unresolvedHero = page.locator('.organization-hero');

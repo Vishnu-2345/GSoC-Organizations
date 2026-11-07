@@ -156,9 +156,7 @@ function repositoryFromUrl(value) {
     const knownHost = ['GitHub', 'GitLab', 'Codeberg', 'SourceHut'].includes(
       host,
     );
-    const looksLikeGit =
-      knownHost || /git|code|source|forge|invent|projects/i.test(url.hostname);
-    if (!looksLikeGit) return null;
+    if (!knownHost) return null;
 
     const segments = url.pathname.split('/').filter(Boolean);
     if (!segments.length) return null;
@@ -438,7 +436,6 @@ function combineOrganizationRecords(group) {
         contributor: clean(project.student_name),
         codeUrl: safeUrl(project.code_url) || undefined,
         projectUrl: safeUrl(project.project_url) || undefined,
-        inferredTechnologies: [],
       };
     });
 
@@ -455,18 +452,6 @@ function combineOrganizationRecords(group) {
     else existing.participations.push(participation);
   });
 
-  for (const participation of existing.participations) {
-    for (const project of participation.projects) {
-      const searchable =
-        `${project.title} ${project.shortDescription} ${project.description}`.toLocaleLowerCase();
-      project.inferredTechnologies = existing.technologies
-        .filter((tag) => {
-          const normalized = tag.toLocaleLowerCase();
-          return normalized.length > 1 && searchable.includes(normalized);
-        })
-        .slice(0, 6);
-    }
-  }
   return existing;
 }
 
@@ -540,12 +525,31 @@ fs.writeFileSync(
   `${JSON.stringify(
     organizations
       .filter((organization) => organization.repository.source === 'unresolved')
-      .map(({ name, slug, latestYear, website, ideasUrl }) => ({
+      .map(
+        ({ name, slug, latestYear, website, ideasUrl, contributionGuide }) => ({
+          name,
+          slug,
+          latestYear,
+          website,
+          ideasUrl,
+          candidateUrls: [ideasUrl, contributionGuide, website].filter(Boolean),
+        }),
+      ),
+    null,
+    2,
+  )}\n`,
+);
+fs.writeFileSync(
+  path.join(root, 'api', 'derived-repositories-to-review.json'),
+  `${JSON.stringify(
+    organizations
+      .filter((organization) => organization.repository.source === 'derived')
+      .map(({ name, slug, website, ideasUrl, repository }) => ({
         name,
         slug,
-        latestYear,
         website,
         ideasUrl,
+        repositories: repository.repositories,
       })),
     null,
     2,

@@ -1,6 +1,6 @@
 # Repository curation workflow
 
-Every organization must end in one of three states: manually verified repository records, explicitly inferred repository records, or unresolved. Never upgrade an inferred record to verified without manual evidence, and never substitute a web-search URL for a direct source destination.
+Every organization must end in one of three states: manually verified repository records, derived repository records, or unresolved. Never upgrade a derived record to verified without manual evidence, and never substitute a web-search URL for a direct source destination.
 
 ## Schema
 
@@ -38,7 +38,7 @@ Supported host labels are `GitHub`, `GitLab`, `Codeberg`, `SourceHut`, and `Self
 8. Run the offline validator and the opt-in network validator.
 9. Open each changed link in a normal browser and confirm the final destination. Some hosts block `HEAD` requests, so a successful browser check remains necessary.
 
-## Inferred links
+## Derived links
 
 The data compiler derives a candidate when an official archive URL already points to a recognizable source host. Derived records must keep:
 
@@ -49,7 +49,7 @@ The data compiler derives a candidate when an official archive URL already point
 }
 ```
 
-An inferred link is a discovery shortcut, not a verification claim. The UI labels it accordingly.
+A derived link is a direct source-host destination awaiting manual confirmation. The public button does not make a verification claim.
 
 ## Unresolved links
 
@@ -78,7 +78,7 @@ The network mode intentionally fails on redirects, non-success HTTP responses, a
 Review in this order:
 
 1. Current-year organizations in `api/unresolved-repositories.json`.
-2. Current-year inferred links.
+2. Current-year derived links in `api/derived-repositories-to-review.json`.
 3. Current-year verified links whose `lastChecked` is older than 90 days.
 4. Historical organizations, most recent participation first.
 5. Entries sharing the same repository URL across different organization names; these may be legitimate renames or an identity-merge candidate.
