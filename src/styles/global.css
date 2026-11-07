@@ -1404,13 +1404,36 @@ img {
 }
 
 .project-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(94px, 1fr));
+  gap: 6px;
   margin-top: auto;
   padding-top: 8px;
-  font-size: 11px;
-  font-weight: 700;
+}
+
+.project-link-button,
+.project-link-button:visited {
+  display: inline-flex;
+  min-height: 31px;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 8px;
+  border: 1px solid var(--orange);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--orange-deep);
+  font-size: 10px;
+  font-weight: 750;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+}
+
+.project-link-button:hover,
+.project-link-button:focus-visible {
+  background: var(--blue-pale);
+  color: var(--orange-deep);
+  text-decoration: none;
 }
 
 .empty-inline {

@@ -460,6 +460,16 @@ test('project years switch a grid of project cards', async ({ page }) => {
   await expect(
     projects2025.locator('[aria-label="Project technologies"]'),
   ).toHaveCount(0);
+  const firstProject = projects2025.locator('.project-card').first();
+  await expect(
+    firstProject.getByRole('link', { name: 'GSoC project page' }),
+  ).toHaveAttribute('href', /^https:\/\/summerofcode\.withgoogle\.com\//);
+  await expect(
+    firstProject.getByRole('link', { name: 'Code submission' }),
+  ).toHaveAttribute('href', /^https:\/\//);
+  await expect(
+    firstProject.getByRole('link', { name: 'GSoC project page' }),
+  ).toHaveCSS('text-decoration-line', 'none');
 });
 
 test('filters offer option search and a first-time shortcut', async ({
