@@ -86,16 +86,57 @@ img {
   font-size: 14px;
   font-weight: 700;
   opacity: 0;
+  pointer-events: none;
   visibility: hidden;
-  animation: loading-screen-reveal 1ms 180ms forwards;
+  transition:
+    opacity 160ms ease,
+    visibility 160ms ease;
 }
 
-.site-loading img {
+html.js .site-loading {
+  animation: loading-screen-reveal 1ms 220ms forwards;
+}
+
+.site-loading-mark {
+  position: relative;
+  display: grid;
+  width: 78px;
+  height: 78px;
+  place-items: center;
+}
+
+.site-loading-mark img {
+  width: 58px;
+  height: 58px;
   animation: loading-logo-pulse 1s ease-in-out infinite alternate;
 }
 
-html.page-ready .site-loading {
-  display: none;
+.site-loading-spinner {
+  position: absolute;
+  inset: 0;
+  border: 2px solid rgba(229, 109, 0, 0.16);
+  border-top-color: var(--sun);
+  border-radius: 50%;
+  animation: loading-spinner 0.85s linear infinite;
+}
+
+.site-loading small {
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+html.page-ready:not(.page-navigating) .site-loading {
+  animation: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+html.page-navigating .site-loading {
+  animation: none;
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
 }
 
 @keyframes loading-screen-reveal {
@@ -108,6 +149,12 @@ html.page-ready .site-loading {
 @keyframes loading-logo-pulse {
   to {
     transform: scale(1.08);
+  }
+}
+
+@keyframes loading-spinner {
+  to {
+    transform: rotate(1turn);
   }
 }
 
@@ -828,6 +875,11 @@ html.page-ready .site-loading {
 
 .org-logo.is-loaded span {
   visibility: hidden;
+}
+
+.org-logo.has-fallback {
+  border-radius: 18px;
+  background: var(--blue-pale);
 }
 
 .org-logo.is-loading {
@@ -1908,7 +1960,8 @@ html.page-ready .site-loading {
   }
 
   .site-loading,
-  .site-loading img,
+  .site-loading-mark img,
+  .site-loading-spinner,
   .org-logo.is-loading::after {
     animation: none !important;
   }

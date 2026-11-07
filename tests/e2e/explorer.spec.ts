@@ -114,6 +114,34 @@ test('uses the official brand across the page and browser tab', async ({
   await expect(page.getByText('GSoC archive', { exact: true })).toHaveCount(0);
 });
 
+test('provides loading feedback for slow page transitions', async ({
+  page,
+}) => {
+  await page.goto('/');
+
+  const loadingScreen = page.locator('.site-loading');
+  await expect(page.getByTestId('explorer')).toHaveAttribute(
+    'data-ready',
+    'true',
+  );
+  await expect(loadingScreen).toBeHidden();
+
+  await page.evaluate(() => {
+    const message = document.querySelector('[data-loading-message]');
+    if (message) message.textContent = 'Opening Saved organizations…';
+    document.documentElement.classList.add('page-navigating');
+  });
+
+  await expect(loadingScreen).toBeVisible();
+  await expect(loadingScreen).toContainText('Opening Saved organizations…');
+  await expect(loadingScreen.locator('.site-loading-spinner')).toBeVisible();
+
+  await page.evaluate(() => {
+    document.documentElement.classList.remove('page-navigating');
+  });
+  await expect(loadingScreen).toBeHidden();
+});
+
 test('search, malformed URL recovery, and organization navigation', async ({
   page,
 }) => {

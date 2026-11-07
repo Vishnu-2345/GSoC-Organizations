@@ -53,7 +53,13 @@ export default function OrganizationCard({
     >
       <div className="org-card-topline">
         <div
-          className={`org-logo ${logoLoaded ? 'is-loaded' : 'is-loading'}`}
+          className={`org-logo ${
+            organization.logo
+              ? logoLoaded
+                ? 'is-loaded'
+                : 'is-loading'
+              : 'has-fallback'
+          }`}
           aria-hidden="true"
         >
           {organization.logo && (

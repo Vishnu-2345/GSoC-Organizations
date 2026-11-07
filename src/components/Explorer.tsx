@@ -54,6 +54,8 @@ export default function Explorer({
     }
     window.addEventListener('popstate', syncStateFromUrl);
     setReady(true);
+    document.documentElement.classList.add('page-ready');
+    window.dispatchEvent(new CustomEvent('gsoc:explorer-ready'));
     return () => window.removeEventListener('popstate', syncStateFromUrl);
   }, []);
 
