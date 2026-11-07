@@ -16,9 +16,6 @@ export default function OrganizationCard({
   onBookmark,
 }: Props) {
   const profileUrl = `/org/${organization.slug}/`;
-  const repository = organization.repository.repositories[0];
-  const repositoryUrl =
-    repository?.url || organization.repository.organizationProfile;
   const initials = organization.name
     .split(/\s+/)
     .slice(0, 2)
@@ -121,37 +118,6 @@ export default function OrganizationCard({
           <dd>{organization.participationCount}</dd>
         </div>
       </dl>
-      <div className="org-card-actions">
-        <a
-          className="button secondary-button"
-          href={profileUrl}
-          target="_blank"
-          rel="noreferrer"
-        >
-          View profile
-        </a>
-        {repositoryUrl && (
-          <a
-            className="button repository-button"
-            href={repositoryUrl}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {repository?.host || 'Web'}
-            <span
-              className={repository?.verified ? 'verified-dot' : 'inferred-dot'}
-              aria-hidden="true"
-            />
-            <span className="sr-only">
-              {repository?.verified
-                ? 'verified'
-                : organization.repository.source === 'search'
-                  ? 'search fallback'
-                  : 'inferred'}
-            </span>
-          </a>
-        )}
-      </div>
     </article>
   );
 }

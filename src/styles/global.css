@@ -699,7 +699,7 @@ img {
 
 @media (min-width: 1261px) {
   .organization-grid {
-    grid-auto-rows: minmax(440px, auto);
+    grid-auto-rows: minmax(400px, auto);
   }
 }
 
@@ -959,42 +959,6 @@ img {
   color: var(--text);
   font-size: 15px;
   font-weight: 750;
-}
-
-.org-card-actions {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 7px;
-  padding: 9px 14px 12px;
-}
-
-.org-card-actions .button {
-  min-height: 34px;
-  padding: 6px 9px;
-  white-space: nowrap;
-  font-size: 11px;
-}
-
-.repository-button {
-  border: 1px solid var(--blue);
-  background: #fff;
-  color: var(--blue-dark);
-}
-
-.repository-button:hover {
-  background: var(--blue-pale);
-}
-
-.verified-dot,
-.inferred-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--success);
-}
-
-.inferred-dot {
-  background: #a46b00;
 }
 
 .empty-state,
@@ -1606,43 +1570,40 @@ img {
 
 .footer-column .github-star-link {
   display: inline-flex;
-  min-height: 38px;
+  min-height: 44px;
   align-items: center;
-  gap: 8px;
+  gap: 9px;
   margin-top: 8px;
-  padding: 7px 8px 7px 12px;
-  border: 1px solid var(--orange);
-  border-radius: 999px;
-  background: transparent;
-  color: var(--orange-deep);
-  font-size: 12px;
+  padding: 9px 12px;
+  border: 1px solid #48484f;
+  border-radius: 7px;
+  background: #242428;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
   box-shadow: none;
 }
 
 .footer-column .github-star-link:hover {
-  border-color: var(--orange-deep);
-  background: var(--blue-pale);
-  color: var(--orange-deep);
+  border-color: #686870;
+  background: #303035;
+  color: #fff;
 }
 
 .github-star-link svg {
-  width: 16px;
-  height: 16px;
-  fill: var(--sun);
-  stroke: var(--orange-deep);
-  stroke-width: 1.2;
+  width: 20px;
+  height: 20px;
+  flex: none;
+  fill: currentColor;
 }
 
 .github-star-count {
-  display: inline-grid;
-  min-width: 24px;
-  min-height: 22px;
-  place-items: center;
-  padding: 0 7px;
-  border-radius: 999px;
-  background: #fff;
-  color: var(--orange-deep);
-  font-size: 11px;
+  min-width: 26px;
+  margin-left: 8px;
+  padding-left: 14px;
+  border-left: 1px solid #48484f;
+  color: #fff;
+  font-size: 14px;
   font-variant-numeric: tabular-nums;
   text-align: center;
 }

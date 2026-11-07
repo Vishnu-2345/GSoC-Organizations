@@ -217,7 +217,9 @@ test('wide directory uses four columns and exposes saved organizations', async (
   expect(columnCount).toBe(4);
   const firstCardBox = await grid.locator('.org-card').first().boundingBox();
   expect(firstCardBox).not.toBeNull();
-  expect(firstCardBox!.height).toBeLessThan(500);
+  expect(firstCardBox!.height).toBeLessThan(430);
+  await expect(grid.locator('.org-card-actions')).toHaveCount(0);
+  await expect(grid.getByRole('link', { name: 'View profile' })).toHaveCount(0);
   await expect(
     page.getByRole('link', { name: 'Saved organizations' }),
   ).toHaveAttribute('href', '/shortlist/');
@@ -525,12 +527,22 @@ test('a small filtered result set keeps the filter panel anchored', async ({
 test('footer provides project, privacy, and creator links', async ({
   page,
 }, testInfo) => {
+  let releaseGitHubApi!: () => void;
+  const githubApiGate = new Promise<void>((resolve) => {
+    releaseGitHubApi = resolve;
+  });
   await page.route(
     'https://api.github.com/repos/rohanmalhotracodes/GSoC-Organizations',
-    (route) => route.fulfill({ json: { stargazers_count: 1234 } }),
+    async (route) => {
+      await githubApiGate;
+      await route.fulfill({ json: { stargazers_count: 1234 } });
+    },
   );
   await page.goto('/');
   const footer = page.getByRole('contentinfo');
+  const starCount = footer.getByTestId('github-star-count');
+  await expect(starCount).toHaveText('1');
+  releaseGitHubApi();
   const footerBrand = footer.getByRole('link', {
     name: 'GSoC Organizations footer home',
   });
@@ -577,18 +589,19 @@ test('footer provides project, privacy, and creator links', async ({
   );
   await expect(footer.locator('.social-icon-link')).toHaveCount(3);
   await expect(
-    footer.getByRole('link', { name: 'Star us on GitHub' }),
+    footer.getByRole('link', { name: 'Star GSoC Organizations on GitHub' }),
   ).toHaveAttribute(
     'href',
     'https://github.com/rohanmalhotracodes/GSoC-Organizations',
   );
-  const starLink = footer.getByRole('link', { name: 'Star us on GitHub' });
-  await expect(starLink).toHaveCSS('border-radius', '999px');
-  await expect(starLink).toHaveCSS('border-top-color', 'rgb(227, 116, 0)');
+  const starLink = footer.getByRole('link', {
+    name: 'Star GSoC Organizations on GitHub',
+  });
+  await expect(starLink).toHaveCSS('border-radius', '7px');
+  await expect(starLink).toHaveCSS('background-color', 'rgb(36, 36, 40)');
   await expect(starLink).toHaveCSS('box-shadow', 'none');
-  const starCount = footer.getByTestId('github-star-count');
   await expect(starCount).toHaveText('1,234');
-  await expect(starCount).toHaveCSS('border-left-width', '0px');
+  await expect(starCount).toHaveCSS('border-left-width', '1px');
   await footer.getByRole('link', { name: 'Privacy policy' }).click();
   await expect(
     page.getByRole('heading', { level: 1, name: 'Privacy policy' }),
