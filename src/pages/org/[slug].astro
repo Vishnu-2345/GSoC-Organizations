@@ -311,18 +311,6 @@ const organizationStructuredData = [
                                 project.description ||
                                 'No project summary is available in the archive.'}
                             </p>
-                            {project.inferredTechnologies.length > 0 && (
-                              <div
-                                class="tag-row"
-                                aria-label="Project technologies"
-                              >
-                                {project.inferredTechnologies.map(
-                                  (technology) => (
-                                    <span class="tag">{technology}</span>
-                                  ),
-                                )}
-                              </div>
-                            )}
                             <div class="project-links">
                               {project.projectUrl && (
                                 <a

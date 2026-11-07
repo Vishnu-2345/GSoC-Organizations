@@ -457,6 +457,9 @@ test('project years switch a grid of project cards', async ({ page }) => {
   await expect(
     projects2025.getByText('Inferred:', { exact: true }),
   ).toHaveCount(0);
+  await expect(
+    projects2025.locator('[aria-label="Project technologies"]'),
+  ).toHaveCount(0);
 });
 
 test('filters offer option search and a first-time shortcut', async ({
