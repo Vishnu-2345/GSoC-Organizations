@@ -73,6 +73,44 @@ img {
   max-width: 100%;
 }
 
+.site-loading {
+  position: fixed;
+  z-index: 2000;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 12px;
+  background: rgba(255, 250, 242, 0.97);
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0;
+  visibility: hidden;
+  animation: loading-screen-reveal 1ms 180ms forwards;
+}
+
+.site-loading img {
+  animation: loading-logo-pulse 1s ease-in-out infinite alternate;
+}
+
+html.page-ready .site-loading {
+  display: none;
+}
+
+@keyframes loading-screen-reveal {
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes loading-logo-pulse {
+  to {
+    transform: scale(1.08);
+  }
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -525,6 +563,10 @@ img {
   height: 17px;
 }
 
+.saved-organizations-link .all-organizations-icon rect {
+  fill: none;
+}
+
 .saved-count {
   display: inline-grid;
   min-width: 21px;
@@ -725,7 +767,6 @@ img {
   box-shadow: var(--shadow);
   cursor: pointer;
   transition:
-    transform 180ms ease,
     border-color 180ms ease,
     box-shadow 180ms ease;
 }
@@ -733,12 +774,10 @@ img {
 .org-card:hover {
   border-color: var(--sun);
   box-shadow: 0 16px 34px rgba(96, 62, 0, 0.16);
-  transform: translateY(-6px);
 }
 
 .org-card:active {
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
-  transform: translateY(-2px);
 }
 
 .org-card-topline {
@@ -773,9 +812,47 @@ img {
   object-fit: contain;
 }
 
-.org-logo img:not([hidden]) + span,
 .detail-logo img:not([hidden]) + span {
   visibility: hidden;
+}
+
+.org-logo img {
+  opacity: 0;
+  transition: opacity 160ms ease;
+}
+
+.org-logo.is-loaded img {
+  opacity: 1;
+}
+
+.org-logo.is-loaded span {
+  visibility: hidden;
+}
+
+.org-logo.is-loading {
+  overflow: hidden;
+  border-radius: 18px;
+  background: var(--blue-pale);
+}
+
+.org-logo.is-loading::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 25%,
+    rgba(255, 255, 255, 0.72) 48%,
+    transparent 72%
+  );
+  content: '';
+  transform: translateX(-100%);
+  animation: logo-loading-shimmer 1.25s ease-in-out infinite;
+}
+
+@keyframes logo-loading-shimmer {
+  to {
+    transform: translateX(100%);
+  }
 }
 
 .bookmark-button {
@@ -1736,6 +1813,20 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .card-metrics {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-inline: 10px;
+  }
+
+  .card-metrics div {
+    justify-content: center;
+  }
+
+  .card-metrics div + div {
+    padding-left: 10px;
+  }
+
   .organization-hero {
     grid-template-columns: 1fr;
     padding: 20px;
@@ -1809,5 +1900,11 @@ img {
   *::after {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .site-loading,
+  .site-loading img,
+  .org-logo.is-loading::after {
+    animation: none !important;
   }
 }

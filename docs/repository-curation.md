@@ -1,6 +1,6 @@
 # Repository curation workflow
 
-Every organization must end in one of three states: manually verified repository records, explicitly inferred repository records, or a clearly labeled search fallback. Never upgrade an inferred or search-derived record to verified without manual evidence.
+Every organization must end in one of three states: manually verified repository records, explicitly inferred repository records, or unresolved. Never upgrade an inferred record to verified without manual evidence, and never substitute a web-search URL for a direct source destination.
 
 ## Schema
 
@@ -51,9 +51,11 @@ The data compiler derives a candidate when an official archive URL already point
 
 An inferred link is a discovery shortcut, not a verification claim. The UI labels it accordingly.
 
-## Search fallback
+## Unresolved links
 
-If no direct repository can be established, leave `repositories` empty and provide an `organizationProfile` search URL with `source: "search"`. The interface must say “Find repositories” rather than “Repository” or “Source.”
+If no direct repository can be established, leave `repositories` empty, omit `organizationProfile`, and set `source` to `unresolved`. The profile page renders no repository action for that organization. The build writes these organizations to `api/unresolved-repositories.json` for manual review.
+
+Manually reviewed records in `api/repository-links.json` are preserved by subsequent data builds when their `source` remains `manual`.
 
 ## Validation
 
@@ -75,7 +77,7 @@ The network mode intentionally fails on redirects, non-success HTTP responses, a
 
 Review in this order:
 
-1. Current-year organizations with a search fallback.
+1. Current-year organizations in `api/unresolved-repositories.json`.
 2. Current-year inferred links.
 3. Current-year verified links whose `lastChecked` is older than 90 days.
 4. Historical organizations, most recent participation first.

@@ -121,6 +121,15 @@ const jsonLd = {
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="site-loading" role="status" aria-live="polite">
+      <img
+        src="/brand/gsoc-organizations-logo.svg"
+        alt=""
+        width="64"
+        height="64"
+      />
+      <span>Loading…</span>
+    </div>
     <div id="main-content">
       <slot />
     </div>
@@ -239,6 +248,21 @@ const jsonLd = {
         <span>© 2026 Rohan Malhotra.</span>
       </div>
     </footer>
+    <script is:inline>
+      (() => {
+        const markReady = () =>
+          document.documentElement.classList.add('page-ready');
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', markReady, {
+            once: true,
+          });
+        } else {
+          markReady();
+        }
+        window.addEventListener('pageshow', markReady);
+        window.setTimeout(markReady, 4000);
+      })();
+    </script>
     <script is:inline>
       (() => {
         const countElements = document.querySelectorAll(

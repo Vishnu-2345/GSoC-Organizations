@@ -9,6 +9,14 @@ const root = process.cwd();
 const rawDirectory = path.join(root, 'data', 'raw');
 const outputFile = path.join(root, 'src', 'data', 'organizations.json');
 const repositoryFile = path.join(root, 'api', 'repository-links.json');
+const unresolvedRepositoryFile = path.join(
+  root,
+  'api',
+  'unresolved-repositories.json',
+);
+const reviewedRepositoryLinks = fs.existsSync(repositoryFile)
+  ? JSON.parse(fs.readFileSync(repositoryFile, 'utf8'))
+  : {};
 const logoAssetsFile = path.join(root, 'data', 'logo-assets.json');
 const logoAssets = fs.existsSync(logoAssetsFile)
   ? JSON.parse(fs.readFileSync(logoAssetsFile, 'utf8'))
@@ -467,7 +475,11 @@ const organizations = [...groupedRecords.values()]
   .map(combineOrganizationRecords)
   .map((org) => {
     org.participations.sort((a, b) => b.year - a.year);
-    const manual = manualRepositories[org.name];
+    // Manual entries in the generated repository file are deliberately
+    // preserved so reviewed links are not lost the next time data is built.
+    const reviewed = reviewedRepositoryLinks[org.name];
+    const manual =
+      reviewed?.source === 'manual' ? reviewed : manualRepositories[org.name];
     const derived = org.repositoryCandidates
       .map(repositoryFromUrl)
       .find(Boolean);
@@ -484,8 +496,7 @@ const organizations = [...groupedRecords.values()]
           }
         : {
             repositories: [],
-            organizationProfile: `https://www.google.com/search?q=${encodeURIComponent(`${org.name} source code repository`)}`,
-            source: 'search',
+            source: 'unresolved',
           });
     repositoryLinks[org.name] = repository;
     const years = org.participations.map((item) => item.year);
@@ -523,6 +534,22 @@ fs.writeFileSync(outputFile, `${JSON.stringify(organizations, null, 2)}\n`);
 fs.writeFileSync(
   repositoryFile,
   `${JSON.stringify(repositoryLinks, null, 2)}\n`,
+);
+fs.writeFileSync(
+  unresolvedRepositoryFile,
+  `${JSON.stringify(
+    organizations
+      .filter((organization) => organization.repository.source === 'unresolved')
+      .map(({ name, slug, latestYear, website, ideasUrl }) => ({
+        name,
+        slug,
+        latestYear,
+        website,
+        ideasUrl,
+      })),
+    null,
+    2,
+  )}\n`,
 );
 console.log(
   `Prepared ${organizations.length} organizations from ${files.length} annual datasets.`,

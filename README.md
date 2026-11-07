@@ -91,7 +91,9 @@ This produces 519 historical organization identities from the 2016–2026 snapsh
 
 - `manual`: verified against an organization-controlled source.
 - `derived`: inferred from the ideas page, contribution guide, or organization site and never shown as verified.
-- `search`: a clearly labeled repository-search fallback.
+- `unresolved`: no direct source destination has been established, so no repository button is shown.
+
+The build never creates web-search links. Manual records in `api/repository-links.json` are preserved across data rebuilds, while `api/unresolved-repositories.json` provides the review queue for missing links.
 
 For umbrella organizations, add multiple repository records rather than choosing one representative project.
 
@@ -102,6 +104,7 @@ For umbrella organizations, add multiple repository records rather than choosing
 - `src/pages/org/[slug].astro`: statically generated organization pages.
 - `src/data/organizations.json`: normalized, version-controlled browsing data.
 - `api/repository-links.json`: repository link records and provenance.
+- `api/unresolved-repositories.json`: organizations still awaiting a direct repository or source-host profile.
 - `scripts/prepare-data.mjs`: repeatable build-time compiler using canonical-name and official-website identity matching.
 - `scripts/validate-data.mjs`: schema, duplicate, tag, and URL checks.
 - `scripts/validate-repository-links.mjs`: repository format, provenance, duplicate, redirect, and reachability checks.

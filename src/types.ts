@@ -26,7 +26,7 @@ export type Repository = {
 export type RepositoryEntry = {
   repositories: Repository[];
   organizationProfile?: string;
-  source: 'manual' | 'derived' | 'search';
+  source: 'manual' | 'derived' | 'unresolved';
 };
 
 export type Organization = {

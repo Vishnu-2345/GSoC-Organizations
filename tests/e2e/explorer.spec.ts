@@ -146,6 +146,7 @@ test('search, malformed URL recovery, and organization navigation', async ({
     has: page.getByRole('heading', { name: 'Metasploit', exact: true }),
   });
   await expect(metasploitCard).toBeVisible();
+  const cardBoxBeforeHover = await metasploitCard.boundingBox();
   await metasploitCard.hover();
   await expect(
     page.locator('link[data-organization-profile-prefetch="metasploit"]'),
@@ -157,8 +158,11 @@ test('search, malformed URL recovery, and organization navigation', async ({
     metasploitCard.getByRole('link', { name: 'Metasploit' }),
   ).toHaveCSS('color', 'rgb(249, 171, 0)');
   await expect(metasploitCard).toHaveCSS('cursor', 'pointer');
+  const cardBoxAfterHover = await metasploitCard.boundingBox();
+  expect(cardBoxAfterHover?.x).toBeCloseTo(cardBoxBeforeHover?.x ?? 0, 1);
+  expect(cardBoxAfterHover?.y).toBeCloseTo(cardBoxBeforeHover?.y ?? 0, 1);
   expect(
-    await metasploitCard.evaluate((card) => getComputedStyle(card).transform),
+    await metasploitCard.evaluate((card) => getComputedStyle(card).boxShadow),
   ).not.toBe('none');
   const popupPromise = page.waitForEvent('popup');
   await metasploitCard.getByText('Projects', { exact: true }).click();
@@ -257,6 +261,10 @@ test('bookmark persists into shortlist', async ({ page }) => {
   await expect(
     page.getByRole('heading', { name: 'Metasploit', exact: true }),
   ).toBeVisible();
+  const allOrganizationsLink = page.getByRole('link', {
+    name: 'All organizations',
+  });
+  await expect(allOrganizationsLink.locator('svg rect')).toHaveCount(4);
 });
 
 test('directory reveals organizations in complete four-card rows', async ({
@@ -389,9 +397,10 @@ test('organization profiles preserve contributor and archive details', async ({
   await expect(
     hero.getByRole('link', { name: 'Official website' }),
   ).toBeVisible();
-  await expect(
-    hero.getByRole('link', { name: 'Find repository' }),
-  ).toBeVisible();
+  await expect(hero.getByText('Find repository', { exact: true })).toHaveCount(
+    0,
+  );
+  await expect(hero.getByRole('link', { name: /repositor/i })).toHaveCount(0);
   await expect(
     page.getByRole('heading', { name: 'Source repositories' }),
   ).toHaveCount(0);
@@ -432,6 +441,26 @@ test('organization profiles preserve contributor and archive details', async ({
   await expect(
     page.getByRole('heading', { name: 'NumFOCUS', exact: true }),
   ).toBeVisible();
+});
+
+test('repository actions use direct source destinations only', async ({
+  page,
+}) => {
+  await page.goto('/org/python-software-foundation/');
+
+  const repository = page
+    .locator('.organization-hero')
+    .getByRole('link', { name: /Repository/ });
+  await expect(repository).toHaveAttribute(
+    'href',
+    'https://github.com/python/cpython',
+  );
+
+  await page.goto('/org/3dtk/');
+  const unresolvedHero = page.locator('.organization-hero');
+  await expect(
+    unresolvedHero.getByRole('link', { name: /repositor/i }),
+  ).toHaveCount(0);
 });
 
 test('project years switch a grid of project cards', async ({ page }) => {
@@ -715,6 +744,16 @@ test('filters and drawer clear-all are usable on mobile', async ({
   await expect(page.getByTestId('explorer')).toHaveAttribute(
     'data-ready',
     'true',
+  );
+  await expect(page.locator('html')).toHaveClass(/page-ready/);
+  await expect(page.locator('.site-loading')).toBeHidden();
+  await expect(page.locator('.card-metrics').first()).toHaveCSS(
+    'display',
+    'grid',
+  );
+  await expect(page.locator('.card-metrics > div').first()).toHaveCSS(
+    'justify-content',
+    'center',
   );
   await page.getByRole('button', { name: /^Filters/ }).click();
   await expect(page.getByRole('heading', { name: 'Filters' })).toBeVisible();
