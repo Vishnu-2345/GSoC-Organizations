@@ -787,3 +787,36 @@ test('filters and drawer clear-all are usable on mobile', async ({
   await page.getByRole('button', { name: 'Close filters' }).click();
   await expect(page.getByRole('button', { name: 'Filters' })).toBeVisible();
 });
+
+test('card metrics are centered in equal columns on mobile', async ({
+  page,
+}, testInfo) => {
+  test.skip(
+    testInfo.project.name !== 'mobile',
+    'Mobile-only card alignment test',
+  );
+
+  await page.goto('/');
+  await expect(page.getByTestId('explorer')).toHaveAttribute(
+    'data-ready',
+    'true',
+  );
+
+  const metrics = page.locator('.org-card .card-metrics').first();
+  await expect(metrics).toHaveCSS('display', 'grid');
+  const columns = await metrics.evaluate(
+    (element) => getComputedStyle(element).gridTemplateColumns,
+  );
+  const [firstColumn, secondColumn] = columns
+    .split(' ')
+    .map((column) => Number.parseFloat(column));
+  expect(Math.abs(firstColumn - secondColumn)).toBeLessThan(1);
+  await expect(metrics.locator('div').first()).toHaveCSS(
+    'justify-content',
+    'center',
+  );
+  await expect(metrics.locator('div').nth(1)).toHaveCSS(
+    'justify-content',
+    'center',
+  );
+});
