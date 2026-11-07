@@ -10,6 +10,9 @@ const summaries: OrganizationSummary[] = organizations.map(
 );
 ---
 
-<BaseLayout>
+<BaseLayout
+  description="Your browser-local list of saved Google Summer of Code organizations."
+  noindex
+>
   <Explorer organizations={summaries} shortlistOnly client:load />
 </BaseLayout>

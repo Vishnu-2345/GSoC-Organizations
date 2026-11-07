@@ -8,8 +8,10 @@ const organizations = organizationsData as Organization[];
 const summaries: OrganizationSummary[] = organizations.map(
   ({ participations, communityLinks, ...organization }) => organization,
 );
+const description =
+  'A comprehensive directory of Google Summer of Code organizations across every archived program year. Explore organizations, projects, technologies, topics, and participation history.';
 ---
 
-<BaseLayout>
+<BaseLayout description={description}>
   <Explorer organizations={summaries} client:load />
 </BaseLayout>

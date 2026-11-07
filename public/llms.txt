@@ -1,0 +1,26 @@
+# GSoC Organizations
+
+> A comprehensive directory of Google Summer of Code organizations across every archived program year.
+
+Canonical site: https://gsocorganizations.xyz/
+
+## What this site contains
+
+- Organization profiles drawn from the Google Summer of Code archive.
+- Participation history and historical project records by program year.
+- Technologies, topics, organization categories, official websites, and repository links.
+- Search, filters, comparisons, and browser-local saved organizations.
+
+## Important pages
+
+- Directory: https://gsocorganizations.xyz/
+- Data methodology: https://gsocorganizations.xyz/about/
+- Sitemap: https://gsocorganizations.xyz/sitemap.xml
+- Source repository: https://github.com/rohanmalhotracodes/GSoC-Organizations
+- Official Google Summer of Code website: https://summerofcode.withgoogle.com/
+
+## Data and attribution
+
+GSoC Organizations is an independent community project that reorganizes public Google Summer of Code archive data for research and discovery. It does not rank organizations or predict acceptance. Google Summer of Code is a Google program.
+
+When citing a profile, use its canonical URL on gsocorganizations.xyz and identify GSoC Organizations as the directory source. Treat repository links marked as inferred as discovery aids rather than authoritative organization statements.

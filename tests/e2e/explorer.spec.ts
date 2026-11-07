@@ -1,5 +1,88 @@
 import { expect, test } from '@playwright/test';
 
+test('publishes canonical SEO and AI discovery metadata', async ({
+  page,
+  request,
+}) => {
+  await page.goto('/?q=python');
+
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
+    'href',
+    'https://gsocorganizations.xyz/',
+  );
+  await expect(page.locator('meta[property="og:site_name"]')).toHaveAttribute(
+    'content',
+    'GSoC Organizations',
+  );
+  await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute(
+    'content',
+    'summary',
+  );
+
+  const structuredData = JSON.parse(
+    (await page.locator('script[type="application/ld+json"]').textContent()) ??
+      '{}',
+  );
+  expect(structuredData['@graph']).toEqual(
+    expect.arrayContaining([
+      expect.objectContaining({
+        '@type': 'WebSite',
+        name: 'GSoC Organizations',
+      }),
+      expect.objectContaining({ '@type': 'CollectionPage' }),
+    ]),
+  );
+
+  const robots = await request.get('/robots.txt');
+  expect(robots.ok()).toBe(true);
+  expect(await robots.text()).toContain('User-agent: OAI-SearchBot');
+  expect(await robots.text()).toContain(
+    'Sitemap: https://gsocorganizations.xyz/sitemap.xml',
+  );
+
+  const sitemap = await request.get('/sitemap.xml');
+  expect(sitemap.ok()).toBe(true);
+  const sitemapText = await sitemap.text();
+  expect(sitemapText).toContain(
+    '<loc>https://gsocorganizations.xyz/org/python-software-foundation/</loc>',
+  );
+  expect((sitemapText.match(/<loc>/g) ?? []).length).toBe(521);
+
+  const aiSummary = await request.get('/llms.txt');
+  expect(aiSummary.ok()).toBe(true);
+  expect(await aiSummary.text()).toContain('# GSoC Organizations');
+});
+
+test('organization profiles publish entity metadata and private pages do not index', async ({
+  page,
+}) => {
+  await page.goto('/org/python-software-foundation/');
+  await expect(page).toHaveTitle('Python Software Foundation');
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
+    'href',
+    'https://gsocorganizations.xyz/org/python-software-foundation/',
+  );
+  const profileData = JSON.parse(
+    (await page.locator('script[type="application/ld+json"]').textContent()) ??
+      '{}',
+  );
+  expect(profileData['@graph']).toEqual(
+    expect.arrayContaining([
+      expect.objectContaining({ '@type': 'BreadcrumbList' }),
+      expect.objectContaining({
+        '@type': 'Organization',
+        name: 'Python Software Foundation',
+      }),
+    ]),
+  );
+
+  await page.goto('/shortlist/');
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
+    'content',
+    'noindex,follow',
+  );
+});
+
 test('uses the official brand across the page and browser tab', async ({
   page,
 }) => {

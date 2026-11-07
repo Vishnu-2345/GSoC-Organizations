@@ -4,12 +4,65 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  image?: string;
+  noindex?: boolean;
+  pageType?: 'WebPage' | 'CollectionPage' | 'AboutPage';
+  pageAboutId?: string;
+  structuredData?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 const {
   title = 'GSoC Organizations',
-  description = 'Search, compare, and shortlist Google Summer of Code organizations using public archive data and transparent source links.',
+  description = 'A comprehensive directory of Google Summer of Code organizations across every archived program year. Explore organizations, projects, technologies, topics, and participation history.',
+  image = '/brand/gsoc-organizations-logo-1024.png',
+  noindex = false,
+  pageType = 'WebPage',
+  pageAboutId,
+  structuredData = [],
 } = Astro.props;
+
+const siteUrl = new URL('/', Astro.site ?? 'https://gsocorganizations.xyz');
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl);
+const socialImageUrl = new URL(image, siteUrl);
+const isHomePage = canonicalUrl.pathname === '/';
+const additionalStructuredData = Array.isArray(structuredData)
+  ? structuredData
+  : [structuredData];
+const webPageData: Record<string, unknown> = {
+  '@type': isHomePage ? 'CollectionPage' : pageType,
+  '@id': `${canonicalUrl.href}#webpage`,
+  url: canonicalUrl.href,
+  name: title,
+  description,
+  isPartOf: { '@id': `${siteUrl.href}#website` },
+  inLanguage: 'en',
+};
+
+if (pageAboutId) {
+  webPageData.about = { '@id': pageAboutId };
+}
+
+const graph = [
+  ...(isHomePage
+    ? [
+        {
+          '@type': 'WebSite',
+          '@id': `${siteUrl.href}#website`,
+          url: siteUrl.href,
+          name: 'GSoC Organizations',
+          description,
+          inLanguage: 'en',
+        },
+      ]
+    : []),
+  webPageData,
+  ...additionalStructuredData,
+];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': graph,
+};
 ---
 
 <!doctype html>
@@ -18,8 +71,29 @@ const {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
+    <meta
+      name="robots"
+      content={noindex
+        ? 'noindex,follow'
+        : 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1'}
+    />
     <meta name="theme-color" content="#F9AB00" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="GSoC Organizations" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={socialImageUrl} />
+    <meta
+      property="og:image:alt"
+      content="GSoC Organizations golden code badge"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageUrl} />
     <link rel="icon" href="/brand/gsoc-organizations-favicon.ico" />
     <link
       rel="icon"
@@ -40,6 +114,7 @@ const {
     />
     <link rel="manifest" href="/site.webmanifest" />
     <title>{title}</title>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     <script is:inline>
       document.documentElement.classList.add('js');
     </script>
