@@ -37,7 +37,7 @@ The production output is written to `dist/`. Astro emits one static page for eve
 
 ## Cloudflare Pages
 
-The production site is deployed at [gsoc-organizations-ael.pages.dev](https://gsoc-organizations-ael.pages.dev).
+The production site is available at [gsocorganizations.xyz](https://gsocorganizations.xyz), with [www.gsocorganizations.xyz](https://www.gsocorganizations.xyz) attached to the same Cloudflare Pages project.
 
 The tracked `wrangler.toml` configures the Pages project and its `dist/` output directory. After authenticating Wrangler, build and publish the production branch with:
 
