@@ -761,6 +761,13 @@ test('filters and drawer clear-all are usable on mobile', async ({
   );
   await page.getByRole('button', { name: /^Filters/ }).click();
   await expect(page.getByRole('heading', { name: 'Filters' })).toBeVisible();
+  const closeFilters = page.getByRole('button', { name: 'Close filters' });
+  await expect(closeFilters.locator('svg')).toBeVisible();
+  await expect(closeFilters.locator('path')).toHaveAttribute(
+    'd',
+    'M6.5 6.5 17.5 17.5M17.5 6.5 6.5 17.5',
+  );
+  await expect(closeFilters).not.toContainText('×');
   const categoryGroup = page
     .locator('.filter-drawer .filter-group')
     .filter({ has: page.getByRole('heading', { name: /^Categories/ }) });
