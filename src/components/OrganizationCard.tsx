@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import type { OrganizationSummary } from '../types';
 
 const prefetchedProfiles = new Set<string>();
@@ -15,12 +16,22 @@ export default function OrganizationCard({
   priority = false,
   onBookmark,
 }: Props) {
+  const logoRef = useRef<HTMLImageElement>(null);
+  const [logoStatus, setLogoStatus] = useState<
+    'loading' | 'loaded' | 'fallback'
+  >(organization.logo ? 'loading' : 'fallback');
   const profileUrl = `/org/${organization.slug}/`;
   const initials = organization.name
     .split(/\s+/)
     .slice(0, 2)
     .map((word) => word[0])
     .join('');
+
+  useEffect(() => {
+    const image = logoRef.current;
+    if (!image?.complete) return;
+    setLogoStatus(image.naturalWidth > 0 ? 'loaded' : 'fallback');
+  }, []);
 
   function openProfile() {
     window.open(profileUrl, '_blank', 'noopener,noreferrer');
@@ -50,9 +61,10 @@ export default function OrganizationCard({
       }}
     >
       <div className="org-card-topline">
-        <div className="org-logo" aria-hidden="true">
+        <div className={`org-logo is-${logoStatus}`} aria-hidden="true">
           {organization.logo && (
             <img
+              ref={logoRef}
               src={organization.logo}
               alt=""
               width="132"
@@ -60,8 +72,10 @@ export default function OrganizationCard({
               loading={priority ? 'eager' : 'lazy'}
               fetchPriority={priority ? 'high' : 'auto'}
               decoding="async"
+              onLoad={() => setLogoStatus('loaded')}
               onError={(event) => {
                 event.currentTarget.hidden = true;
+                setLogoStatus('fallback');
               }}
             />
           )}

@@ -110,7 +110,13 @@ const organizationStructuredData = [
       >
     </nav>
     <section class="organization-hero">
-      <div class="detail-logo" aria-hidden="true">
+      <div
+        class:list={[
+          'detail-logo',
+          organization.logo ? 'is-loading' : 'is-fallback',
+        ]}
+        aria-hidden="true"
+      >
         {
           organization.logo && (
             <img
@@ -119,7 +125,8 @@ const organizationStructuredData = [
               width="124"
               height="124"
               decoding="async"
-              onerror="this.hidden=true"
+              onload="this.parentElement.classList.remove('is-loading'); this.parentElement.classList.add('is-loaded')"
+              onerror="this.hidden=true; this.parentElement.classList.remove('is-loading'); this.parentElement.classList.add('is-fallback')"
             />
           )
         }

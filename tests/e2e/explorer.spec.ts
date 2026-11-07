@@ -114,6 +114,40 @@ test('uses the official brand across the page and browser tab', async ({
   await expect(page.getByText('GSoC archive', { exact: true })).toHaveCount(0);
 });
 
+test('provides delayed loading feedback for slow page transitions', async ({
+  page,
+}) => {
+  await page.goto('/');
+
+  const loadingScreen = page.locator('.site-loading');
+  await expect(page.getByTestId('explorer')).toHaveAttribute(
+    'data-ready',
+    'true',
+  );
+  await expect(loadingScreen).toBeHidden();
+
+  await page.evaluate(() => {
+    const link = document.querySelector<HTMLAnchorElement>('a[href="/about/"]');
+    link?.addEventListener('click', (event) => event.preventDefault(), {
+      once: true,
+    });
+  });
+
+  await page.getByRole('link', { name: 'About the data' }).click();
+  await expect(page.locator('html')).toHaveClass(/page-navigating/);
+  await expect(loadingScreen).toBeVisible();
+  await expect(loadingScreen).toContainText('Opening About the data…');
+  await expect(loadingScreen).toContainText(
+    'This may take a moment on a slow connection',
+  );
+  await expect(loadingScreen.locator('.site-loading-spinner')).toBeVisible();
+
+  await page.evaluate(() => {
+    document.documentElement.classList.remove('page-navigating');
+  });
+  await expect(loadingScreen).toBeHidden();
+});
+
 test('search, malformed URL recovery, and organization navigation', async ({
   page,
 }) => {
@@ -132,6 +166,7 @@ test('search, malformed URL recovery, and organization navigation', async ({
   );
   await expect(firstOrganizationImage).toHaveAttribute('loading', 'eager');
   await expect(firstOrganizationImage).toHaveAttribute('fetchpriority', 'high');
+  await expect(firstOrganizationLogo).toHaveClass(/is-loaded/);
   await expect(page.locator('.org-logo img').nth(8)).toHaveAttribute(
     'loading',
     'lazy',

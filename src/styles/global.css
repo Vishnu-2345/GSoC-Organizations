@@ -73,6 +73,92 @@ img {
   max-width: 100%;
 }
 
+.site-loading {
+  position: fixed;
+  z-index: 2000;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 10px;
+  padding: 24px;
+  background: rgba(255, 250, 242, 0.98);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 750;
+  opacity: 0;
+  pointer-events: none;
+  text-align: center;
+  visibility: hidden;
+  transition:
+    opacity 160ms ease,
+    visibility 160ms ease;
+}
+
+html.js .site-loading {
+  animation: loading-screen-reveal 1ms 320ms forwards;
+}
+
+.site-loading-mark {
+  position: relative;
+  display: grid;
+  width: 76px;
+  height: 76px;
+  place-items: center;
+}
+
+.site-loading-mark img {
+  width: 56px;
+  height: 56px;
+  animation: loading-logo-pulse 1s ease-in-out infinite alternate;
+}
+
+.site-loading-spinner {
+  position: absolute;
+  inset: 0;
+  border: 2px solid rgba(227, 116, 0, 0.16);
+  border-top-color: var(--orange);
+  border-radius: 50%;
+  animation: loading-spinner 0.85s linear infinite;
+}
+
+.site-loading small {
+  max-width: 300px;
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+html.page-ready:not(.page-navigating) .site-loading {
+  animation: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+html.page-navigating .site-loading {
+  animation: loading-screen-reveal 1ms 220ms forwards;
+}
+
+@keyframes loading-screen-reveal {
+  to {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+}
+
+@keyframes loading-logo-pulse {
+  to {
+    transform: scale(1.06);
+  }
+}
+
+@keyframes loading-spinner {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -782,9 +868,57 @@ img {
   object-fit: contain;
 }
 
-.org-logo img:not([hidden]) + span,
-.detail-logo img:not([hidden]) + span {
+.org-logo img,
+.detail-logo img {
+  opacity: 0;
+  transition: opacity 160ms ease;
+}
+
+.org-logo.is-loaded img,
+.detail-logo.is-loaded img {
+  opacity: 1;
+}
+
+.org-logo.is-loaded span,
+.detail-logo.is-loaded span,
+.org-logo.is-loading span,
+.detail-logo.is-loading span {
   visibility: hidden;
+}
+
+.org-logo.is-loading,
+.detail-logo.is-loading {
+  overflow: hidden;
+  border-radius: 18px;
+  background: var(--blue-pale);
+}
+
+.org-logo.is-fallback,
+.detail-logo.is-fallback {
+  border-radius: 18px;
+  background: var(--blue-pale);
+}
+
+.org-logo.is-loading::after,
+.detail-logo.is-loading::after {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 25%,
+    rgba(255, 255, 255, 0.78) 48%,
+    transparent 72%
+  );
+  content: '';
+  transform: translateX(-100%);
+  animation: logo-loading-shimmer 1.25s ease-in-out infinite;
+}
+
+@keyframes logo-loading-shimmer {
+  to {
+    transform: translateX(100%);
+  }
 }
 
 .bookmark-button {
@@ -1818,5 +1952,13 @@ img {
   *::after {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .site-loading,
+  .site-loading-mark img,
+  .site-loading-spinner,
+  .org-logo.is-loading::after,
+  .detail-logo.is-loading::after {
+    animation: none !important;
   }
 }
