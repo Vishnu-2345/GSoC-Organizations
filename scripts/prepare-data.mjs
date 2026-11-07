@@ -9,14 +9,6 @@ const root = process.cwd();
 const rawDirectory = path.join(root, 'data', 'raw');
 const outputFile = path.join(root, 'src', 'data', 'organizations.json');
 const repositoryFile = path.join(root, 'api', 'repository-links.json');
-const unresolvedRepositoryFile = path.join(
-  root,
-  'api',
-  'unresolved-repositories.json',
-);
-const reviewedRepositoryLinks = fs.existsSync(repositoryFile)
-  ? JSON.parse(fs.readFileSync(repositoryFile, 'utf8'))
-  : {};
 const logoAssetsFile = path.join(root, 'data', 'logo-assets.json');
 const logoAssets = fs.existsSync(logoAssetsFile)
   ? JSON.parse(fs.readFileSync(logoAssetsFile, 'utf8'))
@@ -156,7 +148,9 @@ function repositoryFromUrl(value) {
     const knownHost = ['GitHub', 'GitLab', 'Codeberg', 'SourceHut'].includes(
       host,
     );
-    if (!knownHost) return null;
+    const looksLikeGit =
+      knownHost || /git|code|source|forge|invent|projects/i.test(url.hostname);
+    if (!looksLikeGit) return null;
 
     const segments = url.pathname.split('/').filter(Boolean);
     if (!segments.length) return null;
@@ -436,6 +430,7 @@ function combineOrganizationRecords(group) {
         contributor: clean(project.student_name),
         codeUrl: safeUrl(project.code_url) || undefined,
         projectUrl: safeUrl(project.project_url) || undefined,
+        inferredTechnologies: [],
       };
     });
 
@@ -452,6 +447,18 @@ function combineOrganizationRecords(group) {
     else existing.participations.push(participation);
   });
 
+  for (const participation of existing.participations) {
+    for (const project of participation.projects) {
+      const searchable =
+        `${project.title} ${project.shortDescription} ${project.description}`.toLocaleLowerCase();
+      project.inferredTechnologies = existing.technologies
+        .filter((tag) => {
+          const normalized = tag.toLocaleLowerCase();
+          return normalized.length > 1 && searchable.includes(normalized);
+        })
+        .slice(0, 6);
+    }
+  }
   return existing;
 }
 
@@ -460,11 +467,7 @@ const organizations = [...groupedRecords.values()]
   .map(combineOrganizationRecords)
   .map((org) => {
     org.participations.sort((a, b) => b.year - a.year);
-    // Manual entries in the generated repository file are deliberately
-    // preserved so reviewed links are not lost the next time data is built.
-    const reviewed = reviewedRepositoryLinks[org.name];
-    const manual =
-      reviewed?.source === 'manual' ? reviewed : manualRepositories[org.name];
+    const manual = manualRepositories[org.name];
     const derived = org.repositoryCandidates
       .map(repositoryFromUrl)
       .find(Boolean);
@@ -481,7 +484,8 @@ const organizations = [...groupedRecords.values()]
           }
         : {
             repositories: [],
-            source: 'unresolved',
+            organizationProfile: `https://www.google.com/search?q=${encodeURIComponent(`${org.name} source code repository`)}`,
+            source: 'search',
           });
     repositoryLinks[org.name] = repository;
     const years = org.participations.map((item) => item.year);
@@ -519,41 +523,6 @@ fs.writeFileSync(outputFile, `${JSON.stringify(organizations, null, 2)}\n`);
 fs.writeFileSync(
   repositoryFile,
   `${JSON.stringify(repositoryLinks, null, 2)}\n`,
-);
-fs.writeFileSync(
-  unresolvedRepositoryFile,
-  `${JSON.stringify(
-    organizations
-      .filter((organization) => organization.repository.source === 'unresolved')
-      .map(
-        ({ name, slug, latestYear, website, ideasUrl, contributionGuide }) => ({
-          name,
-          slug,
-          latestYear,
-          website,
-          ideasUrl,
-          contributionGuide,
-        }),
-      ),
-    null,
-    2,
-  )}\n`,
-);
-fs.writeFileSync(
-  path.join(root, 'api', 'derived-repositories-to-review.json'),
-  `${JSON.stringify(
-    organizations
-      .filter((organization) => organization.repository.source === 'derived')
-      .map(({ name, slug, website, ideasUrl, repository }) => ({
-        name,
-        slug,
-        website,
-        ideasUrl,
-        repositories: repository.repositories,
-      })),
-    null,
-    2,
-  )}\n`,
 );
 console.log(
   `Prepared ${organizations.length} organizations from ${files.length} annual datasets.`,

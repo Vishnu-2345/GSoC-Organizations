@@ -17,7 +17,7 @@ interface Props {
 
 const { organization } = Astro.props;
 const primaryRepository = organization.repository.repositories[0];
-const repositoryProfile = organization.repository.organizationProfile;
+const repositoryFallback = organization.repository.organizationProfile;
 const initials = organization.name
   .split(/\s+/)
   .slice(0, 2)
@@ -118,8 +118,6 @@ const organizationStructuredData = [
               alt=""
               width="124"
               height="124"
-              loading="eager"
-              fetchpriority="high"
               decoding="async"
               onerror="this.hidden=true"
             />
@@ -187,18 +185,25 @@ const organizationStructuredData = [
                 target="_blank"
                 rel="noreferrer"
               >
-                {primaryRepository.label === 'Organization profile'
-                  ? 'Source repositories'
-                  : 'Repository'}
+                Repository
+                <span
+                  class={
+                    primaryRepository.verified
+                      ? 'verification-pill verified'
+                      : 'verification-pill inferred'
+                  }
+                >
+                  {primaryRepository.verified ? 'Verified' : 'Inferred'}
+                </span>
               </a>
-            ) : repositoryProfile ? (
+            ) : repositoryFallback ? (
               <a
                 class="button primary-button"
-                href={repositoryProfile}
+                href={repositoryFallback}
                 target="_blank"
                 rel="noreferrer"
               >
-                Source repositories
+                Find repository
               </a>
             ) : null
           }

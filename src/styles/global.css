@@ -73,91 +73,6 @@ img {
   max-width: 100%;
 }
 
-.site-loading {
-  position: fixed;
-  z-index: 2000;
-  inset: 0;
-  display: grid;
-  place-content: center;
-  justify-items: center;
-  gap: 12px;
-  background: rgba(255, 250, 242, 0.97);
-  color: var(--text-secondary);
-  font-size: 14px;
-  font-weight: 700;
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-  transition:
-    opacity 160ms ease,
-    visibility 160ms ease;
-}
-
-html.js .site-loading {
-  animation: loading-screen-reveal 1ms 220ms forwards;
-}
-
-.site-loading-mark {
-  position: relative;
-  display: grid;
-  width: 78px;
-  height: 78px;
-  place-items: center;
-}
-
-.site-loading-mark img {
-  width: 58px;
-  height: 58px;
-  animation: loading-logo-pulse 1s ease-in-out infinite alternate;
-}
-
-.site-loading-spinner {
-  position: absolute;
-  inset: 0;
-  border: 2px solid rgba(229, 109, 0, 0.16);
-  border-top-color: var(--sun);
-  border-radius: 50%;
-  animation: loading-spinner 0.85s linear infinite;
-}
-
-.site-loading small {
-  color: var(--text-secondary);
-  font-size: 12px;
-  font-weight: 500;
-}
-
-html.page-ready:not(.page-navigating) .site-loading {
-  animation: none;
-  opacity: 0;
-  visibility: hidden;
-}
-
-html.page-navigating .site-loading {
-  animation: none;
-  opacity: 1;
-  pointer-events: auto;
-  visibility: visible;
-}
-
-@keyframes loading-screen-reveal {
-  to {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-@keyframes loading-logo-pulse {
-  to {
-    transform: scale(1.08);
-  }
-}
-
-@keyframes loading-spinner {
-  to {
-    transform: rotate(1turn);
-  }
-}
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -619,11 +534,6 @@ html.page-navigating .site-loading {
   height: 17px;
 }
 
-.saved-organizations-link .all-organizations-icon path {
-  fill: currentColor;
-  stroke: none;
-}
-
 .saved-count {
   display: inline-grid;
   min-width: 21px;
@@ -824,6 +734,7 @@ html.page-navigating .site-loading {
   box-shadow: var(--shadow);
   cursor: pointer;
   transition:
+    transform 180ms ease,
     border-color 180ms ease,
     box-shadow 180ms ease;
 }
@@ -831,10 +742,12 @@ html.page-navigating .site-loading {
 .org-card:hover {
   border-color: var(--sun);
   box-shadow: 0 16px 34px rgba(96, 62, 0, 0.16);
+  transform: translateY(-6px);
 }
 
 .org-card:active {
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
 }
 
 .org-card-topline {
@@ -869,52 +782,9 @@ html.page-navigating .site-loading {
   object-fit: contain;
 }
 
+.org-logo img:not([hidden]) + span,
 .detail-logo img:not([hidden]) + span {
   visibility: hidden;
-}
-
-.org-logo img {
-  opacity: 0;
-  transition: opacity 160ms ease;
-}
-
-.org-logo.is-loaded img {
-  opacity: 1;
-}
-
-.org-logo.is-loaded span {
-  visibility: hidden;
-}
-
-.org-logo.has-fallback {
-  border-radius: 18px;
-  background: var(--blue-pale);
-}
-
-.org-logo.is-loading {
-  overflow: hidden;
-  border-radius: 18px;
-  background: var(--blue-pale);
-}
-
-.org-logo.is-loading::after {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    110deg,
-    transparent 25%,
-    rgba(255, 255, 255, 0.72) 48%,
-    transparent 72%
-  );
-  content: '';
-  transform: translateX(-100%);
-  animation: logo-loading-shimmer 1.25s ease-in-out infinite;
-}
-
-@keyframes logo-loading-shimmer {
-  to {
-    transform: translateX(100%);
-  }
 }
 
 .bookmark-button {
@@ -1278,6 +1148,19 @@ html.page-navigating .site-loading {
 .hero-actions .button {
   min-width: 0;
   padding-inline: 10px;
+}
+
+.verification-pill {
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  font-size: 9px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.verification-pill.inferred {
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .hero-metrics {
@@ -1862,24 +1745,6 @@ html.page-navigating .site-loading {
     grid-template-columns: 1fr;
   }
 
-  .card-metrics {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    padding-inline: 10px;
-  }
-
-  .card-metrics div {
-    align-items: center;
-    flex-direction: column;
-    gap: 1px;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .card-metrics div + div {
-    padding-left: 0;
-  }
-
   .organization-hero {
     grid-template-columns: 1fr;
     padding: 20px;
@@ -1953,12 +1818,5 @@ html.page-navigating .site-loading {
   *::after {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
-  }
-
-  .site-loading,
-  .site-loading-mark img,
-  .site-loading-spinner,
-  .org-logo.is-loading::after {
-    animation: none !important;
   }
 }

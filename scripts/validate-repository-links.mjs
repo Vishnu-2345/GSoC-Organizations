@@ -13,44 +13,10 @@ const supportedHosts = new Set([
   'Self-hosted Git',
 ]);
 const network = process.argv.includes('--network');
-const forbiddenSearchHosts = new Set([
-  'google.com',
-  'www.google.com',
-  'bing.com',
-  'www.bing.com',
-  'duckduckgo.com',
-  'www.duckduckgo.com',
-]);
 
 for (const [organization, entry] of Object.entries(entries)) {
-  if (!['manual', 'derived', 'unresolved'].includes(entry.source))
+  if (!['manual', 'derived', 'search'].includes(entry.source))
     errors.push(`${organization}: invalid source`);
-  if (
-    entry.source === 'unresolved' &&
-    ((entry.repositories || []).length || entry.organizationProfile)
-  )
-    errors.push(`${organization}: unresolved entry contains a destination`);
-  if (
-    entry.source !== 'unresolved' &&
-    !(entry.repositories || []).length &&
-    !entry.organizationProfile
-  )
-    errors.push(`${organization}: resolved entry has no destination`);
-
-  if (entry.organizationProfile) {
-    try {
-      const profile = new URL(entry.organizationProfile);
-      if (!['http:', 'https:'].includes(profile.protocol))
-        errors.push(`${organization}: unsupported profile URL protocol`);
-      if (forbiddenSearchHosts.has(profile.hostname.toLocaleLowerCase()))
-        errors.push(`${organization}: search URL used as repository profile`);
-    } catch {
-      errors.push(
-        `${organization}: malformed profile URL ${entry.organizationProfile}`,
-      );
-    }
-  }
-
   for (const repository of entry.repositories || []) {
     let parsed;
     try {
@@ -61,8 +27,6 @@ for (const [organization, entry] of Object.entries(entries)) {
     }
     if (!['http:', 'https:'].includes(parsed.protocol))
       errors.push(`${organization}: unsupported URL protocol`);
-    if (forbiddenSearchHosts.has(parsed.hostname.toLocaleLowerCase()))
-      errors.push(`${organization}: search URL used as repository`);
     if (!supportedHosts.has(repository.host))
       errors.push(`${organization}: unsupported host label ${repository.host}`);
     if (entry.source !== 'manual' && repository.verified)

@@ -54,8 +54,6 @@ export default function Explorer({
     }
     window.addEventListener('popstate', syncStateFromUrl);
     setReady(true);
-    document.documentElement.classList.add('page-ready');
-    window.dispatchEvent(new CustomEvent('gsoc:explorer-ready'));
     return () => window.removeEventListener('popstate', syncStateFromUrl);
   }, []);
 
@@ -248,23 +246,13 @@ export default function Explorer({
                 className="button secondary-button saved-organizations-link"
                 href={shortlistOnly ? '/' : '/shortlist/'}
               >
-                {shortlistOnly ? (
-                  <svg
-                    className="save-icon all-organizations-icon"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <path d="M3.5 3.5h7v7h-7zM13.5 3.5h7v7h-7zM3.5 13.5h7v7h-7zM13.5 13.5h7v7h-7z" />
-                  </svg>
-                ) : (
-                  <svg
-                    className="save-icon"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <path d="M7.25 3.5h9.5c.97 0 1.75.78 1.75 1.75v15.1L12 16.4l-6.5 3.95V5.25c0-.97.78-1.75 1.75-1.75Z" />
-                  </svg>
-                )}
+                <svg
+                  className="save-icon"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path d="M7.25 3.5h9.5c.97 0 1.75.78 1.75 1.75v15.1L12 16.4l-6.5 3.95V5.25c0-.97.78-1.75 1.75-1.75Z" />
+                </svg>
                 {shortlistOnly ? 'All organizations' : 'Saved organizations'}
                 {!shortlistOnly && bookmarks.length > 0 && (
                   <span className="saved-count">{bookmarks.length}</span>

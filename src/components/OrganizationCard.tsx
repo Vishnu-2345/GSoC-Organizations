@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import type { OrganizationSummary } from '../types';
 
 const prefetchedProfiles = new Set<string>();
@@ -16,7 +15,6 @@ export default function OrganizationCard({
   priority = false,
   onBookmark,
 }: Props) {
-  const [logoLoaded, setLogoLoaded] = useState(false);
   const profileUrl = `/org/${organization.slug}/`;
   const initials = organization.name
     .split(/\s+/)
@@ -52,16 +50,7 @@ export default function OrganizationCard({
       }}
     >
       <div className="org-card-topline">
-        <div
-          className={`org-logo ${
-            organization.logo
-              ? logoLoaded
-                ? 'is-loaded'
-                : 'is-loading'
-              : 'has-fallback'
-          }`}
-          aria-hidden="true"
-        >
+        <div className="org-logo" aria-hidden="true">
           {organization.logo && (
             <img
               src={organization.logo}
@@ -71,10 +60,8 @@ export default function OrganizationCard({
               loading={priority ? 'eager' : 'lazy'}
               fetchPriority={priority ? 'high' : 'auto'}
               decoding="async"
-              onLoad={() => setLogoLoaded(true)}
               onError={(event) => {
                 event.currentTarget.hidden = true;
-                setLogoLoaded(false);
               }}
             />
           )}

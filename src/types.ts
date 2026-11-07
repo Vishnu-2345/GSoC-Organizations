@@ -5,6 +5,7 @@ export type Project = {
   contributor?: string;
   codeUrl?: string;
   projectUrl?: string;
+  inferredTechnologies: string[];
 };
 
 export type Participation = {
@@ -25,7 +26,7 @@ export type Repository = {
 export type RepositoryEntry = {
   repositories: Repository[];
   organizationProfile?: string;
-  source: 'manual' | 'derived' | 'unresolved';
+  source: 'manual' | 'derived' | 'search';
 };
 
 export type Organization = {

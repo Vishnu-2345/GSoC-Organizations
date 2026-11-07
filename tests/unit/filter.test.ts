@@ -8,7 +8,8 @@ import type { FilterState, OrganizationSummary } from '../../src/types';
 
 const baseRepository = {
   repositories: [],
-  source: 'unresolved' as const,
+  source: 'search' as const,
+  organizationProfile: 'https://example.com',
 };
 const organizations: OrganizationSummary[] = [
   {
