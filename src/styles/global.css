@@ -1820,11 +1820,15 @@ html.page-ready .site-loading {
   }
 
   .card-metrics div {
+    align-items: center;
+    flex-direction: column;
+    gap: 1px;
     justify-content: center;
+    text-align: center;
   }
 
   .card-metrics div + div {
-    padding-left: 10px;
+    padding-left: 0;
   }
 
   .organization-hero {

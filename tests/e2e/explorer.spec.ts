@@ -755,6 +755,14 @@ test('filters and drawer clear-all are usable on mobile', async ({
     'justify-content',
     'center',
   );
+  await expect(page.locator('.card-metrics > div').first()).toHaveCSS(
+    'align-items',
+    'center',
+  );
+  await expect(page.locator('.card-metrics > div').first()).toHaveCSS(
+    'flex-direction',
+    'column',
+  );
   await page.getByRole('button', { name: /^Filters/ }).click();
   await expect(page.getByRole('heading', { name: 'Filters' })).toBeVisible();
   await page.getByRole('checkbox', { name: 'Participation year 2026' }).check();
