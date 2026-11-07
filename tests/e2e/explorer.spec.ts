@@ -292,6 +292,14 @@ test('bookmark persists into shortlist', async ({ page }) => {
   await expect(
     page.getByRole('heading', { name: 'Metasploit', exact: true }),
   ).toBeVisible();
+  const allOrganizations = page.getByRole('link', {
+    name: 'All organizations',
+  });
+  await expect(allOrganizations).toHaveAttribute('href', '/');
+  await expect(
+    allOrganizations.locator('.all-organizations-icon rect'),
+  ).toHaveCount(4);
+  await expect(allOrganizations.locator('path')).toHaveCount(0);
 });
 
 test('directory reveals organizations in complete four-card rows', async ({

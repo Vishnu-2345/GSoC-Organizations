@@ -248,13 +248,26 @@ export default function Explorer({
                 className="button secondary-button saved-organizations-link"
                 href={shortlistOnly ? '/' : '/shortlist/'}
               >
-                <svg
-                  className="save-icon"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path d="M7.25 3.5h9.5c.97 0 1.75.78 1.75 1.75v15.1L12 16.4l-6.5 3.95V5.25c0-.97.78-1.75 1.75-1.75Z" />
-                </svg>
+                {shortlistOnly ? (
+                  <svg
+                    className="save-icon all-organizations-icon"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <rect x="3.5" y="3.5" width="6.5" height="6.5" rx="1" />
+                    <rect x="14" y="3.5" width="6.5" height="6.5" rx="1" />
+                    <rect x="3.5" y="14" width="6.5" height="6.5" rx="1" />
+                    <rect x="14" y="14" width="6.5" height="6.5" rx="1" />
+                  </svg>
+                ) : (
+                  <svg
+                    className="save-icon"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path d="M7.25 3.5h9.5c.97 0 1.75.78 1.75 1.75v15.1L12 16.4l-6.5 3.95V5.25c0-.97.78-1.75 1.75-1.75Z" />
+                  </svg>
+                )}
                 {shortlistOnly ? 'All organizations' : 'Saved organizations'}
                 {!shortlistOnly && bookmarks.length > 0 && (
                   <span className="saved-count">{bookmarks.length}</span>
