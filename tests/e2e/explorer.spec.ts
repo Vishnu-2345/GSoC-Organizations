@@ -267,6 +267,11 @@ test('directory and profile mastheads keep the same position', async ({
   expect(Math.abs(profileBox!.x - directoryBox!.x)).toBeLessThan(1);
   expect(Math.abs(profileBox!.y - directoryBox!.y)).toBeLessThan(1);
   expect(Math.abs(profileBox!.width - directoryBox!.width)).toBeLessThan(1);
+  await expect(
+    profilePage
+      .locator('.profile-directory-header')
+      .getByRole('link', { name: 'Star us on GitHub' }),
+  ).toBeVisible();
   await profilePage.close();
 });
 
@@ -677,10 +682,29 @@ test('footer provides project, privacy, and creator links', async ({
       await route.fulfill({ json: { stargazers_count: 1234 } });
     },
   );
+  await page.addInitScript(() => {
+    localStorage.setItem(
+      'gsoc-organizations-github-stars',
+      JSON.stringify({ count: 6, updatedAt: Date.now() }),
+    );
+  });
   await page.goto('/');
   const footer = page.getByRole('contentinfo');
   const starCount = footer.getByTestId('github-star-count');
-  await expect(starCount).toHaveText('1');
+  const header = page.locator('.directory-header');
+  const headerStarLink = header.getByRole('link', {
+    name: 'Star us on GitHub',
+  });
+  const headerStarCount = header.getByTestId('github-star-count');
+  await expect(starCount).toHaveText('6');
+  await expect(headerStarCount).toHaveText('6');
+  await expect(headerStarLink).toHaveAttribute(
+    'href',
+    'https://github.com/rohanmalhotracodes/GSoC-Organizations',
+  );
+  const headerStarBox = await headerStarLink.boundingBox();
+  expect(headerStarBox).not.toBeNull();
+  expect(headerStarBox!.height).toBeLessThanOrEqual(38);
   releaseGitHubApi();
   const footerBrand = footer.getByRole('link', {
     name: 'GSoC Organizations footer home',
@@ -728,18 +752,19 @@ test('footer provides project, privacy, and creator links', async ({
   );
   await expect(footer.locator('.social-icon-link')).toHaveCount(3);
   await expect(
-    footer.getByRole('link', { name: 'Star GSoC Organizations on GitHub' }),
+    footer.getByRole('link', { name: 'Star us on GitHub' }),
   ).toHaveAttribute(
     'href',
     'https://github.com/rohanmalhotracodes/GSoC-Organizations',
   );
   const starLink = footer.getByRole('link', {
-    name: 'Star GSoC Organizations on GitHub',
+    name: 'Star us on GitHub',
   });
   await expect(starLink).toHaveCSS('border-radius', '7px');
   await expect(starLink).toHaveCSS('background-color', 'rgb(36, 36, 40)');
   await expect(starLink).toHaveCSS('box-shadow', 'none');
   await expect(starCount).toHaveText('1,234');
+  await expect(headerStarCount).toHaveText('1,234');
   await expect(starCount).toHaveCSS('border-left-width', '1px');
   await footer.getByRole('link', { name: 'Privacy policy' }).click();
   await expect(

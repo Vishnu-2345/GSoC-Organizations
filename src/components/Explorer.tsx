@@ -8,6 +8,7 @@ import {
 import { parseFilterState, serializeFilterState } from '../lib/url-state';
 import type { FilterState, OrganizationSummary } from '../types';
 import FilterSidebar from './FilterSidebar';
+import GitHubStarButton from './GitHubStarButton';
 import OrganizationCard from './OrganizationCard';
 import SortControl from './SortControl';
 
@@ -205,6 +206,7 @@ export default function Explorer({
               </button>
             )}
           </label>
+          <GitHubStarButton placement="header" />
         </header>
       </div>
       <div className="explorer-layout">

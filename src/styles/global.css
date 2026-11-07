@@ -190,7 +190,9 @@ html.page-navigating .site-loading {
 
 .directory-header {
   display: grid;
-  grid-template-columns: minmax(330px, 0.75fr) minmax(360px, 1.25fr);
+  grid-template-columns:
+    minmax(330px, 0.75fr) minmax(360px, 1.25fr)
+    auto;
   align-items: center;
   gap: 24px;
   margin-bottom: 20px;
@@ -1758,44 +1760,55 @@ html.page-navigating .site-loading {
   fill: currentColor;
 }
 
-.footer-column .github-star-link {
+.github-star-link {
   display: inline-flex;
-  min-height: 44px;
   align-items: center;
-  gap: 9px;
-  margin-top: 8px;
-  padding: 9px 12px;
+  gap: 7px;
+  min-height: 36px;
+  padding: 6px 9px;
   border: 1px solid #48484f;
   border-radius: 7px;
   background: #242428;
   color: #fff;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   box-shadow: none;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
-.footer-column .github-star-link:hover {
+.github-star-link:hover,
+.github-star-link:focus-visible {
   border-color: #686870;
   background: #303035;
   color: #fff;
 }
 
 .github-star-link svg {
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
   flex: none;
   fill: currentColor;
 }
 
 .github-star-count {
-  min-width: 26px;
-  margin-left: 8px;
-  padding-left: 14px;
+  min-width: 22px;
+  margin-left: 3px;
+  padding-left: 8px;
   border-left: 1px solid #48484f;
   color: #fff;
-  font-size: 14px;
+  font-size: 13px;
   font-variant-numeric: tabular-nums;
   text-align: center;
+}
+
+.header-github-star-link {
+  justify-self: end;
+}
+
+.footer-column .footer-github-star-link {
+  margin-top: 8px;
 }
 
 .footer-bottom {
@@ -1841,8 +1854,23 @@ html.page-navigating .site-loading {
   }
 
   .directory-header {
-    grid-template-columns: 1fr;
+    grid-template-areas:
+      'brand star'
+      'search search';
+    grid-template-columns: minmax(0, 1fr) auto;
     gap: 14px;
+  }
+
+  .directory-brand {
+    grid-area: brand;
+  }
+
+  .global-search {
+    grid-area: search;
+  }
+
+  .header-github-star-link {
+    grid-area: star;
   }
 
   .explorer-layout {
@@ -1864,6 +1892,18 @@ html.page-navigating .site-loading {
 }
 
 @media (max-width: 760px) {
+  .directory-header {
+    grid-template-areas:
+      'brand'
+      'search'
+      'star';
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .header-github-star-link {
+    justify-self: start;
+  }
+
   .global-search {
     min-height: 42px;
   }
