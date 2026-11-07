@@ -252,10 +252,7 @@ export default function Explorer({
                     viewBox="0 0 24 24"
                     aria-hidden="true"
                   >
-                    <rect x="3.5" y="3.5" width="6.5" height="6.5" rx="1" />
-                    <rect x="14" y="3.5" width="6.5" height="6.5" rx="1" />
-                    <rect x="3.5" y="14" width="6.5" height="6.5" rx="1" />
-                    <rect x="14" y="14" width="6.5" height="6.5" rx="1" />
+                    <path d="M3.5 3.5h7v7h-7zM13.5 3.5h7v7h-7zM3.5 13.5h7v7h-7zM13.5 13.5h7v7h-7z" />
                   </svg>
                 ) : (
                   <svg

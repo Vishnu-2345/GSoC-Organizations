@@ -563,8 +563,9 @@ html.page-ready .site-loading {
   height: 17px;
 }
 
-.saved-organizations-link .all-organizations-icon rect {
-  fill: none;
+.saved-organizations-link .all-organizations-icon path {
+  fill: currentColor;
+  stroke: none;
 }
 
 .saved-count {

@@ -264,7 +264,12 @@ test('bookmark persists into shortlist', async ({ page }) => {
   const allOrganizationsLink = page.getByRole('link', {
     name: 'All organizations',
   });
-  await expect(allOrganizationsLink.locator('svg rect')).toHaveCount(4);
+  await expect(
+    allOrganizationsLink.locator('svg.all-organizations-icon path'),
+  ).toHaveCount(1);
+  await expect(
+    allOrganizationsLink.locator('svg.all-organizations-icon path'),
+  ).toHaveCSS('fill', 'rgb(168, 70, 0)');
 });
 
 test('directory reveals organizations in complete four-card rows', async ({
