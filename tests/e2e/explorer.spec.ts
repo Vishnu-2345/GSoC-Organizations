@@ -801,6 +801,16 @@ test('filters and drawer clear-all are usable on mobile', async ({
   );
   await page.getByRole('button', { name: /^Filters/ }).click();
   await expect(page.getByRole('heading', { name: 'Filters' })).toBeVisible();
+  const categoryGroup = page
+    .locator('.filter-drawer .filter-group')
+    .filter({ has: page.getByRole('heading', { name: /^Categories/ }) });
+  const viewAllCategories = categoryGroup.locator('.show-options-button');
+  await expect(viewAllCategories).toHaveText(/^View all/);
+  await viewAllCategories.click();
+  await expect(viewAllCategories).toHaveCSS(
+    'background-color',
+    'rgb(255, 255, 255)',
+  );
   await page.getByRole('checkbox', { name: 'Participation year 2026' }).check();
   await page.getByRole('button', { name: 'Close filters' }).click();
   await expect(page.getByRole('button', { name: 'Filters (1)' })).toBeVisible();

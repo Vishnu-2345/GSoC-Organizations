@@ -5,9 +5,7 @@
     "latestYear": 2018,
     "website": "http://threedtk.de",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://threedtk.de"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "52°North Spatial Information Research GmbH",
@@ -15,11 +13,7 @@
     "latestYear": 2026,
     "website": "https://52north.org/",
     "ideasUrl": "https://52north.org/outreach-dissemination/google-summer-of-code/project-ideas/",
-    "candidateUrls": [
-      "https://52north.org/outreach-dissemination/google-summer-of-code/project-ideas/",
-      "https://52north.org/software/contribute/",
-      "https://52north.org/"
-    ]
+    "contributionGuide": "https://52north.org/software/contribute/"
   },
   {
     "name": "Academy Software Foundation",
@@ -27,9 +21,7 @@
     "latestYear": 2022,
     "website": "https://www.aswf.io/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.aswf.io/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "AerospaceResearch.net",
@@ -37,9 +29,7 @@
     "latestYear": 2021,
     "website": "http://aerospaceresearch.net/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://aerospaceresearch.net/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Amahi",
@@ -47,9 +37,7 @@
     "latestYear": 2020,
     "website": "https://www.amahi.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.amahi.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "AnitaB.org Open Source",
@@ -57,9 +45,7 @@
     "latestYear": 2020,
     "website": "http://anitab.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://anitab.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "AOSSIE - The Australian National University's Open-Source Software Innovation and Education",
@@ -67,9 +53,7 @@
     "latestYear": 2016,
     "website": "https://cecs.anu.edu.au/current-students/student-opportunities/google-summer-code-anu",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://cecs.anu.edu.au/current-students/student-opportunities/google-summer-code-anu"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Apache DataFusion",
@@ -77,11 +61,7 @@
     "latestYear": 2025,
     "website": "https://datafusion.apache.org/",
     "ideasUrl": "https://datafusion.apache.org/contributor-guide/gsoc_project_ideas",
-    "candidateUrls": [
-      "https://datafusion.apache.org/contributor-guide/gsoc_project_ideas",
-      "https://datafusion.apache.org/contributor-guide/gsoc_application_guidelines",
-      "https://datafusion.apache.org/"
-    ]
+    "contributionGuide": "https://datafusion.apache.org/contributor-guide/gsoc_application_guidelines"
   },
   {
     "name": "Apertium",
@@ -89,9 +69,7 @@
     "latestYear": 2024,
     "website": "https://apertium.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://apertium.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Apertus Association",
@@ -99,9 +77,7 @@
     "latestYear": 2022,
     "website": "https://www.apertus.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.apertus.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "API Client Tools at Google",
@@ -109,9 +85,7 @@
     "latestYear": 2019,
     "website": "https://googleapis.github.io",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://googleapis.github.io"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "appleseed",
@@ -119,9 +93,7 @@
     "latestYear": 2020,
     "website": "https://appleseedhq.net/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://appleseedhq.net/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "ArchC",
@@ -129,9 +101,7 @@
     "latestYear": 2016,
     "website": "http://www.archc.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://www.archc.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Arduino",
@@ -139,9 +109,7 @@
     "latestYear": 2020,
     "website": "https://arduino.cc",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://arduino.cc"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "ArduPilot",
@@ -149,11 +117,7 @@
     "latestYear": 2026,
     "website": "https://ardupilot.org/",
     "ideasUrl": "https://ardupilot.org/dev/docs/gsoc-ideas-list.html",
-    "candidateUrls": [
-      "https://ardupilot.org/dev/docs/gsoc-ideas-list.html",
-      "https://ardupilot.org/dev/docs/gsoc.html",
-      "https://ardupilot.org/"
-    ]
+    "contributionGuide": "https://ardupilot.org/dev/docs/gsoc.html"
   },
   {
     "name": "ASCEND",
@@ -161,9 +125,7 @@
     "latestYear": 2016,
     "website": "http://ascend4.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://ascend4.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Audacity",
@@ -171,9 +133,7 @@
     "latestYear": 2022,
     "website": "https://www.audacityteam.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.audacityteam.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Babel",
@@ -181,9 +141,7 @@
     "latestYear": 2017,
     "website": "https://babeljs.io/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://babeljs.io/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Bazel",
@@ -191,9 +149,7 @@
     "latestYear": 2019,
     "website": "https://bazel.build/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://bazel.build/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "BeagleBoard.org",
@@ -201,11 +157,7 @@
     "latestYear": 2025,
     "website": "https://www.beagleboard.org",
     "ideasUrl": "https://bbb.io/gsocideas",
-    "candidateUrls": [
-      "https://bbb.io/gsocideas",
-      "https://bbb.io/gsoc",
-      "https://www.beagleboard.org"
-    ]
+    "contributionGuide": "https://bbb.io/gsoc"
   },
   {
     "name": "Beam Community",
@@ -213,9 +165,7 @@
     "latestYear": 2018,
     "website": "http://beamcommunity.github.io",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://beamcommunity.github.io"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "BeeWare Project",
@@ -223,9 +173,7 @@
     "latestYear": 2018,
     "website": "https://pybee.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://pybee.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Bench-Routes",
@@ -233,9 +181,7 @@
     "latestYear": 2021,
     "website": "https://bench-routes.netlify.com",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://bench-routes.netlify.com"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Berkman Klein Center for Internet and Society",
@@ -243,9 +189,7 @@
     "latestYear": 2019,
     "website": "https://cyber.harvard.edu",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://cyber.harvard.edu"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "BioGears",
@@ -253,9 +197,7 @@
     "latestYear": 2020,
     "website": "https://www.biogearsengine.com/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.biogearsengine.com/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "BioJS",
@@ -263,9 +205,7 @@
     "latestYear": 2016,
     "website": "http://biojs.net/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://biojs.net/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Boa",
@@ -273,11 +213,7 @@
     "latestYear": 2026,
     "website": "https://boajs.dev/",
     "ideasUrl": "https://boajs.dev/roadmap",
-    "candidateUrls": [
-      "https://boajs.dev/roadmap",
-      "https://boajs.dev/docs/contributing",
-      "https://boajs.dev/"
-    ]
+    "contributionGuide": "https://boajs.dev/docs/contributing"
   },
   {
     "name": "Boost C++ Libraries",
@@ -285,9 +221,7 @@
     "latestYear": 2021,
     "website": "https://www.boost.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.boost.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "BuildmLearn",
@@ -295,9 +229,7 @@
     "latestYear": 2016,
     "website": "http://www.buildmlearn.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://www.buildmlearn.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Buildroot",
@@ -305,9 +237,7 @@
     "latestYear": 2019,
     "website": "http://www.buildroot.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://www.buildroot.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "C2SI",
@@ -315,11 +245,7 @@
     "latestYear": 2026,
     "website": "https://c2si.org/",
     "ideasUrl": "https://c2si.org/gsoc/",
-    "candidateUrls": [
-      "https://c2si.org/gsoc/",
-      "https://docs.google.com/document/d/e/2PACX-1vREmzfBRMW1QmehqstK9v094j1t6IvPA5qbvj8MOV7x2wQETcn-AsnhzCaOuO12ltltwBh_cpoRj7pi/pub",
-      "https://c2si.org/"
-    ]
+    "contributionGuide": "https://docs.google.com/document/d/e/2PACX-1vREmzfBRMW1QmehqstK9v094j1t6IvPA5qbvj8MOV7x2wQETcn-AsnhzCaOuO12ltltwBh_cpoRj7pi/pub"
   },
   {
     "name": "Cadasta",
@@ -327,9 +253,7 @@
     "latestYear": 2017,
     "website": "http://cadasta.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://cadasta.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "caMicroscope",
@@ -337,9 +261,7 @@
     "latestYear": 2024,
     "website": "https://camicroscope.github.io",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://camicroscope.github.io"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Canadian Centre for Computational Genomics",
@@ -347,9 +269,7 @@
     "latestYear": 2020,
     "website": "http://computationalgenomics.ca/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://computationalgenomics.ca/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Casbin",
@@ -357,9 +277,7 @@
     "latestYear": 2022,
     "website": "https://casbin.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://casbin.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "CASTOR",
@@ -367,9 +285,7 @@
     "latestYear": 2021,
     "website": "https://www.castor.kth.se/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.castor.kth.se/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "CBMI@UTHSC",
@@ -377,9 +293,7 @@
     "latestYear": 2019,
     "website": "https://cbmi.lab.uthsc.edu/people-2/people/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://cbmi.lab.uthsc.edu/people-2/people/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "CCExtractor Development",
@@ -387,11 +301,7 @@
     "latestYear": 2026,
     "website": "https://www.ccextractor.org",
     "ideasUrl": "https://ccextractor.org/docs/ideas_page_for_summer_of_code_2026/",
-    "candidateUrls": [
-      "https://ccextractor.org/docs/ideas_page_for_summer_of_code_2026/",
-      "https://ccextractor.org/docs/ideas_page_for_summer_of_code_2025/#your-proposal",
-      "https://www.ccextractor.org"
-    ]
+    "contributionGuide": "https://ccextractor.org/docs/ideas_page_for_summer_of_code_2025/#your-proposal"
   },
   {
     "name": "Celluloid",
@@ -399,9 +309,7 @@
     "latestYear": 2016,
     "website": "http://celluloid.io",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://celluloid.io"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Center for Research in Open Source Software (CROSS)",
@@ -409,9 +317,7 @@
     "latestYear": 2022,
     "website": "https://cross.ucsc.edu/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://cross.ucsc.edu/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Center for Translational Data Science",
@@ -419,10 +325,7 @@
     "latestYear": 2025,
     "website": "https://ctds.uchicago.edu",
     "ideasUrl": "https://docs.google.com/document/d/1kiEDB6tw2xD8Qj3uxpSELjazW35llHM1a9Nt_LQKwHw/edit?usp=sharing",
-    "candidateUrls": [
-      "https://docs.google.com/document/d/1kiEDB6tw2xD8Qj3uxpSELjazW35llHM1a9Nt_LQKwHw/edit?usp=sharing",
-      "https://ctds.uchicago.edu"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Ceph Foundation",
@@ -430,11 +333,7 @@
     "latestYear": 2026,
     "website": "https://ceph.io/en/",
     "ideasUrl": "https://ceph.io/en/developers/google-summer-of-code/",
-    "candidateUrls": [
-      "https://ceph.io/en/developers/google-summer-of-code/",
-      "https://docs.ceph.com/en/latest/dev/developer_guide/",
-      "https://ceph.io/en/"
-    ]
+    "contributionGuide": "https://docs.ceph.com/en/latest/dev/developer_guide/"
   },
   {
     "name": "CERN SFT",
@@ -442,9 +341,7 @@
     "latestYear": 2016,
     "website": "http://ep-dep-sft.web.cern.ch/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://ep-dep-sft.web.cern.ch/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Chapel",
@@ -452,9 +349,7 @@
     "latestYear": 2021,
     "website": "https://chapel-lang.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://chapel-lang.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Checker Framework",
@@ -462,11 +357,7 @@
     "latestYear": 2025,
     "website": "https://checkerframework.org/",
     "ideasUrl": "https://rawgit.com/typetools/checker-framework/master/docs/developer/new-contributor-projects.html",
-    "candidateUrls": [
-      "https://rawgit.com/typetools/checker-framework/master/docs/developer/new-contributor-projects.html",
-      "https://rawgit.com/typetools/checker-framework/master/docs/developer/new-contributor-projects.html",
-      "https://checkerframework.org/"
-    ]
+    "contributionGuide": "https://rawgit.com/typetools/checker-framework/master/docs/developer/new-contributor-projects.html"
   },
   {
     "name": "CHIPS Alliance",
@@ -474,9 +365,7 @@
     "latestYear": 2024,
     "website": "https://chipsalliance.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://chipsalliance.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Chromium",
@@ -484,11 +373,7 @@
     "latestYear": 2025,
     "website": "https://chromium.org",
     "ideasUrl": "https://docs.google.com/presentation/d/1ozDiULkf2Gi4HH1XA_Ad9O7rQpP9SP0yPEs_dpcBZKM/edit?usp=sharing",
-    "candidateUrls": [
-      "https://docs.google.com/presentation/d/1ozDiULkf2Gi4HH1XA_Ad9O7rQpP9SP0yPEs_dpcBZKM/edit?usp=sharing",
-      "https://docs.google.com/document/d/1IOj4hSdPl8h1-8zYK_Gt3OxA0R44SLbmr-ZH3f9yDXM/edit?usp=sharing",
-      "https://chromium.org"
-    ]
+    "contributionGuide": "https://docs.google.com/document/d/1IOj4hSdPl8h1-8zYK_Gt3OxA0R44SLbmr-ZH3f9yDXM/edit?usp=sharing"
   },
   {
     "name": "Cilium",
@@ -496,9 +381,7 @@
     "latestYear": 2021,
     "website": "https://cilium.io",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://cilium.io"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "City of Boston",
@@ -506,9 +389,7 @@
     "latestYear": 2024,
     "website": "https://boston.gov/departments/innovation-and-technology",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://boston.gov/departments/innovation-and-technology"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "CiviCRM",
@@ -516,9 +397,7 @@
     "latestYear": 2021,
     "website": "https://civicrm.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://civicrm.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Classical Language Toolkit",
@@ -526,9 +405,7 @@
     "latestYear": 2018,
     "website": "http://cltk.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://cltk.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "CLiPS, University of Antwerp",
@@ -536,9 +413,7 @@
     "latestYear": 2019,
     "website": "https://www.uantwerpen.be/en/research-groups/clips",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.uantwerpen.be/en/research-groups/clips"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Clojure",
@@ -546,9 +421,7 @@
     "latestYear": 2017,
     "website": "http://clojure.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://clojure.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "CMU Sphinx",
@@ -556,9 +429,7 @@
     "latestYear": 2017,
     "website": "http://cmusphinx.sourceforge.net/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://cmusphinx.sourceforge.net/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "coala",
@@ -566,9 +437,7 @@
     "latestYear": 2021,
     "website": "https://coala.io",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://coala.io"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Cockpit Project",
@@ -576,9 +445,7 @@
     "latestYear": 2023,
     "website": "https://cockpit-project.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://cockpit-project.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Computational Biology @ University of Nebraska-Lincoln",
@@ -586,9 +453,7 @@
     "latestYear": 2019,
     "website": "http://helikarlab.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://helikarlab.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Computational Science and Engineering at TU Wien",
@@ -596,9 +461,7 @@
     "latestYear": 2016,
     "website": "http://www.iue.tuwien.ac.at/cse/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://www.iue.tuwien.ac.at/cse/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Continuous Delivery Foundation",
@@ -606,9 +469,7 @@
     "latestYear": 2021,
     "website": "https://cd.foundation/projects/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://cd.foundation/projects/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Conversations.im",
@@ -616,9 +477,7 @@
     "latestYear": 2018,
     "website": "https://Conversations.im",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://Conversations.im"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Copyleft Games",
@@ -626,9 +485,7 @@
     "latestYear": 2017,
     "website": "https://www.copyleftgames.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.copyleftgames.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "coreboot",
@@ -636,9 +493,7 @@
     "latestYear": 2023,
     "website": "https://coreboot.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://coreboot.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Creative Commons",
@@ -646,9 +501,7 @@
     "latestYear": 2024,
     "website": "https://opensource.creativecommons.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://opensource.creativecommons.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "CVAT",
@@ -656,9 +509,7 @@
     "latestYear": 2024,
     "website": "https://www.cvat.ai",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.cvat.ai"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "CVXPY",
@@ -666,9 +517,7 @@
     "latestYear": 2016,
     "website": "http://www.cvxpy.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://www.cvxpy.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "D Language Foundation",
@@ -676,11 +525,7 @@
     "latestYear": 2026,
     "website": "https://dlang.org/",
     "ideasUrl": "https://dlang.github.io/GSoC/gsoc-2026/project-ideas.html",
-    "candidateUrls": [
-      "https://dlang.github.io/GSoC/gsoc-2026/project-ideas.html",
-      "https://dlang.github.io/GSoC/#become-a-dlang-gsocc-contributor",
-      "https://dlang.org/"
-    ]
+    "contributionGuide": "https://dlang.github.io/GSoC/#become-a-dlang-gsocc-contributor"
   },
   {
     "name": "Data for the Common Good",
@@ -688,11 +533,7 @@
     "latestYear": 2026,
     "website": "https://commons.cri.uchicago.edu",
     "ideasUrl": "https://chicagopcdc.github.io/GSoC/ideas",
-    "candidateUrls": [
-      "https://chicagopcdc.github.io/GSoC/ideas",
-      "https://chicagopcdc.github.io/GSoC/proposal",
-      "https://commons.cri.uchicago.edu"
-    ]
+    "contributionGuide": "https://chicagopcdc.github.io/GSoC/proposal"
   },
   {
     "name": "DatenLord",
@@ -700,9 +541,7 @@
     "latestYear": 2024,
     "website": "https://datenlord.github.io/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://datenlord.github.io/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "DBpedia",
@@ -710,11 +549,7 @@
     "latestYear": 2026,
     "website": "https://www.dbpedia.org/",
     "ideasUrl": "https://forum.dbpedia.org/tag/gsoc2026-ideas",
-    "candidateUrls": [
-      "https://forum.dbpedia.org/tag/gsoc2026-ideas",
-      "https://docs.google.com/document/d/e/2PACX-1vQA3I-8JnxH78UOyVhVy1cpDCxwWvqs8BCN9YsR8UqOBiA-OigrSFd9SvTd2AuWdko1TSPtjip6NM65/pub",
-      "https://www.dbpedia.org/"
-    ]
+    "contributionGuide": "https://docs.google.com/document/d/e/2PACX-1vQA3I-8JnxH78UOyVhVy1cpDCxwWvqs8BCN9YsR8UqOBiA-OigrSFd9SvTd2AuWdko1TSPtjip6NM65/pub"
   },
   {
     "name": "Debian",
@@ -722,11 +557,7 @@
     "latestYear": 2026,
     "website": "https://debian.org",
     "ideasUrl": "https://wiki.debian.org/SummerOfCode2026/Projects",
-    "candidateUrls": [
-      "https://wiki.debian.org/SummerOfCode2026/Projects",
-      "https://wiki.debian.org/SummerOfCode2026",
-      "https://debian.org"
-    ]
+    "contributionGuide": "https://wiki.debian.org/SummerOfCode2026"
   },
   {
     "name": "DeepPavlov",
@@ -734,9 +565,7 @@
     "latestYear": 2021,
     "website": "https://deeppavlov.ai/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://deeppavlov.ai/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Developers Italia",
@@ -744,9 +573,7 @@
     "latestYear": 2019,
     "website": "https://developers.italia.it/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://developers.italia.it/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Digital Impact Alliance (DIAL) at UN Foundation",
@@ -754,9 +581,7 @@
     "latestYear": 2021,
     "website": "https://www.digitalimpactalliance.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.digitalimpactalliance.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Discourse",
@@ -764,9 +589,7 @@
     "latestYear": 2017,
     "website": "http://www.discourse.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://www.discourse.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Distributed and Unified Numerics Environment (DUNE)",
@@ -774,9 +597,7 @@
     "latestYear": 2016,
     "website": "https://www.dune-project.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.dune-project.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Django Software Foundation",
@@ -784,11 +605,7 @@
     "latestYear": 2026,
     "website": "https://www.djangoproject.com",
     "ideasUrl": "https://code.djangoproject.com/wiki/SummerOfCode2026",
-    "candidateUrls": [
-      "https://code.djangoproject.com/wiki/SummerOfCode2026",
-      "https://code.djangoproject.com/wiki/SummerOfCode2026",
-      "https://www.djangoproject.com"
-    ]
+    "contributionGuide": "https://code.djangoproject.com/wiki/SummerOfCode2026"
   },
   {
     "name": "Drupal Association",
@@ -796,11 +613,7 @@
     "latestYear": 2026,
     "website": "https://drupal.org",
     "ideasUrl": "https://www.drupal.org/project/issues/gsoc?text=2026&status=All&priorities=All&categories=All&version=All&component=All",
-    "candidateUrls": [
-      "https://www.drupal.org/project/issues/gsoc?text=2026&status=All&priorities=All&categories=All&version=All&component=All",
-      "https://www.drupal.org/community/contributor-guide/reference-information/google-summer-of-code/for-gsoc-students-where-to",
-      "https://drupal.org"
-    ]
+    "contributionGuide": "https://www.drupal.org/community/contributor-guide/reference-information/google-summer-of-code/for-gsoc-students-where-to"
   },
   {
     "name": "Earth Science Information Partners",
@@ -808,9 +621,7 @@
     "latestYear": 2019,
     "website": "http://esipfed.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://esipfed.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Eclipse Foundation",
@@ -818,11 +629,7 @@
     "latestYear": 2026,
     "website": "https://www.eclipse.org/",
     "ideasUrl": "https://gitlab.eclipse.org/eclipsefdn/emo-team/gsoc-at-the-ef/-/issues/?sort=created_date&state=opened&label_name%5B%5D=GSoC%202026&first_page_size=100",
-    "candidateUrls": [
-      "https://gitlab.eclipse.org/eclipsefdn/emo-team/gsoc-at-the-ef/-/issues/?sort=created_date&state=opened&label_name%5B%5D=GSoC%202026&first_page_size=100",
-      "https://gitlab.eclipse.org/eclipsefdn/emo-team/gsoc-at-the-ef/-/blob/main/README.md",
-      "https://www.eclipse.org/"
-    ]
+    "contributionGuide": "https://gitlab.eclipse.org/eclipsefdn/emo-team/gsoc-at-the-ef/-/blob/main/README.md"
   },
   {
     "name": "Eclipse Vert.x",
@@ -830,9 +637,7 @@
     "latestYear": 2017,
     "website": "http://vertx.io",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://vertx.io"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Elastic",
@@ -840,9 +645,7 @@
     "latestYear": 2020,
     "website": "https://elastic.co",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://elastic.co"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Electron",
@@ -850,11 +653,7 @@
     "latestYear": 2025,
     "website": "https://electronjs.org",
     "ideasUrl": "https://electronhq.notion.site/Electron-Google-Summer-of-Code-2025-Ideas-List-1851459d1bd1811894dad8b48a68596d",
-    "candidateUrls": [
-      "https://electronhq.notion.site/Electron-Google-Summer-of-Code-2025-Ideas-List-1851459d1bd1811894dad8b48a68596d",
-      "https://electronhq.notion.site/Electron-Google-Summer-of-Code-2025-Contributor-Guidance-1851459d1bd181ac8004ecb9e031b368",
-      "https://electronjs.org"
-    ]
+    "contributionGuide": "https://electronhq.notion.site/Electron-Google-Summer-of-Code-2025-Contributor-Guidance-1851459d1bd181ac8004ecb9e031b368"
   },
   {
     "name": "Elm Software Foundation",
@@ -862,9 +661,7 @@
     "latestYear": 2017,
     "website": "http://elm-lang.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://elm-lang.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Embox",
@@ -872,9 +669,7 @@
     "latestYear": 2020,
     "website": "http://embox.github.io",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://embox.github.io"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Environmental Data And Governance Initiative",
@@ -882,9 +677,7 @@
     "latestYear": 2017,
     "website": "https://envirodatagov.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://envirodatagov.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Erlang Ecosystem Foundation",
@@ -892,9 +685,7 @@
     "latestYear": 2020,
     "website": "http://erlef.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://erlef.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "EROFS filesystem",
@@ -902,10 +693,7 @@
     "latestYear": 2026,
     "website": "https://erofs.docs.kernel.org",
     "ideasUrl": "https://erofs.docs.kernel.org/en/latest/gsoc.html",
-    "candidateUrls": [
-      "https://erofs.docs.kernel.org/en/latest/gsoc.html",
-      "https://erofs.docs.kernel.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Eta",
@@ -913,9 +701,7 @@
     "latestYear": 2018,
     "website": "https://eta-lang.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://eta-lang.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "eunomia-bpf",
@@ -923,9 +709,7 @@
     "latestYear": 2024,
     "website": "https://eunomia.dev/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://eunomia.dev/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Fedora Project",
@@ -933,11 +717,7 @@
     "latestYear": 2025,
     "website": "https://getfedora.org/",
     "ideasUrl": "https://docs.fedoraproject.org/en-US/mentored-projects/gsoc/2025/ideas/",
-    "candidateUrls": [
-      "https://docs.fedoraproject.org/en-US/mentored-projects/gsoc/2025/ideas/",
-      "https://docs.fedoraproject.org/en-US/mentored-projects/gsoc/2025/application/#_google_summer_of_code_application_and_supplemental_material_requirements",
-      "https://getfedora.org/"
-    ]
+    "contributionGuide": "https://docs.fedoraproject.org/en-US/mentored-projects/gsoc/2025/application/#_google_summer_of_code_application_and_supplemental_material_requirements"
   },
   {
     "name": "FFmpeg",
@@ -945,11 +725,7 @@
     "latestYear": 2026,
     "website": "https://ffmpeg.org/",
     "ideasUrl": "https://trac.ffmpeg.org/wiki/SponsoringPrograms/GSoC/2026",
-    "candidateUrls": [
-      "https://trac.ffmpeg.org/wiki/SponsoringPrograms/GSoC/2026",
-      "https://trac.ffmpeg.org/wiki/SponsoringPrograms/GSoC/2025",
-      "https://ffmpeg.org/"
-    ]
+    "contributionGuide": "https://trac.ffmpeg.org/wiki/SponsoringPrograms/GSoC/2025"
   },
   {
     "name": "Flashrom",
@@ -957,9 +733,7 @@
     "latestYear": 2022,
     "website": "https://www.flashrom.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.flashrom.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Forschungszentrum Jülich",
@@ -967,9 +741,7 @@
     "latestYear": 2022,
     "website": "https://fz-juelich.de/en",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://fz-juelich.de/en"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "FOSDEM",
@@ -977,9 +749,7 @@
     "latestYear": 2019,
     "website": "https://fosdem.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://fosdem.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "FOSSASIA",
@@ -987,11 +757,7 @@
     "latestYear": 2026,
     "website": "https://fossasia.org",
     "ideasUrl": "https://docs.google.com/document/d/1Tz1KxYefreKzBr98C4vbCv9UwnchZoyTwO8rBrz_lmg/edit?tab=t.0#heading=h.9sjk3ie7l2o2",
-    "candidateUrls": [
-      "https://docs.google.com/document/d/1Tz1KxYefreKzBr98C4vbCv9UwnchZoyTwO8rBrz_lmg/edit?tab=t.0#heading=h.9sjk3ie7l2o2",
-      "https://fossasia.org",
-      "https://fossasia.org"
-    ]
+    "contributionGuide": "https://fossasia.org"
   },
   {
     "name": "FrameNet Brasil (UFJF)",
@@ -999,9 +765,7 @@
     "latestYear": 2021,
     "website": "http://www.ufjf.br/framenetbr-eng/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://www.ufjf.br/framenetbr-eng/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Free and Open Source Silicon Foundation",
@@ -1009,11 +773,7 @@
     "latestYear": 2026,
     "website": "https://www.fossi-foundation.org",
     "ideasUrl": "https://fossi-foundation.org/gsoc/gsoc26-ideas",
-    "candidateUrls": [
-      "https://fossi-foundation.org/gsoc/gsoc26-ideas",
-      "https://www.fossi-foundation.org/gsoc",
-      "https://www.fossi-foundation.org"
-    ]
+    "contributionGuide": "https://www.fossi-foundation.org/gsoc"
   },
   {
     "name": "Free UK Genealogy",
@@ -1021,9 +781,7 @@
     "latestYear": 2018,
     "website": "http://www.freeukgenealogy.org.uk",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://www.freeukgenealogy.org.uk"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "FreeCAD",
@@ -1031,11 +789,7 @@
     "latestYear": 2026,
     "website": "https://freecad.org",
     "ideasUrl": "https://wiki.freecad.org/Google_Summer_of_Code_2026",
-    "candidateUrls": [
-      "https://wiki.freecad.org/Google_Summer_of_Code_2026",
-      "https://wiki.freecad.org/GSoC_Checklist",
-      "https://freecad.org"
-    ]
+    "contributionGuide": "https://wiki.freecad.org/GSoC_Checklist"
   },
   {
     "name": "FreeType",
@@ -1043,9 +797,7 @@
     "latestYear": 2024,
     "website": "https://freetype.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://freetype.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "freifunk",
@@ -1053,11 +805,7 @@
     "latestYear": 2025,
     "website": "https://freifunk.net/en",
     "ideasUrl": "https://projects.freifunk.net",
-    "candidateUrls": [
-      "https://projects.freifunk.net",
-      "https://projects.freifunk.net/#/faq",
-      "https://freifunk.net/en"
-    ]
+    "contributionGuide": "https://projects.freifunk.net/#/faq"
   },
   {
     "name": "Frescobaldi",
@@ -1065,9 +813,7 @@
     "latestYear": 2017,
     "website": "http://frescobaldi.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://frescobaldi.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "FRRouting",
@@ -1075,9 +821,7 @@
     "latestYear": 2022,
     "website": "https://frrouting.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://frrouting.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Gambit: The package for computation in game theory",
@@ -1085,11 +829,7 @@
     "latestYear": 2026,
     "website": "https://www.gambit-project.org",
     "ideasUrl": "https://www.gambit-project.org/gsoc_2026/",
-    "candidateUrls": [
-      "https://www.gambit-project.org/gsoc_2026/",
-      "https://www.gambit-project.org/gsoc_2026/",
-      "https://www.gambit-project.org"
-    ]
+    "contributionGuide": "https://www.gambit-project.org/gsoc_2026/"
   },
   {
     "name": "Ganeti",
@@ -1097,9 +837,7 @@
     "latestYear": 2016,
     "website": "http://www.ganeti.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://www.ganeti.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "GDevelop",
@@ -1107,9 +845,7 @@
     "latestYear": 2020,
     "website": "https://gdevelop-app.com",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://gdevelop-app.com"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Genes, Genomes and Variation",
@@ -1117,9 +853,7 @@
     "latestYear": 2019,
     "website": "http://www.ensembl.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://www.ensembl.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "GENIVI Alliance",
@@ -1127,9 +861,7 @@
     "latestYear": 2019,
     "website": "https://www.genivi.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.genivi.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Genome Assembly and Annotation",
@@ -1137,11 +869,7 @@
     "latestYear": 2026,
     "website": "https://www.ebi.ac.uk/",
     "ideasUrl": "https://www.ebi.ac.uk/about/events/events/public-event/2025/2026-google-summer-of-code/",
-    "candidateUrls": [
-      "https://www.ebi.ac.uk/about/events/events/public-event/2025/2026-google-summer-of-code/",
-      "https://www.ebi.ac.uk/about/events/events/public-event/2025/2026-google-summer-of-code/#contributor-guide",
-      "https://www.ebi.ac.uk/"
-    ]
+    "contributionGuide": "https://www.ebi.ac.uk/about/events/events/public-event/2025/2026-google-summer-of-code/#contributor-guide"
   },
   {
     "name": "Gentoo Foundation",
@@ -1149,9 +877,7 @@
     "latestYear": 2023,
     "website": "https://www.gentoo.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.gentoo.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "GitLab",
@@ -1159,11 +885,7 @@
     "latestYear": 2025,
     "website": "https://about.gitlab.com/community/",
     "ideasUrl": "https://contributors.gitlab.com/issues",
-    "candidateUrls": [
-      "https://contributors.gitlab.com/issues",
-      "https://contributors.gitlab.com",
-      "https://about.gitlab.com/community/"
-    ]
+    "contributionGuide": "https://contributors.gitlab.com"
   },
   {
     "name": "Global Alliance for Genomics and Health",
@@ -1171,11 +893,7 @@
     "latestYear": 2026,
     "website": "https://ga4gh.org",
     "ideasUrl": "https://docs.google.com/document/d/1SeDP5Ny7Gt42g5oY9jdN15Wx6RXtJ9dDcaPeYBvKBcE/edit?tab=t.0#heading=h.qflicizcqlm",
-    "candidateUrls": [
-      "https://docs.google.com/document/d/1SeDP5Ny7Gt42g5oY9jdN15Wx6RXtJ9dDcaPeYBvKBcE/edit?tab=t.0#heading=h.qflicizcqlm",
-      "https://docs.google.com/document/d/1Sje_91qcUMkRK9d_BS_8Y-c2r7cCa8h4Csy6d0-xKlQ/edit?usp=sharing",
-      "https://ga4gh.org"
-    ]
+    "contributionGuide": "https://docs.google.com/document/d/1Sje_91qcUMkRK9d_BS_8Y-c2r7cCa8h4Csy6d0-xKlQ/edit?usp=sharing"
   },
   {
     "name": "GNOME Foundation",
@@ -1183,11 +901,7 @@
     "latestYear": 2026,
     "website": "https://gnome.org",
     "ideasUrl": "https://gsoc.gnome.org/2026/",
-    "candidateUrls": [
-      "https://gsoc.gnome.org/2026/",
-      "https://gsoc.gnome.org",
-      "https://gnome.org"
-    ]
+    "contributionGuide": "https://gsoc.gnome.org"
   },
   {
     "name": "GNSS-SDR",
@@ -1195,11 +909,7 @@
     "latestYear": 2025,
     "website": "https://gnss-sdr.org/",
     "ideasUrl": "https://gnss-sdr.org/google-summer-code-2025-ideas-list/",
-    "candidateUrls": [
-      "https://gnss-sdr.org/google-summer-code-2025-ideas-list/",
-      "https://gnss-sdr.org/contribute/",
-      "https://gnss-sdr.org/"
-    ]
+    "contributionGuide": "https://gnss-sdr.org/contribute/"
   },
   {
     "name": "GNU Compiler Collection (GCC)",
@@ -1207,11 +917,7 @@
     "latestYear": 2026,
     "website": "https://gcc.gnu.org/",
     "ideasUrl": "https://gcc.gnu.org/wiki/SummerOfCode",
-    "candidateUrls": [
-      "https://gcc.gnu.org/wiki/SummerOfCode",
-      "https://gcc.gnu.org/wiki/SummerOfCode",
-      "https://gcc.gnu.org/"
-    ]
+    "contributionGuide": "https://gcc.gnu.org/wiki/SummerOfCode"
   },
   {
     "name": "GNU Image Manipulation Program",
@@ -1219,11 +925,7 @@
     "latestYear": 2026,
     "website": "https://www.gimp.org/",
     "ideasUrl": "https://developer.gimp.org/core/internship/ideas/",
-    "candidateUrls": [
-      "https://developer.gimp.org/core/internship/ideas/",
-      "https://developer.gimp.org/core/internship/",
-      "https://www.gimp.org/"
-    ]
+    "contributionGuide": "https://developer.gimp.org/core/internship/"
   },
   {
     "name": "GNU Mailman Project",
@@ -1231,11 +933,7 @@
     "latestYear": 2026,
     "website": "https://www.list.org",
     "ideasUrl": "https://wiki.list.org/DEV/Google%20Summer%20of%20Code%202026",
-    "candidateUrls": [
-      "https://wiki.list.org/DEV/Google%20Summer%20of%20Code%202026",
-      "https://wiki.list.org/DEV/Google%20Summer%20of%20Code%202022",
-      "https://www.list.org"
-    ]
+    "contributionGuide": "https://wiki.list.org/DEV/Google%20Summer%20of%20Code%202022"
   },
   {
     "name": "GNU Octave",
@@ -1243,11 +941,7 @@
     "latestYear": 2026,
     "website": "https://www.octave.org",
     "ideasUrl": "https://wiki.octave.org/wiki/index.php?title=Summer_of_Code_-_Getting_Started#Suggested_projects",
-    "candidateUrls": [
-      "https://wiki.octave.org/wiki/index.php?title=Summer_of_Code_-_Getting_Started#Suggested_projects",
-      "https://wiki.octave.org/Summer_of_Code_-_Getting_Started",
-      "https://www.octave.org"
-    ]
+    "contributionGuide": "https://wiki.octave.org/Summer_of_Code_-_Getting_Started"
   },
   {
     "name": "GNU Project",
@@ -1255,11 +949,7 @@
     "latestYear": 2026,
     "website": "https://www.gnu.org",
     "ideasUrl": "https://www.gnu.org/s/soc-projects/ideas.html",
-    "candidateUrls": [
-      "https://www.gnu.org/s/soc-projects/ideas.html",
-      "https://www.gnu.org/software/soc-projects/guidelines.html",
-      "https://www.gnu.org"
-    ]
+    "contributionGuide": "https://www.gnu.org/software/soc-projects/guidelines.html"
   },
   {
     "name": "GNU Radio",
@@ -1267,11 +957,7 @@
     "latestYear": 2026,
     "website": "https://www.gnuradio.org",
     "ideasUrl": "https://wiki.gnuradio.org/index.php/GSoCIdeas",
-    "candidateUrls": [
-      "https://wiki.gnuradio.org/index.php/GSoCIdeas",
-      "https://www.gnuradio.org/gsoc/",
-      "https://www.gnuradio.org"
-    ]
+    "contributionGuide": "https://www.gnuradio.org/gsoc/"
   },
   {
     "name": "GPAC",
@@ -1279,9 +965,7 @@
     "latestYear": 2020,
     "website": "http://gpac.io",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://gpac.io"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Graphite",
@@ -1289,11 +973,7 @@
     "latestYear": 2026,
     "website": "https://graphite.art",
     "ideasUrl": "https://graphite.art/volunteer/guide/student-projects/",
-    "candidateUrls": [
-      "https://graphite.art/volunteer/guide/student-projects/",
-      "https://graphite.art/volunteer/guide/student-projects/",
-      "https://graphite.art"
-    ]
+    "contributionGuide": "https://graphite.art/volunteer/guide/student-projects/"
   },
   {
     "name": "GraphQL Foundation",
@@ -1301,9 +981,7 @@
     "latestYear": 2020,
     "website": "https://graphql.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://graphql.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Green Navigation",
@@ -1311,9 +989,7 @@
     "latestYear": 2017,
     "website": "http://greennav.io",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://greennav.io"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "gRPC",
@@ -1321,9 +997,7 @@
     "latestYear": 2018,
     "website": "https://grpc.io",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://grpc.io"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "gVisor",
@@ -1331,9 +1005,7 @@
     "latestYear": 2021,
     "website": "http://gvisor.dev",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://gvisor.dev"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Haiku",
@@ -1341,11 +1013,7 @@
     "latestYear": 2026,
     "website": "https://www.haiku-os.org",
     "ideasUrl": "https://www.haiku-os.org/community/gsoc/2026/ideas",
-    "candidateUrls": [
-      "https://www.haiku-os.org/community/gsoc/2026/ideas",
-      "https://www.haiku-os.org/community/gsoc/2026/contributors",
-      "https://www.haiku-os.org"
-    ]
+    "contributionGuide": "https://www.haiku-os.org/community/gsoc/2026/contributors"
   },
   {
     "name": "Halide",
@@ -1353,9 +1021,7 @@
     "latestYear": 2021,
     "website": "https://halide-lang.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://halide-lang.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Haskell.org",
@@ -1363,11 +1029,7 @@
     "latestYear": 2026,
     "website": "https://haskell.org/",
     "ideasUrl": "https://summer.haskell.org/ideas.html",
-    "candidateUrls": [
-      "https://summer.haskell.org/ideas.html",
-      "https://summer.haskell.org/tips.html",
-      "https://haskell.org/"
-    ]
+    "contributionGuide": "https://summer.haskell.org/tips.html"
   },
   {
     "name": "Hazelcast",
@@ -1375,9 +1037,7 @@
     "latestYear": 2020,
     "website": "https://www.hazelcast.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.hazelcast.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Health Information Systems Programme",
@@ -1385,9 +1045,7 @@
     "latestYear": 2016,
     "website": "https://www.dhis2.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.dhis2.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Homebrew",
@@ -1395,9 +1053,7 @@
     "latestYear": 2022,
     "website": "https://brew.sh",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://brew.sh"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "HumanAI",
@@ -1405,10 +1061,7 @@
     "latestYear": 2026,
     "website": "http://humanai.foundation",
     "ideasUrl": "https://humanai.foundation/activities/gsoc2026.html",
-    "candidateUrls": [
-      "https://humanai.foundation/activities/gsoc2026.html",
-      "http://humanai.foundation"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Hydra Ecosystem",
@@ -1416,9 +1069,7 @@
     "latestYear": 2021,
     "website": "https://www.hydraecosystem.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.hydraecosystem.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "illumos.org",
@@ -1426,9 +1077,7 @@
     "latestYear": 2017,
     "website": "http://illumos.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://illumos.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "INCF",
@@ -1436,11 +1085,7 @@
     "latestYear": 2026,
     "website": "https://www.incf.org",
     "ideasUrl": "https://docs.google.com/document/d/1XkelmTUV8zMtg99GsZhbYvPoyUG5uzEIWji7IXj0M4k/edit?tab=t.0",
-    "candidateUrls": [
-      "https://docs.google.com/document/d/1XkelmTUV8zMtg99GsZhbYvPoyUG5uzEIWji7IXj0M4k/edit?tab=t.0",
-      "https://docs.google.com/document/d/16H8MlUl_0EbhL1IC4ddRZKYeMAd9JtAHCuxY5piZOGc/",
-      "https://www.incf.org"
-    ]
+    "contributionGuide": "https://docs.google.com/document/d/16H8MlUl_0EbhL1IC4ddRZKYeMAd9JtAHCuxY5piZOGc/"
   },
   {
     "name": "Inclusive Design Institute",
@@ -1448,9 +1093,7 @@
     "latestYear": 2020,
     "website": "https://inclusivedesign.ca",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://inclusivedesign.ca"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Indic Project",
@@ -1458,9 +1101,7 @@
     "latestYear": 2016,
     "website": "http://indicproject.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://indicproject.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Inria Foundation",
@@ -1468,9 +1109,7 @@
     "latestYear": 2018,
     "website": "https://www.sofa-framework.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.sofa-framework.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Institut für Angewandte Informatik (InfAI) e.V.",
@@ -1478,9 +1117,7 @@
     "latestYear": 2019,
     "website": "https://infai.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://infai.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Institute for Artificial Intelligence",
@@ -1488,9 +1125,7 @@
     "latestYear": 2018,
     "website": "http://ai.uni-bremen.de/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://ai.uni-bremen.de/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Intel Video and Audio for Linux",
@@ -1498,9 +1133,7 @@
     "latestYear": 2022,
     "website": "https://01.org/linuxmedia",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://01.org/linuxmedia"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "InterMine",
@@ -1508,9 +1141,7 @@
     "latestYear": 2019,
     "website": "http://intermine.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://intermine.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "International Catrobat Association",
@@ -1518,11 +1149,7 @@
     "latestYear": 2026,
     "website": "https://www.catrobat.org",
     "ideasUrl": "https://developer.catrobat.org/pages/development/google-summer-of-code/2026/",
-    "candidateUrls": [
-      "https://developer.catrobat.org/pages/development/google-summer-of-code/2026/",
-      "https://docs.google.com/document/d/1vOGY2C80raXLV6RVRHXoqiAhcnBJFeZdU8wqMm-Rgo0/edit?usp=sharing",
-      "https://www.catrobat.org"
-    ]
+    "contributionGuide": "https://docs.google.com/document/d/1vOGY2C80raXLV6RVRHXoqiAhcnBJFeZdU8wqMm-Rgo0/edit?usp=sharing"
   },
   {
     "name": "Internet Archive",
@@ -1530,10 +1157,7 @@
     "latestYear": 2026,
     "website": "http://archive.org",
     "ideasUrl": "https://docs.google.com/document/d/1EjzrHVapOZuzdI_Qqd_ravaTgiDWnxlMRbjjbzfd_-I/edit?tab=t.0",
-    "candidateUrls": [
-      "https://docs.google.com/document/d/1EjzrHVapOZuzdI_Qqd_ravaTgiDWnxlMRbjjbzfd_-I/edit?tab=t.0",
-      "http://archive.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Internet Systems Consortium",
@@ -1541,9 +1165,7 @@
     "latestYear": 2019,
     "website": "https://isc.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://isc.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Ivy (lets-unify.ai)",
@@ -1551,9 +1173,7 @@
     "latestYear": 2023,
     "website": "https://lets-unify.ai",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://lets-unify.ai"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "JAX and Keras",
@@ -1561,11 +1181,7 @@
     "latestYear": 2025,
     "website": "https://docs.jax.dev/",
     "ideasUrl": "https://docs.google.com/document/d/16uAZEldrXUBHjrszSO22Hr81OmVSjzVXza0szZl6Fxw/edit?usp=sharing",
-    "candidateUrls": [
-      "https://docs.google.com/document/d/16uAZEldrXUBHjrszSO22Hr81OmVSjzVXza0szZl6Fxw/edit?usp=sharing",
-      "https://forms.gle/yJaBBLJfqTJfWfyt6",
-      "https://docs.jax.dev/"
-    ]
+    "contributionGuide": "https://forms.gle/yJaBBLJfqTJfWfyt6"
   },
   {
     "name": "JBoss Community",
@@ -1573,11 +1189,7 @@
     "latestYear": 2026,
     "website": "http://www.jboss.org/",
     "ideasUrl": "https://redhat.atlassian.net/wiki/spaces/GSOC/pages/183304705/Google+Summer+of+Code+2026+Ideas",
-    "candidateUrls": [
-      "https://redhat.atlassian.net/wiki/spaces/GSOC/pages/183304705/Google+Summer+of+Code+2026+Ideas",
-      "https://spaces.redhat.com/display/GSOC/Google+Summer+of+Code+-+contributor+guide",
-      "http://www.jboss.org/"
-    ]
+    "contributionGuide": "https://spaces.redhat.com/display/GSOC/Google+Summer+of+Code+-+contributor+guide"
   },
   {
     "name": "JdeRobot",
@@ -1585,11 +1197,7 @@
     "latestYear": 2026,
     "website": "http://jderobot.github.io",
     "ideasUrl": "https://jderobot.github.io/activities/gsoc/2026#ideas-list",
-    "candidateUrls": [
-      "https://jderobot.github.io/activities/gsoc/2026#ideas-list",
-      "https://jderobot.github.io/activities/gsoc/2026#application-instructions-for-gsoc-2026",
-      "http://jderobot.github.io"
-    ]
+    "contributionGuide": "https://jderobot.github.io/activities/gsoc/2026#application-instructions-for-gsoc-2026"
   },
   {
     "name": "Jenkins X",
@@ -1597,9 +1205,7 @@
     "latestYear": 2022,
     "website": "https://jenkins-x.io/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://jenkins-x.io/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "JGraphT",
@@ -1607,9 +1213,7 @@
     "latestYear": 2018,
     "website": "http://jgrapht.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://jgrapht.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Jina AI",
@@ -1617,9 +1221,7 @@
     "latestYear": 2023,
     "website": "https://jina.ai/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://jina.ai/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Joomla!",
@@ -1627,11 +1229,7 @@
     "latestYear": 2026,
     "website": "https://www.joomla.org/",
     "ideasUrl": "https://community.joomla.org/gsoc/projects-2026.html",
-    "candidateUrls": [
-      "https://community.joomla.org/gsoc/projects-2026.html",
-      "https://community.joomla.org/gsoc",
-      "https://www.joomla.org/"
-    ]
+    "contributionGuide": "https://community.joomla.org/gsoc"
   },
   {
     "name": "jQuery Foundation",
@@ -1639,9 +1237,7 @@
     "latestYear": 2016,
     "website": "https://jquery.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://jquery.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "JSK Robotics Laboratory / The University of Tokyo",
@@ -1649,9 +1245,7 @@
     "latestYear": 2019,
     "website": "http://www.jsk.t.u-tokyo.ac.jp/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://www.jsk.t.u-tokyo.ac.jp/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Kart Project",
@@ -1659,9 +1253,7 @@
     "latestYear": 2022,
     "website": "https://kartproject.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://kartproject.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Keptn",
@@ -1669,9 +1261,7 @@
     "latestYear": 2022,
     "website": "https://keptn.sh/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://keptn.sh/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Kiwix",
@@ -1679,11 +1269,7 @@
     "latestYear": 2026,
     "website": "https://www.kiwix.org",
     "ideasUrl": "https://kiwix.org/en/google-summer-of-code/",
-    "candidateUrls": [
-      "https://kiwix.org/en/google-summer-of-code/",
-      "https://kiwix.org/en/writing-your-google-summer-of-code-application/",
-      "https://www.kiwix.org"
-    ]
+    "contributionGuide": "https://kiwix.org/en/writing-your-google-summer-of-code-application/"
   },
   {
     "name": "KNIME",
@@ -1691,9 +1277,7 @@
     "latestYear": 2019,
     "website": "https://knime.com",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://knime.com"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Kodi",
@@ -1701,9 +1285,7 @@
     "latestYear": 2022,
     "website": "https://kodi.tv",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://kodi.tv"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "KolibriOS Project Team",
@@ -1711,11 +1293,7 @@
     "latestYear": 2026,
     "website": "https://kolibrios.org",
     "ideasUrl": "https://wiki.kolibrios.org/wiki/Ideas_Page",
-    "candidateUrls": [
-      "https://wiki.kolibrios.org/wiki/Ideas_Page",
-      "https://wiki.kolibrios.org/wiki/Ideas_Page#Google_Summer_of_Code'26_Contributor_Requirements",
-      "https://kolibrios.org"
-    ]
+    "contributionGuide": "https://wiki.kolibrios.org/wiki/Ideas_Page#Google_Summer_of_Code'26_Contributor_Requirements"
   },
   {
     "name": "Kotlin Foundation",
@@ -1723,11 +1301,7 @@
     "latestYear": 2026,
     "website": "https://kotlinfoundation.org/",
     "ideasUrl": "https://kotlinlang.org/docs/gsoc-2026.html",
-    "candidateUrls": [
-      "https://kotlinlang.org/docs/gsoc-2026.html",
-      "https://kotlinlang.org/docs/gsoc-overview.html",
-      "https://kotlinfoundation.org/"
-    ]
+    "contributionGuide": "https://kotlinlang.org/docs/gsoc-overview.html"
   },
   {
     "name": "Kubeflow",
@@ -1735,10 +1309,7 @@
     "latestYear": 2026,
     "website": "https://kubeflow.org",
     "ideasUrl": "https://www.kubeflow.org/events/upcoming-events/gsoc-2026/",
-    "candidateUrls": [
-      "https://www.kubeflow.org/events/upcoming-events/gsoc-2026/",
-      "https://kubeflow.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "languagetool.org",
@@ -1746,9 +1317,7 @@
     "latestYear": 2018,
     "website": "https://languagetool.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://languagetool.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "LAPPIS",
@@ -1756,9 +1325,7 @@
     "latestYear": 2024,
     "website": "https://www.lappis.rocks",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.lappis.rocks"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "LEAP Encryption Access Project",
@@ -1766,9 +1333,7 @@
     "latestYear": 2022,
     "website": "https://leap.se",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://leap.se"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Learning Equality",
@@ -1776,11 +1341,7 @@
     "latestYear": 2026,
     "website": "https://learningequality.org/",
     "ideasUrl": "https://docs.google.com/document/d/e/2PACX-1vShAAywLDbBu5WH-Wv44rxetISCOQmHxBwxDw63Nt_OcpPVIZW2jjT8sd_GLTpeNvspze8W-_c9JUdl/pub",
-    "candidateUrls": [
-      "https://docs.google.com/document/d/e/2PACX-1vShAAywLDbBu5WH-Wv44rxetISCOQmHxBwxDw63Nt_OcpPVIZW2jjT8sd_GLTpeNvspze8W-_c9JUdl/pub",
-      "https://learningequality.org/r/gsoc-contributor-guidelines",
-      "https://learningequality.org/"
-    ]
+    "contributionGuide": "https://learningequality.org/r/gsoc-contributor-guidelines"
   },
   {
     "name": "Learning Unlimited",
@@ -1788,11 +1349,7 @@
     "latestYear": 2026,
     "website": "https://www.learningu.org/",
     "ideasUrl": "https://docs.google.com/document/d/e/2PACX-1vQHE4OyXDdhDPkP2X7OWdSjauW_rQi1Fhr3RwEgTrSjDbrHO3nePDCdJkCheeocMrRTdqbHqnmb9WcG/pub",
-    "candidateUrls": [
-      "https://docs.google.com/document/d/e/2PACX-1vQHE4OyXDdhDPkP2X7OWdSjauW_rQi1Fhr3RwEgTrSjDbrHO3nePDCdJkCheeocMrRTdqbHqnmb9WcG/pub",
-      "https://docs.google.com/document/d/e/2PACX-1vSQrzex-1PlqTGwOiFmiFnGlm1_3ajsf-Wo2z-9hUzJybZQOBD4EraIH_iW7Qn87TPB2SR5O_JX1T6C/pub",
-      "https://www.learningu.org/"
-    ]
+    "contributionGuide": "https://docs.google.com/document/d/e/2PACX-1vSQrzex-1PlqTGwOiFmiFnGlm1_3ajsf-Wo2z-9hUzJybZQOBD4EraIH_iW7Qn87TPB2SR5O_JX1T6C/pub"
   },
   {
     "name": "libcamera",
@@ -1800,9 +1357,7 @@
     "latestYear": 2023,
     "website": "https://libcamera.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://libcamera.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Libre Space Foundation",
@@ -1810,9 +1365,7 @@
     "latestYear": 2021,
     "website": "https://libre.space",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://libre.space"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "LibreCube Initiative",
@@ -1820,11 +1373,7 @@
     "latestYear": 2026,
     "website": "https://librecube.org",
     "ideasUrl": "https://librecube.org/google-summer-of-code/",
-    "candidateUrls": [
-      "https://librecube.org/google-summer-of-code/",
-      "https://librecube.org/google-summer-of-code-proposal/",
-      "https://librecube.org"
-    ]
+    "contributionGuide": "https://librecube.org/google-summer-of-code-proposal/"
   },
   {
     "name": "LibreHealth",
@@ -1832,11 +1381,7 @@
     "latestYear": 2026,
     "website": "https://librehealth.io",
     "ideasUrl": "https://forums.librehealth.io/ideas",
-    "candidateUrls": [
-      "https://forums.librehealth.io/ideas",
-      "https://forums.librehealth.io/t/readme-making-a-successful-gsoc-proposal/4359",
-      "https://librehealth.io"
-    ]
+    "contributionGuide": "https://forums.librehealth.io/t/readme-making-a-successful-gsoc-proposal/4359"
   },
   {
     "name": "LibreOffice",
@@ -1844,11 +1389,7 @@
     "latestYear": 2026,
     "website": "https://www.libreoffice.org/",
     "ideasUrl": "https://wiki.documentfoundation.org/Development/GSoC/Ideas",
-    "candidateUrls": [
-      "https://wiki.documentfoundation.org/Development/GSoC/Ideas",
-      "https://wiki.documentfoundation.org/Development/GSoC/2026#How_to_apply",
-      "https://www.libreoffice.org/"
-    ]
+    "contributionGuide": "https://wiki.documentfoundation.org/Development/GSoC/2026#How_to_apply"
   },
   {
     "name": "libssh",
@@ -1856,11 +1397,7 @@
     "latestYear": 2026,
     "website": "https://www.libssh.org/",
     "ideasUrl": "https://www.libssh.org/development/google-summer-of-code/",
-    "candidateUrls": [
-      "https://www.libssh.org/development/google-summer-of-code/",
-      "https://www.libssh.org/development/google-summer-of-code/",
-      "https://www.libssh.org/"
-    ]
+    "contributionGuide": "https://www.libssh.org/development/google-summer-of-code/"
   },
   {
     "name": "libvirt",
@@ -1868,9 +1405,7 @@
     "latestYear": 2024,
     "website": "https://libvirt.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://libvirt.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Linkerd",
@@ -1878,9 +1413,7 @@
     "latestYear": 2020,
     "website": "https://linkerd.io/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://linkerd.io/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "LLVM Compiler Infrastructure",
@@ -1888,11 +1421,7 @@
     "latestYear": 2026,
     "website": "http://www.llvm.org",
     "ideasUrl": "https://llvm.org/OpenProjects.html",
-    "candidateUrls": [
-      "https://llvm.org/OpenProjects.html",
-      "https://discourse.llvm.org/t/gsoc-2026-projects-proposals-and-other-information/89967",
-      "http://www.llvm.org"
-    ]
+    "contributionGuide": "https://discourse.llvm.org/t/gsoc-2026-projects-proposals-and-other-information/89967"
   },
   {
     "name": "lowRISC",
@@ -1900,9 +1429,7 @@
     "latestYear": 2020,
     "website": "https://www.lowrisc.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.lowrisc.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "LuaRocks",
@@ -1910,9 +1437,7 @@
     "latestYear": 2019,
     "website": "https://luarocks.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://luarocks.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Machine Learning for Science (ML4SCI)",
@@ -1920,10 +1445,7 @@
     "latestYear": 2026,
     "website": "https://ml4sci.org/",
     "ideasUrl": "https://ml4sci.org/activities/gsoc2026.html",
-    "candidateUrls": [
-      "https://ml4sci.org/activities/gsoc2026.html",
-      "https://ml4sci.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "MacPorts",
@@ -1931,9 +1453,7 @@
     "latestYear": 2020,
     "website": "https://www.macports.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.macports.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "MalariaGEN",
@@ -1941,11 +1461,7 @@
     "latestYear": 2026,
     "website": "https://www.malariagen.net/",
     "ideasUrl": "https://docs.google.com/document/d/178LEZEsC0xbknHDId83k5XzIDRtnyVw243Ta0fhlvPM/edit?tab=t.0",
-    "candidateUrls": [
-      "https://docs.google.com/document/d/178LEZEsC0xbknHDId83k5XzIDRtnyVw243Ta0fhlvPM/edit?tab=t.0",
-      "https://docs.google.com/document/d/178LEZEsC0xbknHDId83k5XzIDRtnyVw243Ta0fhlvPM/edit?usp=sharing",
-      "https://www.malariagen.net/"
-    ]
+    "contributionGuide": "https://docs.google.com/document/d/178LEZEsC0xbknHDId83k5XzIDRtnyVw243Ta0fhlvPM/edit?usp=sharing"
   },
   {
     "name": "Mantis",
@@ -1953,9 +1469,7 @@
     "latestYear": 2023,
     "website": "https://netflix.github.io/mantis/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://netflix.github.io/mantis/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "MapAction",
@@ -1963,9 +1477,7 @@
     "latestYear": 2021,
     "website": "https://mapaction.org/about-us/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://mapaction.org/about-us/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "MariaDB",
@@ -1973,10 +1485,7 @@
     "latestYear": 2026,
     "website": "https://mariadb.org",
     "ideasUrl": "https://mariadb.com/docs/general-resources/community/contributing-participating/google-summers-of-code/google-summer-of-code-2026",
-    "candidateUrls": [
-      "https://mariadb.com/docs/general-resources/community/contributing-participating/google-summers-of-code/google-summer-of-code-2026",
-      "https://mariadb.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Mathesar",
@@ -1984,9 +1493,7 @@
     "latestYear": 2023,
     "website": "https://mathesar.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://mathesar.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Matrix.org",
@@ -1994,9 +1501,7 @@
     "latestYear": 2022,
     "website": "https://matrix.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://matrix.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Mautic",
@@ -2004,9 +1509,7 @@
     "latestYear": 2024,
     "website": "https://www.mautic.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.mautic.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Mayor's Office of New Urban Mechanics",
@@ -2014,9 +1517,7 @@
     "latestYear": 2023,
     "website": "https://www.boston.gov/mechanics",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.boston.gov/mechanics"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "MBDyn",
@@ -2024,11 +1525,7 @@
     "latestYear": 2025,
     "website": "http://www.mbdyn.org/",
     "ideasUrl": "https://public.gitlab.polimi.it/DAER/mbdyn/-/wikis/GSoc-Project-Ideas",
-    "candidateUrls": [
-      "https://public.gitlab.polimi.it/DAER/mbdyn/-/wikis/GSoc-Project-Ideas",
-      "https://public.gitlab.polimi.it/DAER/mbdyn/-/wikis/Development-Guidelines",
-      "http://www.mbdyn.org/"
-    ]
+    "contributionGuide": "https://public.gitlab.polimi.it/DAER/mbdyn/-/wikis/Development-Guidelines"
   },
   {
     "name": "McGill Space Institute",
@@ -2036,9 +1533,7 @@
     "latestYear": 2016,
     "website": "http://msi.mcgill.ca",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://msi.mcgill.ca"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Media Cloud",
@@ -2046,9 +1541,7 @@
     "latestYear": 2021,
     "website": "https://mediacloud.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://mediacloud.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "MediaPipe",
@@ -2056,9 +1549,7 @@
     "latestYear": 2021,
     "website": "https://mediapipe.dev",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://mediapipe.dev"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Meshery",
@@ -2066,11 +1557,7 @@
     "latestYear": 2026,
     "website": "https://meshery.io",
     "ideasUrl": "https://meshery.io/programs/gsoc/2026",
-    "candidateUrls": [
-      "https://meshery.io/programs/gsoc/2026",
-      "https://docs.meshery.io/project/contributing",
-      "https://meshery.io"
-    ]
+    "contributionGuide": "https://docs.meshery.io/project/contributing"
   },
   {
     "name": "MetaBrainz Foundation Inc",
@@ -2078,11 +1565,7 @@
     "latestYear": 2026,
     "website": "https://metabrainz.org",
     "ideasUrl": "https://wiki.musicbrainz.org/Development/Summer_of_Code/2026",
-    "candidateUrls": [
-      "https://wiki.musicbrainz.org/Development/Summer_of_Code/2026",
-      "https://wiki.musicbrainz.org/Development/Summer_of_Code/2026",
-      "https://metabrainz.org"
-    ]
+    "contributionGuide": "https://wiki.musicbrainz.org/Development/Summer_of_Code/2026"
   },
   {
     "name": "MGGG Redistricting Lab",
@@ -2090,9 +1573,7 @@
     "latestYear": 2021,
     "website": "https://mggg.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://mggg.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Microkernel devroom",
@@ -2100,9 +1581,7 @@
     "latestYear": 2017,
     "website": "http://www.microkernel.info/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://www.microkernel.info/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "mlpack",
@@ -2110,9 +1589,7 @@
     "latestYear": 2024,
     "website": "https://www.mlpack.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.mlpack.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Mobile Robot Programming Toolkit (MRPT)",
@@ -2120,9 +1597,7 @@
     "latestYear": 2018,
     "website": "https://www.mrpt.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.mrpt.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "ModSecurity",
@@ -2130,9 +1605,7 @@
     "latestYear": 2016,
     "website": "http://www.modsecurity.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://www.modsecurity.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Moira",
@@ -2140,9 +1613,7 @@
     "latestYear": 2020,
     "website": "https://moira.readthedocs.io/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://moira.readthedocs.io/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "moja global",
@@ -2150,9 +1621,7 @@
     "latestYear": 2022,
     "website": "https://moja.global",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://moja.global"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Monado",
@@ -2160,9 +1629,7 @@
     "latestYear": 2022,
     "website": "https://monado.freedesktop.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://monado.freedesktop.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Mono Project",
@@ -2170,9 +1637,7 @@
     "latestYear": 2017,
     "website": "http://www.mono-project.com/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://www.mono-project.com/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Moodle",
@@ -2180,9 +1645,7 @@
     "latestYear": 2019,
     "website": "https://moodle.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://moodle.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "MoveIt",
@@ -2190,9 +1653,7 @@
     "latestYear": 2024,
     "website": "https://moveit.ros.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://moveit.ros.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Mozilla",
@@ -2200,9 +1661,7 @@
     "latestYear": 2020,
     "website": "https://mozilla.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://mozilla.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "MuseScore",
@@ -2210,9 +1669,7 @@
     "latestYear": 2024,
     "website": "https://musescore.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://musescore.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "mypy",
@@ -2220,9 +1677,7 @@
     "latestYear": 2021,
     "website": "http://mypy-lang.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://mypy-lang.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "MZmine",
@@ -2230,9 +1685,7 @@
     "latestYear": 2022,
     "website": "https://www.mzmine.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.mzmine.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "MZmine and MS-DIAL",
@@ -2240,9 +1693,7 @@
     "latestYear": 2023,
     "website": "https://mzmine-ms-dial-gsoc.github.io/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://mzmine-ms-dial-gsoc.github.io/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Named Data Networking Project",
@@ -2250,9 +1701,7 @@
     "latestYear": 2019,
     "website": "http://named-data.net/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://named-data.net/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Navidrome",
@@ -2260,9 +1709,7 @@
     "latestYear": 2021,
     "website": "https://navidrome.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://navidrome.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Netfilter project",
@@ -2270,9 +1717,7 @@
     "latestYear": 2019,
     "website": "https://www.netfilter.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.netfilter.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Netty",
@@ -2280,9 +1725,7 @@
     "latestYear": 2020,
     "website": "https://netty.io",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://netty.io"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Neuroinformatics Unit",
@@ -2290,11 +1733,7 @@
     "latestYear": 2026,
     "website": "https://neuroinformatics.dev",
     "ideasUrl": "https://neuroinformatics.dev/get-involved/gsoc/2026",
-    "candidateUrls": [
-      "https://neuroinformatics.dev/get-involved/gsoc/2026",
-      "https://neuroinformatics.dev/get-involved/gsoc/guidelines",
-      "https://neuroinformatics.dev"
-    ]
+    "contributionGuide": "https://neuroinformatics.dev/get-involved/gsoc/guidelines"
   },
   {
     "name": "Nightwatch.js",
@@ -2302,9 +1741,7 @@
     "latestYear": 2024,
     "website": "https://nightwatchjs.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://nightwatchjs.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Nmap Security Scanner",
@@ -2312,9 +1749,7 @@
     "latestYear": 2017,
     "website": "https://nmap.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://nmap.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "NV Access",
@@ -2322,9 +1757,7 @@
     "latestYear": 2020,
     "website": "https://www.nvaccess.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.nvaccess.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Open Bioinformatics Foundation (OBF)",
@@ -2332,9 +1765,7 @@
     "latestYear": 2022,
     "website": "https://www.open-bio.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.open-bio.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Open Chemistry",
@@ -2342,9 +1773,7 @@
     "latestYear": 2024,
     "website": "https://openchemistry.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://openchemistry.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Open Chromosome Collective",
@@ -2352,9 +1781,7 @@
     "latestYear": 2024,
     "website": "https://open2c.github.io/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://open2c.github.io/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Open Climate Fix",
@@ -2362,11 +1789,7 @@
     "latestYear": 2025,
     "website": "https://www.openclimatefix.org",
     "ideasUrl": "https://docs.google.com/spreadsheets/d/14BF5NT8k-S-mMdKCTNrXjZKQTJZ30Kil35gAtQskSzg/edit?usp=sharing",
-    "candidateUrls": [
-      "https://docs.google.com/spreadsheets/d/14BF5NT8k-S-mMdKCTNrXjZKQTJZ30Kil35gAtQskSzg/edit?usp=sharing",
-      "https://docs.google.com/document/d/19vU8JAhr2ekvtKrZNC067seerZxMHNGrvS9nBrXBP24/edit?usp=sharing",
-      "https://www.openclimatefix.org"
-    ]
+    "contributionGuide": "https://docs.google.com/document/d/19vU8JAhr2ekvtKrZNC067seerZxMHNGrvS9nBrXBP24/edit?usp=sharing"
   },
   {
     "name": "Open Data Kit",
@@ -2374,9 +1797,7 @@
     "latestYear": 2019,
     "website": "https://opendatakit.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://opendatakit.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Open Detection",
@@ -2384,9 +1805,7 @@
     "latestYear": 2017,
     "website": "http://opendetection.com",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://opendetection.com"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Open Ephys",
@@ -2394,9 +1813,7 @@
     "latestYear": 2016,
     "website": "http://www.open-ephys.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://www.open-ephys.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Open Food Facts",
@@ -2404,11 +1821,7 @@
     "latestYear": 2026,
     "website": "https://world.openfoodfacts.org/discover",
     "ideasUrl": "https://wiki.openfoodfacts.org/GSOC/2026_ideas_list",
-    "candidateUrls": [
-      "https://wiki.openfoodfacts.org/GSOC/2026_ideas_list",
-      "https://world.openfoodfacts.org/google-summer-of-code",
-      "https://world.openfoodfacts.org/discover"
-    ]
+    "contributionGuide": "https://world.openfoodfacts.org/google-summer-of-code"
   },
   {
     "name": "Open Genome Informatics",
@@ -2416,11 +1829,7 @@
     "latestYear": 2026,
     "website": "http://gmod.org/wiki/GSoC",
     "ideasUrl": "https://gmod.org/wiki/GSOC_Project_Ideas_2026",
-    "candidateUrls": [
-      "https://gmod.org/wiki/GSOC_Project_Ideas_2026",
-      "http://gmod.org/wiki/GSoC",
-      "http://gmod.org/wiki/GSoC"
-    ]
+    "contributionGuide": "http://gmod.org/wiki/GSoC"
   },
   {
     "name": "Open Roberta",
@@ -2428,9 +1837,7 @@
     "latestYear": 2021,
     "website": "https://lab.open-roberta.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://lab.open-roberta.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Open Science Initiative for Perfusion Imaging",
@@ -2438,11 +1845,7 @@
     "latestYear": 2026,
     "website": "https://osipi.ismrm.org/",
     "ideasUrl": "https://docs.google.com/document/d/e/2PACX-1vTs3n_pm3ZM7t-6rKooThwrBtCRQMCkYJcbIyl0ekhm5O4jBgC0BqdBDFKVUDhDvbFM1ShBoV3Q2pFM/pub",
-    "candidateUrls": [
-      "https://docs.google.com/document/d/e/2PACX-1vTs3n_pm3ZM7t-6rKooThwrBtCRQMCkYJcbIyl0ekhm5O4jBgC0BqdBDFKVUDhDvbFM1ShBoV3Q2pFM/pub",
-      "https://docs.google.com/document/d/e/2PACX-1vSa8Nvl_Ays9ZL3nYO1UL4hSB9vG2QXfSzWcEaN4jnuWNRJ3Vj58YX0FWI02llw17JaC_jMquAmBoAk/pub",
-      "https://osipi.ismrm.org/"
-    ]
+    "contributionGuide": "https://docs.google.com/document/d/e/2PACX-1vSa8Nvl_Ays9ZL3nYO1UL4hSB9vG2QXfSzWcEaN4jnuWNRJ3Vj58YX0FWI02llw17JaC_jMquAmBoAk/pub"
   },
   {
     "name": "Open Science Labs",
@@ -2450,11 +1853,7 @@
     "latestYear": 2026,
     "website": "https://opensciencelabs.org",
     "ideasUrl": "https://opensciencelabs.org/opportunities/gsoc/project-ideas",
-    "candidateUrls": [
-      "https://opensciencelabs.org/opportunities/gsoc/project-ideas",
-      "https://opensciencelabs.org/opportunities/gsoc/guides/contributor/",
-      "https://opensciencelabs.org"
-    ]
+    "contributionGuide": "https://opensciencelabs.org/opportunities/gsoc/guides/contributor/"
   },
   {
     "name": "Open States",
@@ -2462,9 +1861,7 @@
     "latestYear": 2018,
     "website": "https://openstates.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://openstates.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Open Technologies Alliance - GFOSS",
@@ -2472,11 +1869,7 @@
     "latestYear": 2026,
     "website": "http://www.gfoss.eu",
     "ideasUrl": "https://ellak.gr/wiki/index.php?title=Google_Summer_of_Code_2026_proposed_ideas",
-    "candidateUrls": [
-      "https://ellak.gr/wiki/index.php?title=Google_Summer_of_Code_2026_proposed_ideas",
-      "https://ellak.gr/wiki/index.php?title=Google_Summer_of_Code_2026_proposed_ideas",
-      "http://www.gfoss.eu"
-    ]
+    "contributionGuide": "https://ellak.gr/wiki/index.php?title=Google_Summer_of_Code_2026_proposed_ideas"
   },
   {
     "name": "Open Transit Software Foundation",
@@ -2484,11 +1877,7 @@
     "latestYear": 2026,
     "website": "https://opentransitsoftwarefoundation.org",
     "ideasUrl": "https://opentransitsoftwarefoundation.org/2026/01/google-summer-of-code-2026-project-ideas/",
-    "candidateUrls": [
-      "https://opentransitsoftwarefoundation.org/2026/01/google-summer-of-code-2026-project-ideas/",
-      "https://opentransitsoftwarefoundation.org/2024/02/how-to-craft-a-successful-gsoc-proposal/",
-      "https://opentransitsoftwarefoundation.org"
-    ]
+    "contributionGuide": "https://opentransitsoftwarefoundation.org/2024/02/how-to-craft-a-successful-gsoc-proposal/"
   },
   {
     "name": "Open3D team",
@@ -2496,9 +1885,7 @@
     "latestYear": 2022,
     "website": "http://www.open3d.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://www.open3d.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "OpenAFS",
@@ -2506,11 +1893,7 @@
     "latestYear": 2026,
     "website": "https://www.openafs.org",
     "ideasUrl": "https://www.openafs.org/gsoc/project-ideas.html",
-    "candidateUrls": [
-      "https://www.openafs.org/gsoc/project-ideas.html",
-      "https://www.openafs.org/gsoc.html",
-      "https://www.openafs.org"
-    ]
+    "contributionGuide": "https://www.openafs.org/gsoc.html"
   },
   {
     "name": "OpenAstronomy",
@@ -2518,11 +1901,7 @@
     "latestYear": 2026,
     "website": "https://openastronomy.org/",
     "ideasUrl": "https://openastronomy.org/gsoc/gsoc2026/#/projects",
-    "candidateUrls": [
-      "https://openastronomy.org/gsoc/gsoc2026/#/projects",
-      "https://openastronomy.org/gsoc/contributor_guidelines.html",
-      "https://openastronomy.org/"
-    ]
+    "contributionGuide": "https://openastronomy.org/gsoc/contributor_guidelines.html"
   },
   {
     "name": "OpenCensus",
@@ -2530,9 +1909,7 @@
     "latestYear": 2018,
     "website": "http://opencensus.io",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://opencensus.io"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "OpenELIS Global",
@@ -2540,11 +1917,7 @@
     "latestYear": 2026,
     "website": "https://openelis-global.org/",
     "ideasUrl": "https://uwdigi.atlassian.net/wiki/spaces/OG/pages/931594241/GSoC+2026",
-    "candidateUrls": [
-      "https://uwdigi.atlassian.net/wiki/spaces/OG/pages/931594241/GSoC+2026",
-      "https://uwdigi.atlassian.net/wiki/spaces/OG/pages/245694473/GSoC+Guidelines+for+Students",
-      "https://openelis-global.org/"
-    ]
+    "contributionGuide": "https://uwdigi.atlassian.net/wiki/spaces/OG/pages/245694473/GSoC+Guidelines+for+Students"
   },
   {
     "name": "OpenEMR",
@@ -2552,9 +1925,7 @@
     "latestYear": 2020,
     "website": "https://www.open-emr.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.open-emr.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "OpenHMD",
@@ -2562,9 +1933,7 @@
     "latestYear": 2020,
     "website": "http://openhmd.net",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://openhmd.net"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "OpenKeychain (OpenPGP for Android)",
@@ -2572,9 +1941,7 @@
     "latestYear": 2016,
     "website": "https://www.openkeychain.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.openkeychain.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "OpenMined",
@@ -2582,9 +1949,7 @@
     "latestYear": 2021,
     "website": "https://www.openmined.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.openmined.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "OpenMRS",
@@ -2592,11 +1957,7 @@
     "latestYear": 2026,
     "website": "https://openmrs.org/",
     "ideasUrl": "https://openmrs.atlassian.net/wiki/spaces/RES/pages/752844801/Summer+of+Code+2026",
-    "candidateUrls": [
-      "https://openmrs.atlassian.net/wiki/spaces/RES/pages/752844801/Summer+of+Code+2026",
-      "https://wiki.openmrs.org/display/RES/GSoC+-+Proposal+Guidelines",
-      "https://openmrs.org/"
-    ]
+    "contributionGuide": "https://wiki.openmrs.org/display/RES/GSoC+-+Proposal+Guidelines"
   },
   {
     "name": "OpenMS",
@@ -2604,11 +1965,7 @@
     "latestYear": 2025,
     "website": "https://openms.de",
     "ideasUrl": "https://www.openms.org/news/gsoc2025/",
-    "candidateUrls": [
-      "https://www.openms.org/news/gsoc2025/",
-      "https://openms.de/news/gsoc2025/",
-      "https://openms.de"
-    ]
+    "contributionGuide": "https://openms.de/news/gsoc2025/"
   },
   {
     "name": "OpenMS Inc",
@@ -2616,11 +1973,7 @@
     "latestYear": 2026,
     "website": "https://OpenMS.org",
     "ideasUrl": "https://openms.de/news/gsoc2026/",
-    "candidateUrls": [
-      "https://openms.de/news/gsoc2026/",
-      "https://openms.de/news/gsoc2026/",
-      "https://OpenMS.org"
-    ]
+    "contributionGuide": "https://openms.de/news/gsoc2026/"
   },
   {
     "name": "OpenRefine",
@@ -2628,9 +1981,7 @@
     "latestYear": 2024,
     "website": "https://openrefine.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://openrefine.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "OpenSIPS",
@@ -2638,9 +1989,7 @@
     "latestYear": 2018,
     "website": "http://www.opensips.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://www.opensips.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "OpenWISP",
@@ -2648,11 +1997,7 @@
     "latestYear": 2026,
     "website": "https://openwisp.org",
     "ideasUrl": "https://openwisp.io/docs/dev/developer/gsoc-ideas-2026.html",
-    "candidateUrls": [
-      "https://openwisp.io/docs/dev/developer/gsoc-ideas-2026.html",
-      "https://openwisp.io/docs/developer/contributing.html",
-      "https://openwisp.org"
-    ]
+    "contributionGuide": "https://openwisp.io/docs/developer/contributing.html"
   },
   {
     "name": "OpnTec",
@@ -2660,9 +2005,7 @@
     "latestYear": 2018,
     "website": "http://opntec.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://opntec.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Orange – Data Mining Fruitful & Fun",
@@ -2670,9 +2013,7 @@
     "latestYear": 2016,
     "website": "http://orange.biolab.si",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://orange.biolab.si"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Orcasound",
@@ -2680,9 +2021,7 @@
     "latestYear": 2022,
     "website": "https://orcasound.net",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://orcasound.net"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "OSGeo (Open Source Geospatial Foundation)",
@@ -2690,11 +2029,7 @@
     "latestYear": 2026,
     "website": "https://www.osgeo.org/",
     "ideasUrl": "https://wiki.osgeo.org/wiki/Google_Summer_of_Code_2026_Ideas",
-    "candidateUrls": [
-      "https://wiki.osgeo.org/wiki/Google_Summer_of_Code_2026_Ideas",
-      "https://wiki.osgeo.org/wiki/Google_Summer_of_Code_Recommendations_for_Students",
-      "https://www.osgeo.org/"
-    ]
+    "contributionGuide": "https://wiki.osgeo.org/wiki/Google_Summer_of_Code_Recommendations_for_Students"
   },
   {
     "name": "OSU Open Source Lab",
@@ -2702,9 +2037,7 @@
     "latestYear": 2016,
     "website": "http://osuosl.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://osuosl.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Our World In Data",
@@ -2712,9 +2045,7 @@
     "latestYear": 2022,
     "website": "https://ourworldindata.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://ourworldindata.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "oVirt",
@@ -2722,9 +2053,7 @@
     "latestYear": 2017,
     "website": "http://www.ovirt.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://www.ovirt.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "OW2",
@@ -2732,9 +2061,7 @@
     "latestYear": 2018,
     "website": "http://www.ow2.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://www.ow2.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "OWASP Foundation",
@@ -2742,10 +2069,7 @@
     "latestYear": 2026,
     "website": "https://owasp.org",
     "ideasUrl": "https://owasp.org/www-community/initiatives/gsoc/gsoc2026ideas",
-    "candidateUrls": [
-      "https://owasp.org/www-community/initiatives/gsoc/gsoc2026ideas",
-      "https://owasp.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "ownCloud",
@@ -2753,9 +2077,7 @@
     "latestYear": 2017,
     "website": "http://owncloud.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://owncloud.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "P2PSP.org",
@@ -2763,9 +2085,7 @@
     "latestYear": 2018,
     "website": "http://www.p2psp.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://www.p2psp.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "PAL Robotics",
@@ -2773,11 +2093,7 @@
     "latestYear": 2025,
     "website": "https://pal-robotics.com/",
     "ideasUrl": "https://pal-robotics.com/2025-google-summer-code-proposals/#tips-successful-gsoc",
-    "candidateUrls": [
-      "https://pal-robotics.com/2025-google-summer-code-proposals/#tips-successful-gsoc",
-      "https://pal-robotics.com/2025-google-summer-code-proposals/#tips-successful-gsoc",
-      "https://pal-robotics.com/"
-    ]
+    "contributionGuide": "https://pal-robotics.com/2025-google-summer-code-proposals/#tips-successful-gsoc"
   },
   {
     "name": "PEcAn Project",
@@ -2785,11 +2101,7 @@
     "latestYear": 2026,
     "website": "https://pecanproject.github.io/",
     "ideasUrl": "https://pecanproject.github.io/gsoc_ideas",
-    "candidateUrls": [
-      "https://pecanproject.github.io/gsoc_ideas",
-      "https://pecanproject.github.io/gsoc",
-      "https://pecanproject.github.io/"
-    ]
+    "contributionGuide": "https://pecanproject.github.io/gsoc"
   },
   {
     "name": "Peragro",
@@ -2797,9 +2109,7 @@
     "latestYear": 2016,
     "website": "http://www.peragro.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://www.peragro.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Percona",
@@ -2807,9 +2117,7 @@
     "latestYear": 2020,
     "website": "https://www.percona.com/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.percona.com/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Performance Co-Pilot",
@@ -2817,9 +2125,7 @@
     "latestYear": 2022,
     "website": "https://pcp.io/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://pcp.io/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Pharo Consortium",
@@ -2827,11 +2133,7 @@
     "latestYear": 2026,
     "website": "https://pharo.org/",
     "ideasUrl": "https://gsoc.pharo.org/ideas",
-    "candidateUrls": [
-      "https://gsoc.pharo.org/ideas",
-      "https://gsoc.pharo.org/",
-      "https://pharo.org/"
-    ]
+    "contributionGuide": "https://gsoc.pharo.org/"
   },
   {
     "name": "phpBB Forum Software",
@@ -2839,9 +2141,7 @@
     "latestYear": 2018,
     "website": "https://www.phpbb.com",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.phpbb.com"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "phpMyAdmin",
@@ -2849,9 +2149,7 @@
     "latestYear": 2019,
     "website": "https://www.phpmyadmin.net",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.phpmyadmin.net"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Physical Web Project",
@@ -2859,9 +2157,7 @@
     "latestYear": 2017,
     "website": "http://physical-web-project.github.io/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://physical-web-project.github.io/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Pidgin Instant Messenger",
@@ -2869,9 +2165,7 @@
     "latestYear": 2021,
     "website": "https://pidgin.im",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://pidgin.im"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Pitivi",
@@ -2879,9 +2173,7 @@
     "latestYear": 2023,
     "website": "https://www.pitivi.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.pitivi.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Plan 9 Foundation",
@@ -2889,9 +2181,7 @@
     "latestYear": 2021,
     "website": "http://p9f.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://p9f.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "PLASMA-UMass",
@@ -2899,9 +2189,7 @@
     "latestYear": 2016,
     "website": "http://plasma.cs.umass.edu",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://plasma.cs.umass.edu"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Plone Foundation",
@@ -2909,10 +2197,7 @@
     "latestYear": 2025,
     "website": "https://plone.org",
     "ideasUrl": "https://plone.org/community/gsoc/2026",
-    "candidateUrls": [
-      "https://plone.org/community/gsoc/2026",
-      "https://plone.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "PMD",
@@ -2920,9 +2205,7 @@
     "latestYear": 2018,
     "website": "https://pmd.github.io/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://pmd.github.io/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Pocket Science Lab",
@@ -2930,9 +2213,7 @@
     "latestYear": 2018,
     "website": "https://pslab.io",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://pslab.io"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Point Cloud Library",
@@ -2940,9 +2221,7 @@
     "latestYear": 2021,
     "website": "https://pointclouds.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://pointclouds.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Polly Labs",
@@ -2950,9 +2229,7 @@
     "latestYear": 2018,
     "website": "http://pollylabs.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://pollylabs.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Polypheny",
@@ -2960,9 +2237,7 @@
     "latestYear": 2024,
     "website": "https://polypheny.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://polypheny.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Portland State University",
@@ -2970,9 +2245,7 @@
     "latestYear": 2017,
     "website": "http://wiki.cs.pdx.edu/psu-gsoc",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://wiki.cs.pdx.edu/psu-gsoc"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "PostgreSQL",
@@ -2980,11 +2253,7 @@
     "latestYear": 2026,
     "website": "https://postgresql.org",
     "ideasUrl": "https://wiki.postgresql.org/wiki/GSoC_2026",
-    "candidateUrls": [
-      "https://wiki.postgresql.org/wiki/GSoC_2026",
-      "https://wiki.postgresql.org/wiki/GSoC",
-      "https://postgresql.org"
-    ]
+    "contributionGuide": "https://wiki.postgresql.org/wiki/GSoC"
   },
   {
     "name": "Postman",
@@ -2992,9 +2261,7 @@
     "latestYear": 2024,
     "website": "https://postman.com",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://postman.com"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "PowerDNS",
@@ -3002,9 +2269,7 @@
     "latestYear": 2022,
     "website": "https://www.powerdns.com/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.powerdns.com/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "preCICE",
@@ -3012,11 +2277,7 @@
     "latestYear": 2026,
     "website": "https://precice.org/",
     "ideasUrl": "https://precice.org/community-contribute-open-projects.html",
-    "candidateUrls": [
-      "https://precice.org/community-contribute-open-projects.html",
-      "https://precice.org/community-contribute-open-projects.html#google-summer-of-code",
-      "https://precice.org/"
-    ]
+    "contributionGuide": "https://precice.org/community-contribute-open-projects.html#google-summer-of-code"
   },
   {
     "name": "PRISM Model Checker",
@@ -3024,9 +2285,7 @@
     "latestYear": 2016,
     "website": "http://www.prismmodelchecker.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://www.prismmodelchecker.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Probot",
@@ -3034,9 +2293,7 @@
     "latestYear": 2018,
     "website": "https://probot.github.io/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://probot.github.io/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Project PANOPTES",
@@ -3044,9 +2301,7 @@
     "latestYear": 2019,
     "website": "https://projectpanoptes.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://projectpanoptes.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Project WikiLoop",
@@ -3054,9 +2309,7 @@
     "latestYear": 2021,
     "website": "https://meta.wikimedia.org/wiki/WikiLoop",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://meta.wikimedia.org/wiki/WikiLoop"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Public Lab",
@@ -3064,9 +2317,7 @@
     "latestYear": 2022,
     "website": "https://publiclab.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://publiclab.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Purr Data",
@@ -3074,9 +2325,7 @@
     "latestYear": 2024,
     "website": "https://www.purrdata.net/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.purrdata.net/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "QC-Devs",
@@ -3084,11 +2333,7 @@
     "latestYear": 2026,
     "website": "https://qcdevs.org/",
     "ideasUrl": "https://qcdevs.org/join/qcdevs_gsoc/",
-    "candidateUrls": [
-      "https://qcdevs.org/join/qcdevs_gsoc/",
-      "https://qcdevs.org/join/qcdevs_gsoc/#contributor-guidance",
-      "https://qcdevs.org/"
-    ]
+    "contributionGuide": "https://qcdevs.org/join/qcdevs_gsoc/#contributor-guidance"
   },
   {
     "name": "Qdrant",
@@ -3096,9 +2341,7 @@
     "latestYear": 2023,
     "website": "https://qdrant.tech",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://qdrant.tech"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "QEMU",
@@ -3106,11 +2349,7 @@
     "latestYear": 2026,
     "website": "https://qemu.org/",
     "ideasUrl": "https://wiki.qemu.org/Google_Summer_of_Code_2026",
-    "candidateUrls": [
-      "https://wiki.qemu.org/Google_Summer_of_Code_2026",
-      "https://wiki.qemu.org/Google_Summer_of_Code_2026",
-      "https://qemu.org/"
-    ]
+    "contributionGuide": "https://wiki.qemu.org/Google_Summer_of_Code_2026"
   },
   {
     "name": "Qubes OS",
@@ -3118,11 +2357,7 @@
     "latestYear": 2026,
     "website": "https://qubes-os.org",
     "ideasUrl": "https://doc.qubes-os.org/en/latest/developer/general/gsoc.html#project-ideas",
-    "candidateUrls": [
-      "https://doc.qubes-os.org/en/latest/developer/general/gsoc.html#project-ideas",
-      "https://doc.qubes-os.org/en/latest/developer/general/gsoc.html#information-for-students",
-      "https://qubes-os.org"
-    ]
+    "contributionGuide": "https://doc.qubes-os.org/en/latest/developer/general/gsoc.html#information-for-students"
   },
   {
     "name": "Quill.org",
@@ -3130,9 +2365,7 @@
     "latestYear": 2018,
     "website": "https://quill.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://quill.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "RADAR-base",
@@ -3140,9 +2373,7 @@
     "latestYear": 2022,
     "website": "https://radar-base.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://radar-base.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Radare",
@@ -3150,9 +2381,7 @@
     "latestYear": 2020,
     "website": "https://radare.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://radare.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "React Native Elements",
@@ -3160,9 +2389,7 @@
     "latestYear": 2021,
     "website": "https://reactnativeelements.com/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://reactnativeelements.com/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "ReactOS Foundation",
@@ -3170,9 +2397,7 @@
     "latestYear": 2022,
     "website": "https://reactos.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://reactos.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Read the Docs",
@@ -3180,9 +2405,7 @@
     "latestYear": 2019,
     "website": "https://readthedocs.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://readthedocs.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Red Hen Lab",
@@ -3190,9 +2413,7 @@
     "latestYear": 2024,
     "website": "http://www.redhenlab.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://www.redhenlab.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Responsible AI and Human Centred Technology",
@@ -3200,9 +2421,7 @@
     "latestYear": 2022,
     "website": "https://www.tensorflow.org/responsible_ai",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.tensorflow.org/responsible_ai"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Rizin",
@@ -3210,11 +2429,7 @@
     "latestYear": 2026,
     "website": "https://rizin.re",
     "ideasUrl": "https://rizin.re/gsoc/2026/#project-ideas",
-    "candidateUrls": [
-      "https://rizin.re/gsoc/2026/#project-ideas",
-      "https://rizin.re/gsoc/2026",
-      "https://rizin.re"
-    ]
+    "contributionGuide": "https://rizin.re/gsoc/2026"
   },
   {
     "name": "RoboComp",
@@ -3222,9 +2437,7 @@
     "latestYear": 2022,
     "website": "https://robocomp.github.io/web/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://robocomp.github.io/web/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Robolectric",
@@ -3232,9 +2445,7 @@
     "latestYear": 2024,
     "website": "http://robolectric.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://robolectric.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "RTEMS Project",
@@ -3242,11 +2453,7 @@
     "latestYear": 2026,
     "website": "https://www.rtems.org/",
     "ideasUrl": "https://projects.rtems.org/gsoc/",
-    "candidateUrls": [
-      "https://projects.rtems.org/gsoc/",
-      "https://projects.rtems.org/gsoc/",
-      "https://www.rtems.org/"
-    ]
+    "contributionGuide": "https://projects.rtems.org/gsoc/"
   },
   {
     "name": "Ruby on Rails",
@@ -3254,9 +2461,7 @@
     "latestYear": 2018,
     "website": "http://rubyonrails.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://rubyonrails.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Ruby Science Foundation",
@@ -3264,9 +2469,7 @@
     "latestYear": 2019,
     "website": "http://sciruby.com/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://sciruby.com/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "SageMath",
@@ -3274,11 +2477,7 @@
     "latestYear": 2026,
     "website": "https://www.sagemath.org",
     "ideasUrl": "https://wiki.sagemath.org/GSoC/2026",
-    "candidateUrls": [
-      "https://wiki.sagemath.org/GSoC/2026",
-      "https://wiki.sagemath.org/GSoC/Contributors",
-      "https://www.sagemath.org"
-    ]
+    "contributionGuide": "https://wiki.sagemath.org/GSoC/Contributors"
   },
   {
     "name": "Salesforce",
@@ -3286,9 +2485,7 @@
     "latestYear": 2019,
     "website": "https://opensource.salesforce.com/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://opensource.salesforce.com/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Samba",
@@ -3296,9 +2493,7 @@
     "latestYear": 2021,
     "website": "https://www.samba.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.samba.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Scalable Parallel Computing Laboratory",
@@ -3306,9 +2501,7 @@
     "latestYear": 2024,
     "website": "https://spcl.inf.ethz.ch/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://spcl.inf.ethz.ch/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Scilab",
@@ -3316,9 +2509,7 @@
     "latestYear": 2018,
     "website": "https://www.scilab.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.scilab.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "SCoRe Lab",
@@ -3326,9 +2517,7 @@
     "latestYear": 2023,
     "website": "https://scorelab.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://scorelab.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "ScummVM",
@@ -3336,11 +2525,7 @@
     "latestYear": 2026,
     "website": "https://www.scummvm.org/",
     "ideasUrl": "https://www.scummvm.org/gsoc-2026-ideas",
-    "candidateUrls": [
-      "https://www.scummvm.org/gsoc-2026-ideas",
-      "https://wiki.scummvm.org/index.php/GSoC_Application",
-      "https://www.scummvm.org/"
-    ]
+    "contributionGuide": "https://wiki.scummvm.org/index.php/GSoC_Application"
   },
   {
     "name": "SeaQL",
@@ -3348,9 +2533,7 @@
     "latestYear": 2022,
     "website": "https://sea-ql.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://sea-ql.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Seastar",
@@ -3358,9 +2541,7 @@
     "latestYear": 2018,
     "website": "http://www.seastar-project.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://www.seastar-project.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Semi Technologies",
@@ -3368,9 +2549,7 @@
     "latestYear": 2022,
     "website": "https://weaviate.io",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://weaviate.io"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Shaka Player",
@@ -3378,9 +2557,7 @@
     "latestYear": 2021,
     "website": "https://opensource.google/projects/shaka-player",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://opensource.google/projects/shaka-player"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Shogun",
@@ -3388,9 +2565,7 @@
     "latestYear": 2020,
     "website": "https://www.shogun.ml/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.shogun.ml/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Sigmah",
@@ -3398,9 +2573,7 @@
     "latestYear": 2017,
     "website": "http://www.sigmah.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://www.sigmah.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "sktime",
@@ -3408,9 +2581,7 @@
     "latestYear": 2024,
     "website": "https://www.sktime.net/en/stable/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.sktime.net/en/stable/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Society for Arts and Technology (SAT)",
@@ -3418,11 +2589,7 @@
     "latestYear": 2025,
     "website": "https://sat.qc.ca",
     "ideasUrl": "https://sat-mtl.gitlab.io/collaborations/google-summer-of-code/categories/ideas/",
-    "candidateUrls": [
-      "https://sat-mtl.gitlab.io/collaborations/google-summer-of-code/categories/ideas/",
-      "https://sat-mtl.gitlab.io/collaborations/google-summer-of-code/posts/2025-news/2025-share/",
-      "https://sat.qc.ca"
-    ]
+    "contributionGuide": "https://sat-mtl.gitlab.io/collaborations/google-summer-of-code/posts/2025-news/2025-share/"
   },
   {
     "name": "Software and Computational Systems Lab at LMU Munich",
@@ -3430,11 +2597,7 @@
     "latestYear": 2025,
     "website": "https://www.sosy-lab.org/",
     "ideasUrl": "https://www.sosy-lab.org/gsoc/gsoc2025.php",
-    "candidateUrls": [
-      "https://www.sosy-lab.org/gsoc/gsoc2025.php",
-      "https://www.sosy-lab.org/gsoc/gsoc2025.php#instructions",
-      "https://www.sosy-lab.org/"
-    ]
+    "contributionGuide": "https://www.sosy-lab.org/gsoc/gsoc2025.php#instructions"
   },
   {
     "name": "Software Heritage",
@@ -3442,9 +2605,7 @@
     "latestYear": 2022,
     "website": "https://www.softwareheritage.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.softwareheritage.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Soletta Project",
@@ -3452,9 +2613,7 @@
     "latestYear": 2016,
     "website": "https://solettaproject.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://solettaproject.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Space @ Virginia Tech",
@@ -3462,9 +2621,7 @@
     "latestYear": 2018,
     "website": "http://space.vt.edu",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://space.vt.edu"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "SPDX",
@@ -3472,9 +2629,7 @@
     "latestYear": 2023,
     "website": "https://spdx.dev",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://spdx.dev"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "St. Jude Children's Research Hospital",
@@ -3482,11 +2637,7 @@
     "latestYear": 2026,
     "website": "https://stjude.org",
     "ideasUrl": "https://gist.github.com/claymcleod/ee8e62831a4975cba2032d888bb52080",
-    "candidateUrls": [
-      "https://gist.github.com/claymcleod/ee8e62831a4975cba2032d888bb52080",
-      "https://gist.github.com/claymcleod/ee8e62831a4975cba2032d888bb52080",
-      "https://stjude.org"
-    ]
+    "contributionGuide": "https://gist.github.com/claymcleod/ee8e62831a4975cba2032d888bb52080"
   },
   {
     "name": "Stemformatics",
@@ -3494,9 +2645,7 @@
     "latestYear": 2018,
     "website": "https://www.stemformatics.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.stemformatics.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Stichting SU2",
@@ -3504,11 +2653,7 @@
     "latestYear": 2026,
     "website": "https://su2foundation.org",
     "ideasUrl": "https://su2code.github.io/gsoc/Introduction/",
-    "candidateUrls": [
-      "https://su2code.github.io/gsoc/Introduction/",
-      "https://su2code.github.io/gsoc/Participation/",
-      "https://su2foundation.org"
-    ]
+    "contributionGuide": "https://su2code.github.io/gsoc/Participation/"
   },
   {
     "name": "Stony Brook University Biomedical Informatics",
@@ -3516,9 +2661,7 @@
     "latestYear": 2018,
     "website": "https://bmi.stonybrookmedicine.edu/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://bmi.stonybrookmedicine.edu/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "strace",
@@ -3526,9 +2669,7 @@
     "latestYear": 2022,
     "website": "https://strace.io/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://strace.io/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Stratosphere Laboratory, Czech Technical University in Prague",
@@ -3536,9 +2677,7 @@
     "latestYear": 2024,
     "website": "https://www.stratosphereips.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.stratosphereips.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Streetmix",
@@ -3546,9 +2685,7 @@
     "latestYear": 2018,
     "website": "https://streetmix.net/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://streetmix.net/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Submitty",
@@ -3556,11 +2693,7 @@
     "latestYear": 2026,
     "website": "https://submitty.org",
     "ideasUrl": "https://submitty.org/developer/getting_started/project_ideas",
-    "candidateUrls": [
-      "https://submitty.org/developer/getting_started/project_ideas",
-      "https://submitty.org/developer/google_summer_of_code/GSoC_application",
-      "https://submitty.org"
-    ]
+    "contributionGuide": "https://submitty.org/developer/google_summer_of_code/GSoC_application"
   },
   {
     "name": "SW360",
@@ -3568,11 +2701,7 @@
     "latestYear": 2026,
     "website": "https://eclipse.dev/sw360/",
     "ideasUrl": "https://eclipse.dev/sw360/gsoc/gsoc-projects-2026/",
-    "candidateUrls": [
-      "https://eclipse.dev/sw360/gsoc/gsoc-projects-2026/",
-      "https://eclipse.dev/sw360/docs/development/",
-      "https://eclipse.dev/sw360/"
-    ]
+    "contributionGuide": "https://eclipse.dev/sw360/docs/development/"
   },
   {
     "name": "Swift",
@@ -3580,11 +2709,7 @@
     "latestYear": 2026,
     "website": "https://swift.org",
     "ideasUrl": "https://www.swift.org/gsoc2026/",
-    "candidateUrls": [
-      "https://www.swift.org/gsoc2026/",
-      "https://www.swift.org/contributing/",
-      "https://swift.org"
-    ]
+    "contributionGuide": "https://www.swift.org/contributing/"
   },
   {
     "name": "SymbiFlow",
@@ -3592,9 +2717,7 @@
     "latestYear": 2021,
     "website": "https://symbiflow.github.io/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://symbiflow.github.io/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "syslog-ng",
@@ -3602,9 +2725,7 @@
     "latestYear": 2022,
     "website": "https://www.syslog-ng.com/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.syslog-ng.com/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Systers Community",
@@ -3612,9 +2733,7 @@
     "latestYear": 2018,
     "website": "https://anitab.org/systers/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://anitab.org/systers/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Systers, an Anita Borg Institute community",
@@ -3622,9 +2741,7 @@
     "latestYear": 2017,
     "website": "http://systers.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://systers.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Tarantool",
@@ -3632,9 +2749,7 @@
     "latestYear": 2022,
     "website": "https://www.tarantool.io/en/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.tarantool.io/en/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "TARDIS RT Collaboration",
@@ -3642,11 +2757,7 @@
     "latestYear": 2026,
     "website": "https://tardis-sn.github.io",
     "ideasUrl": "https://tardis-sn.github.io/summer_of_code/ideas/",
-    "candidateUrls": [
-      "https://tardis-sn.github.io/summer_of_code/ideas/",
-      "https://tardis-sn.github.io/summer_of_code/gsoc_home/",
-      "https://tardis-sn.github.io"
-    ]
+    "contributionGuide": "https://tardis-sn.github.io/summer_of_code/gsoc_home/"
   },
   {
     "name": "TARDIS SN",
@@ -3654,9 +2765,7 @@
     "latestYear": 2021,
     "website": "https://tardis-sn.github.io/tardis/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://tardis-sn.github.io/tardis/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "TensorFlow",
@@ -3664,9 +2773,7 @@
     "latestYear": 2023,
     "website": "https://www.tensorflow.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.tensorflow.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "The Apache Software Foundation",
@@ -3674,11 +2781,7 @@
     "latestYear": 2026,
     "website": "https://apache.org",
     "ideasUrl": "https://s.apache.org/gsoc2026ideas",
-    "candidateUrls": [
-      "https://s.apache.org/gsoc2026ideas",
-      "https://community.apache.org/gsoc/",
-      "https://apache.org"
-    ]
+    "contributionGuide": "https://community.apache.org/gsoc/"
   },
   {
     "name": "The Center for Connected Learning and Computer-Based Modeling",
@@ -3686,9 +2789,7 @@
     "latestYear": 2019,
     "website": "http://ccl.northwestern.edu/netlogo",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://ccl.northwestern.edu/netlogo"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "The ENIGMA Team",
@@ -3696,9 +2797,7 @@
     "latestYear": 2024,
     "website": "https://enigma-dev.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://enigma-dev.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "The FreeBSD Project",
@@ -3706,11 +2805,7 @@
     "latestYear": 2026,
     "website": "https://www.freebsd.org/",
     "ideasUrl": "https://wiki.freebsd.org/SummerOfCodeIdeas",
-    "candidateUrls": [
-      "https://wiki.freebsd.org/SummerOfCodeIdeas",
-      "https://www.freebsd.org/projects/summerofcode/",
-      "https://www.freebsd.org/"
-    ]
+    "contributionGuide": "https://www.freebsd.org/projects/summerofcode/"
   },
   {
     "name": "The Honeynet Project",
@@ -3718,11 +2813,7 @@
     "latestYear": 2026,
     "website": "https://honeynet.org",
     "ideasUrl": "https://www.honeynet.org/gsoc/gsoc-2026/google-summer-of-code-2026-project-ideas/",
-    "candidateUrls": [
-      "https://www.honeynet.org/gsoc/gsoc-2026/google-summer-of-code-2026-project-ideas/",
-      "https://www.honeynet.org/gsoc/",
-      "https://honeynet.org"
-    ]
+    "contributionGuide": "https://www.honeynet.org/gsoc/"
   },
   {
     "name": "The Julia Language",
@@ -3730,11 +2821,7 @@
     "latestYear": 2026,
     "website": "https://julialang.org",
     "ideasUrl": "https://julialang.org/jsoc/projects/",
-    "candidateUrls": [
-      "https://julialang.org/jsoc/projects/",
-      "https://julialang.org/jsoc/guidelines/",
-      "https://julialang.org"
-    ]
+    "contributionGuide": "https://julialang.org/jsoc/guidelines/"
   },
   {
     "name": "The Mifos Initiative",
@@ -3742,11 +2829,7 @@
     "latestYear": 2026,
     "website": "https://mifos.org",
     "ideasUrl": "https://mifosforge.jira.com/wiki/spaces/RES/pages/5021990914/2026+Google+Summer+of+Code+Ideas+List",
-    "candidateUrls": [
-      "https://mifosforge.jira.com/wiki/spaces/RES/pages/5021990914/2026+Google+Summer+of+Code+Ideas+List",
-      "https://mifosforge.jira.com/wiki/spaces/RES/pages/4456638/Application+Template",
-      "https://mifos.org"
-    ]
+    "contributionGuide": "https://mifosforge.jira.com/wiki/spaces/RES/pages/4456638/Application+Template"
   },
   {
     "name": "The Monarch Initiative",
@@ -3754,9 +2837,7 @@
     "latestYear": 2016,
     "website": "http://www.monarchinitiative.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://www.monarchinitiative.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "The NetBSD Foundation",
@@ -3764,11 +2845,7 @@
     "latestYear": 2026,
     "website": "https://www.NetBSD.org/",
     "ideasUrl": "https://wiki.NetBSD.org/projects/gsoc/",
-    "candidateUrls": [
-      "https://wiki.NetBSD.org/projects/gsoc/",
-      "https://wiki.NetBSD.org/projects/gsoc/",
-      "https://www.NetBSD.org/"
-    ]
+    "contributionGuide": "https://wiki.NetBSD.org/projects/gsoc/"
   },
   {
     "name": "The ns-3 Network Simulator Project",
@@ -3776,11 +2853,7 @@
     "latestYear": 2026,
     "website": "https://www.nsnam.org",
     "ideasUrl": "https://www.nsnam.org/wiki/GSOC2026Projects",
-    "candidateUrls": [
-      "https://www.nsnam.org/wiki/GSOC2026Projects",
-      "https://www.nsnam.org/wiki/GSOC2026ContributorGuide",
-      "https://www.nsnam.org"
-    ]
+    "contributionGuide": "https://www.nsnam.org/wiki/GSOC2026ContributorGuide"
   },
   {
     "name": "The OpenROAD Initiative",
@@ -3788,11 +2861,7 @@
     "latestYear": 2026,
     "website": "https://www.openroadinitiative.org",
     "ideasUrl": "https://docs.google.com/document/d/1X6xxUonxgEQ_iD5G5vFp2ZOH1vbkRSspEdYrpSf4khE/edit?usp=sharing",
-    "candidateUrls": [
-      "https://docs.google.com/document/d/1X6xxUonxgEQ_iD5G5vFp2ZOH1vbkRSspEdYrpSf4khE/edit?usp=sharing",
-      "https://openroad.readthedocs.io/en/latest/contrib/GettingInvolved.html",
-      "https://www.openroadinitiative.org"
-    ]
+    "contributionGuide": "https://openroad.readthedocs.io/en/latest/contrib/GettingInvolved.html"
   },
   {
     "name": "The Palisadoes Foundation",
@@ -3800,11 +2869,7 @@
     "latestYear": 2025,
     "website": "https://www.palisadoes.org",
     "ideasUrl": "https://developer.palisadoes.org/docs/internships/gsoc/gsoc-ideas",
-    "candidateUrls": [
-      "https://developer.palisadoes.org/docs/internships/gsoc/gsoc-ideas",
-      "https://developer.palisadoes.org/docs/internships/gsoc/gsoc-introduction",
-      "https://www.palisadoes.org"
-    ]
+    "contributionGuide": "https://developer.palisadoes.org/docs/internships/gsoc/gsoc-introduction"
   },
   {
     "name": "The Perl Foundation",
@@ -3812,9 +2877,7 @@
     "latestYear": 2019,
     "website": "https://perlfoundation.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://perlfoundation.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "The Qt Project",
@@ -3822,9 +2885,7 @@
     "latestYear": 2018,
     "website": "http://wiki.qt.io/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://wiki.qt.io/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "The Terasology Foundation",
@@ -3832,9 +2893,7 @@
     "latestYear": 2021,
     "website": "https://terasology.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://terasology.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "The Tor Project",
@@ -3842,11 +2901,7 @@
     "latestYear": 2025,
     "website": "https://www.torproject.org/",
     "ideasUrl": "https://gitlab.torproject.org/tpo/team/-/wikis/GSoC",
-    "candidateUrls": [
-      "https://gitlab.torproject.org/tpo/team/-/wikis/GSoC",
-      "https://gitlab.torproject.org/tpo/team/-/wikis/How-To-Apply-to-Google-Summer-of-Code",
-      "https://www.torproject.org/"
-    ]
+    "contributionGuide": "https://gitlab.torproject.org/tpo/team/-/wikis/How-To-Apply-to-Google-Summer-of-Code"
   },
   {
     "name": "The Vega Project at the University of Washington",
@@ -3854,9 +2909,7 @@
     "latestYear": 2019,
     "website": "http://vega.github.io/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://vega.github.io/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "The Wine Project",
@@ -3864,9 +2917,7 @@
     "latestYear": 2020,
     "website": "https://www.winehq.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.winehq.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "TianoCore",
@@ -3874,9 +2925,7 @@
     "latestYear": 2022,
     "website": "https://www.tianocore.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.tianocore.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Timelab Technologies Ltd.",
@@ -3884,9 +2933,7 @@
     "latestYear": 2016,
     "website": "http://www.timelabtechnologies.com/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://www.timelabtechnologies.com/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "TimVideos.us",
@@ -3894,9 +2941,7 @@
     "latestYear": 2019,
     "website": "https://code.timvideos.us",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://code.timvideos.us"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "TLA+",
@@ -3904,9 +2949,7 @@
     "latestYear": 2018,
     "website": "https://lamport.azurewebsites.net/tla/tla.html",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://lamport.azurewebsites.net/tla/tla.html"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Tokio",
@@ -3914,9 +2957,7 @@
     "latestYear": 2019,
     "website": "https://tokio.rs",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://tokio.rs"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Tungsten Fabric",
@@ -3924,9 +2965,7 @@
     "latestYear": 2019,
     "website": "https://tungsten.io",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://tungsten.io"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Typelevel",
@@ -3934,11 +2973,7 @@
     "latestYear": 2026,
     "website": "https://typelevel.org",
     "ideasUrl": "https://typelevel.org/gsoc/ideas.html",
-    "candidateUrls": [
-      "https://typelevel.org/gsoc/ideas.html",
-      "https://typelevel.org/gsoc/",
-      "https://typelevel.org"
-    ]
+    "contributionGuide": "https://typelevel.org/gsoc/"
   },
   {
     "name": "UC OSPO",
@@ -3946,11 +2981,7 @@
     "latestYear": 2026,
     "website": "https://ucsc-ospo.github.io/osre26/",
     "ideasUrl": "https://ucsc-ospo.github.io/osre26/#projects",
-    "candidateUrls": [
-      "https://ucsc-ospo.github.io/osre26/#projects",
-      "https://ucsc-ospo.github.io/osre26/#forstudents",
-      "https://ucsc-ospo.github.io/osre26/"
-    ]
+    "contributionGuide": "https://ucsc-ospo.github.io/osre26/#forstudents"
   },
   {
     "name": "UCSC Xena",
@@ -3958,9 +2989,7 @@
     "latestYear": 2019,
     "website": "http://xena.ucsc.edu",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://xena.ucsc.edu"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Unicode, Inc.",
@@ -3968,11 +2997,7 @@
     "latestYear": 2025,
     "website": "https://home.unicode.org",
     "ideasUrl": "https://docs.google.com/document/u/2/d/e/2PACX-1vQbj0-VFkRjYdnivuPPXuHM3IW4LuHxK6E0LVO3O8ZU_-k8CYH_eFMZ_IwFg_r-oBw3FCEOmHCb5jrn/pub",
-    "candidateUrls": [
-      "https://docs.google.com/document/u/2/d/e/2PACX-1vQbj0-VFkRjYdnivuPPXuHM3IW4LuHxK6E0LVO3O8ZU_-k8CYH_eFMZ_IwFg_r-oBw3FCEOmHCb5jrn/pub",
-      "https://docs.google.com/document/d/e/2PACX-1vQwQhjcjYENWYTfA4_FEsyVPZzqhp-QAyeVfPcYR9x0RFqL4mhby1hWKatjiG6Itwkuz8Q4ZXSF_IZz/pub",
-      "https://home.unicode.org"
-    ]
+    "contributionGuide": "https://docs.google.com/document/d/e/2PACX-1vQwQhjcjYENWYTfA4_FEsyVPZzqhp-QAyeVfPcYR9x0RFqL4mhby1hWKatjiG6Itwkuz8Q4ZXSF_IZz/pub"
   },
   {
     "name": "United Nations Office of Information Communication Technology",
@@ -3980,11 +3005,7 @@
     "latestYear": 2026,
     "website": "https://unite.un.org/en",
     "ideasUrl": "https://opensource.unicc.org/un/unoict/mentorship-programme/google-summer-of-code/-/blob/main/README.md",
-    "candidateUrls": [
-      "https://opensource.unicc.org/un/unoict/mentorship-programme/google-summer-of-code/-/blob/main/README.md",
-      "https://opensource.unicc.org/un/unoict/mentorship-programme/google-summer-of-code/",
-      "https://unite.un.org/en"
-    ]
+    "contributionGuide": "https://opensource.unicc.org/un/unoict/mentorship-programme/google-summer-of-code/"
   },
   {
     "name": "Unitex/GramLab",
@@ -3992,9 +3013,7 @@
     "latestYear": 2016,
     "website": "http://unitexgramlab.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://unitexgramlab.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Urban Energy Systems Laboratory, Empa",
@@ -4002,9 +3021,7 @@
     "latestYear": 2017,
     "website": "https://hues-platform.github.io/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://hues-platform.github.io/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "ViSP",
@@ -4012,9 +3029,7 @@
     "latestYear": 2018,
     "website": "https://visp.inria.fr/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://visp.inria.fr/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "vitrivr",
@@ -4022,9 +3037,7 @@
     "latestYear": 2021,
     "website": "https://vitrivr.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://vitrivr.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Waycrate",
@@ -4032,11 +3045,7 @@
     "latestYear": 2025,
     "website": "https://waycrate.github.io/",
     "ideasUrl": "https://waycrate.github.io/outreach/gsoc/2025/idea-list/",
-    "candidateUrls": [
-      "https://waycrate.github.io/outreach/gsoc/2025/idea-list/",
-      "https://waycrate.github.io/outreach/gsoc/2024/contributor-proposal-guidance/",
-      "https://waycrate.github.io/"
-    ]
+    "contributionGuide": "https://waycrate.github.io/outreach/gsoc/2024/contributor-proposal-guidance/"
   },
   {
     "name": "Wayland",
@@ -4044,9 +3053,7 @@
     "latestYear": 2016,
     "website": "https://wayland.freedesktop.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://wayland.freedesktop.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "webpack",
@@ -4054,11 +3061,7 @@
     "latestYear": 2026,
     "website": "https://webpack.js.org",
     "ideasUrl": "https://docs.google.com/document/d/1Mr_IPVdbupGwmGtcvLlVqFEL8wYN_rlfHUghJ2EPBVE/edit?usp=sharing",
-    "candidateUrls": [
-      "https://docs.google.com/document/d/1Mr_IPVdbupGwmGtcvLlVqFEL8wYN_rlfHUghJ2EPBVE/edit?usp=sharing",
-      "https://webpack.js.org/contribute/",
-      "https://webpack.js.org"
-    ]
+    "contributionGuide": "https://webpack.js.org/contribute/"
   },
   {
     "name": "Wellcome Sanger Tree of Life",
@@ -4066,11 +3069,7 @@
     "latestYear": 2025,
     "website": "https://www.sanger.ac.uk/",
     "ideasUrl": "https://docs.google.com/document/d/1dRHwnHAXlwQbRDstnd0OZTDJYA9cTsl1jG_hOempqII/edit?usp=sharing",
-    "candidateUrls": [
-      "https://docs.google.com/document/d/1dRHwnHAXlwQbRDstnd0OZTDJYA9cTsl1jG_hOempqII/edit?usp=sharing",
-      "https://docs.google.com/document/d/1dRHwnHAXlwQbRDstnd0OZTDJYA9cTsl1jG_hOempqII/edit?usp=sharing",
-      "https://www.sanger.ac.uk/"
-    ]
+    "contributionGuide": "https://docs.google.com/document/d/1dRHwnHAXlwQbRDstnd0OZTDJYA9cTsl1jG_hOempqII/edit?usp=sharing"
   },
   {
     "name": "Wikimedia Foundation",
@@ -4078,11 +3077,7 @@
     "latestYear": 2026,
     "website": "http://wikimediafoundation.org/",
     "ideasUrl": "https://www.mediawiki.org/wiki/Google_Summer_of_Code/2026#Projects",
-    "candidateUrls": [
-      "https://www.mediawiki.org/wiki/Google_Summer_of_Code/2026#Projects",
-      "https://www.mediawiki.org/wiki/Google_Summer_of_Code/Participants#Application_process_steps",
-      "http://wikimediafoundation.org/"
-    ]
+    "contributionGuide": "https://www.mediawiki.org/wiki/Google_Summer_of_Code/Participants#Application_process_steps"
   },
   {
     "name": "Wireshark",
@@ -4090,9 +3085,7 @@
     "latestYear": 2020,
     "website": "https://www.wireshark.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.wireshark.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "WorldBrain.io - Verifying the Internet",
@@ -4100,9 +3093,7 @@
     "latestYear": 2018,
     "website": "http://worldbrain.io",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://worldbrain.io"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "WSO2",
@@ -4110,9 +3101,7 @@
     "latestYear": 2017,
     "website": "http://wso2.com/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://wso2.com/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "wxWidgets",
@@ -4120,9 +3109,7 @@
     "latestYear": 2017,
     "website": "http://www.wxwidgets.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://www.wxwidgets.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "X.Org Foundation",
@@ -4130,9 +3117,7 @@
     "latestYear": 2023,
     "website": "https://www.x.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.x.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Xapian Search Engine Library",
@@ -4140,9 +3125,7 @@
     "latestYear": 2020,
     "website": "https://xapian.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://xapian.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Xen Project",
@@ -4150,9 +3133,7 @@
     "latestYear": 2017,
     "website": "http://xenproject.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://xenproject.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Xfce",
@@ -4160,9 +3141,7 @@
     "latestYear": 2022,
     "website": "https://www.xfce.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.xfce.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Xiph.Org Foundation",
@@ -4170,9 +3149,7 @@
     "latestYear": 2021,
     "website": "https://xiph.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://xiph.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "XMPP Standards Foundation",
@@ -4180,9 +3157,7 @@
     "latestYear": 2024,
     "website": "https://xmpp.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://xmpp.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "xpra",
@@ -4190,9 +3165,7 @@
     "latestYear": 2019,
     "website": "https://xpra.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://xpra.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "xrdesktop",
@@ -4200,9 +3173,7 @@
     "latestYear": 2021,
     "website": "https://gitlab.freedesktop.org/xrdesktop/xrdesktop/-/wikis/home",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://gitlab.freedesktop.org/xrdesktop/xrdesktop/-/wikis/home"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "XWiki",
@@ -4210,9 +3181,7 @@
     "latestYear": 2023,
     "website": "https://www.xwiki.org/",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://www.xwiki.org/"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Zendalona",
@@ -4220,11 +3189,7 @@
     "latestYear": 2025,
     "website": "https://zendalona.com/",
     "ideasUrl": "https://docs.google.com/document/d/1enwqzEqKgb9uMp2mfDDdrVaEV05yS2eHYgi6kJZXEcU/edit?tab=t.0",
-    "candidateUrls": [
-      "https://docs.google.com/document/d/1enwqzEqKgb9uMp2mfDDdrVaEV05yS2eHYgi6kJZXEcU/edit?tab=t.0",
-      "https://zendalona.com/gsoc/",
-      "https://zendalona.com/"
-    ]
+    "contributionGuide": "https://zendalona.com/gsoc/"
   },
   {
     "name": "Zenodo",
@@ -4232,9 +3197,7 @@
     "latestYear": 2017,
     "website": "https://zenodo.org",
     "ideasUrl": "",
-    "candidateUrls": [
-      "https://zenodo.org"
-    ]
+    "contributionGuide": ""
   },
   {
     "name": "Zulip",
@@ -4242,11 +3205,7 @@
     "latestYear": 2026,
     "website": "https://zulip.com/",
     "ideasUrl": "https://zulip.readthedocs.io/en/latest/outreach/gsoc.html",
-    "candidateUrls": [
-      "https://zulip.readthedocs.io/en/latest/outreach/gsoc.html",
-      "https://zulip.readthedocs.io/en/latest/outreach/apply.html",
-      "https://zulip.com/"
-    ]
+    "contributionGuide": "https://zulip.readthedocs.io/en/latest/outreach/apply.html"
   },
   {
     "name": "ZynAddSubFX",
@@ -4254,8 +3213,6 @@
     "latestYear": 2019,
     "website": "http://zynaddsubfx.sf.net",
     "ideasUrl": "",
-    "candidateUrls": [
-      "http://zynaddsubfx.sf.net"
-    ]
+    "contributionGuide": ""
   }
 ]

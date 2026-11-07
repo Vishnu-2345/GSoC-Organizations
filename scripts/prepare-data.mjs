@@ -532,7 +532,7 @@ fs.writeFileSync(
           latestYear,
           website,
           ideasUrl,
-          candidateUrls: [ideasUrl, contributionGuide, website].filter(Boolean),
+          contributionGuide,
         }),
       ),
     null,
