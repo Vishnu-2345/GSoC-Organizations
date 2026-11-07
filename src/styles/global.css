@@ -1025,7 +1025,6 @@ html.page-navigating .site-loading {
   -webkit-line-clamp: 2;
 }
 
-.year-row,
 .tag-row {
   display: flex;
   flex-wrap: wrap;
@@ -1034,6 +1033,10 @@ html.page-navigating .site-loading {
 }
 
 .year-row {
+  display: grid;
+  grid-template-columns: repeat(6, max-content);
+  align-items: center;
+  row-gap: 4px;
   margin-bottom: 8px;
 }
 

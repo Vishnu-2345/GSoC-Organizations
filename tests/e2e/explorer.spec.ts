@@ -416,6 +416,24 @@ test('cards show the complete participation history', async ({ page }) => {
     participationYears.getByText('2016', { exact: true }),
   ).toBeVisible();
   await expect(participationYears.locator('small')).toHaveCount(0);
+
+  const yearBoxes = await participationYears
+    .locator('span')
+    .evaluateAll((years) =>
+      years.map((year) => {
+        const box = year.getBoundingClientRect();
+        return { x: box.x, y: box.y };
+      }),
+    );
+  expect(
+    new Set(yearBoxes.slice(0, 6).map(({ y }) => Math.round(y))).size,
+  ).toBe(1);
+  expect(new Set(yearBoxes.slice(6).map(({ y }) => Math.round(y))).size).toBe(
+    1,
+  );
+  yearBoxes.slice(0, 5).forEach(({ x }, index) => {
+    expect(Math.abs(x - yearBoxes[index + 6].x)).toBeLessThan(1);
+  });
 });
 
 test('organization profiles preserve contributor and archive details', async ({
