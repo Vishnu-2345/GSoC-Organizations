@@ -580,6 +580,13 @@ test('organization profiles preserve contributor and archive details', async ({
 test('project years switch a grid of project cards', async ({ page }) => {
   await page.goto('/org/python-software-foundation/');
 
+  const repositoryButton = page
+    .locator('.organization-hero')
+    .getByRole('link', { name: 'Repository', exact: true });
+  await expect(repositoryButton).toBeVisible();
+  await expect(repositoryButton.getByText('Inferred')).toHaveCount(0);
+  await expect(repositoryButton.getByText('Verified')).toHaveCount(0);
+
   await expect(
     page.getByRole('heading', {
       level: 2,

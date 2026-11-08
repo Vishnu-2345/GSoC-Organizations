@@ -222,15 +222,6 @@ const organizationStructuredData = [
                 rel="noreferrer"
               >
                 Repository
-                <span
-                  class={
-                    primaryRepository.verified
-                      ? 'verification-pill verified'
-                      : 'verification-pill inferred'
-                  }
-                >
-                  {primaryRepository.verified ? 'Verified' : 'Inferred'}
-                </span>
               </a>
             ) : repositoryFallback ? (
               <a
