@@ -1,5 +1,10 @@
 import type { APIRoute } from 'astro';
 import organizationsData from '../data/organizations.json';
+import {
+  buildFirstTimeHub,
+  buildTaxonomyHubs,
+  buildYearHubs,
+} from '../lib/hubs';
 import type { Organization } from '../types';
 
 export const prerender = true;
@@ -14,12 +19,26 @@ const escapeXml = (value: string) =>
 
 export const GET: APIRoute = ({ site }) => {
   const baseUrl = site ?? new URL('https://gsocorganizations.xyz');
+  const organizations = organizationsData as Organization[];
+  const yearHubs = buildYearHubs(organizations);
+  const technologyHubs = buildTaxonomyHubs(organizations, 'technology');
+  const topicHubs = buildTaxonomyHubs(organizations, 'topic');
+  const categoryHubs = buildTaxonomyHubs(organizations, 'category');
+  const firstTimeHub = buildFirstTimeHub(organizations);
   const paths = [
     '/',
     '/about/',
-    ...(organizationsData as Organization[]).map(
-      (organization) => `/org/${organization.slug}/`,
-    ),
+    '/privacy/',
+    '/years/',
+    '/technologies/',
+    '/topics/',
+    '/categories/',
+    `/new-in-${firstTimeHub.year}/`,
+    ...yearHubs.map((hub) => `/year/${hub.year}/`),
+    ...technologyHubs.map((hub) => `/technology/${hub.slug}/`),
+    ...topicHubs.map((hub) => `/topic/${hub.slug}/`),
+    ...categoryHubs.map((hub) => `/category/${hub.slug}/`),
+    ...organizations.map((organization) => `/org/${organization.slug}/`),
   ];
   const urls = paths
     .map(

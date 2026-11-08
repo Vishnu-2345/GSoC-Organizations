@@ -1,0 +1,50 @@
+---
+import HubIndexPage from '../components/HubIndexPage.astro';
+import organizationsData from '../data/organizations.json';
+import { buildTaxonomyHubs, TAXONOMY_HUB_MIN_ORGANIZATIONS } from '../lib/hubs';
+import type { Organization } from '../types';
+
+const organizations = organizationsData as Organization[];
+const hubs = buildTaxonomyHubs(organizations, 'technology');
+const topHub = hubs[0];
+const faqs = [
+  {
+    question: 'Which technologies are used by GSoC organizations?',
+    answer: `This index covers ${hubs.length} technologies used by at least ${TAXONOMY_HUB_MIN_ORGANIZATIONS} archived GSoC organizations, from programming languages to frameworks and developer tools.`,
+  },
+  {
+    question: 'What is the most common technology in the GSoC archive?',
+    answer: `${topHub.label} is the most frequently listed technology in this dataset, associated with ${topHub.organizationCount} organizations.`,
+  },
+  {
+    question: 'Why are very rare technologies not given a separate page?',
+    answer: `Technology hubs require at least ${TAXONOMY_HUB_MIN_ORGANIZATIONS} organizations so each page provides a useful comparison rather than a thin one-off result.`,
+  },
+  {
+    question: 'How are equivalent technology names handled?',
+    answer:
+      'Equivalent capitalization and punctuation variants are grouped under one canonical page, including special names such as C++, C#, and .NET.',
+  },
+];
+---
+
+<HubIndexPage
+  title="GSoC Organization Technologies | GSoC Organizations"
+  description={`Browse ${hubs.length} technology directories for Google Summer of Code organizations, including languages, frameworks, platforms, and development tools.`}
+  eyebrow="Technology index"
+  heading="Technologies used by GSoC organizations"
+  intro={`${hubs.length} technology directories connect languages, frameworks, platforms, and tools to the GSoC organizations that use them.`}
+  hubs={hubs.map((hub) => ({
+    label: hub.label,
+    href: `/technology/${hub.slug}/`,
+    count: hub.organizationCount,
+    detail: `${hub.totalProjects.toLocaleString()} project records`,
+  }))}
+  hubLabel="Technologies"
+  faqs={faqs}
+  relatedLinks={[
+    { label: 'Topics', href: '/topics/' },
+    { label: 'Categories', href: '/categories/' },
+    { label: 'Program years', href: '/years/' },
+  ]}
+/>

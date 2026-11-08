@@ -1,0 +1,159 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DirectoryHeader from './DirectoryHeader.astro';
+
+type HubLink = {
+  label: string;
+  href: string;
+  count: number;
+  detail: string;
+};
+type Faq = { question: string; answer: string };
+type RelatedLink = { label: string; href: string };
+
+interface Props {
+  title: string;
+  description: string;
+  eyebrow: string;
+  heading: string;
+  intro: string;
+  hubs: HubLink[];
+  hubLabel: string;
+  faqs: Faq[];
+  relatedLinks: RelatedLink[];
+}
+
+const {
+  title,
+  description,
+  eyebrow,
+  heading,
+  intro,
+  hubs,
+  hubLabel,
+  faqs,
+  relatedLinks,
+} = Astro.props;
+
+const structuredData = [
+  {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'GSoC Organizations',
+        item: new URL('/', Astro.site).href,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: heading,
+        item: new URL(Astro.url.pathname, Astro.site).href,
+      },
+    ],
+  },
+  {
+    '@type': 'ItemList',
+    name: heading,
+    numberOfItems: hubs.length,
+    itemListElement: hubs.map((hub, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: hub.label,
+      url: new URL(hub.href, Astro.site).href,
+    })),
+  },
+  {
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+    })),
+  },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  pageType="CollectionPage"
+  structuredData={structuredData}
+>
+  <main class="hub-page hub-index-page">
+    <DirectoryHeader />
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Organizations</a><span aria-hidden="true">/</span><span
+        aria-current="page">{heading}</span
+      >
+    </nav>
+
+    <section class="hub-hero" aria-labelledby="hub-index-heading">
+      <div class="hub-hero-copy">
+        <span class="eyebrow">{eyebrow}</span>
+        <h1 id="hub-index-heading">{heading}</h1>
+        <p>{intro}</p>
+      </div>
+      <dl class="hub-stats">
+        <div>
+          <dt>{hubLabel}</dt>
+          <dd>{hubs.length.toLocaleString()}</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="hub-section" aria-labelledby="hub-directory-heading">
+      <div class="hub-section-heading">
+        <div>
+          <span class="eyebrow">Browse the archive</span>
+          <h2 id="hub-directory-heading">All {hubLabel.toLowerCase()}</h2>
+        </div>
+      </div>
+      <div class="hub-index-grid">
+        {
+          hubs.map((hub) => (
+            <a href={hub.href}>
+              <span>
+                <strong>{hub.label}</strong>
+                <small>{hub.detail}</small>
+              </span>
+              <b>{hub.count.toLocaleString()}</b>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="hub-section related-hubs" aria-labelledby="related-heading">
+      <div class="hub-section-heading">
+        <div>
+          <span class="eyebrow">Continue exploring</span>
+          <h2 id="related-heading">Other directories</h2>
+        </div>
+      </div>
+      <div class="hub-link-grid">
+        {relatedLinks.map((link) => <a href={link.href}>{link.label}</a>)}
+      </div>
+    </section>
+
+    <section class="hub-section hub-faq" aria-labelledby="faq-heading">
+      <div class="hub-section-heading">
+        <div>
+          <span class="eyebrow">Frequently asked questions</span>
+          <h2 id="faq-heading">About these directories</h2>
+        </div>
+      </div>
+      <div class="faq-grid">
+        {
+          faqs.map((faq) => (
+            <article>
+              <h3>{faq.question}</h3>
+              <p>{faq.answer}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+</BaseLayout>

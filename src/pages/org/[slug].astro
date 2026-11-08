@@ -3,7 +3,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import GitHubStarButton from '../../components/GitHubStarButton';
 import ParticipationChart from '../../components/ParticipationChart.astro';
 import organizationsData from '../../data/organizations.json';
+import { buildTaxonomyHubs, hubSlug } from '../../lib/hubs';
 import type { Organization } from '../../types';
+
+const organizations = organizationsData as Organization[];
+const technologyHubSlugs = new Set(
+  buildTaxonomyHubs(organizations, 'technology').map((hub) => hub.slug),
+);
+const topicHubSlugs = new Set(
+  buildTaxonomyHubs(organizations, 'topic').map((hub) => hub.slug),
+);
 
 export function getStaticPaths() {
   return (organizationsData as Organization[]).map((organization) => ({
@@ -135,7 +144,11 @@ const organizationStructuredData = [
         <span>{initials}</span>
       </div>
       <div class="organization-heading">
-        <span class="category-label">{organization.category}</span>
+        <a
+          class="category-label"
+          href={`/category/${hubSlug(organization.category)}/`}
+          >{organization.category}</a
+        >
         <h1>{organization.name}</h1>
         <p>{organization.description}</p>
         <div class="hero-taxonomy">
@@ -143,9 +156,16 @@ const organizationStructuredData = [
             <span class="taxonomy-label">Technologies</span>
             <div class="tag-row">
               {
-                organization.technologies.map((technology) => (
-                  <span class="tag">{technology}</span>
-                ))
+                organization.technologies.map((technology) => {
+                  const slug = hubSlug(technology);
+                  return technologyHubSlugs.has(slug) ? (
+                    <a class="tag" href={`/technology/${slug}/`}>
+                      {technology}
+                    </a>
+                  ) : (
+                    <span class="tag">{technology}</span>
+                  );
+                })
               }
             </div>
           </div>
@@ -153,9 +173,16 @@ const organizationStructuredData = [
             <span class="taxonomy-label">Topics</span>
             <div class="tag-row">
               {
-                organization.topics.map((topic) => (
-                  <span class="tag muted">{topic}</span>
-                ))
+                organization.topics.map((topic) => {
+                  const slug = hubSlug(topic);
+                  return topicHubSlugs.has(slug) ? (
+                    <a class="tag muted" href={`/topic/${slug}/`}>
+                      {topic}
+                    </a>
+                  ) : (
+                    <span class="tag muted">{topic}</span>
+                  );
+                })
               }
             </div>
           </div>

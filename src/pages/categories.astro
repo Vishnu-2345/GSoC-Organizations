@@ -1,0 +1,51 @@
+---
+import HubIndexPage from '../components/HubIndexPage.astro';
+import organizationsData from '../data/organizations.json';
+import { buildTaxonomyHubs } from '../lib/hubs';
+import type { Organization } from '../types';
+
+const organizations = organizationsData as Organization[];
+const hubs = buildTaxonomyHubs(organizations, 'category');
+const topHub = hubs[0];
+const faqs = [
+  {
+    question: 'How are GSoC organizations categorized?',
+    answer: `The archive groups organizations into ${hubs.length} broad categories such as end-user applications, science and medicine, web, data, and development tools.`,
+  },
+  {
+    question: 'Which category has the most GSoC organizations?',
+    answer: `${topHub.label} is the largest category in this dataset, with ${topHub.organizationCount} organizations.`,
+  },
+  {
+    question: 'Can an organization have more than one category?',
+    answer:
+      'The source archive assigns one primary category to each organization, while technologies and topics provide more detailed cross-category discovery.',
+  },
+  {
+    question: 'What information is shown on a category page?',
+    answer:
+      'Each category page provides organization and project totals, linked organization profiles, related categories, and data-generated answers.',
+  },
+];
+---
+
+<HubIndexPage
+  title="GSoC Organization Categories | GSoC Organizations"
+  description={`Browse all ${hubs.length} Google Summer of Code organization categories and compare communities, projects, technologies, and participation history.`}
+  eyebrow="Category index"
+  heading="GSoC organization categories"
+  intro={`All ${hubs.length} archive categories are collected here, giving you a broad way to compare open-source communities before narrowing by technology, topic, or year.`}
+  hubs={hubs.map((hub) => ({
+    label: hub.label,
+    href: `/category/${hub.slug}/`,
+    count: hub.organizationCount,
+    detail: `${hub.totalProjects.toLocaleString()} project records`,
+  }))}
+  hubLabel="Categories"
+  faqs={faqs}
+  relatedLinks={[
+    { label: 'Technologies', href: '/technologies/' },
+    { label: 'Topics', href: '/topics/' },
+    { label: 'Program years', href: '/years/' },
+  ]}
+/>

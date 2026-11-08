@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { GITHUB_REPOSITORY_URL, GITHUB_STAR_FALLBACK } from '../lib/github';
 
 export default function GitHubStarButton({
@@ -5,6 +6,26 @@ export default function GitHubStarButton({
 }: {
   placement: 'header' | 'footer';
 }) {
+  const [starCount, setStarCount] = useState(GITHUB_STAR_FALLBACK);
+
+  useEffect(() => {
+    const updateCount = (event: Event) => {
+      const nextCount = (event as CustomEvent<number>).detail;
+      if (Number.isInteger(nextCount)) setStarCount(nextCount);
+    };
+
+    try {
+      const cached = JSON.parse(
+        localStorage.getItem('gsoc-organizations-github-stars') || 'null',
+      );
+      if (cached && Number.isInteger(cached.count)) setStarCount(cached.count);
+    } catch {}
+
+    window.addEventListener('github-stars-updated', updateCount);
+    return () =>
+      window.removeEventListener('github-stars-updated', updateCount);
+  }, []);
+
   return (
     <a
       className={`github-star-link ${placement}-github-star-link`}
@@ -23,7 +44,7 @@ export default function GitHubStarButton({
         data-github-star-count
         data-testid="github-star-count"
       >
-        {GITHUB_STAR_FALLBACK}
+        {new Intl.NumberFormat().format(starCount)}
       </span>
     </a>
   );

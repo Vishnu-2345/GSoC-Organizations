@@ -1,0 +1,186 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import type { Organization } from '../types';
+import DirectoryHeader from './DirectoryHeader.astro';
+
+type Breadcrumb = { label: string; href?: string };
+type Faq = { question: string; answer: string };
+type RelatedLink = { label: string; href: string; meta?: string };
+type Stat = { label: string; value: string };
+
+interface Props {
+  title: string;
+  description: string;
+  eyebrow: string;
+  heading: string;
+  intro: string;
+  listHeading: string;
+  organizations: Organization[];
+  breadcrumbs: Breadcrumb[];
+  faqs: Faq[];
+  relatedLinks: RelatedLink[];
+  stats: Stat[];
+}
+
+const {
+  title,
+  description,
+  eyebrow,
+  heading,
+  intro,
+  listHeading,
+  organizations,
+  breadcrumbs,
+  faqs,
+  relatedLinks,
+  stats,
+} = Astro.props;
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const structuredData = [
+  {
+    '@type': 'BreadcrumbList',
+    itemListElement: breadcrumbs.map((breadcrumb, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: breadcrumb.label,
+      item: new URL(breadcrumb.href ?? Astro.url.pathname, Astro.site).href,
+    })),
+  },
+  {
+    '@type': 'ItemList',
+    '@id': `${canonicalUrl.href}#organizations`,
+    name: listHeading,
+    numberOfItems: organizations.length,
+    itemListElement: organizations.map((organization, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: organization.name,
+      url: new URL(`/org/${organization.slug}/`, Astro.site).href,
+    })),
+  },
+  {
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  pageType="CollectionPage"
+  structuredData={structuredData}
+>
+  <main class="hub-page">
+    <DirectoryHeader />
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      {
+        breadcrumbs.map((breadcrumb, index) => (
+          <>
+            {index > 0 && <span aria-hidden="true">/</span>}
+            {breadcrumb.href ? (
+              <a href={breadcrumb.href}>{breadcrumb.label}</a>
+            ) : (
+              <span aria-current="page">{breadcrumb.label}</span>
+            )}
+          </>
+        ))
+      }
+    </nav>
+
+    <section class="hub-hero" aria-labelledby="hub-heading">
+      <div class="hub-hero-copy">
+        <span class="eyebrow">{eyebrow}</span>
+        <h1 id="hub-heading">{heading}</h1>
+        <p>{intro}</p>
+      </div>
+      <dl class="hub-stats">
+        {
+          stats.map((stat) => (
+            <div>
+              <dt>{stat.label}</dt>
+              <dd>{stat.value}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </section>
+
+    <section class="hub-section" aria-labelledby="hub-list-heading">
+      <div class="hub-section-heading">
+        <div>
+          <span class="eyebrow">Organization directory</span>
+          <h2 id="hub-list-heading">{listHeading}</h2>
+        </div>
+        <span>{organizations.length.toLocaleString()} organizations</span>
+      </div>
+      <ul class="hub-org-grid">
+        {
+          organizations.map((organization) => (
+            <li>
+              <a href={`/org/${organization.slug}/`}>
+                <span class="hub-org-category">{organization.category}</span>
+                <strong>{organization.name}</strong>
+                <span class="hub-org-description">
+                  {organization.description ||
+                    'Explore this organization’s GSoC participation history.'}
+                </span>
+                <span class="hub-org-meta">
+                  {organization.totalProjects.toLocaleString()} projects ·{' '}
+                  {organization.participationCount}{' '}
+                  {organization.participationCount === 1 ? 'year' : 'years'}
+                </span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section class="hub-section related-hubs" aria-labelledby="related-heading">
+      <div class="hub-section-heading">
+        <div>
+          <span class="eyebrow">Continue exploring</span>
+          <h2 id="related-heading">Related directories</h2>
+        </div>
+      </div>
+      <div class="hub-link-grid">
+        {
+          relatedLinks.map((link) => (
+            <a href={link.href}>
+              <strong>{link.label}</strong>
+              {link.meta && <span>{link.meta}</span>}
+            </a>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="hub-section hub-faq" aria-labelledby="faq-heading">
+      <div class="hub-section-heading">
+        <div>
+          <span class="eyebrow">Frequently asked questions</span>
+          <h2 id="faq-heading">About this directory</h2>
+        </div>
+      </div>
+      <div class="faq-grid">
+        {
+          faqs.map((faq) => (
+            <article>
+              <h3>{faq.question}</h3>
+              <p>{faq.answer}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+</BaseLayout>

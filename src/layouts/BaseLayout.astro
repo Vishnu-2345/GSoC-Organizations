@@ -169,6 +169,13 @@ const jsonLd = {
           </p>
         </div>
         <div class="footer-link-grid">
+          <nav class="footer-column" aria-labelledby="footer-explore-heading">
+            <h2 id="footer-explore-heading">Explore</h2>
+            <a href="/years/">Program years</a>
+            <a href="/technologies/">Technologies</a>
+            <a href="/topics/">Topics</a>
+            <a href="/categories/">Categories</a>
+          </nav>
           <nav class="footer-column" aria-labelledby="footer-project-heading">
             <h2 id="footer-project-heading">Project</h2>
             <a href="/about/">About the data</a>
@@ -379,6 +386,9 @@ const jsonLd = {
           statusElements.forEach((element) => {
             element.textContent = `${formattedCount} GitHub ${count === 1 ? 'star' : 'stars'}`;
           });
+          window.dispatchEvent(
+            new CustomEvent('github-stars-updated', { detail: count }),
+          );
         };
 
         let cachedCount = null;

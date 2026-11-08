@@ -1,0 +1,59 @@
+---
+import HubIndexPage from '../components/HubIndexPage.astro';
+import organizationsData from '../data/organizations.json';
+import { buildFirstTimeHub, buildYearHubs } from '../lib/hubs';
+import type { Organization } from '../types';
+
+const organizations = organizationsData as Organization[];
+const yearHubs = buildYearHubs(organizations);
+const firstTimeHub = buildFirstTimeHub(organizations);
+const largestYear = [...yearHubs].sort(
+  (left, right) => right.organizationCount - left.organizationCount,
+)[0];
+const oldestYear = yearHubs.at(-1)?.year;
+const latestYear = yearHubs[0].year;
+const faqs = [
+  {
+    question: 'Which GSoC program years are included?',
+    answer: `The directory covers ${yearHubs.length} archived Google Summer of Code program years from ${oldestYear} through ${latestYear}.`,
+  },
+  {
+    question: `How many organizations participated in GSoC ${latestYear}?`,
+    answer: `${yearHubs[0].organizationCount} organizations participated in the latest archived program year, ${latestYear}.`,
+  },
+  {
+    question: 'Which year had the most GSoC organizations?',
+    answer: `${largestYear.year} has the largest organization count in this archive, with ${largestYear.organizationCount} organizations.`,
+  },
+  {
+    question: 'What can I compare across program years?',
+    answer:
+      'Each year page lists participating organizations, archived project counts, categories, and links to detailed organization profiles.',
+  },
+];
+---
+
+<HubIndexPage
+  title="GSoC Organizations by Year | GSoC Organizations"
+  description={`Browse Google Summer of Code organizations and project records across ${yearHubs.length} program years from ${oldestYear} through ${latestYear}.`}
+  eyebrow="Program archive"
+  heading="GSoC organizations by year"
+  intro={`Explore ${yearHubs.length} archived GSoC program years from ${oldestYear} through ${latestYear}, with organization and project totals calculated directly from the directory data.`}
+  hubs={yearHubs.map((hub) => ({
+    label: String(hub.year),
+    href: `/year/${hub.year}/`,
+    count: hub.organizationCount,
+    detail: `${hub.projectCount.toLocaleString()} project records`,
+  }))}
+  hubLabel="Program years"
+  faqs={faqs}
+  relatedLinks={[
+    {
+      label: `Organizations new in ${firstTimeHub.year}`,
+      href: `/new-in-${firstTimeHub.year}/`,
+    },
+    { label: 'Technologies', href: '/technologies/' },
+    { label: 'Topics', href: '/topics/' },
+    { label: 'Categories', href: '/categories/' },
+  ]}
+/>

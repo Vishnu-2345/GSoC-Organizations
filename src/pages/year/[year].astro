@@ -1,0 +1,103 @@
+---
+import HubPage from '../../components/HubPage.astro';
+import organizationsData from '../../data/organizations.json';
+import { buildYearHubs, type YearHub } from '../../lib/hubs';
+import type { Organization } from '../../types';
+
+export function getStaticPaths() {
+  const yearHubs = buildYearHubs(organizationsData as Organization[]);
+  return yearHubs.map((yearHub, index) => ({
+    params: { year: String(yearHub.year) },
+    props: {
+      yearHub,
+      relatedYears: yearHubs
+        .filter((_, relatedIndex) => relatedIndex !== index)
+        .sort(
+          (left, right) =>
+            Math.abs(left.year - yearHub.year) -
+            Math.abs(right.year - yearHub.year),
+        )
+        .slice(0, 4),
+      latestYear: yearHubs[0].year,
+      oldestYear: yearHubs.at(-1)?.year,
+    },
+  }));
+}
+
+interface Props {
+  yearHub: YearHub;
+  relatedYears: YearHub[];
+  latestYear: number;
+  oldestYear: number;
+}
+
+const { yearHub, relatedYears, latestYear, oldestYear } = Astro.props;
+const categoryCount = new Set(
+  yearHub.organizations.map((organization) => organization.category),
+).size;
+const topOrganizations = yearHub.organizations
+  .slice(0, 5)
+  .map((organization) => organization.name)
+  .join(', ');
+const title = `GSoC ${yearHub.year} Organizations | GSoC Organizations`;
+const description = `${yearHub.organizationCount} organizations participated in Google Summer of Code ${yearHub.year}, with ${yearHub.projectCount} archived project records. Browse every organization and its history.`;
+const intro = `In ${yearHub.year}, ${yearHub.organizationCount} organizations took part in Google Summer of Code, with ${yearHub.projectCount.toLocaleString()} project records preserved in the archive.`;
+const faqs = [
+  {
+    question: `How many organizations participated in GSoC ${yearHub.year}?`,
+    answer: `${yearHub.organizationCount} organizations participated in Google Summer of Code ${yearHub.year}.`,
+  },
+  {
+    question: `How many GSoC projects were recorded in ${yearHub.year}?`,
+    answer: `The archive contains ${yearHub.projectCount.toLocaleString()} project records across ${categoryCount} organization categories for ${yearHub.year}.`,
+  },
+  {
+    question: `Which organizations participated in GSoC ${yearHub.year}?`,
+    answer: `This directory lists every archived organization for ${yearHub.year}. Organizations near the top include ${topOrganizations}.`,
+  },
+  {
+    question: `Where can I compare GSoC ${yearHub.year} with other years?`,
+    answer: `Use the program-year directory to move between every archived GSoC year from ${oldestYear} through ${latestYear}.`,
+  },
+];
+---
+
+<HubPage
+  title={title}
+  description={description}
+  eyebrow="Program year"
+  heading={`GSoC organizations in ${yearHub.year}`}
+  intro={intro}
+  listHeading={`Organizations that participated in ${yearHub.year}`}
+  organizations={yearHub.organizations}
+  breadcrumbs={[
+    { label: 'Organizations', href: '/' },
+    { label: 'Years', href: '/years/' },
+    { label: String(yearHub.year) },
+  ]}
+  faqs={faqs}
+  stats={[
+    {
+      label: 'Organizations',
+      value: yearHub.organizationCount.toLocaleString(),
+    },
+    { label: 'Project records', value: yearHub.projectCount.toLocaleString() },
+    { label: 'Categories', value: categoryCount.toLocaleString() },
+  ]}
+  relatedLinks={[
+    { label: 'All program years', href: '/years/' },
+    ...relatedYears.map((relatedYear) => ({
+      label: `GSoC ${relatedYear.year}`,
+      href: `/year/${relatedYear.year}/`,
+      meta: `${relatedYear.organizationCount} organizations`,
+    })),
+    ...(yearHub.year === latestYear
+      ? [
+          {
+            label: `New organizations in ${latestYear}`,
+            href: `/new-in-${latestYear}/`,
+          },
+        ]
+      : []),
+  ]}
+/>

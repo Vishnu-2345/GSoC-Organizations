@@ -1,0 +1,83 @@
+---
+import HubPage from '../../components/HubPage.astro';
+import organizationsData from '../../data/organizations.json';
+import {
+  buildTaxonomyHubs,
+  relatedTaxonomyHubs,
+  type TaxonomyHub,
+} from '../../lib/hubs';
+import type { Organization } from '../../types';
+
+export function getStaticPaths() {
+  const topicHubs = buildTaxonomyHubs(
+    organizationsData as Organization[],
+    'topic',
+  );
+  return topicHubs.map((hub) => ({
+    params: { slug: hub.slug },
+    props: { hub, relatedHubs: relatedTaxonomyHubs(hub, topicHubs) },
+  }));
+}
+
+interface Props {
+  hub: TaxonomyHub;
+  relatedHubs: TaxonomyHub[];
+}
+
+const { hub, relatedHubs } = Astro.props;
+const yearRange = `${hub.years.at(-1)}–${hub.years[0]}`;
+const topOrganizations = hub.organizations
+  .slice(0, 5)
+  .map((organization) => organization.name)
+  .join(', ');
+const title = `${hub.label} Topic: GSoC Organizations | GSoC Organizations`;
+const description = `Explore ${hub.organizationCount} Google Summer of Code organizations working on ${hub.label}, with project history, technologies, official links, and repositories.`;
+const faqs = [
+  {
+    question: `Which GSoC organizations work on ${hub.label}?`,
+    answer: `${hub.organizationCount} archived GSoC organizations list ${hub.label} as a topic. They include ${topOrganizations}.`,
+  },
+  {
+    question: `How many projects are associated with these ${hub.label} organizations?`,
+    answer: `Together, these organizations have ${hub.totalProjects.toLocaleString()} project records across their full GSoC participation history.`,
+  },
+  {
+    question: `How long has ${hub.label} appeared in the GSoC archive?`,
+    answer: `Organizations associated with ${hub.label} appear in ${hub.years.length} archived program years spanning ${yearRange}.`,
+  },
+  {
+    question: `Where can I find technologies used for ${hub.label}?`,
+    answer: `Each organization profile lists its technologies and historical projects, and the technology directory provides additional ways to compare communities.`,
+  },
+];
+---
+
+<HubPage
+  title={title}
+  description={description}
+  eyebrow="Topic directory"
+  heading={`GSoC organizations working on ${hub.label}`}
+  intro={`${hub.organizationCount} organizations in the GSoC archive are connected to ${hub.label}, with ${hub.totalProjects.toLocaleString()} project records across ${hub.years.length} program years.`}
+  listHeading={`${hub.label} organizations`}
+  organizations={hub.organizations}
+  breadcrumbs={[
+    { label: 'Organizations', href: '/' },
+    { label: 'Topics', href: '/topics/' },
+    { label: hub.label },
+  ]}
+  faqs={faqs}
+  stats={[
+    { label: 'Organizations', value: hub.organizationCount.toLocaleString() },
+    { label: 'Project records', value: hub.totalProjects.toLocaleString() },
+    { label: 'Program years', value: hub.years.length.toLocaleString() },
+  ]}
+  relatedLinks={[
+    { label: 'All topics', href: '/topics/' },
+    ...relatedHubs.map((relatedHub) => ({
+      label: relatedHub.label,
+      href: `/topic/${relatedHub.slug}/`,
+      meta: `${relatedHub.organizationCount} organizations`,
+    })),
+    { label: 'Browse technologies', href: '/technologies/' },
+  ]}
+/>

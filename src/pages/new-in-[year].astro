@@ -1,0 +1,74 @@
+---
+import HubPage from '../components/HubPage.astro';
+import organizationsData from '../data/organizations.json';
+import { buildFirstTimeHub } from '../lib/hubs';
+import type { Organization } from '../types';
+
+export function getStaticPaths() {
+  const firstTimeHub = buildFirstTimeHub(organizationsData as Organization[]);
+  return [
+    {
+      params: { year: String(firstTimeHub.year) },
+      props: { firstTimeHub },
+    },
+  ];
+}
+
+const { firstTimeHub: hub } = Astro.props;
+const categoryCount = new Set(
+  hub.organizations.map((organization) => organization.category),
+).size;
+const topOrganizations = hub.organizations
+  .slice(0, 5)
+  .map((organization) => organization.name)
+  .join(', ');
+const title = `New GSoC Organizations in ${hub.year} | GSoC Organizations`;
+const description = `${hub.organizationCount} organizations joined Google Summer of Code for the first time in ${hub.year}. Explore their projects, technologies, topics, and profiles.`;
+const faqs = [
+  {
+    question: `How many organizations were new to GSoC in ${hub.year}?`,
+    answer: `${hub.organizationCount} organizations in the archive participated in GSoC for the first time in ${hub.year}.`,
+  },
+  {
+    question: `Which organizations joined GSoC in ${hub.year}?`,
+    answer: `First-time organizations include ${topOrganizations}. The complete list appears on this page.`,
+  },
+  {
+    question: `What counts as a new GSoC organization?`,
+    answer: `This directory treats an organization as new when ${hub.year} is its only participation year in the archived dataset.`,
+  },
+  {
+    question: `How many projects did new ${hub.year} organizations have?`,
+    answer: `The ${hub.organizationCount} first-time organizations account for ${hub.projectCount.toLocaleString()} archived project records across ${categoryCount} categories.`,
+  },
+];
+---
+
+<HubPage
+  title={title}
+  description={description}
+  eyebrow="First-time participants"
+  heading={`Organizations new to GSoC in ${hub.year}`}
+  intro={`${hub.organizationCount} organizations joined the GSoC archive for the first time in ${hub.year}, contributing ${hub.projectCount.toLocaleString()} project records across ${categoryCount} categories.`}
+  listHeading={`First-time GSoC organizations in ${hub.year}`}
+  organizations={hub.organizations}
+  breadcrumbs={[
+    { label: 'Organizations', href: '/' },
+    { label: `New in ${hub.year}` },
+  ]}
+  faqs={faqs}
+  stats={[
+    {
+      label: 'New organizations',
+      value: hub.organizationCount.toLocaleString(),
+    },
+    { label: 'Project records', value: hub.projectCount.toLocaleString() },
+    { label: 'Categories', value: categoryCount.toLocaleString() },
+  ]}
+  relatedLinks={[
+    { label: `All GSoC ${hub.year} organizations`, href: `/year/${hub.year}/` },
+    { label: 'All program years', href: '/years/' },
+    { label: 'Browse categories', href: '/categories/' },
+    { label: 'Browse technologies', href: '/technologies/' },
+  ]}
+/>

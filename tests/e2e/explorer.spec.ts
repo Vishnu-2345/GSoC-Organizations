@@ -46,11 +46,88 @@ test('publishes canonical SEO and AI discovery metadata', async ({
   expect(sitemapText).toContain(
     '<loc>https://gsocorganizations.xyz/org/python-software-foundation/</loc>',
   );
-  expect((sitemapText.match(/<loc>/g) ?? []).length).toBe(521);
+  expect(sitemapText).toContain(
+    '<loc>https://gsocorganizations.xyz/year/2026/</loc>',
+  );
+  expect(sitemapText).toContain(
+    '<loc>https://gsocorganizations.xyz/technology/cpp/</loc>',
+  );
+  expect(sitemapText).toContain(
+    '<loc>https://gsocorganizations.xyz/topics/</loc>',
+  );
+  expect((sitemapText.match(/<loc>/g) ?? []).length).toBeGreaterThan(800);
 
   const aiSummary = await request.get('/llms.txt');
   expect(aiSummary.ok()).toBe(true);
   expect(await aiSummary.text()).toContain('# GSoC Organizations');
+});
+
+test('publishes answer-first static hub pages with internal navigation', async ({
+  page,
+  request,
+}) => {
+  await page.goto('/year/2026/');
+
+  await expect(page).toHaveTitle(
+    'GSoC 2026 Organizations | GSoC Organizations',
+  );
+  await expect(
+    page.getByRole('heading', {
+      level: 1,
+      name: 'GSoC organizations in 2026',
+    }),
+  ).toBeVisible();
+  await expect(
+    page.getByText(
+      /In 2026, 183 organizations took part in Google Summer of Code/,
+    ),
+  ).toBeVisible();
+  await expect(
+    page.getByRole('navigation', { name: 'Breadcrumb' }),
+  ).toContainText('Years');
+  await expect(
+    page.getByRole('heading', {
+      level: 3,
+      name: 'How many organizations participated in GSoC 2026?',
+    }),
+  ).toBeVisible();
+  await expect(page.locator('.hub-org-grid a')).toHaveCount(183);
+
+  const structuredData = JSON.parse(
+    (await page.locator('script[type="application/ld+json"]').textContent()) ??
+      '{}',
+  );
+  expect(structuredData['@graph']).toEqual(
+    expect.arrayContaining([
+      expect.objectContaining({ '@type': 'BreadcrumbList' }),
+      expect.objectContaining({ '@type': 'ItemList', numberOfItems: 183 }),
+      expect.objectContaining({ '@type': 'FAQPage' }),
+    ]),
+  );
+
+  await page.goto('/technology/cpp/');
+  await expect(
+    page.getByRole('heading', {
+      level: 1,
+      name: 'GSoC organizations using C++',
+    }),
+  ).toBeVisible();
+
+  await page.goto('/technologies/');
+  await expect(
+    page.getByRole('heading', {
+      level: 1,
+      name: 'Technologies used by GSoC organizations',
+    }),
+  ).toBeVisible();
+  await expect(
+    page
+      .getByRole('contentinfo')
+      .getByRole('link', { name: 'Program years', exact: true }),
+  ).toBeVisible();
+
+  expect((await request.get('/technology/c-sharp/')).ok()).toBe(true);
+  expect((await request.get('/new-in-2026/')).ok()).toBe(true);
 });
 
 test('organization profiles publish entity metadata and private pages do not index', async ({

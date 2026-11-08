@@ -1,0 +1,51 @@
+---
+import HubIndexPage from '../components/HubIndexPage.astro';
+import organizationsData from '../data/organizations.json';
+import { buildTaxonomyHubs, TAXONOMY_HUB_MIN_ORGANIZATIONS } from '../lib/hubs';
+import type { Organization } from '../types';
+
+const organizations = organizationsData as Organization[];
+const hubs = buildTaxonomyHubs(organizations, 'topic');
+const topHub = hubs[0];
+const faqs = [
+  {
+    question: 'Which topics do GSoC organizations work on?',
+    answer: `This index covers ${hubs.length} topics associated with at least ${TAXONOMY_HUB_MIN_ORGANIZATIONS} archived GSoC organizations, including web, data, infrastructure, science, and community interests.`,
+  },
+  {
+    question: 'What is the most common GSoC organization topic?',
+    answer: `${topHub.label} is the most frequently listed topic in this dataset, associated with ${topHub.organizationCount} organizations.`,
+  },
+  {
+    question: 'How are duplicate topic labels handled?',
+    answer:
+      'Capitalization, spacing, and punctuation variants that resolve to the same topic are grouped into one canonical directory page.',
+  },
+  {
+    question: 'How can I find technologies related to a topic?',
+    answer:
+      'Open any topic page and then visit an organization profile to review its technologies, projects, and participation history.',
+  },
+];
+---
+
+<HubIndexPage
+  title="GSoC Organization Topics | GSoC Organizations"
+  description={`Browse ${hubs.length} topic directories for Google Summer of Code organizations and compare communities, technologies, projects, and participation history.`}
+  eyebrow="Topic index"
+  heading="Topics explored by GSoC organizations"
+  intro={`${hubs.length} topic directories group GSoC organizations by the problems, communities, and open-source areas they work on.`}
+  hubs={hubs.map((hub) => ({
+    label: hub.label,
+    href: `/topic/${hub.slug}/`,
+    count: hub.organizationCount,
+    detail: `${hub.totalProjects.toLocaleString()} project records`,
+  }))}
+  hubLabel="Topics"
+  faqs={faqs}
+  relatedLinks={[
+    { label: 'Technologies', href: '/technologies/' },
+    { label: 'Categories', href: '/categories/' },
+    { label: 'Program years', href: '/years/' },
+  ]}
+/>

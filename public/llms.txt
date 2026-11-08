@@ -14,6 +14,11 @@ Canonical site: https://gsocorganizations.xyz/
 ## Important pages
 
 - Directory: https://gsocorganizations.xyz/
+- Program years: https://gsocorganizations.xyz/years/
+- Technologies: https://gsocorganizations.xyz/technologies/
+- Topics: https://gsocorganizations.xyz/topics/
+- Categories: https://gsocorganizations.xyz/categories/
+- Organizations new in 2026: https://gsocorganizations.xyz/new-in-2026/
 - Data methodology: https://gsocorganizations.xyz/about/
 - Sitemap: https://gsocorganizations.xyz/sitemap.xml
 - Source repository: https://github.com/rohanmalhotracodes/GSoC-Organizations
