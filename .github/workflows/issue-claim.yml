@@ -28,6 +28,7 @@ jobs:
             const issue = context.payload.issue;
             const contributor = context.actor;
             const command = context.payload.comment.body.trim();
+            const maxActiveClaims = 2;
 
             const reply = (body) => github.rest.issues.createComment({
               owner,
@@ -36,8 +37,14 @@ jobs:
               body,
             });
 
+            const { data: currentIssue } = await github.rest.issues.get({
+              owner,
+              repo,
+              issue_number: issue.number,
+            });
+
             if (command === '/unclaim') {
-              if (!issue.assignees.some(({ login }) => login === contributor)) {
+              if (!currentIssue.assignees.some(({ login }) => login === contributor)) {
                 await reply(`@${contributor}, this issue is not assigned to you.`);
                 return;
               }
@@ -47,32 +54,49 @@ jobs:
                 issue_number: issue.number,
                 assignees: [contributor],
               });
-              try {
-                await github.rest.issues.removeLabel({
-                  owner,
-                  repo,
-                  issue_number: issue.number,
-                  name: 'in progress',
-                });
-              } catch (error) {
-                if (error.status !== 404) throw error;
+              if (currentIssue.assignees.length === 1) {
+                try {
+                  await github.rest.issues.removeLabel({
+                    owner,
+                    repo,
+                    issue_number: issue.number,
+                    name: 'in progress',
+                  });
+                } catch (error) {
+                  if (error.status !== 404) throw error;
+                }
               }
               await reply(`✅ @${contributor} released this issue for another contributor.`);
               return;
             }
 
-            if (issue.state !== 'open') return;
-            if (issue.assignees.length > 0) {
+            if (currentIssue.state !== 'open') {
+              await reply(`@${contributor}, closed issues cannot be claimed.`);
+              return;
+            }
+            if (currentIssue.assignees.some(({ login }) => login === contributor)) {
+              await reply(`@${contributor}, this issue is already assigned to you.`);
+              return;
+            }
+            if (currentIssue.assignees.length > 0) {
               await reply(`Sorry @${contributor}, this issue is already assigned.`);
               return;
             }
 
-            const active = await github.rest.search.issuesAndPullRequests({
-              q: `repo:${owner}/${repo} is:issue is:open assignee:${contributor}`,
-              per_page: 2,
+            const assignedItems = await github.paginate(github.rest.issues.listForRepo, {
+              owner,
+              repo,
+              state: 'open',
+              assignee: contributor,
+              per_page: 100,
             });
-            if (active.data.total_count > 0) {
-              await reply(`@${contributor}, please finish or release your currently assigned issue before claiming another one.`);
+            const activeClaims = assignedItems.filter(({ pull_request: pullRequest }) => !pullRequest);
+
+            if (activeClaims.length >= maxActiveClaims) {
+              const claimedIssues = activeClaims
+                .map(({ number }) => `#${number}`)
+                .join(', ');
+              await reply(`@${contributor}, you already have the maximum of ${maxActiveClaims} active issue assignments (${claimedIssues}). Finish or \`/unclaim\` one before claiming another.`);
               return;
             }
 
@@ -89,7 +113,8 @@ jobs:
                 issue_number: issue.number,
                 labels: ['in progress'],
               });
-              await reply(`✅ Assigned to @${contributor}. Please keep the issue updated and use \`/unclaim\` if you can no longer work on it.`);
+              const newClaimCount = activeClaims.length + 1;
+              await reply(`✅ Assigned to @${contributor}. You now have ${newClaimCount} of ${maxActiveClaims} allowed active issue assignments. Please keep the issue updated and use \`/unclaim\` if you can no longer work on it.`);
             } catch (error) {
               if (error.status !== 422) throw error;
               await reply(`@${contributor}, GitHub could not assign this issue automatically. A maintainer will need to assign it manually.`);

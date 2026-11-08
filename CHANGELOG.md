@@ -19,6 +19,8 @@ All notable project changes are documented in this file.
   contributor checklist tailored to GSoC Organizations.
 - Added a one-time welcome and clear CLA signing instructions for first-time
   contributors when they open a pull request.
+- Expanded self-service issue claiming to two simultaneous assignments per
+  contributor, with live conflict checks and `/unclaim` support.
 
 ## [1.0.0] — 2026-11-09
 

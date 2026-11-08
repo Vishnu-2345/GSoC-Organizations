@@ -7,10 +7,14 @@ and experienced open-source contributors are welcome.
 
 1. Read this guide before opening a pull request.
 2. Choose an existing issue and check that nobody else is working on it.
-3. Comment `/claim` on the issue. The claim bot allows one active assignment per
-   contributor so work is not duplicated.
+3. Comment `/claim` on the issue. The bot will assign it to you immediately if
+   it is available and you have fewer than two active assignments.
 4. Keep each pull request focused on one issue.
 5. Link the issue in the pull-request description with `Closes #ISSUE_NUMBER`.
+
+Each contributor may hold at most two open issue assignments at once. Finish an
+assigned issue or comment `/unclaim` to release it before claiming a third. Do
+not work on an issue assigned to someone else.
 
 Pull requests opened by someone who is not assigned to the linked issue are
 closed automatically. Pull requests without a linked issue are also closed.
@@ -44,8 +48,10 @@ can be completed as focused contributions.
 ### 1. Claim an issue
 
 Open the pinned initiative, expand one of its four batch trackers, and choose an
-unassigned organization. Comment `/claim` to request the assignment. If you can
-no longer work on it, comment `/unclaim` so someone else can contribute.
+unassigned organization. Comment `/claim` and wait for the bot's confirmation
+before starting work. The bot supports self-assignment and allows no more than
+two active issue claims per contributor. If you can no longer work on an issue,
+comment `/unclaim` so someone else can contribute.
 
 ### 2. Verify the destination
 
@@ -173,8 +179,10 @@ project's existing license.
 
 Before a first pull request can be merged, read [the Contributor License
 Agreement](./CLA.md) and post the exact acceptance statement requested by the
-CLA check. The signature applies to future contributions under that GitHub
-account until the agreement is materially changed.
+CLA check. First-time contributors receive an automatic welcome comment with
+the agreement link and signing instructions. The signature applies to future
+contributions under that GitHub account until the agreement is materially
+changed.
 
 ## Contributor milestones
 
