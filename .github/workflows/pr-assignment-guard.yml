@@ -1,0 +1,102 @@
+name: PR assignment guard
+
+on:
+  pull_request_target:
+    types: [opened, reopened, edited, ready_for_review, synchronize]
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+jobs:
+  verify:
+    name: Verify linked issue assignment
+    if: >-
+      github.event.pull_request.user.login != github.repository_owner &&
+      !endsWith(github.event.pull_request.user.login, '[bot]')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Close unassigned pull requests
+        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const pull = context.payload.pull_request;
+            const contributor = pull.user.login;
+            const repository = `${owner}/${repo}`.toLowerCase();
+            const marker = '<!-- gsoc-organizations-assignment-guard -->';
+
+            const result = await github.graphql(
+              `query($owner: String!, $repo: String!, $number: Int!) {
+                repository(owner: $owner, name: $repo) {
+                  pullRequest(number: $number) {
+                    closingIssuesReferences(first: 25) {
+                      nodes {
+                        number
+                        state
+                        url
+                        repository { nameWithOwner }
+                        assignees(first: 50) { nodes { login } }
+                      }
+                    }
+                  }
+                }
+              }`,
+              { owner, repo, number: pull.number },
+            );
+
+            const linkedIssues = result.repository.pullRequest.closingIssuesReferences.nodes
+              .filter(({ repository: linkedRepository }) =>
+                linkedRepository.nameWithOwner.toLowerCase() === repository,
+              );
+
+            const problems = [];
+
+            if (linkedIssues.length === 0) {
+              problems.push(
+                'The pull-request description does not close an issue in this repository. Add `Closes #ISSUE_NUMBER` after claiming the issue.',
+              );
+            }
+
+            for (const issue of linkedIssues) {
+              if (issue.state !== 'OPEN') {
+                problems.push(`Issue #${issue.number} is not open.`);
+                continue;
+              }
+
+              const assigned = issue.assignees.nodes.some(
+                ({ login }) => login.toLowerCase() === contributor.toLowerCase(),
+              );
+              if (!assigned) {
+                problems.push(`@${contributor} is not assigned to issue #${issue.number}.`);
+              }
+            }
+
+            if (problems.length === 0) return;
+
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              owner,
+              repo,
+              issue_number: pull.number,
+              per_page: 100,
+            });
+
+            if (!comments.some(({ body }) => body?.includes(marker))) {
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number: pull.number,
+                body: `${marker}\nThanks for contributing, @${contributor}. This pull request has been closed because it does not follow the issue-assignment workflow:\n\n${problems.map((problem) => `- ${problem}`).join('\n')}\n\nComment \`/claim\` on an unassigned issue first. Then ensure the pull-request description contains \`Closes #ISSUE_NUMBER\` and reopen this pull request. The bot will check it again automatically.`,
+              });
+            }
+
+            if (pull.state === 'open') {
+              await github.rest.pulls.update({
+                owner,
+                repo,
+                pull_number: pull.number,
+                state: 'closed',
+              });
+            }

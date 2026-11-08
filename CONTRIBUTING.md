@@ -12,6 +12,11 @@ and experienced open-source contributors are welcome.
 4. Keep each pull request focused on one issue.
 5. Link the issue in the pull-request description with `Closes #ISSUE_NUMBER`.
 
+Pull requests opened by someone who is not assigned to the linked issue are
+closed automatically. Pull requests without a linked issue are also closed.
+Claim the issue first, then reopen the pull request after correcting its
+description; the assignment guard will check it again.
+
 For a beginner-friendly contribution, start with the pinned
 [repository-link initiative](https://github.com/rohanmalhotracodes/GSoC-Organizations/issues/382).
 Each organization has a separate `good first issue` with exact instructions and

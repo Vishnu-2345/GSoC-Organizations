@@ -10,6 +10,11 @@ All notable project changes are documented in this file.
   Community Source License, permitting contribution forks while prohibiting
   commercial use, redistribution, independent deployment, and copied websites.
 
+### Added
+
+- Added a pull-request assignment guard that closes contributions without an
+  assigned, linked issue and explains how to correct and reopen them.
+
 ## [1.0.0] — 2026-11-09
 
 The first public release of GSoC Organizations.
