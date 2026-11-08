@@ -14,6 +14,9 @@ All notable project changes are documented in this file.
 
 - Added a pull-request assignment guard that closes contributions without an
   assigned, linked issue and explains how to correct and reopen them.
+- Added a structured pull-request template inspired by Oppia's review workflow,
+  with required issue linkage, evidence, responsive proof, verification, and a
+  contributor checklist tailored to GSoC Organizations.
 
 ## [1.0.0] — 2026-11-09
 
