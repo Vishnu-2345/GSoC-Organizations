@@ -799,30 +799,28 @@ test('footer provides project, privacy, and creator links', async ({
   });
   await page.goto('/');
   const footer = page.getByRole('contentinfo');
-  const starCount = footer.getByTestId('github-star-count');
   const header = page.locator('.directory-header');
   const headerStarLink = header.getByRole('link', {
     name: 'Star us on GitHub',
   });
   const headerStarCount = header.getByTestId('github-star-count');
-  await expect(starCount).toHaveText('6');
   await expect(headerStarCount).toHaveText('6');
   await expect(headerStarLink).toHaveAttribute(
     'href',
     'https://github.com/rohanmalhotracodes/GSoC-Organizations',
   );
   await expect(headerStarLink).toBeVisible();
-  await expect(headerStarLink).toContainText('Star us on GitHub');
-  await expect(headerStarLink).toHaveCSS('background-color', 'rgb(168, 70, 0)');
+  await expect(headerStarLink).toContainText('Star');
+  await expect(headerStarLink).toHaveCSS('background-color', 'rgb(24, 24, 27)');
   const headerStarBox = await headerStarLink.boundingBox();
   const headerSearchBox = await header.locator('.global-search').boundingBox();
   expect(headerStarBox).not.toBeNull();
   expect(headerSearchBox).not.toBeNull();
-  expect(headerStarBox!.height).toBeLessThanOrEqual(38);
+  expect(
+    Math.abs(headerStarBox!.height - headerSearchBox!.height),
+  ).toBeLessThan(2);
   if (testInfo.project.name.includes('mobile')) {
-    expect(
-      Math.abs(headerStarBox!.width - headerSearchBox!.width),
-    ).toBeLessThan(2);
+    expect(headerStarBox!.width).toBeLessThan(headerSearchBox!.width);
   } else {
     expect(headerStarBox!.x).toBeGreaterThan(
       headerSearchBox!.x + headerSearchBox!.width,
@@ -876,19 +874,9 @@ test('footer provides project, privacy, and creator links', async ({
   await expect(footer.locator('.social-icon-link')).toHaveCount(3);
   await expect(
     footer.getByRole('link', { name: 'Star us on GitHub' }),
-  ).toHaveAttribute(
-    'href',
-    'https://github.com/rohanmalhotracodes/GSoC-Organizations',
-  );
-  const starLink = footer.getByRole('link', {
-    name: 'Star us on GitHub',
-  });
-  await expect(starLink).toHaveCSS('border-radius', '7px');
-  await expect(starLink).toHaveCSS('background-color', 'rgb(36, 36, 40)');
-  await expect(starLink).toHaveCSS('box-shadow', 'none');
-  await expect(starCount).toHaveText('1,234');
+  ).toHaveCount(0);
   await expect(headerStarCount).toHaveText('1,234');
-  await expect(starCount).toHaveCSS('border-left-width', '1px');
+  await expect(headerStarCount).toHaveCSS('border-left-width', '1px');
   await footer.getByRole('link', { name: 'Privacy policy' }).click();
   await expect(
     page.getByRole('heading', { level: 1, name: 'Privacy policy' }),

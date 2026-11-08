@@ -2060,13 +2060,14 @@ html.page-navigating .site-loading {
 
 .github-star-link {
   display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  min-height: 36px;
-  padding: 6px 9px;
+  min-height: 42px;
+  align-items: stretch;
+  gap: 0;
+  overflow: hidden;
+  padding: 0;
   border: 1px solid #48484f;
   border-radius: 7px;
-  background: #242428;
+  background: #18181b;
   color: #fff;
   font-size: 13px;
   font-weight: 700;
@@ -2079,22 +2080,36 @@ html.page-navigating .site-loading {
 .github-star-link:hover,
 .github-star-link:focus-visible {
   border-color: #686870;
-  background: #303035;
   color: #fff;
 }
 
-.github-star-link svg {
-  width: 17px;
-  height: 17px;
+.github-star-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 13px;
+  background: #303034;
+}
+
+.github-star-link:hover .github-star-action,
+.github-star-link:focus-visible .github-star-action {
+  background: #3a3a3f;
+}
+
+.github-star-action svg {
+  width: 18px;
+  height: 18px;
   flex: none;
   fill: currentColor;
 }
 
 .github-star-count {
-  min-width: 22px;
-  margin-left: 3px;
-  padding-left: 8px;
+  display: grid;
+  min-width: 42px;
+  place-items: center;
+  padding: 0 12px;
   border-left: 1px solid #48484f;
+  background: #18181b;
   color: #fff;
   font-size: 13px;
   font-variant-numeric: tabular-nums;
@@ -2103,23 +2118,6 @@ html.page-navigating .site-loading {
 
 .header-github-star-link {
   justify-self: end;
-  padding-inline: 12px;
-  border-color: var(--orange-deep);
-  background: var(--orange-deep);
-}
-
-.header-github-star-link:hover,
-.header-github-star-link:focus-visible {
-  border-color: var(--orange);
-  background: var(--orange);
-}
-
-.header-github-star-link .github-star-count {
-  border-left-color: rgba(255, 255, 255, 0.42);
-}
-
-.footer-column .footer-github-star-link {
-  margin-top: 8px;
 }
 
 .footer-bottom {
@@ -2229,8 +2227,6 @@ html.page-navigating .site-loading {
 
   .header-github-star-link {
     justify-self: start;
-    width: 100%;
-    justify-content: center;
   }
 
   .global-search {

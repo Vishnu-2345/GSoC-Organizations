@@ -206,7 +206,7 @@ export default function Explorer({
               </button>
             )}
           </label>
-          <GitHubStarButton placement="header" />
+          <GitHubStarButton />
         </header>
       </div>
       <div className="explorer-layout">

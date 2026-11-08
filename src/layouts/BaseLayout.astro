@@ -1,7 +1,5 @@
 ---
 import '../styles/global.css';
-import GitHubStarButton from '../components/GitHubStarButton';
-import { GITHUB_STAR_FALLBACK } from '../lib/github';
 
 interface Props {
   title?: string;
@@ -189,10 +187,6 @@ const jsonLd = {
               href="https://summerofcode.withgoogle.com/"
               target="_blank"
               rel="noreferrer">Official GSoC</a
-            >
-            <GitHubStarButton placement="footer" />
-            <span class="sr-only" data-github-star-status aria-live="polite"
-              >{GITHUB_STAR_FALLBACK} GitHub stars</span
             >
           </nav>
           <nav class="footer-column" aria-labelledby="footer-creator-heading">
