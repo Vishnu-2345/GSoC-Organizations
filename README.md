@@ -45,25 +45,6 @@ Select a participation year to browse its completed projects and open the corres
 
 ![Historical GSoC projects](./docs/images/historical-projects.jpg)
 
-## Run locally
-
-Node.js 20.11 or newer is required.
-
-```bash
-git clone git@github.com:rohanmalhotracodes/GSoC-Organizations.git
-cd GSoC-Organizations
-npm install
-npm run dev
-```
-
-The development server runs at `http://localhost:4321` by default.
-
-Create a production build with:
-
-```bash
-npm run build
-```
-
 ## Built with
 
 - [Astro](https://astro.build/)
@@ -78,3 +59,9 @@ The website is generated from version-controlled GSoC archive snapshots. Organiz
 ## Disclaimer
 
 This is an independent community project and is not affiliated with or endorsed by Google. Google Summer of Code is a Google program.
+
+## License
+
+Copyright © 2026 Rohan Malhotra. All rights reserved.
+
+This is proprietary source-available software, not open-source software. Copying, modification, redistribution, republication, or deployment is prohibited without prior written permission. See the [LICENSE](./LICENSE) file for the complete terms.

@@ -2,6 +2,7 @@
   "name": "gsoc-org-explorer",
   "version": "1.0.0",
   "private": true,
+  "license": "UNLICENSED",
   "type": "module",
   "scripts": {
     "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",

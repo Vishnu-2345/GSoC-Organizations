@@ -1,0 +1,56 @@
+PROPRIETARY SOURCE-AVAILABLE LICENSE
+
+Copyright (c) 2026 Rohan Malhotra. All rights reserved.
+
+1. OWNERSHIP
+
+The original source code, user interface, documentation, branding, and other
+materials in this repository that are authored and owned by Rohan Malhotra
+(the "Project Materials") are proprietary and protected by copyright and
+other applicable laws.
+
+2. LIMITED PERMISSION
+
+You may access the publicly hosted website and view this public repository for
+personal evaluation and reference. Temporary copies created automatically by
+a web browser solely to access the website or repository are permitted.
+
+GitHub may provide additional platform-level rights, including viewing and
+forking, under the GitHub Terms of Service. This license grants no rights beyond
+those platform-level rights.
+
+3. RESTRICTIONS
+
+Except with prior written permission from Rohan Malhotra, you may not:
+
+- copy or reproduce the Project Materials;
+- modify, adapt, translate, or create derivative works from them;
+- publish, distribute, transfer, sublicense, sell, or commercially exploit
+  them;
+- deploy, host, or operate a copy of the project or a substantially similar
+  version derived from it;
+- incorporate the Project Materials or substantial portions of them into
+  another product, service, repository, or website; or
+- remove or alter copyright, attribution, or proprietary notices.
+
+4. THIRD-PARTY MATERIALS
+
+This license applies only to Project Materials owned by Rohan Malhotra. Google
+Summer of Code archive data, organization names and logos, third-party
+libraries, and other third-party materials remain the property of their
+respective owners and are subject to their own terms. Nothing in this license
+claims ownership of, or changes the rights applicable to, those materials.
+
+5. PERMISSION REQUESTS
+
+Any use not expressly permitted above requires prior written permission from
+Rohan Malhotra. Permission requests may be submitted through the repository's
+issue tracker or the creator links published on the website.
+
+6. NO WARRANTY
+
+THE PROJECT MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING
+FROM OR RELATED TO THE PROJECT MATERIALS OR THEIR USE.
