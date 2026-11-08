@@ -35,6 +35,7 @@ jobs:
             const pullNumber = context.payload.pull_request?.number ?? context.payload.issue.number;
             const signaturePhrase = 'I have read and agree to the Contributor License Agreement';
             const signaturePath = 'signatures/cla-v1.json';
+            const signatureBranch = 'cla-signatures';
             const claUrl = `https://github.com/${owner}/${repo}/blob/main/CLA.md`;
 
             const { data: pull } = await github.rest.pulls.get({
@@ -53,7 +54,7 @@ jobs:
                 owner,
                 repo,
                 path: signaturePath,
-                ref: context.payload.repository.default_branch,
+                ref: signatureBranch,
               });
               fileSha = file.sha;
               signatures = JSON.parse(
@@ -82,7 +83,7 @@ jobs:
                 owner,
                 repo,
                 path: signaturePath,
-                branch: context.payload.repository.default_branch,
+                branch: signatureBranch,
                 message: `Record CLA signature for @${contributor}`,
                 content: Buffer.from(`${JSON.stringify(signatures, null, 2)}\n`).toString('base64'),
                 ...(fileSha ? { sha: fileSha } : {}),
