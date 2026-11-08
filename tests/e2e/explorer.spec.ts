@@ -503,13 +503,27 @@ test('organization profiles preserve contributor and archive details', async ({
 test('project years switch a grid of project cards', async ({ page }) => {
   await page.goto('/org/python-software-foundation/');
 
+  await expect(
+    page.getByRole('heading', {
+      level: 2,
+      name: 'Completed projects across years',
+    }),
+  ).toBeVisible();
+
   const yearTabs = page.getByRole('tablist', { name: 'Participation years' });
   await expect(yearTabs.getByRole('tab')).toHaveCount(11);
   await expect(yearTabs.getByRole('tab', { name: '2026' })).toHaveAttribute(
     'aria-selected',
     'true',
   );
-  await expect(page.locator('[data-project-year-panel="2026"]')).toBeVisible();
+  const projects2026 = page.locator('[data-project-year-panel="2026"]');
+  await expect(projects2026).toBeVisible();
+  await expect(
+    projects2026
+      .locator('.project-card')
+      .first()
+      .getByRole('link', { name: 'Code submission' }),
+  ).toHaveAttribute('href', /^https:\/\//);
 
   await yearTabs.getByRole('tab', { name: '2025' }).click();
   await expect(yearTabs.getByRole('tab', { name: '2025' })).toHaveAttribute(

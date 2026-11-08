@@ -65,10 +65,11 @@ node scripts/validate-repository-links.mjs --network
 Annual source snapshots live in `data/raw/YYYY.json`. They are factual exports of the public Google Summer of Code archive data model. To refresh:
 
 1. Replace or add the relevant annual snapshot.
-2. Run `npm run cache:logos` to rebuild the normalized data and download any new organization logos into the local static asset cache.
-3. Review changes to `src/data/organizations.json`, `data/logo-assets.json`, `public/organization-logos/`, and `api/repository-links.json`.
-4. Run `npm run validate`, `npm test`, and `npm run build`.
-5. Manually review new or changed repository links using [`docs/repository-curation.md`](docs/repository-curation.md).
+2. Once code submissions are published, run `npm run refresh:code-links -- YYYY` to fill their official links from the GSoC API.
+3. Run `npm run cache:logos` to rebuild the normalized data and download any new organization logos into the local static asset cache.
+4. Review changes to `src/data/organizations.json`, `data/logo-assets.json`, `public/organization-logos/`, and `api/repository-links.json`.
+5. Run `npm run validate`, `npm test`, and `npm run build`.
+6. Manually review new or changed repository links using [`docs/repository-curation.md`](docs/repository-curation.md).
 
 This follows the same data lifecycle as `gsocorganizations.dev`: annual JSON snapshots are committed to the repository and compiled during the static build. The reference site does not query GSoC or GitHub at page-request time and does not contain an automatic annual scraper.
 
