@@ -64,7 +64,9 @@ verifying missing organization repository links.
 
 First-time contributors sign the [Contributor License Agreement](./CLA.md)
 before their first merge. Contributors with five meaningful merged pull
-requests may apply to the [collaborator program](./COLLABORATOR_PROGRAM.md).
+requests may apply to the [collaborator program](./COLLABORATOR_PROGRAM.md)'s
+moderation stage. This does not grant write access, which requires separate
+Project Owner approval.
 
 See the [changelog](./CHANGELOG.md) for release history.
 

@@ -1,12 +1,14 @@
 name: Collaborator application
-description: Apply after five or more meaningful pull requests have been merged.
+description: Apply for the moderation stage after five meaningful merged pull requests.
 title: '[Collaborator application]: '
 labels: ['collaborator application']
 body:
   - type: markdown
     attributes:
       value: |
-        Thank you for investing in GSoC Organizations. Five merged pull requests make you eligible to apply; access is granted only after a maintainer reviews contribution quality, conduct, reliability, and current project needs.
+        Thank you for investing in GSoC Organizations. Five meaningful merged pull requests make you eligible to apply for the moderation stage; they do not grant repository or write access. Applications are approved only after maintainer review. Write access is a separate request requiring explicit Project Owner approval.
+
+        Because this repository is currently owned by a personal GitHub account, GitHub cannot grant a close-only Triage role. Approved moderation collaborators will not receive broad write access merely to close issues or pull requests.
 
   - type: input
     id: github
@@ -43,6 +45,14 @@ body:
     validations:
       required: true
 
+  - type: textarea
+    id: moderation
+    attributes:
+      label: Moderation approach
+      description: Explain when you would close a pull request, when you would request changes instead, and when you would escalate to the Project Owner.
+    validations:
+      required: true
+
   - type: checkboxes
     id: commitments
     attributes:
@@ -51,6 +61,12 @@ body:
         - label: I have read and agree to follow `CONTRIBUTING.md` and the collaborator program.
           required: true
         - label: I understand that eligibility does not guarantee access and that access may be removed if responsibilities are not met.
+          required: true
+        - label: I understand that this application is for moderation responsibility only and does not grant write or merge access.
+          required: true
+        - label: I will always explain closures, avoid closing valid work prematurely, and escalate uncertain cases.
+          required: true
+        - label: I understand that write access requires a separate request and explicit Project Owner approval.
           required: true
         - label: I will protect contributor data, repository credentials, and the integrity of the curated dataset.
           required: true

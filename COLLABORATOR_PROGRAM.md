@@ -30,6 +30,44 @@ The Project Owner may ask follow-up questions, request a trial period, defer the
 application, or decline it. Decisions consider the complete contribution record
 and are not based only on a count.
 
+## Access stages
+
+### Stage 1: moderation collaborator
+
+An accepted applicant begins in the moderation stage. This stage is intended to
+use GitHub's **Triage** role, which can manage issues and pull requests without
+permission to push or merge code.
+
+Moderation collaborators may:
+
+- review pull requests and leave actionable feedback;
+- label, assign, and organize issues and pull requests;
+- close or reopen work that is clearly spam, duplicated, abandoned, malicious,
+  outside the project scope, or in violation of the assignment policy; and
+- help contributors understand automated checks and project guidelines.
+
+Every closure must include a clear reason. Uncertain or disputed cases must be
+escalated to the Project Owner instead of being closed. A pull request must not
+be closed merely because it has fixable CI failures, needs revision, or takes a
+different reasonable approach.
+
+Moderation collaborators cannot push to the repository, merge pull requests,
+approve required reviews, change workflows or repository settings, bypass
+automated checks, or grant access to anyone else.
+
+### Stage 2: write access
+
+Write access is separate from the collaborator application. A moderation
+collaborator may request it after demonstrating sound technical judgment,
+reliable reviews, careful moderation, and consistent compliance with project
+policy. There is no automatic contribution count or period that grants write
+access.
+
+The Project Owner must approve write access explicitly. Approval may be
+deferred or declined based on project needs, security considerations, review
+quality, or readiness. Branch protection, independent review, CLA checks, and
+CI requirements continue to apply after write access is granted.
+
 ## Responsibilities
 
 Collaborators are expected to:
@@ -47,7 +85,15 @@ Collaborators are expected to:
 
 This repository is currently owned by a personal GitHub account. GitHub gives a
 personal repository’s collaborators write access rather than a narrower triage
-role. For that reason, access is always granted manually and conservatively.
+role. Therefore, approval for the moderation stage does **not** currently result
+in direct repository collaborator access. The Project Owner will perform the
+requested moderation action until the repository is transferred to a GitHub
+organization where the Triage role can be assigned safely.
+
+No applicant will receive broad write access merely to enable issue or
+pull-request moderation. If the repository moves to an organization, accepted
+moderation collaborators may receive the Triage role; write access will still
+require the separate approval described above.
 
 Collaborator access may be reviewed or removed after inactivity, repeated
 quality problems, policy violations, unsafe handling of access, or conduct that

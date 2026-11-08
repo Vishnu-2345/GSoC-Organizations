@@ -202,8 +202,10 @@ request. After five meaningful merged pull requests, the contributor is invited
 to apply to the [collaborator program](./COLLABORATOR_PROGRAM.md).
 
 Five merged pull requests establish eligibility; they do not automatically
-grant write access. Applications are reviewed for contribution quality,
-reliability, community conduct, review experience, and current project needs.
+grant repository or write access. Applications are reviewed for contribution
+quality, reliability, community conduct, review experience, and current project
+needs. Accepted applicants begin in the moderation stage. Write access requires
+a separate request and explicit approval from the Project Owner.
 
 ## Getting help
 

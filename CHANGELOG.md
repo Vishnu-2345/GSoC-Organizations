@@ -9,6 +9,8 @@ All notable project changes are documented in this file.
 - Replaced the previous license with the GSoC Organizations Noncommercial
   Community Source License, permitting contribution forks while prohibiting
   commercial use, redistribution, independent deployment, and copied websites.
+- Defined a staged collaborator program: limited moderation comes first, while
+  write access requires a separate request and explicit Project Owner approval.
 
 ### Added
 

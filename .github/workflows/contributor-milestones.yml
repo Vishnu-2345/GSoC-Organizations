@@ -63,6 +63,6 @@ jobs:
               const applicationUrl = `https://github.com/${owner}/${repo}/issues/new?template=collaborator-application.yml`;
               await postOnce(
                 '<!-- gsoc-organizations-fifth-merge -->',
-                `🌟 Congratulations @${contributor} on five merged contributions! You are now eligible to [apply to the collaborator program](${applicationUrl}). Eligibility starts the review process and does not automatically grant repository access.`,
+                `🌟 Congratulations @${contributor} on five merged contributions! You are now eligible to [apply for the collaborator program's moderation stage](${applicationUrl}). Eligibility starts the review process and does not grant repository or write access. Write access requires a separate request and explicit Project Owner approval.`,
               );
             }
