@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96" role="img" aria-label="GSoC Organizations">
+<title>GSoC Organizations</title>
+<circle cx="48" cy="48" r="46" fill="#FBBC05"/>
+<circle cx="48" cy="48" r="39.5" fill="none" stroke="#FFFFFF" stroke-width="4.5"/>
+<path d="M26 33 L48 48 L26 63" fill="none" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="55" y1="63" x2="71" y2="63" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round"/>
+</svg>
