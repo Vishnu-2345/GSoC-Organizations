@@ -56,6 +56,12 @@ Select a participation year to browse its completed projects and open the corres
 
 The website is generated from version-controlled GSoC archive snapshots. Organization data and logos are prepared at build time, allowing the deployed site to remain static and fast.
 
+## Contributing
+
+Contributions are welcome. Read the [contributing guide](./CONTRIBUTING.md) for
+local setup, pull-request expectations, and the beginner-friendly workflow for
+verifying missing organization repository links.
+
 ## Disclaimer
 
 This is an independent community project and is not affiliated with or endorsed by Google. Google Summer of Code is a Google program.
