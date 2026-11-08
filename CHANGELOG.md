@@ -2,6 +2,14 @@
 
 All notable project changes are documented in this file.
 
+## [Unreleased]
+
+### Changed
+
+- Replaced the previous license with the GSoC Organizations Noncommercial
+  Community Source License, permitting contribution forks while prohibiting
+  commercial use, redistribution, independent deployment, and copied websites.
+
 ## [1.0.0] — 2026-11-09
 
 The first public release of GSoC Organizations.

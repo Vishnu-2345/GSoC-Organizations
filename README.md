@@ -74,6 +74,6 @@ This is an independent community project and is not affiliated with or endorsed 
 
 ## License
 
-Copyright © 2026 Rohan Malhotra. All rights reserved.
+Copyright © 2026 Rohan Malhotra.
 
-This is proprietary source-available software, not open-source software. Copying, modification, redistribution, republication, or deployment is prohibited without prior written permission. See the [LICENSE](./LICENSE) file for the complete terms.
+This project uses the [GSoC Organizations Noncommercial Community Source License](./LICENSE). You may fork and modify the code only to prepare contributions for this repository. Commercial use, redistribution, independent deployment, and copied or substantially similar websites are prohibited without prior written permission.

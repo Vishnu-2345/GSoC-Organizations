@@ -155,10 +155,11 @@ review.
 
 ## Licensing and contribution rights
 
-This repository is source-available under its [proprietary license](./LICENSE),
-not an open-source license. Contributing does not grant permission to reuse,
-redistribute, or deploy the project outside the permissions stated in that
-license.
+This repository uses the [GSoC Organizations Noncommercial Community Source
+License](./LICENSE), not an open-source license. It permits you to fork, clone,
+and modify the project only as needed to prepare and submit a contribution to
+this repository. It does not permit commercial use, redistribution, independent
+deployment, or copied websites.
 
 Only submit work you have the right to contribute. By opening a pull request,
 you confirm that the contribution is your own or that you have permission to
