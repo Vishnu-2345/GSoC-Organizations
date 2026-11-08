@@ -1932,6 +1932,14 @@ html.page-navigating .site-loading {
   color: var(--text-secondary);
 }
 
+body.directory-page .explorer-layout {
+  padding-bottom: 0;
+}
+
+body.directory-page .site-footer {
+  margin-top: 0;
+}
+
 .footer-inner {
   display: grid;
   grid-template-columns: minmax(320px, 1.2fr) minmax(420px, 1fr);

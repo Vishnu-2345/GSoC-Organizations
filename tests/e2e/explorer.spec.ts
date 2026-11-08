@@ -817,6 +817,31 @@ test('filter scrollbars do not overlap option counts', async ({
   expect(rightClearance).toBeGreaterThanOrEqual(12);
 });
 
+test('directory footer follows the load-more row without a blank gap', async ({
+  page,
+}) => {
+  await page.goto('/');
+  await expect(page.getByTestId('explorer')).toHaveAttribute(
+    'data-ready',
+    'true',
+  );
+  await page.getByRole('button', { name: 'Load more organizations' }).click();
+  await expect(page.getByText('Showing 96 of 519')).toBeVisible();
+
+  const verticalGap = await page.evaluate(() => {
+    const loadMore = document.querySelector('.load-more-row');
+    const footer = document.querySelector('.site-footer');
+    if (!loadMore || !footer)
+      throw new Error('Required layout elements missing');
+    return (
+      footer.getBoundingClientRect().top -
+      loadMore.getBoundingClientRect().bottom
+    );
+  });
+
+  expect(verticalGap).toBeLessThanOrEqual(1);
+});
+
 test('footer provides project, privacy, and creator links', async ({
   page,
 }, testInfo) => {
