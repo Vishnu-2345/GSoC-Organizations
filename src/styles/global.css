@@ -2103,6 +2103,19 @@ html.page-navigating .site-loading {
 
 .header-github-star-link {
   justify-self: end;
+  padding-inline: 12px;
+  border-color: var(--orange-deep);
+  background: var(--orange-deep);
+}
+
+.header-github-star-link:hover,
+.header-github-star-link:focus-visible {
+  border-color: var(--orange);
+  background: var(--orange);
+}
+
+.header-github-star-link .github-star-count {
+  border-left-color: rgba(255, 255, 255, 0.42);
 }
 
 .footer-column .footer-github-star-link {
@@ -2216,6 +2229,8 @@ html.page-navigating .site-loading {
 
   .header-github-star-link {
     justify-self: start;
+    width: 100%;
+    justify-content: center;
   }
 
   .global-search {

@@ -811,9 +811,23 @@ test('footer provides project, privacy, and creator links', async ({
     'href',
     'https://github.com/rohanmalhotracodes/GSoC-Organizations',
   );
+  await expect(headerStarLink).toBeVisible();
+  await expect(headerStarLink).toContainText('Star us on GitHub');
+  await expect(headerStarLink).toHaveCSS('background-color', 'rgb(168, 70, 0)');
   const headerStarBox = await headerStarLink.boundingBox();
+  const headerSearchBox = await header.locator('.global-search').boundingBox();
   expect(headerStarBox).not.toBeNull();
+  expect(headerSearchBox).not.toBeNull();
   expect(headerStarBox!.height).toBeLessThanOrEqual(38);
+  if (testInfo.project.name.includes('mobile')) {
+    expect(
+      Math.abs(headerStarBox!.width - headerSearchBox!.width),
+    ).toBeLessThan(2);
+  } else {
+    expect(headerStarBox!.x).toBeGreaterThan(
+      headerSearchBox!.x + headerSearchBox!.width,
+    );
+  }
   releaseGitHubApi();
   const footerBrand = footer.getByRole('link', {
     name: 'GSoC Organizations footer home',
