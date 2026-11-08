@@ -62,6 +62,12 @@ Contributions are welcome. Read the [contributing guide](./CONTRIBUTING.md) for
 local setup, pull-request expectations, and the beginner-friendly workflow for
 verifying missing organization repository links.
 
+First-time contributors sign the [Contributor License Agreement](./CLA.md)
+before their first merge. Contributors with five meaningful merged pull
+requests may apply to the [collaborator program](./COLLABORATOR_PROGRAM.md).
+
+See the [changelog](./CHANGELOG.md) for release history.
+
 ## Disclaimer
 
 This is an independent community project and is not affiliated with or endorsed by Google. Google Summer of Code is a Google program.

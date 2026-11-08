@@ -1,0 +1,127 @@
+name: CLA
+
+on:
+  pull_request_target:
+    types: [opened, reopened, synchronize]
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+  statuses: write
+
+concurrency:
+  group: cla-signatures
+  cancel-in-progress: false
+
+jobs:
+  check:
+    name: Contributor agreement
+    if: >-
+      github.event_name == 'pull_request_target' ||
+      (github.event_name == 'issue_comment' &&
+      github.event.issue.pull_request &&
+      github.event.comment.body == 'I have read and agree to the Contributor License Agreement')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check or record the CLA signature
+        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const pullNumber = context.payload.pull_request?.number ?? context.payload.issue.number;
+            const signaturePhrase = 'I have read and agree to the Contributor License Agreement';
+            const signaturePath = 'signatures/cla-v1.json';
+            const claUrl = `https://github.com/${owner}/${repo}/blob/main/CLA.md`;
+
+            const { data: pull } = await github.rest.pulls.get({
+              owner,
+              repo,
+              pull_number: pullNumber,
+            });
+
+            const contributor = pull.user.login;
+            const exempt = contributor === owner || contributor.endsWith('[bot]');
+            let fileSha;
+            let signatures = [];
+
+            try {
+              const { data: file } = await github.rest.repos.getContent({
+                owner,
+                repo,
+                path: signaturePath,
+                ref: context.payload.repository.default_branch,
+              });
+              fileSha = file.sha;
+              signatures = JSON.parse(
+                Buffer.from(file.content.replace(/\n/g, ''), 'base64').toString('utf8'),
+              );
+            } catch (error) {
+              if (error.status !== 404) throw error;
+            }
+
+            let signed = exempt || signatures.some(({ login }) => login === contributor);
+            const isSignatureComment =
+              context.eventName === 'issue_comment' &&
+              context.actor === contributor &&
+              context.payload.comment.body.trim() === signaturePhrase;
+
+            if (!signed && isSignatureComment) {
+              signatures.push({
+                login: contributor,
+                signedAt: new Date().toISOString(),
+                claVersion: '1.0',
+                pullRequest: pullNumber,
+              });
+              signatures.sort((a, b) => a.login.localeCompare(b.login));
+
+              await github.rest.repos.createOrUpdateFileContents({
+                owner,
+                repo,
+                path: signaturePath,
+                branch: context.payload.repository.default_branch,
+                message: `Record CLA signature for @${contributor}`,
+                content: Buffer.from(`${JSON.stringify(signatures, null, 2)}\n`).toString('base64'),
+                ...(fileSha ? { sha: fileSha } : {}),
+              });
+
+              signed = true;
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number: pullNumber,
+                body: `✅ Thank you @${contributor}. Your CLA v1.0 signature has been recorded.`,
+              });
+            }
+
+            await github.rest.repos.createCommitStatus({
+              owner,
+              repo,
+              sha: pull.head.sha,
+              state: signed ? 'success' : 'failure',
+              context: 'CLA / signed',
+              description: signed ? 'Contributor agreement signed' : 'CLA signature required',
+              target_url: claUrl,
+            });
+
+            if (!signed && context.eventName === 'pull_request_target') {
+              const marker = '<!-- gsoc-organizations-cla-request -->';
+              const comments = await github.paginate(github.rest.issues.listComments, {
+                owner,
+                repo,
+                issue_number: pullNumber,
+                per_page: 100,
+              });
+
+              if (!comments.some(({ body }) => body?.includes(marker))) {
+                await github.rest.issues.createComment({
+                  owner,
+                  repo,
+                  issue_number: pullNumber,
+                  body: `${marker}\nThanks for contributing, @${contributor}! Before this pull request can be merged, please read the [Contributor License Agreement](${claUrl}) and post this exact comment:\n\n> ${signaturePhrase}\n\nYou only need to sign CLA v1.0 once.`,
+                });
+              }
+            }

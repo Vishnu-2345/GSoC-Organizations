@@ -1,0 +1,42 @@
+name: Request maintainer review
+
+on:
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  request:
+    if: github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Request review after automated checks pass
+        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const maintainer = 'rohanmalhotracodes';
+            const pulls = await github.rest.repos.listPullRequestsAssociatedWithCommit({
+              owner,
+              repo,
+              commit_sha: context.payload.workflow_run.head_sha,
+            });
+
+            for (const pull of pulls.data.filter(({ state }) => state === 'open')) {
+              if (pull.user.login === maintainer) continue;
+              try {
+                await github.rest.pulls.requestReviewers({
+                  owner,
+                  repo,
+                  pull_number: pull.number,
+                  reviewers: [maintainer],
+                });
+              } catch (error) {
+                if (error.status !== 422) throw error;
+              }
+            }

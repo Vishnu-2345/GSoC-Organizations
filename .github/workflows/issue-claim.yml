@@ -1,0 +1,96 @@
+name: Issue claims
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: issue-claims
+  cancel-in-progress: false
+
+jobs:
+  claim:
+    if: >-
+      !github.event.issue.pull_request &&
+      (github.event.comment.body == '/claim' || github.event.comment.body == '/unclaim')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Process issue claim
+        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const issue = context.payload.issue;
+            const contributor = context.actor;
+            const command = context.payload.comment.body.trim();
+
+            const reply = (body) => github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number: issue.number,
+              body,
+            });
+
+            if (command === '/unclaim') {
+              if (!issue.assignees.some(({ login }) => login === contributor)) {
+                await reply(`@${contributor}, this issue is not assigned to you.`);
+                return;
+              }
+              await github.rest.issues.removeAssignees({
+                owner,
+                repo,
+                issue_number: issue.number,
+                assignees: [contributor],
+              });
+              try {
+                await github.rest.issues.removeLabel({
+                  owner,
+                  repo,
+                  issue_number: issue.number,
+                  name: 'in progress',
+                });
+              } catch (error) {
+                if (error.status !== 404) throw error;
+              }
+              await reply(`✅ @${contributor} released this issue for another contributor.`);
+              return;
+            }
+
+            if (issue.state !== 'open') return;
+            if (issue.assignees.length > 0) {
+              await reply(`Sorry @${contributor}, this issue is already assigned.`);
+              return;
+            }
+
+            const active = await github.rest.search.issuesAndPullRequests({
+              q: `repo:${owner}/${repo} is:issue is:open assignee:${contributor}`,
+              per_page: 2,
+            });
+            if (active.data.total_count > 0) {
+              await reply(`@${contributor}, please finish or release your currently assigned issue before claiming another one.`);
+              return;
+            }
+
+            try {
+              await github.rest.issues.addAssignees({
+                owner,
+                repo,
+                issue_number: issue.number,
+                assignees: [contributor],
+              });
+              await github.rest.issues.addLabels({
+                owner,
+                repo,
+                issue_number: issue.number,
+                labels: ['in progress'],
+              });
+              await reply(`✅ Assigned to @${contributor}. Please keep the issue updated and use \`/unclaim\` if you can no longer work on it.`);
+            } catch (error) {
+              if (error.status !== 422) throw error;
+              await reply(`@${contributor}, GitHub could not assign this issue automatically. A maintainer will need to assign it manually.`);
+            }

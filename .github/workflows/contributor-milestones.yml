@@ -1,0 +1,68 @@
+name: Contributor milestones
+
+on:
+  pull_request_target:
+    types: [closed]
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+jobs:
+  celebrate:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Recognize contributor milestones
+        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const pull = context.payload.pull_request;
+            const contributor = pull.user.login;
+
+            if (contributor === owner || contributor.endsWith('[bot]')) return;
+
+            const closedPulls = await github.paginate(github.rest.pulls.list, {
+              owner,
+              repo,
+              state: 'closed',
+              per_page: 100,
+            });
+            const mergedCount = closedPulls.filter(
+              ({ user, merged_at }) => user?.login === contributor && merged_at,
+            ).length;
+
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              owner,
+              repo,
+              issue_number: pull.number,
+              per_page: 100,
+            });
+
+            const postOnce = async (marker, body) => {
+              if (comments.some(({ body: comment }) => comment?.includes(marker))) return;
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number: pull.number,
+                body: `${marker}\n${body}`,
+              });
+            };
+
+            if (mergedCount === 1) {
+              await postOnce(
+                '<!-- gsoc-organizations-first-merge -->',
+                `🎉 Congratulations @${contributor} on your first merged contribution to GSoC Organizations! Thank you for helping make the directory more useful for future open-source contributors.`,
+              );
+            }
+
+            if (mergedCount === 5) {
+              const applicationUrl = `https://github.com/${owner}/${repo}/issues/new?template=collaborator-application.yml`;
+              await postOnce(
+                '<!-- gsoc-organizations-fifth-merge -->',
+                `🌟 Congratulations @${contributor} on five merged contributions! You are now eligible to [apply to the collaborator program](${applicationUrl}). Eligibility starts the review process and does not automatically grant repository access.`,
+              );
+            }

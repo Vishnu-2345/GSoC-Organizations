@@ -7,7 +7,8 @@ and experienced open-source contributors are welcome.
 
 1. Read this guide before opening a pull request.
 2. Choose an existing issue and check that nobody else is working on it.
-3. Comment on the issue to say you would like to work on it.
+3. Comment `/claim` on the issue. The claim bot allows one active assignment per
+   contributor so work is not duplicated.
 4. Keep each pull request focused on one issue.
 5. Link the issue in the pull-request description with `Closes #ISSUE_NUMBER`.
 
@@ -38,8 +39,8 @@ can be completed as focused contributions.
 ### 1. Claim an issue
 
 Open the pinned initiative, expand one of its four batch trackers, and choose an
-unassigned organization. Comment on that issue before starting so contributors
-do not duplicate work.
+unassigned organization. Comment `/claim` to request the assignment. If you can
+no longer work on it, comment `/unclaim` so someone else can contribute.
 
 ### 2. Verify the destination
 
@@ -137,6 +138,23 @@ Run `npm run test:e2e` when a change affects interactive browser behavior.
 - [ ] No secrets, tokens, private information, or unrelated generated files are
       committed.
 
+## Automated review process
+
+Every pull request goes through the same first review before the maintainer is
+requested:
+
+1. The CLA check confirms that every contributor has accepted the current
+   agreement.
+2. CI checks formatting, curated data, repository links, unit tests, and the
+   production build.
+3. GitHub Copilot may leave an automated review using the repository's review
+   instructions.
+4. After CI passes, the maintainer is automatically requested for human review.
+
+Automated feedback is a first pass, not a guarantee that a change will be
+merged. Address its valid findings, explain anything that does not apply, and
+keep the pull request focused while it is under review.
+
 ## Licensing and contribution rights
 
 This repository is source-available under its [proprietary license](./LICENSE),
@@ -148,6 +166,21 @@ Only submit work you have the right to contribute. By opening a pull request,
 you confirm that the contribution is your own or that you have permission to
 submit it, and that it may be incorporated into this project under the
 project's existing license.
+
+Before a first pull request can be merged, read [the Contributor License
+Agreement](./CLA.md) and post the exact acceptance statement requested by the
+CLA check. The signature applies to future contributions under that GitHub
+account until the agreement is materially changed.
+
+## Contributor milestones
+
+The project posts a thank-you message after a contributor's first merged pull
+request. After five meaningful merged pull requests, the contributor is invited
+to apply to the [collaborator program](./COLLABORATOR_PROGRAM.md).
+
+Five merged pull requests establish eligibility; they do not automatically
+grant write access. Applications are reviewed for contribution quality,
+reliability, community conduct, review experience, and current project needs.
 
 ## Getting help
 

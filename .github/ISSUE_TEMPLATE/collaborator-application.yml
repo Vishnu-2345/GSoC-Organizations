@@ -1,0 +1,56 @@
+name: Collaborator application
+description: Apply after five or more meaningful pull requests have been merged.
+title: '[Collaborator application]: '
+labels: ['collaborator application']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for investing in GSoC Organizations. Five merged pull requests make you eligible to apply; access is granted only after a maintainer reviews contribution quality, conduct, reliability, and current project needs.
+
+  - type: input
+    id: github
+    attributes:
+      label: GitHub username
+      placeholder: '@username'
+    validations:
+      required: true
+
+  - type: textarea
+    id: contributions
+    attributes:
+      label: Merged contributions
+      description: Link at least five merged pull requests and briefly state what each improved.
+      placeholder: |
+        - #123 — verified the repository link for Example Organization
+        - #124 — fixed mobile filter behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Why do you want to collaborate?
+      description: Describe the area you want to maintain and how you plan to help contributors.
+    validations:
+      required: true
+
+  - type: textarea
+    id: review
+    attributes:
+      label: Review experience
+      description: Link any useful issue triage, pull-request reviews, or contributor support you have already provided.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: commitments
+    attributes:
+      label: Commitments
+      options:
+        - label: I have read and agree to follow `CONTRIBUTING.md` and the collaborator program.
+          required: true
+        - label: I understand that eligibility does not guarantee access and that access may be removed if responsibilities are not met.
+          required: true
+        - label: I will protect contributor data, repository credentials, and the integrity of the curated dataset.
+          required: true
