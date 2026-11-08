@@ -147,13 +147,11 @@ requested:
    agreement.
 2. CI checks formatting, curated data, repository links, unit tests, and the
    production build.
-3. GitHub Copilot may leave an automated review using the repository's review
-   instructions.
-4. After CI passes, the maintainer is automatically requested for human review.
+3. After CI passes, the maintainer is automatically requested for human review.
 
-Automated feedback is a first pass, not a guarantee that a change will be
-merged. Address its valid findings, explain anything that does not apply, and
-keep the pull request focused while it is under review.
+Automated checks are a first pass, not a guarantee that a change will be
+merged. Fix any failures and keep the pull request focused while it is under
+review.
 
 ## Licensing and contribution rights
 
