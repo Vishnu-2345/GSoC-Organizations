@@ -17,6 +17,8 @@ All notable project changes are documented in this file.
 - Added a structured pull-request template inspired by Oppia's review workflow,
   with required issue linkage, evidence, responsive proof, verification, and a
   contributor checklist tailored to GSoC Organizations.
+- Added a one-time welcome and clear CLA signing instructions for first-time
+  contributors when they open a pull request.
 
 ## [1.0.0] — 2026-11-09
 

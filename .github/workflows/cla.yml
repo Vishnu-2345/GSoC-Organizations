@@ -46,6 +46,10 @@ jobs:
 
             const contributor = pull.user.login;
             const exempt = contributor === owner || contributor.endsWith('[bot]');
+            const firstTimeAssociations = new Set(['FIRST_TIMER', 'FIRST_TIME_CONTRIBUTOR']);
+            const isFirstTimeContributor = firstTimeAssociations.has(
+              pull.author_association,
+            );
             let fileSha;
             let signatures = [];
 
@@ -118,11 +122,15 @@ jobs:
               });
 
               if (!comments.some(({ body }) => body?.includes(marker))) {
+                const welcome = isFirstTimeContributor
+                  ? `👋 Welcome, @${contributor}, and thank you for opening your first pull request to GSoC Organizations!`
+                  : `Thanks for contributing, @${contributor}!`;
+
                 await github.rest.issues.createComment({
                   owner,
                   repo,
                   issue_number: pullNumber,
-                  body: `${marker}\nThanks for contributing, @${contributor}! Before this pull request can be merged, please read the [Contributor License Agreement](${claUrl}) and post this exact comment:\n\n> ${signaturePhrase}\n\nYou only need to sign CLA v1.0 once.`,
+                  body: `${marker}\n${welcome}\n\nBefore this pull request can be merged, please read the [Contributor License Agreement](${claUrl}) and post this exact comment:\n\n> ${signaturePhrase}\n\nThe CLA check will record your acceptance automatically. You only need to sign CLA v1.0 once for all future contributions from this GitHub account.`,
                 });
               }
             }
