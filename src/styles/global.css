@@ -383,6 +383,7 @@ html.page-navigating .site-loading {
   border-radius: var(--radius);
   background: var(--card);
   box-shadow: var(--shadow);
+  scrollbar-gutter: stable;
   scrollbar-width: thin;
 }
 
@@ -500,7 +501,8 @@ html.page-navigating .site-loading {
   display: grid;
   max-height: 188px;
   overflow-y: auto;
-  padding-right: 4px;
+  padding-right: 12px;
+  scrollbar-gutter: stable;
   scrollbar-width: thin;
 }
 

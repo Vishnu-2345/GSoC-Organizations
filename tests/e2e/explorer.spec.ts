@@ -784,6 +784,39 @@ test('a small filtered result set keeps the filter panel anchored', async ({
   expect(Math.abs(sidebarTopAfter - sidebarTopBefore)).toBeLessThan(1);
 });
 
+test('filter scrollbars do not overlap option counts', async ({
+  page,
+}, testInfo) => {
+  test.skip(
+    testInfo.project.name.includes('mobile'),
+    'The mobile drawer uses the full viewport width.',
+  );
+  await page.setViewportSize({ width: 1440, height: 640 });
+  await page.goto('/');
+  await expect(page.getByTestId('explorer')).toHaveAttribute(
+    'data-ready',
+    'true',
+  );
+
+  const yearOptions = page
+    .getByRole('complementary', { name: 'Organization filters' })
+    .locator('.compact-options');
+  const yearCount = yearOptions
+    .getByRole('checkbox', { name: 'Participation year 2023' })
+    .locator('xpath=..')
+    .locator('small');
+  const rightClearance = await yearOptions.evaluate(
+    (container, count) => {
+      const containerBox = container.getBoundingClientRect();
+      const countBox = (count as HTMLElement).getBoundingClientRect();
+      return containerBox.right - countBox.right;
+    },
+    await yearCount.elementHandle(),
+  );
+
+  expect(rightClearance).toBeGreaterThanOrEqual(12);
+});
+
 test('footer provides project, privacy, and creator links', async ({
   page,
 }, testInfo) => {
