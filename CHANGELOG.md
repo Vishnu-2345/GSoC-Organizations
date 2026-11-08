@@ -21,6 +21,8 @@ All notable project changes are documented in this file.
   contributors when they open a pull request.
 - Expanded self-service issue claiming to two simultaneous assignments per
   contributor, with live conflict checks and `/unclaim` support.
+- Added daily claim-inactivity maintenance with a seven-day reminder and
+  automatic release after fourteen days without contributor progress.
 
 ## [1.0.0] — 2026-11-09
 

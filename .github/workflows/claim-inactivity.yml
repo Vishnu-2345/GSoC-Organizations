@@ -1,0 +1,152 @@
+name: Claim inactivity
+
+on:
+  schedule:
+    - cron: '23 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: read
+
+concurrency:
+  group: issue-claims
+  cancel-in-progress: false
+
+jobs:
+  maintain:
+    name: Remind or release inactive claims
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check assigned issues for activity
+        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const reminderAfterDays = 7;
+            const releaseAfterDays = 14;
+            const dayInMilliseconds = 24 * 60 * 60 * 1000;
+            const now = new Date();
+
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
+              owner,
+              repo,
+              state: 'open',
+              labels: 'in progress',
+              per_page: 100,
+            });
+
+            for (const issue of issues.filter(({ pull_request: pullRequest }) => !pullRequest)) {
+              if (issue.assignees.length === 0) continue;
+
+              const timeline = await github.paginate(
+                github.rest.issues.listEventsForTimeline,
+                {
+                  owner,
+                  repo,
+                  issue_number: issue.number,
+                  per_page: 100,
+                },
+              );
+
+              const released = [];
+
+              for (const assignee of issue.assignees) {
+                const login = assignee.login.toLowerCase();
+                const assignmentEvents = timeline
+                  .filter(
+                    (event) =>
+                      event.event === 'assigned' &&
+                      event.assignee?.login?.toLowerCase() === login &&
+                      event.created_at,
+                  )
+                  .map((event) => new Date(event.created_at));
+                const assignedAt = assignmentEvents.length
+                  ? new Date(Math.max(...assignmentEvents.map((date) => date.getTime())))
+                  : new Date(issue.updated_at ?? issue.created_at);
+
+                const issueActivity = timeline
+                  .filter((event) => {
+                    const actor = event.user?.login ?? event.actor?.login;
+                    return (
+                      actor?.toLowerCase() === login &&
+                      event.created_at &&
+                      !['assigned', 'unassigned'].includes(event.event)
+                    );
+                  })
+                  .map((event) => new Date(event.created_at))
+                  .filter((date) => date >= assignedAt);
+
+                const pullRequestActivity = timeline
+                  .filter(
+                    (event) =>
+                      event.event === 'cross-referenced' &&
+                      event.source?.issue?.pull_request &&
+                      event.source.issue.user?.login?.toLowerCase() === login &&
+                      event.source.issue.updated_at,
+                  )
+                  .map((event) => new Date(event.source.issue.updated_at))
+                  .filter((date) => date >= assignedAt);
+
+                const lastActivity = new Date(
+                  Math.max(
+                    assignedAt.getTime(),
+                    ...issueActivity.map((date) => date.getTime()),
+                    ...pullRequestActivity.map((date) => date.getTime()),
+                  ),
+                );
+                const inactiveDays = Math.floor(
+                  (now.getTime() - lastActivity.getTime()) / dayInMilliseconds,
+                );
+                const activityKey = lastActivity.toISOString();
+
+                if (inactiveDays >= releaseAfterDays) {
+                  await github.rest.issues.removeAssignees({
+                    owner,
+                    repo,
+                    issue_number: issue.number,
+                    assignees: [assignee.login],
+                  });
+                  released.push(assignee.login);
+
+                  await github.rest.issues.createComment({
+                    owner,
+                    repo,
+                    issue_number: issue.number,
+                    body: `<!-- gsoc-organizations-claim-release:${assignee.login}:${activityKey} -->\n♻️ @${assignee.login}, this issue has been released automatically after ${inactiveDays} days without an update. You are welcome to comment \`/claim\` again if it is still available and you are ready to continue.`,
+                  });
+                  continue;
+                }
+
+                if (inactiveDays >= reminderAfterDays) {
+                  const marker = `<!-- gsoc-organizations-claim-reminder:${assignee.login}:${activityKey} -->`;
+                  const alreadyReminded = timeline.some(({ body }) =>
+                    body?.includes(marker),
+                  );
+
+                  if (!alreadyReminded) {
+                    await github.rest.issues.createComment({
+                      owner,
+                      repo,
+                      issue_number: issue.number,
+                      body: `${marker}\n⏳ Hi @${assignee.login}, this is a friendly check-in after ${inactiveDays} days without an update. Please comment with your progress or update a pull request linked to this issue. Claims with no activity for ${releaseAfterDays} days are released automatically.`,
+                    });
+                  }
+                }
+              }
+
+              if (released.length === issue.assignees.length) {
+                try {
+                  await github.rest.issues.removeLabel({
+                    owner,
+                    repo,
+                    issue_number: issue.number,
+                    name: 'in progress',
+                  });
+                } catch (error) {
+                  if (error.status !== 404) throw error;
+                }
+              }
+            }

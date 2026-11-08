@@ -16,6 +16,12 @@ Each contributor may hold at most two open issue assignments at once. Finish an
 assigned issue or comment `/unclaim` to release it before claiming a third. Do
 not work on an issue assigned to someone else.
 
+The claim bot checks activity daily. After seven days without an update from
+the assignee, it posts a reminder. After fourteen days without progress, it
+automatically unassigns the issue and makes it available again. A meaningful
+comment from the assignee or activity on their pull request linked to the issue
+resets the inactivity period. Bot comments do not count as progress.
+
 Pull requests opened by someone who is not assigned to the linked issue are
 closed automatically. Pull requests without a linked issue are also closed.
 Claim the issue first, then reopen the pull request after correcting its
@@ -52,6 +58,11 @@ unassigned organization. Comment `/claim` and wait for the bot's confirmation
 before starting work. The bot supports self-assignment and allows no more than
 two active issue claims per contributor. If you can no longer work on an issue,
 comment `/unclaim` so someone else can contribute.
+
+Keep the issue updated while you work. If research takes longer than expected,
+post a short progress comment before the seven-day reminder. Claims are released
+after fourteen days without an assignee comment or activity on a linked pull
+request.
 
 ### 2. Verify the destination
 
