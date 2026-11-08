@@ -1,119 +1,80 @@
-# GSoC Organizations
+<p align="center">
+  <a href="https://gsocorganizations.xyz">
+    <img src="./public/brand/gsoc-organizations-logo-256.png" width="112" alt="GSoC Organizations logo">
+  </a>
+</p>
 
-GSoC Organizations is a static-first explorer for researching Google Summer of Code organizations. It provides local full-text search, filters, sorting, browser-local shortlists, participation history, historical projects, and transparent repository-link states.
+<h1 align="center">GSoC Organizations</h1>
 
-This is an independent community project. It is not affiliated with or endorsed by Google. Google Summer of Code is a Google program.
+<p align="center">
+  A comprehensive directory of Google Summer of Code organizations across every archived program year.
+</p>
 
-## Stack
+<p align="center">
+  <a href="https://gsocorganizations.xyz"><strong>Visit the website</strong></a>
+  ·
+  <a href="https://github.com/rohanmalhotracodes/GSoC-Organizations/issues">Report an issue</a>
+</p>
 
-- Astro static site generation
-- React islands for the interactive directory, shortlist, bookmarks, and notes
-- TypeScript
-- Version-controlled JSON data
-- Vitest unit tests and Playwright end-to-end tests
+![GSoC Organizations directory](./docs/images/directory.jpg)
 
-There is no browsing database, account system, advertising, analytics, or runtime GitHub API dependency.
+## About
 
-## Local development
+GSoC Organizations helps aspiring open-source contributors discover organizations, explore their participation history, and research completed Google Summer of Code projects.
 
-Requires Node.js 20.11 or newer.
+The directory currently covers 519 organizations from the 2016–2026 GSoC archives.
 
-```sh
+## Features
+
+- Search organizations, technologies, and topics.
+- Filter by participation year, category, technology, and topic.
+- Save organizations locally in the browser.
+- View organization technologies, topics, repositories, and participation totals.
+- Explore completed projects year by year.
+- Open official GSoC project pages and code submissions.
+
+## Organization profiles
+
+Each organization has a profile containing its participation history, technology and topic tags, official links, and project totals.
+
+![Organization profile and participation history](./docs/images/organization-profile.jpg)
+
+## Historical projects
+
+Select a participation year to browse its completed projects and open the corresponding GSoC project or code-submission page.
+
+![Historical GSoC projects](./docs/images/historical-projects.jpg)
+
+## Run locally
+
+Node.js 20.11 or newer is required.
+
+```bash
+git clone git@github.com:rohanmalhotracodes/GSoC-Organizations.git
+cd GSoC-Organizations
 npm install
-npm run cache:logos
 npm run dev
 ```
 
-The development server is available at `http://localhost:4321` by default.
+The development server runs at `http://localhost:4321` by default.
 
-## Build and preview
+Create a production build with:
 
-```sh
+```bash
 npm run build
-npm run preview
 ```
 
-The production output is written to `dist/`. Astro emits one static page for every organization.
+## Built with
 
-## Cloudflare Pages
+- [Astro](https://astro.build/)
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Cloudflare Pages](https://pages.cloudflare.com/)
 
-The production site is available at [gsocorganizations.xyz](https://gsocorganizations.xyz), with [www.gsocorganizations.xyz](https://www.gsocorganizations.xyz) attached to the same Cloudflare Pages project.
+## Data
 
-The tracked `wrangler.toml` configures the Pages project and its `dist/` output directory. After authenticating Wrangler, build and publish the production branch with:
+The website is generated from version-controlled GSoC archive snapshots. Organization data and logos are prepared at build time, allowing the deployed site to remain static and fast.
 
-```sh
-npm run deploy:pages
-```
+## Disclaimer
 
-## Validation and tests
-
-```sh
-npm run validate
-npm test
-npm run test:e2e
-npm run format:check
-```
-
-Repository validation is offline by default. Add network checks to detect redirects and broken links:
-
-```sh
-node scripts/validate-repository-links.mjs --network
-```
-
-## Data refresh
-
-Annual source snapshots live in `data/raw/YYYY.json`. They are factual exports of the public Google Summer of Code archive data model. To refresh:
-
-1. Replace or add the relevant annual snapshot.
-2. Once code submissions are published, run `npm run refresh:code-links -- YYYY` to fill their official links from the GSoC API.
-3. Run `npm run cache:logos` to rebuild the normalized data and download any new organization logos into the local static asset cache.
-4. Review changes to `src/data/organizations.json`, `data/logo-assets.json`, `public/organization-logos/`, and `api/repository-links.json`.
-5. Run `npm run validate`, `npm test`, and `npm run build`.
-6. Manually review new or changed repository links using [`docs/repository-curation.md`](docs/repository-curation.md).
-
-This follows the same data lifecycle as `gsocorganizations.dev`: annual JSON snapshots are committed to the repository and compiled during the static build. The reference site does not query GSoC or GitHub at page-request time and does not contain an automatic annual scraper.
-
-During compilation, `scripts/prepare-data.mjs`:
-
-1. Applies a reviewable organization-name alias table.
-2. Merges annual records when their canonical names or normalized official website URLs match.
-3. Uses only the three most recent participation records for current technology/topic tags while retaining every historical project year.
-4. Normalizes clear tag equivalents such as capitalization, surrounding whitespace, `nodejs`/`Node.js`, and `golang`/`Go` without collapsing meaningful distinctions such as C and C++.
-5. Derives participation totals and repository candidates.
-6. Emits the normalized static dataset consumed by Astro.
-
-The version-controlled logo cache keeps organization artwork on the same Cloudflare CDN as the website, so rendering does not depend on third-party image hosts. The first visible row is requested eagerly; remaining logos retain native lazy loading.
-
-This produces 519 historical organization identities from the 2016–2026 snapshots, including all 183 organizations in the 2026 snapshot.
-
-## Repository curation
-
-`api/repository-links.json` is generated for full coverage and then reviewed through the workflow in [`docs/repository-curation.md`](docs/repository-curation.md). Link states are explicit:
-
-- `manual`: verified against an organization-controlled source.
-- `derived`: inferred from the ideas page, contribution guide, or organization site and never shown as verified.
-- `search`: a clearly labeled repository-search fallback.
-
-For umbrella organizations, add multiple repository records rather than choosing one representative project.
-
-## Architecture
-
-- `src/pages/index.astro`: static directory shell.
-- `src/components/Explorer.tsx`: local search, filters, sorting, URL state, and shortlist.
-- `src/pages/org/[slug].astro`: statically generated organization pages.
-- `src/data/organizations.json`: normalized, version-controlled browsing data.
-- `api/repository-links.json`: repository link records and provenance.
-- `scripts/prepare-data.mjs`: repeatable build-time compiler using canonical-name and official-website identity matching.
-- `scripts/validate-data.mjs`: schema, duplicate, tag, and URL checks.
-- `scripts/validate-repository-links.mjs`: repository format, provenance, duplicate, redirect, and reachability checks.
-
-Bookmarks and notes use versioned local-storage keys. Malformed local data or URL parameters are ignored rather than crashing the interface.
-
-## Known data limitations
-
-- Organization name changes without a known alias and simultaneous official-website changes can appear as separate historical records until manually reconciled.
-- Most repository links are inferred and require the manual review workflow before they can be marked verified.
-- Project-level technology tags are text matches against organization-declared technologies. They are displayed as inferred, not authoritative.
-- Public archive records occasionally contain stale external links. Validation identifies malformed URLs; network validation and manual review are still needed for freshness.
-
-The product deliberately does not invent competition, acceptance, difficulty, mentor-response, activity, or beginner-friendliness scores.
+This is an independent community project and is not affiliated with or endorsed by Google. Google Summer of Code is a Google program.
