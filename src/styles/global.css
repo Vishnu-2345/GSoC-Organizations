@@ -230,9 +230,9 @@ html.page-navigating .site-loading {
 }
 
 .contribution-announcement.is-compact {
-  width: fit-content;
-  max-width: min(100%, 780px);
-  margin: -8px 0 16px auto;
+  width: 100%;
+  max-width: none;
+  margin: -8px 0 16px;
 }
 
 .contribution-announcement p {
