@@ -198,8 +198,11 @@ test('promotes the pinned contribution initiative across directory pages', async
     const announcement = page.locator('.contribution-announcement');
     await expect(announcement).toBeVisible();
     await expect(announcement).toContainText('GSoC 2027 is approaching.');
+    await expect(announcement).toContainText(
+      'contributing directly to this website’s codebase',
+    );
     await expect(
-      announcement.getByRole('link', { name: /Start contributing/ }),
+      announcement.getByRole('link', { name: /View contribution issue/ }),
     ).toHaveAttribute(
       'href',
       'https://github.com/rohanmalhotracodes/GSoC-Organizations/issues/382',
