@@ -210,7 +210,6 @@ export default function Explorer({
           <GitHubStarButton />
         </header>
       </div>
-      <ContributionAnnouncement />
       <div className="explorer-layout">
         <aside className="desktop-filters" aria-label="Organization filters">
           <FilterSidebar
@@ -290,6 +289,8 @@ export default function Explorer({
               />
             </div>
           </div>
+
+          <ContributionAnnouncement compact />
 
           {results.length ? (
             <>

@@ -211,6 +211,9 @@ test('promotes the pinned contribution initiative across directory pages', async
 
   await page.goto('/');
   await expectAnnouncement();
+  await expect(
+    page.locator('.results-toolbar + .contribution-announcement.is-compact'),
+  ).toBeVisible();
 
   await page.goto('/org/python-software-foundation/');
   await expectAnnouncement();

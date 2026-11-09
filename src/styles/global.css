@@ -229,6 +229,12 @@ html.page-navigating .site-loading {
   margin: -6px 0 18px;
 }
 
+.contribution-announcement.is-compact {
+  width: fit-content;
+  max-width: min(100%, 780px);
+  margin: -8px 0 16px auto;
+}
+
 .contribution-announcement p {
   min-width: 0;
   flex: 1;
@@ -2276,6 +2282,12 @@ body.directory-page .site-footer {
 
   .contribution-announcement.is-embedded {
     width: 100%;
+  }
+
+  .contribution-announcement.is-compact {
+    width: 100%;
+    max-width: none;
+    margin: -6px 0 14px;
   }
 
   .contribution-announcement p {

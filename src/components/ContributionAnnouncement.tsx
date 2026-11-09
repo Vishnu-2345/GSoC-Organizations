@@ -3,12 +3,14 @@ const CONTRIBUTION_ISSUE_URL =
 
 export default function ContributionAnnouncement({
   embedded = false,
+  compact = false,
 }: {
   embedded?: boolean;
+  compact?: boolean;
 }) {
   return (
     <aside
-      className={`contribution-announcement${embedded ? ' is-embedded' : ''}`}
+      className={`contribution-announcement${embedded ? ' is-embedded' : ''}${compact ? ' is-compact' : ''}`}
       aria-label="GSoC 2027 contribution announcement"
     >
       <p>
