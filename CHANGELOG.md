@@ -6,9 +6,9 @@ All notable project changes are documented in this file.
 
 ### Changed
 
-- Replaced the previous license with the GSoC Organizations Noncommercial
-  Community Source License, permitting contribution forks while prohibiting
-  commercial use, redistribution, independent deployment, and copied websites.
+- Replaced the custom community-source license with the standard GNU Affero
+  General Public License v3.0 for the project's original source code, with a
+  separate notice for branding and third-party materials.
 - Defined a staged collaborator program: limited moderation comes first, while
   write access requires a separate request and explicit Project Owner approval.
 

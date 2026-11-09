@@ -88,4 +88,11 @@ This is an independent community project and is not affiliated with or endorsed 
 
 Copyright © 2026 Rohan Malhotra.
 
-This project uses the [GSoC Organizations Noncommercial Community Source License](./LICENSE). You may fork and modify the code only to prepare contributions for this repository. Commercial use, redistribution, independent deployment, and copied or substantially similar websites are prohibited without prior written permission.
+The original source code in this repository is licensed under the
+[GNU Affero General Public License v3.0](./LICENSE) (`AGPL-3.0-only`). If you
+operate a modified version over a network, the AGPL requires you to offer its
+corresponding source code to those users.
+
+The project name, logos, visual identity, third-party organization logos, and
+archive data are not relicensed by the AGPL. See the
+[brand and data notice](./BRAND_AND_DATA.md) for details.

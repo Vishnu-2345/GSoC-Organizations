@@ -184,16 +184,15 @@ releases.
 
 ## Licensing and contribution rights
 
-This repository uses the [GSoC Organizations Noncommercial Community Source
-License](./LICENSE), not an open-source license. It permits you to fork, clone,
-and modify the project only as needed to prepare and submit a contribution to
-this repository. It does not permit commercial use, redistribution, independent
-deployment, or copied websites.
+The original source code in this repository is licensed under the
+[GNU Affero General Public License v3.0](./LICENSE) (`AGPL-3.0-only`). The
+project's branding and third-party materials are separately addressed in the
+[brand and data notice](./BRAND_AND_DATA.md).
 
 Only submit work you have the right to contribute. By opening a pull request,
 you confirm that the contribution is your own or that you have permission to
 submit it, and that it may be incorporated into this project under the
-project's existing license.
+project's AGPL license and the terms of the Contributor License Agreement.
 
 Before a first pull request can be merged, read [the Contributor License
 Agreement](./CLA.md) and post the exact acceptance statement requested by the
