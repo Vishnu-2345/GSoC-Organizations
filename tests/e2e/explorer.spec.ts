@@ -191,6 +191,31 @@ test('uses the official brand across the page and browser tab', async ({
   await expect(page.getByText('GSoC archive', { exact: true })).toHaveCount(0);
 });
 
+test('promotes the pinned contribution initiative across directory pages', async ({
+  page,
+}) => {
+  const expectAnnouncement = async () => {
+    const announcement = page.locator('.contribution-announcement');
+    await expect(announcement).toBeVisible();
+    await expect(announcement).toContainText('GSoC 2027 is approaching.');
+    await expect(
+      announcement.getByRole('link', { name: /Start contributing/ }),
+    ).toHaveAttribute(
+      'href',
+      'https://github.com/rohanmalhotracodes/GSoC-Organizations/issues/382',
+    );
+  };
+
+  await page.goto('/');
+  await expectAnnouncement();
+
+  await page.goto('/org/python-software-foundation/');
+  await expectAnnouncement();
+
+  await page.goto('/year/2026/');
+  await expectAnnouncement();
+});
+
 test('provides delayed loading feedback for slow page transitions', async ({
   page,
 }) => {

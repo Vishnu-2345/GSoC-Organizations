@@ -7,6 +7,7 @@ import {
 } from '../lib/filter';
 import { parseFilterState, serializeFilterState } from '../lib/url-state';
 import type { FilterState, OrganizationSummary } from '../types';
+import ContributionAnnouncement from './ContributionAnnouncement';
 import FilterSidebar from './FilterSidebar';
 import GitHubStarButton from './GitHubStarButton';
 import OrganizationCard from './OrganizationCard';
@@ -209,6 +210,7 @@ export default function Explorer({
           <GitHubStarButton />
         </header>
       </div>
+      <ContributionAnnouncement />
       <div className="explorer-layout">
         <aside className="desktop-filters" aria-label="Organization filters">
           <FilterSidebar

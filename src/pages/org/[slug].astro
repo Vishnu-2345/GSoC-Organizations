@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContributionAnnouncement from '../../components/ContributionAnnouncement';
 import GitHubStarButton from '../../components/GitHubStarButton';
 import ParticipationChart from '../../components/ParticipationChart.astro';
 import organizationsData from '../../data/organizations.json';
@@ -115,6 +116,7 @@ const organizationStructuredData = [
       </form>
       <GitHubStarButton />
     </header>
+    <ContributionAnnouncement embedded />
     <nav class="breadcrumbs" aria-label="Breadcrumb">
       <a href="/">Organizations</a><span>/</span><span aria-current="page"
         >{organization.name}</span

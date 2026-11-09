@@ -208,6 +208,79 @@ html.page-navigating .site-loading {
   margin-bottom: 0;
 }
 
+.contribution-announcement {
+  display: flex;
+  width: calc(100% - 56px);
+  max-width: calc(var(--content) - 56px);
+  min-height: 44px;
+  align-items: center;
+  gap: 11px;
+  margin: 14px auto 0;
+  padding: 8px 10px 8px 12px;
+  border: 1px solid rgba(227, 116, 0, 0.32);
+  border-radius: var(--radius);
+  background: var(--blue-pale);
+  color: var(--text);
+}
+
+.contribution-announcement.is-embedded {
+  width: 100%;
+  max-width: none;
+  margin: -6px 0 18px;
+}
+
+.contribution-announcement-icon {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--sun);
+  color: var(--text);
+}
+
+.contribution-announcement-icon svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-width: 1.8;
+}
+
+.contribution-announcement p {
+  min-width: 0;
+  flex: 1;
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.contribution-announcement strong {
+  color: var(--text);
+}
+
+.contribution-announcement > a {
+  display: inline-flex;
+  min-height: 30px;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border-radius: 7px;
+  background: var(--orange-deep);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.contribution-announcement > a:hover {
+  background: var(--orange);
+  color: #fff;
+}
+
 .directory-brand {
   display: flex;
   min-width: 0;
@@ -2214,6 +2287,24 @@ body.directory-page .site-footer {
 }
 
 @media (max-width: 760px) {
+  .contribution-announcement {
+    width: calc(100% - 28px);
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .contribution-announcement.is-embedded {
+    width: 100%;
+  }
+
+  .contribution-announcement p {
+    flex: 1 1 calc(100% - 40px);
+  }
+
+  .contribution-announcement > a {
+    margin-left: 39px;
+  }
+
   .directory-header {
     grid-template-areas:
       'brand'
