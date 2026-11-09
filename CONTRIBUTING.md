@@ -170,10 +170,17 @@ requested:
 2. CI checks formatting, curated data, repository links, unit tests, and the
    production build.
 3. After CI passes, the maintainer is automatically requested for human review.
+4. A maintainer approval enables squash auto-merge. GitHub merges only after
+   every protected-branch requirement, including CI and the CLA check, passes.
 
 Automated checks are a first pass, not a guarantee that a change will be
 merged. Fix any failures and keep the pull request focused while it is under
 review.
+
+Merging into `main` does not publish the change immediately. Production is
+deployed from the latest `main` branch once a week, on Sunday at 09:00
+Asia/Kolkata. Maintainers may run the production workflow manually for urgent
+releases.
 
 ## Licensing and contribution rights
 

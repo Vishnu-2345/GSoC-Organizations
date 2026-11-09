@@ -14,6 +14,10 @@ All notable project changes are documented in this file.
 
 ### Added
 
+- Added maintainer-gated squash auto-merge after protected-branch requirements
+  pass.
+- Added validated weekly production deployments from `main`, with a manual
+  release option for urgent changes.
 - Added a pull-request assignment guard that closes contributions without an
   assigned, linked issue and explains how to correct and reopen them.
 - Added a structured pull-request template inspired by Oppia's review workflow,

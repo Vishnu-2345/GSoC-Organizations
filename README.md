@@ -56,6 +56,16 @@ Select a participation year to browse its completed projects and open the corres
 
 The website is generated from version-controlled GSoC archive snapshots. Organization data and logos are prepared at build time, allowing the deployed site to remain static and fast.
 
+## Releases and deployment
+
+Approved pull requests are squash-merged after all required reviews, CI checks,
+and the CLA check pass. Merges do not immediately change the live website.
+Production is built from the latest `main` branch and deployed to Cloudflare
+Pages every Sunday at 09:00 Asia/Kolkata.
+
+See the [maintainer automation guide](./docs/maintainer-automation.md) for the
+required repository settings, deployment secret, and manual-release process.
+
 ## Contributing
 
 Contributions are welcome. Read the [contributing guide](./CONTRIBUTING.md) for
