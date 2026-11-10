@@ -28,7 +28,6 @@ export const GET: APIRoute = ({ site }) => {
   const paths = [
     '/',
     '/about/',
-    '/privacy/',
     '/years/',
     '/technologies/',
     '/topics/',

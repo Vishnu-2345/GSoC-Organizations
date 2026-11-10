@@ -8,8 +8,8 @@ const organizations = organizationsData as Organization[];
 const summaries: OrganizationSummary[] = organizations.map(
   ({ participations, communityLinks, ...organization }) => organization,
 );
-const description =
-  'A comprehensive directory of Google Summer of Code organizations across every archived program year. Explore organizations, projects, technologies, topics, and participation history.';
+const years = organizations.flatMap((organization) => organization.years);
+const description = `Explore ${organizations.length} Google Summer of Code organizations from ${Math.min(...years)}–${Math.max(...years)}, with historical projects, technologies, topics, and participation records.`;
 ---
 
 <BaseLayout description={description}>

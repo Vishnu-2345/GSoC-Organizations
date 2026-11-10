@@ -28,7 +28,6 @@ export default function GitHubStarButton() {
       href={GITHUB_REPOSITORY_URL}
       target="_blank"
       rel="noreferrer"
-      aria-label="Star us on GitHub"
       title="Star us on GitHub"
     >
       <span className="github-star-action">
