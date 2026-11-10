@@ -185,6 +185,19 @@ const manualRepositories = {
     organizationProfile: 'https://github.com/aboutcode-org',
     source: 'manual',
   },
+  'Ceph Foundation': {
+    repositories: [
+      {
+        label: 'Ceph repositories',
+        url: 'https://github.com/ceph',
+        host: 'GitHub',
+        verified: true,
+        lastChecked: '2026-11-10',
+      },
+    ],
+    organizationProfile: 'https://github.com/ceph',
+    source: 'manual',
+  },
   '52°North Spatial Information Research GmbH': {
     repositories: [
       {
