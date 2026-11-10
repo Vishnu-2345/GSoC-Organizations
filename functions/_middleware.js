@@ -1,7 +1,7 @@
 const CANONICAL_HOST = 'gsocorganizations.xyz';
 const REDIRECT_HOSTS = new Set([
   `www.${CANONICAL_HOST}`,
-  'gsoc-organizations.pages.dev',
+  'gsoc-organizations-ael.pages.dev',
 ]);
 
 export async function onRequest(context) {
